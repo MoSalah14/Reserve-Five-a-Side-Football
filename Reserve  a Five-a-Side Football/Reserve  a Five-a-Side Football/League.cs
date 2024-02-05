@@ -16,5 +16,11 @@ namespace Reserve__a_Five_a_Side_Football
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var homeScreen = new HomeScreen();
+            homeScreen.Show();
+        }
     }
 }
