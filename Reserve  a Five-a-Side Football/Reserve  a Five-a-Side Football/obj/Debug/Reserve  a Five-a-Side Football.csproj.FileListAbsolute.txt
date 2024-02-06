@@ -9,3 +9,15 @@ D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  
 D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.exe
 D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.pdb
 D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\Reserve  a Five-a-Side Football.pdb
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\Reserve  a Five-a-Side Football.exe.config
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\Reserve  a Five-a-Side Football.exe
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\Reserve  a Five-a-Side Football.pdb
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.csproj.AssemblyReference.cache
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.HomeScreen.resources
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.LeagueForm.resources
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.Properties.Resources.resources
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.csproj.GenerateResource.cache
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.csproj.CoreCompileInputs.cache
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.exe
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.pdb
+D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\RegertrationPage.Regest.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegertrationPage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Reserve__a_Five_a_Side_Football
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeScreen());
+            Application.Run(new Login_Form());
         }
     }
 }
