@@ -20,7 +20,6 @@ namespace Reserve__a_Five_a_Side_Football
         private void LeagueButton_Click(object sender, EventArgs e)
         {
             var League = new LeagueForm();
-            Hide();
             League.Show();
         }
 

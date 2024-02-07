@@ -52,7 +52,7 @@ namespace Reserve__a_Five_a_Side_Football
 
             string email = textBox1.Text;
             string password = textBox2.Text;
-            string passwordPattern = "^[A-Za-z\\d@$!%*?&].{7}$";
+            string passwordPattern = "^[A-Za-z\\d@$!%*?&].{7}$"; // ??????
 
             // Check if both email and password are not empty
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
