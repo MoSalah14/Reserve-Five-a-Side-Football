@@ -16,7 +16,8 @@ namespace Reserve__a_Five_a_Side_Football
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeScreen());
+            // Application.Run(new HomeScreen());
+            Application.Run(new AddYourTeam()); //to test form AddYourTeam
         }
     }
 }
