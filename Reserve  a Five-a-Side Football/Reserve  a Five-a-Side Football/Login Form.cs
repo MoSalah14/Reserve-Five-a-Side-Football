@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows.Forms;
+using System;
 
-namespace Reserve__a_Five_a_Side_Football
+namespace Login_
 {
     public partial class Login_Form : Form
     {
@@ -35,7 +29,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            string passwordPattern = "^[A-Za-z\\d@$!%*?&].{7}$";
+            string passwordPattern = "^[A-Za-z\\d@$!%*?&].{7,19}$";
             if (!System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, passwordPattern))
             {
                 label4.Visible = true;
@@ -52,7 +46,7 @@ namespace Reserve__a_Five_a_Side_Football
 
             string email = textBox1.Text;
             string password = textBox2.Text;
-            string passwordPattern = "^[A-Za-z\\d@$!%*?&].{7}$"; // ??????
+
 
             // Check if both email and password are not empty
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
@@ -60,11 +54,18 @@ namespace Reserve__a_Five_a_Side_Football
                 MessageBox.Show("Please enter both email and password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;  // Exit the method, as login is not possible with empty fields
             }
-            else
+            if ((label3.Visible || label4.Visible))
             {
-                MessageBox.Show("Login Done Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter a valid data.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
             }
+
+
+            MessageBox.Show("Login Done Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
+
 
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

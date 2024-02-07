@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Reserve__a_Five_a_Side_Football
+namespace Login_
 {
     partial class Login_Form
     {
