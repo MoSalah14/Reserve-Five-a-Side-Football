@@ -47,6 +47,7 @@
             this.emailalarm = new System.Windows.Forms.Label();
             this.idalarm = new System.Windows.Forms.Label();
             this.namealarm = new System.Windows.Forms.Label();
+            this.showpass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -111,6 +112,7 @@
             // 
             // btnreg
             // 
+            this.btnreg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnreg.Location = new System.Drawing.Point(96, 415);
             this.btnreg.Name = "btnreg";
             this.btnreg.Size = new System.Drawing.Size(479, 48);
@@ -122,6 +124,7 @@
             // acountalarm
             // 
             this.acountalarm.AutoSize = true;
+            this.acountalarm.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.acountalarm.Location = new System.Drawing.Point(199, 530);
             this.acountalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.acountalarm.Name = "acountalarm";
@@ -137,9 +140,11 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Back To Login";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(96, 469);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(479, 48);
@@ -166,6 +171,7 @@
             // 
             this.Pass.Location = new System.Drawing.Point(70, 234);
             this.Pass.Name = "Pass";
+            this.Pass.PasswordChar = '•';
             this.Pass.Size = new System.Drawing.Size(352, 31);
             this.Pass.TabIndex = 12;
             // 
@@ -173,6 +179,7 @@
             // 
             this.confpass.Location = new System.Drawing.Point(70, 308);
             this.confpass.Name = "confpass";
+            this.confpass.PasswordChar = '•';
             this.confpass.Size = new System.Drawing.Size(352, 31);
             this.confpass.TabIndex = 13;
             // 
@@ -193,7 +200,6 @@
             this.Passalarm.Size = new System.Drawing.Size(252, 15);
             this.Passalarm.TabIndex = 15;
             this.Passalarm.Text = "Password and confirm Password Must Same";
-            this.Passalarm.Click += new System.EventHandler(this.Passalarm_Click);
             // 
             // emailalarm
             // 
@@ -228,11 +234,26 @@
             this.namealarm.TabIndex = 18;
             this.namealarm.Text = "User Name must be more than 6 character";
             // 
+            // showpass
+            // 
+            this.showpass.AutoSize = true;
+            this.showpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpass.Location = new System.Drawing.Point(303, 271);
+            this.showpass.Name = "showpass";
+            this.showpass.Size = new System.Drawing.Size(116, 20);
+            this.showpass.TabIndex = 19;
+            this.showpass.Text = "show password";
+            this.showpass.UseVisualStyleBackColor = true;
+            this.showpass.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Regest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 624);
+            this.Controls.Add(this.showpass);
             this.Controls.Add(this.namealarm);
             this.Controls.Add(this.idalarm);
             this.Controls.Add(this.emailalarm);
@@ -256,7 +277,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Regest";
             this.Text = "Regest";
-            this.Load += new System.EventHandler(this.Regest_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Regest_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +304,6 @@
         private System.Windows.Forms.Label emailalarm;
         private System.Windows.Forms.Label idalarm;
         private System.Windows.Forms.Label namealarm;
+        private System.Windows.Forms.CheckBox showpass;
     }
 }
