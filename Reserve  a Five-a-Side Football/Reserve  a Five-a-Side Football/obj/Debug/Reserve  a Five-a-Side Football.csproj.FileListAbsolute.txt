@@ -22,3 +22,6 @@ D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Res
 D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.pdb
 D:\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\RegertrationPage.Regest.resources
 D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\RegertrationPage.Regest.resources
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.AddYourTeam.resources
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Login_.Login_Form.resources
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.TeamInformatin.resources

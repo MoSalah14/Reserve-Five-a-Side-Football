@@ -52,6 +52,12 @@
     <Compile Include="AddYourTeam.Designer.cs">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_IncomeingPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_IncomeingPrice.Designer.cs">
+      <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Login Form.Designer.cs">
       <DependentUpon>Login Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerAddLeague.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerAddLeague.Designer.cs">
+      <DependentUpon>OwnerAddLeague.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_IncomeingPrice.resx">
+      <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
