@@ -1,4 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
+﻿/*using static System.Net.Mime.MediaTypeNames;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -692,3 +692,4 @@ namespace Stadiam
         private Label label4;
     }
 }
+*/

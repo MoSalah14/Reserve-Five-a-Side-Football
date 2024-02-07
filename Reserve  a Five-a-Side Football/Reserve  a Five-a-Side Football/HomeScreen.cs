@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReservationPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +26,8 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void StadiumButton_Click(object sender, EventArgs e)
         {
-            var Stadium = new StadiumForm();
-            Stadium.Show();
+/*            var Stadium = new StadiumForm();
+            Stadium.Show();*/
         }
 
         private void ReservationsButton_Click(object sender, EventArgs e)

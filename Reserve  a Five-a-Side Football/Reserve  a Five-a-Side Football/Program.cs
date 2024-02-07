@@ -17,7 +17,8 @@ namespace Reserve__a_Five_a_Side_Football
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LeagueForm());
+           // Application.Run(new LeagueForm());
+            Application.Run(new Regest());
         }
     }
 }

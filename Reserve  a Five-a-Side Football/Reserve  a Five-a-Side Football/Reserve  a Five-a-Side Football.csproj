@@ -96,9 +96,7 @@
     <Compile Include="ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stadium.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Stadium.cs" />
     <Compile Include="Stadium.Designer.cs">
       <DependentUpon>Stadium.cs</DependentUpon>
     </Compile>
@@ -137,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stadium.resx">
+      <DependentUpon>Stadium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
