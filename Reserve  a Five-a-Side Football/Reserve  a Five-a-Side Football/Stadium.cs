@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿/*using System.Windows.Forms;
 using System;
 
 namespace Stadiam
@@ -34,5 +34,24 @@ namespace Stadiam
             //reservition.ShowDialog();
             //this.Show();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Stadium
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Stadium";
+            this.Load += new System.EventHandler(this.Stadium_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void Stadium_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+*/
