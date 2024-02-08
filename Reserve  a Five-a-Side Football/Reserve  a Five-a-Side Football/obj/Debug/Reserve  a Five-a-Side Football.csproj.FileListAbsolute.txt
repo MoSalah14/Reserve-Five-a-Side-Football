@@ -43,3 +43,10 @@ K:\pro\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug
 K:\pro\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\Reserve  a Five-a-Side Football.pdb
 K:\pro\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.exe
 K:\pro\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.pdb
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.Add_IncomeingPrice.resources
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve__a_Five_a_Side_Football.OwnerAddLeague.resources
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\EntityFramework.dll
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\EntityFramework.xml
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\Reserve-Five-a-Side-Football\Reserve  a Five-a-Side Football\Reserve  a Five-a-Side Football\obj\Debug\Reserve  a Five-a-Side Football.csproj.CopyComplete
