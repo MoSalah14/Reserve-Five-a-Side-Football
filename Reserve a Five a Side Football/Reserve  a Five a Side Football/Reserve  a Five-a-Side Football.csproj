@@ -42,11 +42,17 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,46 +76,41 @@
     <Compile Include="Add_IncomeingPrice.Designer.cs">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\Five_Side_DbContext.Context.cs">
+    <Compile Include="Database\Five_a_SideContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Five_Side_DbContext.Context.tt</DependentUpon>
+      <DependentUpon>Five_a_SideContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Five_Side_DbContext.cs">
+    <Compile Include="Database\Five_a_SideContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Five_Side_DbContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Five_Side_DbContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Legue.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Ownar.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Player.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Reservation.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Stadium.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\sysdiagram.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\User.cs">
-      <DependentUpon>Five_Side_DbContext.tt</DependentUpon>
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Five_a_SideContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Five_a_SideContext.xsd</DependentUpon>
+      <DependentUpon>Five_a_SideContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Legaue.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Ownar.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Player.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Reservation.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Stadium.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sysdiagram.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\User.cs">
+      <DependentUpon>Five_a_SideContext.tt</DependentUpon>
     </Compile>
     <Compile Include="HomeScreen.cs">
       <SubType>Form</SubType>
@@ -187,25 +188,14 @@
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Database\Five_Side_DbContext.edmx">
+    <EntityDeploy Include="Database\Five_a_SideContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Five_Side_DbContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Database\Five_Side_DbContext.edmx.diagram">
-      <DependentUpon>Five_Side_DbContext.edmx</DependentUpon>
-    </None>
-    <None Include="Database\Five_a_SideContext.xsc">
-      <DependentUpon>Five_a_SideContext.xsd</DependentUpon>
-    </None>
-    <None Include="Database\Five_a_SideContext.xsd">
-      <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Five_a_SideContext.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    </EntityDeploy>
+    <None Include="Database\Five_a_SideContext.edmx.diagram">
+      <DependentUpon>Five_a_SideContext.edmx</DependentUpon>
     </None>
-    <None Include="Database\Five_a_SideContext.xss">
-      <DependentUpon>Five_a_SideContext.xsd</DependentUpon>
-    </None>
-    <None Include="Database\packages.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,16 +216,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\Five_Side_DbContext.Context.tt">
+    <Content Include="Database\Five_a_SideContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Five_Side_DbContext.Context.cs</LastGenOutput>
-      <DependentUpon>Five_Side_DbContext.edmx</DependentUpon>
+      <LastGenOutput>Five_a_SideContext.Context.cs</LastGenOutput>
+      <DependentUpon>Five_a_SideContext.edmx</DependentUpon>
     </Content>
-    <Content Include="Database\Five_Side_DbContext.tt">
+    <Content Include="Database\Five_a_SideContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Five_Side_DbContext.edmx</DependentUpon>
-      <LastGenOutput>Five_Side_DbContext.cs</LastGenOutput>
+      <DependentUpon>Five_a_SideContext.edmx</DependentUpon>
+      <LastGenOutput>Five_a_SideContext.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DesignPackge\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

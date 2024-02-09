@@ -17,7 +17,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Stadium()
         {
-            this.Legues = new HashSet<Legue>();
+            this.Legaues = new HashSet<Legaue>();
             this.Reservations = new HashSet<Reservation>();
         }
     
@@ -28,7 +28,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public Nullable<int> Hourly_Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Legue> Legues { get; set; }
+        public virtual ICollection<Legaue> Legaues { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reservation> Reservations { get; set; }
     }

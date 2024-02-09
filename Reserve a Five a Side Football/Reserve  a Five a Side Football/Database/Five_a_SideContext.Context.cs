@@ -13,10 +13,10 @@ namespace Reserve__a_Five_a_Side_Football.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Five_Side_DbContext : DbContext
+    public partial class Reserve_a_Five_a_Side : DbContext
     {
-        public Five_Side_DbContext()
-            : base("name=Entities")
+        public Reserve_a_Five_a_Side()
+            : base("name=Reserve_a_Five_a_Side")
         {
         }
     
@@ -25,11 +25,11 @@ namespace Reserve__a_Five_a_Side_Football.Database
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Legue> Legues { get; set; }
+        public virtual DbSet<Legaue> Legaues { get; set; }
         public virtual DbSet<Ownar> Ownars { get; set; }
         public virtual DbSet<Player> Players { get; set; }
         public virtual DbSet<Reservation> Reservations { get; set; }
-        public virtual DbSet<Stadium> Stadia { get; set; }
+        public virtual DbSet<Stadium> Stadium { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

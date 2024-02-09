@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="50f2eca145a2443fadadf5392d63dc00" Name="Diagram1">
-        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Legue" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+      <Diagram DiagramId="d7a8bdf134fe45e3aece2b9d83b52de8" Name="Diagram1">
+        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Legaue" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Ownar" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Player" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Reservation" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />

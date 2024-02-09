@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Reserve_a_Five_a_SideModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Legue">
+        <EntityType Name="Legaue">
           <Key>
             <PropertyRef Name="LegueID" />
           </Key>
@@ -82,12 +82,12 @@
           <End Role="Stadium" Type="Self.Stadium" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Legue" Type="Self.Legue" Multiplicity="*" />
+          <End Role="Legaue" Type="Self.Legaue" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Stadium">
               <PropertyRef Name="StadiumID" />
             </Principal>
-            <Dependent Role="Legue">
+            <Dependent Role="Legaue">
               <PropertyRef Name="StadiumID" />
             </Dependent>
           </ReferentialConstraint>
@@ -161,7 +161,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Reserve_a_Five_a_SideModelStoreContainer">
-          <EntitySet Name="Legue" EntityType="Self.Legue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Legaue" EntityType="Self.Legaue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ownar" EntityType="Self.Ownar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
@@ -170,7 +170,7 @@
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="Legue_Stadium" Association="Self.Legue_Stadium">
             <End Role="Stadium" EntitySet="Stadium" />
-            <End Role="Legue" EntitySet="Legue" />
+            <End Role="Legaue" EntitySet="Legaue" />
           </AssociationSet>
           <AssociationSet Name="Ownar_Reservation_FK" Association="Self.Ownar_Reservation_FK">
             <End Role="Ownar" EntitySet="Ownar" />
@@ -198,7 +198,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Reserve_a_Five_a_SideModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Legue">
+        <EntityType Name="Legaue">
           <Key>
             <PropertyRef Name="LegueID" />
           </Key>
@@ -207,7 +207,7 @@
           <Property Name="BeginDate" Type="DateTime" Precision="0" />
           <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="StadiumID" Type="Int32" />
-          <NavigationProperty Name="Stadium" Relationship="Self.Legue_Stadium" FromRole="Legue" ToRole="Stadium" />
+          <NavigationProperty Name="Stadium" Relationship="Self.Legue_Stadium" FromRole="Legaue" ToRole="Stadium" />
         </EntityType>
         <EntityType Name="Ownar">
           <Key>
@@ -255,7 +255,7 @@
           <Property Name="Stad_Status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Area" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Hourly_Price" Type="Int32" />
-          <NavigationProperty Name="Legues" Relationship="Self.Legue_Stadium" FromRole="Stadium" ToRole="Legue" />
+          <NavigationProperty Name="Legaues" Relationship="Self.Legue_Stadium" FromRole="Stadium" ToRole="Legaue" />
           <NavigationProperty Name="Reservations" Relationship="Self.Stadium_Reservation_FK" FromRole="Stadium" ToRole="Reservation" />
         </EntityType>
         <EntityType Name="sysdiagram">
@@ -287,12 +287,12 @@
           <End Role="Stadium" Type="Self.Stadium" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Legue" Type="Self.Legue" Multiplicity="*" />
+          <End Role="Legaue" Type="Self.Legaue" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Stadium">
               <PropertyRef Name="StadiumID" />
             </Principal>
-            <Dependent Role="Legue">
+            <Dependent Role="Legaue">
               <PropertyRef Name="StadiumID" />
             </Dependent>
           </ReferentialConstraint>
@@ -365,8 +365,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Legues" EntityType="Self.Legue" />
+        <EntityContainer Name="Reserve_a_Five_a_Side" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Legaues" EntityType="Self.Legaue" />
           <EntitySet Name="Ownars" EntityType="Self.Ownar" />
           <EntitySet Name="Players" EntityType="Self.Player" />
           <EntitySet Name="Reservations" EntityType="Self.Reservation" />
@@ -375,7 +375,7 @@
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="Legue_Stadium" Association="Self.Legue_Stadium">
             <End Role="Stadium" EntitySet="Stadia" />
-            <End Role="Legue" EntitySet="Legues" />
+            <End Role="Legaue" EntitySet="Legaues" />
           </AssociationSet>
           <AssociationSet Name="Ownar_Reservation_FK" Association="Self.Ownar_Reservation_FK">
             <End Role="Ownar" EntitySet="Ownars" />
@@ -403,10 +403,10 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Reserve_a_Five_a_SideModelStoreContainer" CdmEntityContainer="Entities">
-          <EntitySetMapping Name="Legues">
-            <EntityTypeMapping TypeName="Reserve_a_Five_a_SideModel.Legue">
-              <MappingFragment StoreEntitySet="Legue">
+        <EntityContainerMapping StorageEntityContainer="Reserve_a_Five_a_SideModelStoreContainer" CdmEntityContainer="Reserve_a_Five_a_Side">
+          <EntitySetMapping Name="Legaues">
+            <EntityTypeMapping TypeName="Reserve_a_Five_a_SideModel.Legaue">
+              <MappingFragment StoreEntitySet="Legaue">
                 <ScalarProperty Name="LegueID" ColumnName="LegueID" />
                 <ScalarProperty Name="Legue_Name" ColumnName="Legue_Name" />
                 <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />

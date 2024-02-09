@@ -12,7 +12,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Legue
+    public partial class Legaue
     {
         public int LegueID { get; set; }
         public string Legue_Name { get; set; }
