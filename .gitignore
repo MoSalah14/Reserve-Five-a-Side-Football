@@ -403,6 +403,6 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/csharp
 
 #Reserve a Five a Side Football/Reserve  a Five a Side Football/App.config
-Reserve a Five a Side Football/App.config
+Reserve a Five a Side Football/*.config
 
 
