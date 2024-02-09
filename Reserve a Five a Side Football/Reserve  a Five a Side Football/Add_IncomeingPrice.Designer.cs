@@ -39,13 +39,12 @@
             this.TotalAmountlbl = new System.Windows.Forms.Label();
             this.TotalAmountTxtBox = new System.Windows.Forms.TextBox();
             this.ShowData_btn = new System.Windows.Forms.Button();
-            this.TotalPricePerDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Houre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Daily = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stadium_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Stadium_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Houres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPricePerDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,48 +130,6 @@
             this.ShowData_btn.UseVisualStyleBackColor = true;
             this.ShowData_btn.Click += new System.EventHandler(this.ShowData_btn_Click);
             // 
-            // TotalPricePerDay
-            // 
-            this.TotalPricePerDay.HeaderText = "Total Price Per Day";
-            this.TotalPricePerDay.MinimumWidth = 6;
-            this.TotalPricePerDay.Name = "TotalPricePerDay";
-            this.TotalPricePerDay.ReadOnly = true;
-            // 
-            // Houre
-            // 
-            this.Houre.HeaderText = "Houre";
-            this.Houre.MinimumWidth = 6;
-            this.Houre.Name = "Houre";
-            this.Houre.ReadOnly = true;
-            // 
-            // Daily
-            // 
-            this.Daily.HeaderText = "Daily";
-            this.Daily.MinimumWidth = 6;
-            this.Daily.Name = "Daily";
-            this.Daily.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Stadium_Name
-            // 
-            this.Stadium_Name.HeaderText = "Stadium Name";
-            this.Stadium_Name.MinimumWidth = 6;
-            this.Stadium_Name.Name = "Stadium_Name";
-            this.Stadium_Name.ReadOnly = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -190,8 +147,7 @@
             this.Stadium_Name,
             this.Price,
             this.Date,
-            this.Daily,
-            this.Houre,
+            this.Houres,
             this.TotalPricePerDay});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -216,6 +172,41 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1348, 446);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Stadium_Name
+            // 
+            this.Stadium_Name.HeaderText = "Stadium Name";
+            this.Stadium_Name.MinimumWidth = 6;
+            this.Stadium_Name.Name = "Stadium_Name";
+            this.Stadium_Name.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Houres
+            // 
+            this.Houres.HeaderText = "Houre";
+            this.Houres.MinimumWidth = 6;
+            this.Houres.Name = "Houres";
+            this.Houres.ReadOnly = true;
+            // 
+            // TotalPricePerDay
+            // 
+            this.TotalPricePerDay.HeaderText = "Total Price Per Day";
+            this.TotalPricePerDay.MinimumWidth = 6;
+            this.TotalPricePerDay.Name = "TotalPricePerDay";
+            this.TotalPricePerDay.ReadOnly = true;
             // 
             // Add_IncomeingPrice
             // 
@@ -250,12 +241,11 @@
         private System.Windows.Forms.Label TotalAmountlbl;
         private System.Windows.Forms.TextBox TotalAmountTxtBox;
         private System.Windows.Forms.Button ShowData_btn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPricePerDay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Houre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Daily;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stadium_Name;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stadium_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Houres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPricePerDay;
     }
 }

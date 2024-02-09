@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
@@ -31,50 +32,42 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
         // GetStadiumNames
-        private void GetStadiumsName()
+        private void GetReports()
         {
             var fromDate = FromDatePicker.Value;
             var ToDate = ToDatePicker.Value;
-            var StadiumNames = Context.Stadium
-                                .Where(s => Context.Reservations
-                                            .Any(r => r.StadiumID == s.StadiumID && r.Reservation_Date >= fromDate && r.Reservation_Date <= ToDate))
-                                .Select(s => s.Stad_Name)
-                                .ToList();
+            var query = from s in Context.Stadium 
+                        join r in Context.Reservations on s.StadiumID equals r.StadiumID
+                        where r.Reservation_Date >= fromDate && r.Reservation_Date <= ToDate
+                        group new { s, r } by new { s.Stad_Name, r.Reservation_Date, s.Hourly_Price } into grp
+                        select new
+                        { grp.Key.Stad_Name,
+                             grp.Key.Reservation_Date,
+                             grp.Key.Hourly_Price,
+                            TotalHourlyPrice = grp.Sum(x => x.s.Hourly_Price),
+                            Reservation_Count = grp.Count()
+                        };
 
-            foreach (var stadiumName in StadiumNames)
+            dataGridView1.Rows.Clear();
+            foreach (var item in query)
             {
-                int rowIndex = dataGridView1.Rows.Add();
-                dataGridView1.Rows[rowIndex].Cells[0].Value = stadiumName;
+                dataGridView1.Rows.Add(
+                    item.Stad_Name,
+                    item.Hourly_Price.ToString(),
+                    item.Reservation_Date.ToString(),
+                    item.Reservation_Count,
+                    item.TotalHourlyPrice.ToString()
+                );
             }
 
         }
 
-
-        // Get StadiumsHorlyPrice
-        private void GetStadiumsHorlyPrice()
-        {
-            var fromDate = FromDatePicker.Value;
-            var ToDate = ToDatePicker.Value;
-            var StadiumNames = Context.Stadium
-                                .Where(s => Context.Reservations
-                                            .Any(r => r.StadiumID == s.StadiumID && r.Reservation_Date >= fromDate && r.Reservation_Date <= ToDate))
-                                .Select(s => s.Hourly_Price)
-                                .ToList();
-
-            int rowIndex = 0;
-            foreach (var stadiumName in StadiumNames)
-            {
-                dataGridView1.Rows[rowIndex].Cells[1].Value = stadiumName;
-                rowIndex++;
-            }
-        }
 
 
 
         private void ShowData_btn_Click(object sender, EventArgs e)
         {
-            GetStadiumsName();
-            GetStadiumsHorlyPrice();
+            GetReports();
         }
     }
 }
