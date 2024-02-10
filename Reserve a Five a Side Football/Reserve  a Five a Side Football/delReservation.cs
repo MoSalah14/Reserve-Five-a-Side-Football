@@ -13,13 +13,13 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class del_Reservation : Form
+    public partial class delReservation : Form
     {
-      private readonly Reserve_a_Five_a_Side context1;
-        public del_Reservation()
+      private readonly Reserve_a_Five_a_SideEntities context1;
+        public delReservation()
         {
             InitializeComponent();
-            context1 = new Reserve_a_Five_a_Side();
+            context1 = new Reserve_a_Five_a_SideEntities();
         }
 
 

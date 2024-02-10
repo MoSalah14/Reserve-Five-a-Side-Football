@@ -16,13 +16,13 @@ namespace Reserve__a_Five_a_Side_Football
 {
     public partial class Player_Data : Form
     {
-        private readonly Reserve_a_Five_a_Side context;
+        private readonly Reserve_a_Five_a_SideEntities context;
 
         public Player_Data()
         {
             InitializeComponent();
 
-            context = new Reserve_a_Five_a_Side();
+            context = new Reserve_a_Five_a_SideEntities();
         }
 
 

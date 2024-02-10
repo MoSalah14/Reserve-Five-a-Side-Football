@@ -1,6 +1,6 @@
 ﻿namespace Reserve__a_Five_a_Side_Football
 {
-    partial class del_Reservation
+    partial class delReservation
     {
         /// <summary>
         /// Required designer variable.
@@ -100,7 +100,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name.Name = "del_Reservation";
             this.Text = "del_Reservation";
             this.Load += new System.EventHandler(this.del_Reservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
