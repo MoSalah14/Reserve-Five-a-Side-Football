@@ -16,9 +16,14 @@ namespace Reserve__a_Five_a_Side_Football.Database
     {
         public int LegueID { get; set; }
         public string Legue_Name { get; set; }
-        public Nullable<System.DateTime> BeginDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
-        public Nullable<int> StadiumID { get; set; }
+        public System.DateTime BeginDate { get; set; }
+        public System.DateTime EndDate { get; set; }
+        public int StadiumID { get; set; }
+        public string StadiumName { get; set; }
+        public System.DateTime EndReg { get; set; }
+        public string Reward { get; set; }
+        public string City { get; set; }
+        public System.TimeSpan TimePlay { get; set; }
     
         public virtual Stadium Stadium { get; set; }
     }
