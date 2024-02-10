@@ -28,7 +28,7 @@ namespace Reserve__a_Five_a_Side_Football
             //this.WindowState = FormWindowState.Maximized;
 
             ToDatePicker.MaxDate = DateTime.Today;
-            
+
         }
 
         // GetStadiumNames
@@ -36,14 +36,15 @@ namespace Reserve__a_Five_a_Side_Football
         {
             var fromDate = FromDatePicker.Value;
             var ToDate = ToDatePicker.Value;
-            var query = from s in Context.Stadium 
+            var query = from s in Context.Stadium
                         join r in Context.Reservations on s.StadiumID equals r.StadiumID
                         where r.Reservation_Date >= fromDate && r.Reservation_Date <= ToDate
                         group new { s, r } by new { s.Stad_Name, r.Reservation_Date, s.Hourly_Price } into grp
                         select new
-                        { grp.Key.Stad_Name,
-                             grp.Key.Reservation_Date,
-                             grp.Key.Hourly_Price,
+                        {
+                            grp.Key.Stad_Name,
+                            grp.Key.Reservation_Date,
+                            grp.Key.Hourly_Price,
                             TotalHourlyPrice = grp.Sum(x => x.s.Hourly_Price),
                             Reservation_Count = grp.Count()
                         };
@@ -54,7 +55,7 @@ namespace Reserve__a_Five_a_Side_Football
                 dataGridView1.Rows.Add(
                     item.Stad_Name,
                     item.Hourly_Price.ToString(),
-                    item.Reservation_Date.ToString(),
+                    item.Reservation_Date.Value.Date.ToString("yyyy-MM-dd"),
                     item.Reservation_Count,
                     item.TotalHourlyPrice.ToString()
                 );
@@ -62,12 +63,16 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
-
-
-
         private void ShowData_btn_Click(object sender, EventArgs e)
         {
             GetReports();
+            decimal totalAmount = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells["TotalPricePerDay"].Value != null && decimal.TryParse(row.Cells["TotalPricePerDay"].Value.ToString(), out decimal price))
+                    totalAmount += price;
+            }
+            TotalAmountTxtBox.Text = totalAmount.ToString() + " EGP";
         }
     }
 }

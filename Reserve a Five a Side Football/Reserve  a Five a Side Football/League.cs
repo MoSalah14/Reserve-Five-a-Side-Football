@@ -32,5 +32,10 @@ namespace Reserve__a_Five_a_Side_Football
             // We Will Handle Open Form To Register His Team
             MessageBox.Show("Hello");
         }
+
+        private void LeagueForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
