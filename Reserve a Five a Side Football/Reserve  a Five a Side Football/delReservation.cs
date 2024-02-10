@@ -23,27 +23,6 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
 
-        //private void Form1_Load(object sender, EventArgs e)
-        //{
-
-
-
-        //    var query = (from r in context1.Reservations
-        //                 join p in context1.Players on r.Player_ID equals p.Player_ID
-        //                 join x in context1.Users on p.UserID equals x.UserID
-        //                 select new
-        //                 {
-        //                     FullName = x.FName + " " + x.LName,
-        //                     r.Reservation_Date,
-        //                     r.Reservation_Time,
-        //                     r.Payment
-        //                 });
-
-        //        foreach (var item in query)
-        //        {
-        //            dataGridView1.Rows.Add(item.FullName, item.Reservation_Date, item.Reservation_Time, item.Payment);
-        //        }
-        //}
 
 
         
@@ -64,7 +43,7 @@ namespace Reserve__a_Five_a_Side_Football
 
             var query = (from r in context1.Reservations
                          join p in context1.Players on r.Player_ID equals p.Player_ID
-                         join x in context1.Users on p.UserID equals x.UserID
+                         join x in context1.Users on p.UserID equals 1
                          select new
                          {
                              FullName = x.FName + " " + x.LName,
@@ -75,7 +54,7 @@ namespace Reserve__a_Five_a_Side_Football
 
             foreach (var item in query)
             {
-                dataGridView1.Rows.Add(item.FullName, item.Reservation_Date, item.Reservation_Time, item.Payment);
+                dataGridView1.Rows.Add(item.FullName, item.Reservation_Date.Value.Date.ToString("yyyy-MM-dd"), item.Reservation_Time.ToString(), item.Payment);
             }
         }
     }

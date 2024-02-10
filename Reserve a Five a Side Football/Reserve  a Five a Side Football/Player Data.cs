@@ -37,23 +37,15 @@ namespace Reserve__a_Five_a_Side_Football
                
             }
 
-            int userID;
-            if (!int.TryParse(userIDStr, out userID))
-            {
-                MessageBox.Show("Invalid user ID format");
+
+            var query = (from r in context.Users
                
-            }
-
-            
-
-            var query = (from r in context.Reservations
-                         join p in context.Players on r.Player_ID equals p.Player_ID
-                         join x in context.Users on p.UserID equals x.UserID
-                         where x.UserID == userIDStr
+                        
+                         where r.NationalID ==  userIDStr
                          select new
                          {
-                             Name = x.FName + " " + x.LName,
-                             Status = r.Reservation_Statues
+                             Name = r.FName + " " + r.LName,
+                             Status = r.AccountStatus
                          }).FirstOrDefault();
 
             dataGridView1.Rows.Clear();
