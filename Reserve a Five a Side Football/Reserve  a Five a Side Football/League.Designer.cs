@@ -147,6 +147,7 @@
             this.Controls.Add(this.LeagueGridView);
             this.Name = "LeagueForm";
             this.Text = "League";
+            this.Load += new System.EventHandler(this.LeagueForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LeagueGridView)).EndInit();
             this.ResumeLayout(false);
 

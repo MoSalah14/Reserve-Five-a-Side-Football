@@ -119,6 +119,7 @@
             this.TotalAmountTxtBox.ReadOnly = true;
             this.TotalAmountTxtBox.Size = new System.Drawing.Size(317, 38);
             this.TotalAmountTxtBox.TabIndex = 7;
+            this.TotalAmountTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ShowData_btn
             // 

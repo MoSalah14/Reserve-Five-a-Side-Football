@@ -63,9 +63,6 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
-
-
-
         private void ShowData_btn_Click(object sender, EventArgs e)
         {
             GetReports();
@@ -73,9 +70,9 @@ namespace Reserve__a_Five_a_Side_Football
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells["TotalPricePerDay"].Value != null && decimal.TryParse(row.Cells["TotalPricePerDay"].Value.ToString(), out decimal price))
-                 totalAmount += price;
+                    totalAmount += price;
             }
-            TotalAmountTxtBox.Text = totalAmount.ToString();
+            TotalAmountTxtBox.Text = totalAmount.ToString() + " EGP";
         }
     }
 }
