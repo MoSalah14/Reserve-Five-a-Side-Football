@@ -19,11 +19,11 @@ namespace RegertrationPage
     public partial class Regest : Form
     {
 
-        private Reserve_a_Five_a_Side _a_Five_a_Side;
+        private Reserve_a_Five_a_SideEntities _a_Five_a_Side;
         public Regest()
         {
             InitializeComponent();
-            _a_Five_a_Side = new Reserve_a_Five_a_Side();
+            _a_Five_a_Side = new Reserve_a_Five_a_SideEntities();
             namealarm.Visible = false;
             emailalarm.Visible = false;
             Passalarm.Visible = false;

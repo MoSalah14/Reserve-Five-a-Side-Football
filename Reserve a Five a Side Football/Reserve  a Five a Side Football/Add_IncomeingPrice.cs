@@ -14,12 +14,12 @@ namespace Reserve__a_Five_a_Side_Football
 {
     public partial class Add_IncomeingPrice : Form
     {
-        private readonly Reserve_a_Five_a_Side Context;
+        private readonly Reserve_a_Five_a_SideEntities Context;
 
         public Add_IncomeingPrice()
         {
             InitializeComponent();
-            Context = new Reserve_a_Five_a_Side();
+            Context = new Reserve_a_Five_a_SideEntities();
 
         }
 
@@ -36,7 +36,7 @@ namespace Reserve__a_Five_a_Side_Football
         {
             var fromDate = FromDatePicker.Value;
             var ToDate = ToDatePicker.Value;
-            var query = from s in Context.Stadium
+            var query = from s in Context.Stadiaum
                         join r in Context.Reservations on s.StadiumID equals r.StadiumID
                         where r.Reservation_Date >= fromDate && r.Reservation_Date <= ToDate
                         group new { s, r } by new { s.Stad_Name, r.Reservation_Date, s.Hourly_Price } into grp
