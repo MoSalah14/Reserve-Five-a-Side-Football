@@ -69,6 +69,13 @@ namespace Reserve__a_Five_a_Side_Football
         private void ShowData_btn_Click(object sender, EventArgs e)
         {
             GetReports();
+            decimal totalAmount = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells["TotalPricePerDay"].Value != null && decimal.TryParse(row.Cells["TotalPricePerDay"].Value.ToString(), out decimal price))
+                 totalAmount += price;
+            }
+            TotalAmountTxtBox.Text = totalAmount.ToString();
         }
     }
 }
