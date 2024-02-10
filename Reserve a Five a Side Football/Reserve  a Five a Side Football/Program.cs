@@ -22,7 +22,14 @@ namespace Reserve__a_Five_a_Side_Football
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Player_Data());
+=======
+           // Application.Run(new LeagueForm());
+            Application.Run(new Add_IncomeingPrice());
+           // Application.Run(new Regest());
+
+>>>>>>> 44fa8da20437933182ab6979f78bdd2a16d850b7
 
             //Application.Run(new Add_IncomeingPrice());
             //Reserve_a_Five_a_Side context = new Reserve_a_Five_a_Side();

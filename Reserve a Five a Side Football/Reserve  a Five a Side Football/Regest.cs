@@ -9,15 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.OleDb;
+using System.Web.UI.WebControls;
+using Login_;
+using Reserve__a_Five_a_Side_Football.Database;
 
 
 namespace RegertrationPage
 {
     public partial class Regest : Form
     {
+
+        private Reserve_a_Five_a_SideEntities _a_Five_a_Side;
         public Regest()
         {
             InitializeComponent();
+            _a_Five_a_Side = new Reserve_a_Five_a_SideEntities();
             namealarm.Visible = false;
             emailalarm.Visible = false;
             Passalarm.Visible = false;
@@ -82,11 +88,27 @@ namespace RegertrationPage
                     idalarm.Visible = true;
                 }
 
-                MessageBox.Show("Invalid Data", "Registration Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                RegFaildLbl.Visible = true;
 
             }
             else
             {
+
+                User newUser = new User
+                {
+                    FName = Uname.Text,
+                    Email = email.Text,
+                    Password = Pass.Text,
+                    NationalID = idnum.Text
+                };
+
+                _a_Five_a_Side.Users.Add(newUser);
+                _a_Five_a_Side.SaveChanges();
+
+
+
                 namealarm.Visible = false;
                 emailalarm.Visible = false;
                 Passalarm.Visible = false;
@@ -96,9 +118,8 @@ namespace RegertrationPage
                 Pass.Text = "";
                 confpass.Text = "";
                 idnum.Text = "";
+
                 MessageBox.Show("sucess Data", "Regestration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
             }
         }
         private void button3_Click(object sender, EventArgs e)
@@ -120,8 +141,6 @@ namespace RegertrationPage
             {
                 Pass.PasswordChar = '\0';
                 confpass.PasswordChar = '\0';
-
-
             }
             else
             {
@@ -132,7 +151,8 @@ namespace RegertrationPage
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Login_Form login_Form = new Login_Form();
+            login_Form.ShowDialog();
         }
 
         private void Regest_FormClosing(object sender, FormClosingEventArgs e)

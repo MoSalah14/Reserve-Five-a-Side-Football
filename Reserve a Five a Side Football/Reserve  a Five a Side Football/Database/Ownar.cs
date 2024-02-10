@@ -21,8 +21,6 @@ namespace Reserve__a_Five_a_Side_Football.Database
         }
     
         public int OwnarID { get; set; }
-        public string FName { get; set; }
-        public string LName { get; set; }
         public Nullable<int> UserID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
