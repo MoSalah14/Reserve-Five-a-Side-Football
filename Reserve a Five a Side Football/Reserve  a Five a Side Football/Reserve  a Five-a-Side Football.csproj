@@ -112,6 +112,18 @@
     <Compile Include="Database\User.cs">
       <DependentUpon>Five_a_SideContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="delReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delReservation.Designer.cs">
+      <DependentUpon>delReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player Data.Designer.cs">
+      <DependentUpon>Player Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add_IncomeingPrice.resx">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delReservation.resx">
+      <DependentUpon>delReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player Data.resx">
+      <DependentUpon>Player Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>

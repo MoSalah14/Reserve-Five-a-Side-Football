@@ -69,5 +69,10 @@ namespace Reserve__a_Five_a_Side_Football
         {
             GetReports();
         }
+
+        private void TotalAmountTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
