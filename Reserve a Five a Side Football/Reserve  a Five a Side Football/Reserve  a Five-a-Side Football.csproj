@@ -215,6 +215,9 @@
     <EmbeddedResource Include="Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </EmbeddedResource>
