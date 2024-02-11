@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
@@ -30,7 +31,7 @@ namespace Reserve__a_Five_a_Side_Football
             foreach (var item in query)
             {
                 stadiumData.Rows.Add(
-                    item.StadiumID,
+                    //item.StadiumID,
                     item.Stad_Name,
                     item.Stad_Status,
                     item.Area,
@@ -75,70 +76,29 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void Add_update_del_Stadium_Load(object sender, EventArgs e)
         {
+
             getdata();
-            //data.Columns.Add("Name", typeof(string));
-            //data.Columns.Add("price", typeof(int));
-            //data.Columns.Add("State", typeof(string));
-            //data.Columns.Add("Area", typeof(string));
 
-            //data.Rows.Add("Stadium1", 200, "Open", "Assuit");
-            //data.Rows.Add("Stadium2", 100, "Open", "Assuit");
-            //data.Rows.Add("Stadium3", 150, "Open", "Assuit");
-
-            //foreach(var item in q1)
-            //{
-
-            //    stadiumData.DataSource = item;
-            //}
-
-            //stadiumData.DataSource = data;
 
         }
 
         private void stadiumData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //selectedrow = e.RowIndex;
-            //DataGridViewRow row = stadiumData.Rows[selectedrow];
-            //name.Text = row.Cells[0].Value.ToString();
-            //price.Text = row.Cells[1].Value.ToString();
-            //state.Text = row.Cells[2].Value.ToString();
-            //area.Text = row.Cells[3].Value.ToString();
+            selectedrow = e.RowIndex;
+            DataGridViewRow row = stadiumData.Rows[selectedrow];
+            name.Text = row.Cells[0].Value.ToString();
+            state.Text = row.Cells[1].Value.ToString();
+            area.Text = row.Cells[2].Value.ToString();
+            price.Text = row.Cells[3].Value.ToString();
 
         }
 
         private void updatbtn_Click(object sender, EventArgs e)
         {
-            //if (name.Text == "" ||
-            //    price.Text == "" ||
-            //    state.SelectedIndex == -1 ||
-            //    area.Text == "")
-            //{
-
-            //    MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //}
-            //else
-            //{
-            //    DataGridViewRow row = stadiumData.Rows[selectedrow];
-            //    row.Cells[0].Value = name.Text;
-            //    row.Cells[1].Value = price.Text;
-            //    row.Cells[2].Value = state.Text;
-            //    row.Cells[3].Value = area.Text;
-
-            //    name.Text = "";
-            //    price.Text = "";
-            //    state.Text = "";
-            //    area.Text = "";
-            //}
-
-
-        }
-        private void deletebtn_Click(object sender, EventArgs e)
-        {
             if (name.Text == "" ||
-               price.Text == "" ||
-               state.SelectedIndex == -1 ||
-               area.Text == "")
+                price.Text == "" ||
+                state.SelectedIndex == -1 ||
+                area.Text == "")
             {
 
                 MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -146,23 +106,98 @@ namespace Reserve__a_Five_a_Side_Football
             }
             else
             {
+                DataGridViewRow row = stadiumData.Rows[selectedrow];
+                string _Name = row.Cells[0].FormattedValue.ToString();
 
-                stadiumData.Rows.RemoveAt(selectedrow);
+                Stadium std1 = context_stadium.Stadiaum.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
+
+                std1.Stad_Name = name.Text;
+                std1.Stad_Status = state.SelectedItem.ToString();
+                std1.Area = area.Text;
+                std1.Hourly_Price = int.Parse(price.Text);
+                context_stadium.SaveChanges();
+
+                getdata();
+
                 name.Text = "";
                 price.Text = "";
                 state.Text = "";
                 area.Text = "";
-
             }
 
-        }
 
+        }
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (name.Text == "" ||
+                   price.Text == "" ||
+                   state.SelectedIndex == -1 ||
+                   area.Text == "")
+                {
+
+                    MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    var result = MessageBox.Show("Are you sure To Delete  ", "Delete Form",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
+
+                    // e.Cancel = (result == DialogResult.No);
+                    if (result == DialogResult.Yes)
+                    {
+                        DataGridViewRow row = stadiumData.Rows[selectedrow];
+                        string _Name = row.Cells[0].FormattedValue.ToString();
+                        Stadium std1 = context_stadium.Stadiaum.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
+
+                        context_stadium.Stadiaum.Remove(std1);
+                        context_stadium.SaveChanges();
+                        getdata();
+
+                        name.Text = "";
+                        price.Text = "";
+                        state.Text = "";
+                        area.Text = "";
+                    }
+                    else
+                    {
+                        name.Text = "";
+                        price.Text = "";
+                        state.Text = "";
+                        area.Text = "";
+                    }
+
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Data");
+            }
+            }
+    
+
+
+        
         private void Clearbtn_Click(object sender, EventArgs e)
         {
             name.Text = "";
             price.Text = "";
             state.Text = "";
             area.Text = "";
+        }
+
+        private void Add_update_del_Stadium_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure To close  ", "Close Form",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+
+            e.Cancel = (result == DialogResult.No);
         }
     }
 }

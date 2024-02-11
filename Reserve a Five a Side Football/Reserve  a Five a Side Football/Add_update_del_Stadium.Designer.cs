@@ -42,7 +42,6 @@
             this.deletebtn = new System.Windows.Forms.Button();
             this.updatbtn = new System.Windows.Forms.Button();
             this.Clearbtn = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stadname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stadstate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stadarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,14 +140,13 @@
             // 
             this.stadiumData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stadiumData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
             this.stadname,
             this.Stadstate,
             this.stadarea,
             this.pricehour});
-            this.stadiumData.Location = new System.Drawing.Point(0, 215);
+            this.stadiumData.Location = new System.Drawing.Point(1, 228);
             this.stadiumData.Name = "stadiumData";
-            this.stadiumData.Size = new System.Drawing.Size(755, 382);
+            this.stadiumData.Size = new System.Drawing.Size(756, 388);
             this.stadiumData.TabIndex = 10;
             this.stadiumData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stadiumData_CellClick);
             // 
@@ -182,30 +180,29 @@
             this.Clearbtn.UseVisualStyleBackColor = true;
             this.Clearbtn.Click += new System.EventHandler(this.Clearbtn_Click);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "StadiumID";
-            this.ID.Name = "ID";
-            // 
             // stadname
             // 
             this.stadname.HeaderText = "Stad Name";
             this.stadname.Name = "stadname";
+            this.stadname.Width = 150;
             // 
             // Stadstate
             // 
             this.Stadstate.HeaderText = "Stad Status";
             this.Stadstate.Name = "Stadstate";
+            this.Stadstate.Width = 150;
             // 
             // stadarea
             // 
             this.stadarea.HeaderText = "Area";
             this.stadarea.Name = "stadarea";
+            this.stadarea.Width = 150;
             // 
             // pricehour
             // 
             this.pricehour.HeaderText = "Hourly Price";
             this.pricehour.Name = "pricehour";
+            this.pricehour.Width = 150;
             // 
             // Add_update_del_Stadium
             // 
@@ -230,6 +227,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Add_update_del_Stadium";
             this.Text = "Add_update_del_Stadium";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_update_del_Stadium_FormClosing);
             this.Load += new System.EventHandler(this.Add_update_del_Stadium_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stadiumData)).EndInit();
             this.ResumeLayout(false);
@@ -253,7 +251,6 @@
         private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.Button updatbtn;
         private System.Windows.Forms.Button Clearbtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn stadname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stadstate;
         private System.Windows.Forms.DataGridViewTextBoxColumn stadarea;
