@@ -26,6 +26,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public string Stad_Status { get; set; }
         public string Area { get; set; }
         public Nullable<decimal> Hourly_Price { get; set; }
+        public string Stadium_Image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Legaue> Legaues { get; set; }

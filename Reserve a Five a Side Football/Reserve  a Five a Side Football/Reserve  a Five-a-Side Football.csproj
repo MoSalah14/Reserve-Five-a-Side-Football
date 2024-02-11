@@ -123,6 +123,12 @@
     <Compile Include="Database\User.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="delLegue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delLegue.Designer.cs">
+      <DependentUpon>delLegue.cs</DependentUpon>
+    </Compile>
     <Compile Include="delReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <EmbeddedResource Include="Add_update_del_Stadium.resx">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="delLegue.resx">
+      <DependentUpon>delLegue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="delReservation.resx">
       <DependentUpon>delReservation.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +228,9 @@
     </Compile>
     <EmbeddedResource Include="Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>

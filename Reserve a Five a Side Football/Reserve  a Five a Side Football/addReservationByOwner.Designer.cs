@@ -52,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(250, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 25);
+            this.label1.Size = new System.Drawing.Size(167, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation ";
             // 
@@ -61,7 +61,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.Size = new System.Drawing.Size(72, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Date";
             // 
@@ -70,7 +70,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(2, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 25);
+            this.label3.Size = new System.Drawing.Size(216, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Stadium Number";
             // 
@@ -79,7 +79,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 219);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
+            this.label4.Size = new System.Drawing.Size(74, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Time";
             // 
@@ -88,7 +88,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 341);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 25);
+            this.label5.Size = new System.Drawing.Size(122, 31);
             this.label5.TabIndex = 4;
             this.label5.Text = "Pay Way";
             // 
@@ -108,7 +108,7 @@
             this.datebx.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datebx.Location = new System.Drawing.Point(105, 83);
             this.datebx.Name = "datebx";
-            this.datebx.Size = new System.Drawing.Size(205, 31);
+            this.datebx.Size = new System.Drawing.Size(205, 37);
             this.datebx.TabIndex = 6;
             // 
             // stadbx
@@ -122,7 +122,7 @@
             "5"});
             this.stadbx.Location = new System.Drawing.Point(211, 143);
             this.stadbx.Name = "stadbx";
-            this.stadbx.Size = new System.Drawing.Size(121, 33);
+            this.stadbx.Size = new System.Drawing.Size(121, 38);
             this.stadbx.TabIndex = 7;
             // 
             // timebx
@@ -131,7 +131,7 @@
             this.timebx.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.timebx.Location = new System.Drawing.Point(189, 214);
             this.timebx.Name = "timebx";
-            this.timebx.Size = new System.Drawing.Size(143, 31);
+            this.timebx.Size = new System.Drawing.Size(143, 37);
             this.timebx.TabIndex = 8;
             // 
             // paybx
@@ -143,7 +143,7 @@
             "wallet Cash"});
             this.paybx.Location = new System.Drawing.Point(174, 333);
             this.paybx.Name = "paybx";
-            this.paybx.Size = new System.Drawing.Size(179, 33);
+            this.paybx.Size = new System.Drawing.Size(179, 38);
             this.paybx.TabIndex = 9;
             // 
             // datealarm
@@ -152,7 +152,7 @@
             this.datealarm.BackColor = System.Drawing.Color.Red;
             this.datealarm.Location = new System.Drawing.Point(411, 83);
             this.datealarm.Name = "datealarm";
-            this.datealarm.Size = new System.Drawing.Size(201, 25);
+            this.datealarm.Size = new System.Drawing.Size(252, 31);
             this.datealarm.TabIndex = 10;
             this.datealarm.Text = "Date Must be future";
             // 
@@ -160,9 +160,9 @@
             // 
             this.payalarm.AutoSize = true;
             this.payalarm.BackColor = System.Drawing.Color.Red;
-            this.payalarm.Location = new System.Drawing.Point(411, 333);
+            this.payalarm.Location = new System.Drawing.Point(403, 341);
             this.payalarm.Name = "payalarm";
-            this.payalarm.Size = new System.Drawing.Size(200, 25);
+            this.payalarm.Size = new System.Drawing.Size(250, 31);
             this.payalarm.TabIndex = 11;
             this.payalarm.Text = "Choose Way to pay";
             // 
@@ -172,7 +172,7 @@
             this.stadalarm.BackColor = System.Drawing.Color.Red;
             this.stadalarm.Location = new System.Drawing.Point(411, 146);
             this.stadalarm.Name = "stadalarm";
-            this.stadalarm.Size = new System.Drawing.Size(170, 25);
+            this.stadalarm.Size = new System.Drawing.Size(214, 31);
             this.stadalarm.TabIndex = 12;
             this.stadalarm.Text = "Choose Stadium";
             // 
@@ -181,7 +181,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 272);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 25);
+            this.label6.Size = new System.Drawing.Size(119, 31);
             this.label6.TabIndex = 13;
             this.label6.Text = "PalyerID";
             // 
@@ -189,22 +189,22 @@
             // 
             this.playerid.Location = new System.Drawing.Point(145, 272);
             this.playerid.Name = "playerid";
-            this.playerid.Size = new System.Drawing.Size(208, 31);
+            this.playerid.Size = new System.Drawing.Size(208, 37);
             this.playerid.TabIndex = 14;
             // 
             // idplayeralarm
             // 
             this.idplayeralarm.AutoSize = true;
             this.idplayeralarm.BackColor = System.Drawing.Color.Red;
-            this.idplayeralarm.Location = new System.Drawing.Point(429, 272);
+            this.idplayeralarm.Location = new System.Drawing.Point(420, 278);
             this.idplayeralarm.Name = "idplayeralarm";
-            this.idplayeralarm.Size = new System.Drawing.Size(152, 25);
+            this.idplayeralarm.Size = new System.Drawing.Size(194, 31);
             this.idplayeralarm.TabIndex = 15;
             this.idplayeralarm.Text = "Inser Palyer ID";
             // 
             // addReservationByOwner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 584);
             this.Controls.Add(this.idplayeralarm);

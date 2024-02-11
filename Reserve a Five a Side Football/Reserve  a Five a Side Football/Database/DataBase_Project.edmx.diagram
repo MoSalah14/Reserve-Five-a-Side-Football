@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="a759466151364414be2698813f0102ae" Name="Diagram1">
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Legaue" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Ownar" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Ownar" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Player" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Reservation" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Stadium" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
