@@ -11,8 +11,9 @@ using System.Text.RegularExpressions;
 using System.Data.OleDb;
 using System.Web.UI.WebControls;
 using Login_;
+using Reserve__a_Five_a_Side_Football;
 using Reserve__a_Five_a_Side_Football.Database;
-
+using System.Xml.Linq;
 
 namespace RegertrationPage
 {
@@ -43,16 +44,18 @@ namespace RegertrationPage
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (Uname.TextLength <= 6 ||
+            if (Fname.Text == "" ||
+                Lname.Text == "" ||
                 !Regex.IsMatch(email.Text, emailpattern) ||
                 !Regex.IsMatch(Pass.Text, passwordpattern) ||
-                idnum.TextLength != 14)
+            idnum.TextLength != 14)
             {
 
-                if (Uname.TextLength <= 6)
+                if (Fname.Text == "" || Lname.Text == "")
                 {
-                    Uname.Text = "";
-                    Uname.Focus();
+                    Fname.Text = "";
+                    Lname.Text = "";
+                    Fname.Focus();
                     namealarm.Visible = true;
                     emailalarm.Visible = false;
                     Passalarm.Visible = false;
@@ -98,10 +101,13 @@ namespace RegertrationPage
 
                 User newUser = new User
                 {
-                    FName = Uname.Text,
+                    FName = Fname.Text,
+                    LName = Lname.Text,
                     Email = email.Text,
                     Password = Pass.Text,
-                    NationalID = idnum.Text
+                    NationalID = idnum.Text,
+                    AccountStatus = true
+
                 };
 
                 _a_Five_a_Side.Users.Add(newUser);
@@ -113,7 +119,8 @@ namespace RegertrationPage
                 emailalarm.Visible = false;
                 Passalarm.Visible = false;
                 idalarm.Visible = false;
-                Uname.Text = "";
+                Fname.Text = "";
+                Lname.Text = "";
                 email.Text = "";
                 Pass.Text = "";
                 confpass.Text = "";
@@ -124,7 +131,8 @@ namespace RegertrationPage
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            Uname.Text = "";
+            Fname.Text = "";
+            Lname.Text = "";
             email.Text = "";
             Pass.Text = "";
             confpass.Text = "";

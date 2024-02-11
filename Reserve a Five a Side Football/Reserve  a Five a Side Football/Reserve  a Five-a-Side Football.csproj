@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addReservationByOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addReservationByOwner.Designer.cs">
+      <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddYourTeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="Add_IncomeingPrice.Designer.cs">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_update_del_Stadium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_update_del_Stadium.Designer.cs">
+      <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DataBase_Project.Context.cs">
       <AutoGen>True</AutoGen>
@@ -170,6 +182,9 @@
     <Compile Include="TeamInformatin.Designer.cs">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addReservationByOwner.resx">
+      <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
     </EmbeddedResource>

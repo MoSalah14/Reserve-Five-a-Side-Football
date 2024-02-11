@@ -1,24 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReservationPage
 {
-    public partial class ReservationForm : Form
+    public partial class addReservationByOwner : Form
     {
-        public ReservationForm()
+        public addReservationByOwner()
         {
             InitializeComponent();
             datealarm.Visible = false;
             stadalarm.Visible = false;
             payalarm.Visible = false;
+            idplayeralarm.Visible = false;
 
         }
 
@@ -33,13 +26,15 @@ namespace ReservationPage
 
             if (datebx.Value < dateTime.Value ||
                 stadbx.SelectedIndex == -1 ||
-                paybx.SelectedIndex == -1)
+                paybx.SelectedIndex == -1 ||
+                playerid.Text=="")
             {
                 if (datebx.Value < dateTime.Value)
                 {
                     datealarm.Visible = true;
                     stadalarm.Visible = false;
                     payalarm.Visible = false;
+                    idplayeralarm.Visible = false;
                 }
 
                 if (stadbx.SelectedIndex < 0)
@@ -47,19 +42,28 @@ namespace ReservationPage
                     datealarm.Visible = false;
                     stadalarm.Visible = true;
                     payalarm.Visible = false;
-
+                    idplayeralarm.Visible = false;
 
                 }
                 if (paybx.SelectedIndex < 0)
                 {
                     datealarm.Visible = false;
                     stadalarm.Visible = false;
-                    payalarm.Visible = true;
+                    idplayeralarm.Visible = true;
+                    payalarm.Visible = false;
+
+                }
+                if (playerid.Text == "")
+                {
+                    datealarm.Visible = false;
+                    stadalarm.Visible = false;
+                    payalarm.Visible = false;
+                    idplayeralarm.Visible = true;
+
                 }
                 //datealarm.Visible = false;
                 //stadalarm.Visible = false;
                 //payalarm.Visible = false;
-
 
                 MessageBox.Show("Invalid Data", "Confirm Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -69,6 +73,8 @@ namespace ReservationPage
                 datealarm.Visible = false;
                 stadalarm.Visible = false;
                 payalarm.Visible = false;
+                idplayeralarm.Visible = false;
+
                 datebx.Text = "";
                 stadbx.Text = "";
                 paybx.Text = "";
