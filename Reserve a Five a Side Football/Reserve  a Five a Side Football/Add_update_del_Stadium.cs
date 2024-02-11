@@ -199,5 +199,11 @@ namespace Reserve__a_Five_a_Side_Football
 
             e.Cancel = (result == DialogResult.No);
         }
+
+        private void uploadimgbtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.ShowDialog();
+        }
     }
 }
