@@ -1,9 +1,11 @@
 ﻿using RegertrationPage;
+using ReservationPage;
 using Reserve__a_Five_a_Side_Football.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,13 +19,17 @@ namespace Reserve__a_Five_a_Side_Football
         [STAThread]
         static void Main()
         {
+            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new LeagueForm());
-            // Application.Run(new Add_IncomeingPrice());
+
+            // Application.Run(new delReservation());
             // Application.Run(new Regest());
-            //Application.Run(new OwnerAddLeague());
-            Application.Run(new LeagueForm());
+             Application.Run(new Add_update_del_Stadium());
+          //Application.Run(new ReservationForm());
+
+
 
 
         }

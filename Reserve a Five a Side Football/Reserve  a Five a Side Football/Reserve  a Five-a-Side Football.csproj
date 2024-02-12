@@ -45,7 +45,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -64,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addReservationByOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addReservationByOwner.Designer.cs">
+      <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddYourTeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +83,12 @@
     </Compile>
     <Compile Include="Add_IncomeingPrice.Designer.cs">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_update_del_Stadium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_update_del_Stadium.Designer.cs">
+      <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DataBase_Project.Context.cs">
       <AutoGen>True</AutoGen>
@@ -108,6 +122,24 @@
     </Compile>
     <Compile Include="Database\User.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="delLegue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delLegue.Designer.cs">
+      <DependentUpon>delLegue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delReservation.Designer.cs">
+      <DependentUpon>delReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player Data.Designer.cs">
+      <DependentUpon>Player Data.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeScreen.cs">
       <SubType>Form</SubType>
@@ -157,11 +189,26 @@
     <Compile Include="TeamInformatin.Designer.cs">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addReservationByOwner.resx">
+      <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add_IncomeingPrice.resx">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_update_del_Stadium.resx">
+      <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delLegue.resx">
+      <DependentUpon>delLegue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delReservation.resx">
+      <DependentUpon>delReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player Data.resx">
+      <DependentUpon>Player Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
@@ -186,6 +233,9 @@
     </Compile>
     <EmbeddedResource Include="Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>

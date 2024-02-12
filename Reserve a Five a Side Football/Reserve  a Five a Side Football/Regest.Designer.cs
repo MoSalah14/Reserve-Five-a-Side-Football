@@ -38,7 +38,7 @@
             this.acountalarm = new System.Windows.Forms.Label();
             this.Signinbtn = new System.Windows.Forms.Button();
             this.Clearbtn = new System.Windows.Forms.Button();
-            this.Uname = new System.Windows.Forms.TextBox();
+            this.Fname = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
             this.Pass = new System.Windows.Forms.TextBox();
             this.confpass = new System.Windows.Forms.TextBox();
@@ -49,6 +49,8 @@
             this.namealarm = new System.Windows.Forms.Label();
             this.showpass = new System.Windows.Forms.CheckBox();
             this.RegFaildLbl = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Lname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +59,7 @@
             this.label1.Location = new System.Drawing.Point(363, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 31);
+            this.label1.Size = new System.Drawing.Size(136, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Up Now";
             // 
@@ -67,19 +69,19 @@
             this.label2.Location = new System.Drawing.Point(62, 173);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 31);
+            this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 98);
+            this.label3.Location = new System.Drawing.Point(45, 101);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 31);
+            this.label3.Size = new System.Drawing.Size(123, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "UserName";
+            this.label3.Text = "Firrst Name";
             // 
             // label4
             // 
@@ -87,7 +89,7 @@
             this.label4.Location = new System.Drawing.Point(62, 412);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 31);
+            this.label4.Size = new System.Drawing.Size(117, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "National ID";
             // 
@@ -97,7 +99,7 @@
             this.label5.Location = new System.Drawing.Point(62, 324);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 31);
+            this.label5.Size = new System.Drawing.Size(140, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Confirm Pass";
             // 
@@ -107,7 +109,7 @@
             this.label6.Location = new System.Drawing.Point(62, 241);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 31);
+            this.label6.Size = new System.Drawing.Size(106, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Password";
             // 
@@ -130,7 +132,7 @@
             this.acountalarm.Location = new System.Drawing.Point(291, 687);
             this.acountalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.acountalarm.Name = "acountalarm";
-            this.acountalarm.Size = new System.Drawing.Size(335, 31);
+            this.acountalarm.Size = new System.Drawing.Size(267, 25);
             this.acountalarm.TabIndex = 7;
             this.acountalarm.Text = "Already Have an Account?";
             this.acountalarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,18 +159,18 @@
             this.Clearbtn.UseVisualStyleBackColor = true;
             this.Clearbtn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Uname
+            // Fname
             // 
-            this.Uname.Location = new System.Drawing.Point(274, 92);
-            this.Uname.Name = "Uname";
-            this.Uname.Size = new System.Drawing.Size(352, 37);
-            this.Uname.TabIndex = 10;
+            this.Fname.Location = new System.Drawing.Point(181, 95);
+            this.Fname.Name = "Fname";
+            this.Fname.Size = new System.Drawing.Size(160, 31);
+            this.Fname.TabIndex = 10;
             // 
             // email
             // 
             this.email.Location = new System.Drawing.Point(274, 173);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(352, 37);
+            this.email.Size = new System.Drawing.Size(352, 31);
             this.email.TabIndex = 11;
             // 
             // Pass
@@ -176,7 +178,7 @@
             this.Pass.Location = new System.Drawing.Point(274, 241);
             this.Pass.Name = "Pass";
             this.Pass.PasswordChar = '•';
-            this.Pass.Size = new System.Drawing.Size(352, 37);
+            this.Pass.Size = new System.Drawing.Size(352, 31);
             this.Pass.TabIndex = 12;
             // 
             // confpass
@@ -184,14 +186,14 @@
             this.confpass.Location = new System.Drawing.Point(274, 324);
             this.confpass.Name = "confpass";
             this.confpass.PasswordChar = '•';
-            this.confpass.Size = new System.Drawing.Size(352, 37);
+            this.confpass.Size = new System.Drawing.Size(352, 31);
             this.confpass.TabIndex = 13;
             // 
             // idnum
             // 
             this.idnum.Location = new System.Drawing.Point(274, 409);
             this.idnum.Name = "idnum";
-            this.idnum.Size = new System.Drawing.Size(352, 37);
+            this.idnum.Size = new System.Drawing.Size(352, 31);
             this.idnum.TabIndex = 14;
             // 
             // Passalarm
@@ -202,7 +204,7 @@
             this.Passalarm.Location = new System.Drawing.Point(275, 364);
             this.Passalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Passalarm.Name = "Passalarm";
-            this.Passalarm.Size = new System.Drawing.Size(308, 18);
+            this.Passalarm.Size = new System.Drawing.Size(252, 15);
             this.Passalarm.TabIndex = 15;
             this.Passalarm.Text = "Password and confirm Password Must Same";
             // 
@@ -214,7 +216,7 @@
             this.emailalarm.Location = new System.Drawing.Point(271, 214);
             this.emailalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.emailalarm.Name = "emailalarm";
-            this.emailalarm.Size = new System.Drawing.Size(123, 18);
+            this.emailalarm.Size = new System.Drawing.Size(103, 15);
             this.emailalarm.TabIndex = 16;
             this.emailalarm.Text = "Email Is Not Valid";
             // 
@@ -226,7 +228,7 @@
             this.idalarm.Location = new System.Drawing.Point(275, 449);
             this.idalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.idalarm.Name = "idalarm";
-            this.idalarm.Size = new System.Drawing.Size(136, 18);
+            this.idalarm.Size = new System.Drawing.Size(114, 15);
             this.idalarm.TabIndex = 17;
             this.idalarm.Text = "ID Must 14 Number";
             // 
@@ -238,7 +240,7 @@
             this.namealarm.Location = new System.Drawing.Point(271, 132);
             this.namealarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.namealarm.Name = "namealarm";
-            this.namealarm.Size = new System.Drawing.Size(290, 18);
+            this.namealarm.Size = new System.Drawing.Size(240, 15);
             this.namealarm.TabIndex = 18;
             this.namealarm.Text = "User Name must be more than 6 character";
             // 
@@ -250,7 +252,7 @@
             this.showpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showpass.Location = new System.Drawing.Point(665, 247);
             this.showpass.Name = "showpass";
-            this.showpass.Size = new System.Drawing.Size(165, 29);
+            this.showpass.Size = new System.Drawing.Size(134, 24);
             this.showpass.TabIndex = 19;
             this.showpass.Text = "show password";
             this.showpass.UseVisualStyleBackColor = true;
@@ -264,16 +266,35 @@
             this.RegFaildLbl.Location = new System.Drawing.Point(204, 548);
             this.RegFaildLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RegFaildLbl.Name = "RegFaildLbl";
-            this.RegFaildLbl.Size = new System.Drawing.Size(470, 22);
+            this.RegFaildLbl.Size = new System.Drawing.Size(382, 18);
             this.RegFaildLbl.TabIndex = 20;
             this.RegFaildLbl.Text = "Invalid Data\", \"Registration Faild Please Add Correct Data";
             this.RegFaildLbl.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(363, 95);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 25);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Last Name";
+            // 
+            // Lname
+            // 
+            this.Lname.Location = new System.Drawing.Point(487, 92);
+            this.Lname.Name = "Lname";
+            this.Lname.Size = new System.Drawing.Size(160, 31);
+            this.Lname.TabIndex = 22;
+            // 
             // Regest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 811);
+            this.Controls.Add(this.Lname);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.RegFaildLbl);
             this.Controls.Add(this.showpass);
             this.Controls.Add(this.namealarm);
@@ -284,7 +305,7 @@
             this.Controls.Add(this.confpass);
             this.Controls.Add(this.Pass);
             this.Controls.Add(this.email);
-            this.Controls.Add(this.Uname);
+            this.Controls.Add(this.Fname);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.Signinbtn);
             this.Controls.Add(this.acountalarm);
@@ -317,7 +338,7 @@
         private System.Windows.Forms.Label acountalarm;
         private System.Windows.Forms.Button Signinbtn;
         private System.Windows.Forms.Button Clearbtn;
-        private System.Windows.Forms.TextBox Uname;
+        private System.Windows.Forms.TextBox Fname;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.TextBox confpass;
@@ -328,5 +349,7 @@
         private System.Windows.Forms.Label namealarm;
         private System.Windows.Forms.CheckBox showpass;
         private System.Windows.Forms.Label RegFaildLbl;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Lname;
     }
 }
