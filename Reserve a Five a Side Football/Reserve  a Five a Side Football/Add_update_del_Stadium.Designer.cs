@@ -39,13 +39,15 @@
             this.area = new System.Windows.Forms.TextBox();
             this.addbtn = new System.Windows.Forms.Button();
             this.stadiumData = new System.Windows.Forms.DataGridView();
-            this.deletebtn = new System.Windows.Forms.Button();
-            this.updatbtn = new System.Windows.Forms.Button();
-            this.Clearbtn = new System.Windows.Forms.Button();
             this.stadname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stadstate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stadarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricehour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletebtn = new System.Windows.Forms.Button();
+            this.updatbtn = new System.Windows.Forms.Button();
+            this.Clearbtn = new System.Windows.Forms.Button();
+            this.uploadimgbtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.stadiumData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,9 +74,8 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(571, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Photo";
             // 
             // label4
             // 
@@ -150,6 +151,30 @@
             this.stadiumData.TabIndex = 10;
             this.stadiumData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stadiumData_CellClick);
             // 
+            // stadname
+            // 
+            this.stadname.HeaderText = "Stad Name";
+            this.stadname.Name = "stadname";
+            this.stadname.Width = 150;
+            // 
+            // Stadstate
+            // 
+            this.Stadstate.HeaderText = "Stad Status";
+            this.Stadstate.Name = "Stadstate";
+            this.Stadstate.Width = 150;
+            // 
+            // stadarea
+            // 
+            this.stadarea.HeaderText = "Area";
+            this.stadarea.Name = "stadarea";
+            this.stadarea.Width = 150;
+            // 
+            // pricehour
+            // 
+            this.pricehour.HeaderText = "Hourly Price";
+            this.pricehour.Name = "pricehour";
+            this.pricehour.Width = 150;
+            // 
             // deletebtn
             // 
             this.deletebtn.Location = new System.Drawing.Point(375, 147);
@@ -180,35 +205,22 @@
             this.Clearbtn.UseVisualStyleBackColor = true;
             this.Clearbtn.Click += new System.EventHandler(this.Clearbtn_Click);
             // 
-            // stadname
+            // uploadimgbtn
             // 
-            this.stadname.HeaderText = "Stad Name";
-            this.stadname.Name = "stadname";
-            this.stadname.Width = 150;
-            // 
-            // Stadstate
-            // 
-            this.Stadstate.HeaderText = "Stad Status";
-            this.Stadstate.Name = "Stadstate";
-            this.Stadstate.Width = 150;
-            // 
-            // stadarea
-            // 
-            this.stadarea.HeaderText = "Area";
-            this.stadarea.Name = "stadarea";
-            this.stadarea.Width = 150;
-            // 
-            // pricehour
-            // 
-            this.pricehour.HeaderText = "Hourly Price";
-            this.pricehour.Name = "pricehour";
-            this.pricehour.Width = 150;
+            this.uploadimgbtn.Location = new System.Drawing.Point(537, 21);
+            this.uploadimgbtn.Name = "uploadimgbtn";
+            this.uploadimgbtn.Size = new System.Drawing.Size(180, 49);
+            this.uploadimgbtn.TabIndex = 14;
+            this.uploadimgbtn.Text = "Choose Image";
+            this.uploadimgbtn.UseVisualStyleBackColor = true;
+            this.uploadimgbtn.Click += new System.EventHandler(this.uploadimgbtn_Click);
             // 
             // Add_update_del_Stadium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 609);
+            this.Controls.Add(this.uploadimgbtn);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.updatbtn);
             this.Controls.Add(this.deletebtn);
@@ -255,5 +267,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stadstate;
         private System.Windows.Forms.DataGridViewTextBoxColumn stadarea;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricehour;
+        private System.Windows.Forms.Button uploadimgbtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
