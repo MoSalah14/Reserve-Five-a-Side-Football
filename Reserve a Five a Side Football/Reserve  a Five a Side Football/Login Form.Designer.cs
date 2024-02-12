@@ -85,7 +85,6 @@ namespace Login_
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(195, 29);
             textBox1.TabIndex = 4;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -95,7 +94,6 @@ namespace Login_
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(195, 29);
             textBox2.TabIndex = 5;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
             // 

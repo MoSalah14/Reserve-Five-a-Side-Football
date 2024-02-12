@@ -90,6 +90,7 @@
     <Compile Include="Add_update_del_Stadium.Designer.cs">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrentUserLogin.cs" />
     <Compile Include="Database\DataBase_Project.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
