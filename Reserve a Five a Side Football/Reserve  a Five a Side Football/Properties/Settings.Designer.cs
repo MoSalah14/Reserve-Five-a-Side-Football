@@ -33,5 +33,16 @@ namespace Reserve__a_Five_a_Side_Football.Properties {
                 return ((string)(this["Reserve_a_Five_a_SideConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-H0D6UNM\\MSSQLSERVER01;Initial Catalog=Reserve_a_Five_a_Side;I" +
+            "ntegrated Security=True;TrustServerCertificate=True")]
+        public string Reserve_a_Five_a_SideConnectionString1 {
+            get {
+                return ((string)(this["Reserve_a_Five_a_SideConnectionString1"]));
+            }
+        }
     }
 }
