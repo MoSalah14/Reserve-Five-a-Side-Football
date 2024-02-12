@@ -36,18 +36,18 @@
             this.confbtn = new System.Windows.Forms.Button();
             this.datebx = new System.Windows.Forms.DateTimePicker();
             this.stadbx = new System.Windows.Forms.ComboBox();
-            this.timebx = new System.Windows.Forms.DateTimePicker();
             this.paybx = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.datealarm = new System.Windows.Forms.Label();
             this.payalarm = new System.Windows.Forms.Label();
             this.stadalarm = new System.Windows.Forms.Label();
+            this.timeComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(250, 22);
+            this.label1.Location = new System.Drawing.Point(387, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 31);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 88);
+            this.label2.Location = new System.Drawing.Point(25, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 31);
             this.label2.TabIndex = 1;
@@ -65,11 +65,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 151);
+            this.label3.Location = new System.Drawing.Point(25, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 31);
+            this.label3.Size = new System.Drawing.Size(113, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Stadium Number";
+            this.label3.Text = "Stadium";
             // 
             // label4
             // 
@@ -103,7 +103,7 @@
             // 
             this.datebx.CustomFormat = "dd-MM-yyyy";
             this.datebx.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datebx.Location = new System.Drawing.Point(105, 83);
+            this.datebx.Location = new System.Drawing.Point(191, 63);
             this.datebx.Name = "datebx";
             this.datebx.Size = new System.Drawing.Size(205, 37);
             this.datebx.TabIndex = 6;
@@ -111,19 +111,11 @@
             // stadbx
             // 
             this.stadbx.FormattingEnabled = true;
-            this.stadbx.Location = new System.Drawing.Point(211, 143);
+            this.stadbx.Location = new System.Drawing.Point(191, 143);
             this.stadbx.Name = "stadbx";
             this.stadbx.Size = new System.Drawing.Size(121, 38);
             this.stadbx.TabIndex = 7;
-            // 
-            // timebx
-            // 
-            this.timebx.CustomFormat = "HH:mm:SS";
-            this.timebx.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timebx.Location = new System.Drawing.Point(189, 214);
-            this.timebx.Name = "timebx";
-            this.timebx.Size = new System.Drawing.Size(143, 37);
-            this.timebx.TabIndex = 8;
+            this.stadbx.SelectedIndexChanged += new System.EventHandler(this.stadbx_SelectedIndexChanged);
             // 
             // paybx
             // 
@@ -132,7 +124,7 @@
             "Cash",
             "Credit Card",
             "wallet Cash"});
-            this.paybx.Location = new System.Drawing.Point(174, 302);
+            this.paybx.Location = new System.Drawing.Point(174, 305);
             this.paybx.Name = "paybx";
             this.paybx.Size = new System.Drawing.Size(179, 38);
             this.paybx.TabIndex = 9;
@@ -140,43 +132,57 @@
             // datealarm
             // 
             this.datealarm.AutoSize = true;
-            this.datealarm.BackColor = System.Drawing.Color.Red;
-            this.datealarm.Location = new System.Drawing.Point(411, 83);
+            this.datealarm.BackColor = System.Drawing.Color.Transparent;
+            this.datealarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datealarm.ForeColor = System.Drawing.Color.Red;
+            this.datealarm.Location = new System.Drawing.Point(195, 103);
             this.datealarm.Name = "datealarm";
-            this.datealarm.Size = new System.Drawing.Size(252, 31);
+            this.datealarm.Size = new System.Drawing.Size(158, 20);
             this.datealarm.TabIndex = 10;
             this.datealarm.Text = "Date Must be future";
             // 
             // payalarm
             // 
             this.payalarm.AutoSize = true;
-            this.payalarm.BackColor = System.Drawing.Color.Red;
+            this.payalarm.BackColor = System.Drawing.Color.Transparent;
+            this.payalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payalarm.ForeColor = System.Drawing.Color.Red;
             this.payalarm.Location = new System.Drawing.Point(411, 305);
             this.payalarm.Name = "payalarm";
-            this.payalarm.Size = new System.Drawing.Size(250, 31);
+            this.payalarm.Size = new System.Drawing.Size(154, 20);
             this.payalarm.TabIndex = 11;
             this.payalarm.Text = "Choose Way to pay";
             // 
             // stadalarm
             // 
             this.stadalarm.AutoSize = true;
-            this.stadalarm.BackColor = System.Drawing.Color.Red;
-            this.stadalarm.Location = new System.Drawing.Point(411, 146);
+            this.stadalarm.BackColor = System.Drawing.Color.Transparent;
+            this.stadalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stadalarm.ForeColor = System.Drawing.Color.Red;
+            this.stadalarm.Location = new System.Drawing.Point(187, 193);
             this.stadalarm.Name = "stadalarm";
-            this.stadalarm.Size = new System.Drawing.Size(214, 31);
+            this.stadalarm.Size = new System.Drawing.Size(132, 20);
             this.stadalarm.TabIndex = 12;
             this.stadalarm.Text = "Choose Stadium";
+            // 
+            // timeComboBox
+            // 
+            this.timeComboBox.FormattingEnabled = true;
+            this.timeComboBox.Location = new System.Drawing.Point(191, 229);
+            this.timeComboBox.Name = "timeComboBox";
+            this.timeComboBox.Size = new System.Drawing.Size(121, 38);
+            this.timeComboBox.TabIndex = 13;
             // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 584);
+            this.ClientSize = new System.Drawing.Size(1047, 584);
+            this.Controls.Add(this.timeComboBox);
             this.Controls.Add(this.stadalarm);
             this.Controls.Add(this.payalarm);
             this.Controls.Add(this.datealarm);
             this.Controls.Add(this.paybx);
-            this.Controls.Add(this.timebx);
             this.Controls.Add(this.stadbx);
             this.Controls.Add(this.datebx);
             this.Controls.Add(this.confbtn);
@@ -206,11 +212,11 @@
         private System.Windows.Forms.Button confbtn;
         private System.Windows.Forms.DateTimePicker datebx;
         private System.Windows.Forms.ComboBox stadbx;
-        private System.Windows.Forms.DateTimePicker timebx;
         private System.Windows.Forms.ComboBox paybx;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label datealarm;
         private System.Windows.Forms.Label payalarm;
         private System.Windows.Forms.Label stadalarm;
+        private System.Windows.Forms.ComboBox timeComboBox;
     }
 }
