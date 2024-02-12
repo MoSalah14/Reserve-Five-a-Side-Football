@@ -14,13 +14,12 @@ namespace Reserve__a_Five_a_Side_Football
         DataTable data = new DataTable();
         int selectedrow;
         private Reserve_a_Five_a_SideEntities context_stadium;
-
+        string filePath;
         public Add_update_del_Stadium()
         {
             InitializeComponent();
             context_stadium = new Reserve_a_Five_a_SideEntities();
-            //SqlDataAdapter ad = new SqlDataAdapter("select * from ", );
-
+             filePath = openFileDialog1.FileName;
         }
 
         private void getdata()
@@ -36,6 +35,7 @@ namespace Reserve__a_Five_a_Side_Football
                     item.Stad_Status,
                     item.Area,
                     item.Hourly_Price
+                    //item.Stadium_Image
                     );
             }
         }
@@ -44,7 +44,7 @@ namespace Reserve__a_Five_a_Side_Football
             if (name.Text == "" ||
                 price.Text == "" ||
                 state.SelectedIndex == -1 ||
-                area.Text == "")
+                area.Text == ""|| filePath=="")
             {
 
                 MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -60,6 +60,7 @@ namespace Reserve__a_Five_a_Side_Football
                     Stad_Status = state.SelectedItem.ToString(),
                     Area = area.Text,
                     Hourly_Price = int.Parse(price.Text),
+                    Stadium_Image = filePath
 
                 };
                 context_stadium.Stadiaum.Add(std1);
@@ -70,6 +71,8 @@ namespace Reserve__a_Five_a_Side_Football
                 price.Text = "";
                 state.Text = "";
                 area.Text = "";
+                filePath = "";
+
 
             }
         }
@@ -98,7 +101,8 @@ namespace Reserve__a_Five_a_Side_Football
             if (name.Text == "" ||
                 price.Text == "" ||
                 state.SelectedIndex == -1 ||
-                area.Text == "")
+                area.Text == "" || filePath == ""
+)
             {
 
                 MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,6 +127,7 @@ namespace Reserve__a_Five_a_Side_Football
                 price.Text = "";
                 state.Text = "";
                 area.Text = "";
+                filePath = "";
             }
 
 
@@ -135,7 +140,7 @@ namespace Reserve__a_Five_a_Side_Football
                 if (name.Text == "" ||
                    price.Text == "" ||
                    state.SelectedIndex == -1 ||
-                   area.Text == "")
+                   area.Text == "" || openFileDialog1.FileName == "")
                 {
 
                     MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -162,6 +167,8 @@ namespace Reserve__a_Five_a_Side_Football
                         price.Text = "";
                         state.Text = "";
                         area.Text = "";
+                        openFileDialog1.FileName = "";
+
                     }
                     else
                     {
@@ -169,6 +176,8 @@ namespace Reserve__a_Five_a_Side_Football
                         price.Text = "";
                         state.Text = "";
                         area.Text = "";
+                        openFileDialog1.FileName = "";
+
                     }
 
 
@@ -189,6 +198,7 @@ namespace Reserve__a_Five_a_Side_Football
             price.Text = "";
             state.Text = "";
             area.Text = "";
+            openFileDialog1.FileName = "";
         }
 
         private void Add_update_del_Stadium_FormClosing(object sender, FormClosingEventArgs e)
@@ -202,8 +212,14 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void uploadimgbtn_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.ShowDialog();
+            openFileDialog1.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif|All files|*.*";
+            var result=openFileDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                 filePath = openFileDialog1.FileName;
+            }
+           
         }
     }
 }
