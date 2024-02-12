@@ -179,6 +179,11 @@
     <Compile Include="ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reserve_a_Five_a_SideDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reserve_a_Five_a_SideDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TeamInformatin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +258,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reserve_a_Five_a_SideDataSet.xsc">
+      <DependentUpon>Reserve_a_Five_a_SideDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reserve_a_Five_a_SideDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reserve_a_Five_a_SideDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reserve_a_Five_a_SideDataSet.xss">
+      <DependentUpon>Reserve_a_Five_a_SideDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
