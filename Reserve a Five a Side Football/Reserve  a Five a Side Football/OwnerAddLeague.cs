@@ -76,11 +76,11 @@ namespace Reserve__a_Five_a_Side_Football
             this.legaueTableAdapter.Fill(this.reserve_a_Five_a_SideDataSet.Legaue);
             //Clear();
             //PopulateDataGridview();
-            var StadiumName = DB.Stadiaum.Select(et => et.Stad_Name).ToList();
+            var StadiumName = DB.Stadium.Select(et => et.Stad_Name).ToList();
             foreach (var item in StadiumName)
                 StadiumNameCmb.Items.Add(item);
 
-            var City = DB.Stadiaum.Select(et => et.Area).ToList();
+            var City = DB.Stadium.Select(et => et.Area).ToList();
             foreach (var item in City)
                 CityCmb.Items.Add(item);
 
@@ -158,7 +158,7 @@ namespace Reserve__a_Five_a_Side_Football
           if (ValidateInput())
                 {
                     Legaue legaue = new Legaue();
-                var stadiumIds = DB.Stadiaum
+                var stadiumIds = DB.Stadium
                 .Where(r => r.Stad_Name == StadiumNameCmb.SelectedItem.ToString())
                  .Select(r => r.StadiumID).FirstOrDefault();
             legaue.Legue_Name = legaueNametxt.Text;

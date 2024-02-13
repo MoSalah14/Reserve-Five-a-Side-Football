@@ -120,6 +120,9 @@
     <Compile Include="Database\Stadium.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\Team.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\User.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
