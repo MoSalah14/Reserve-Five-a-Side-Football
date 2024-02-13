@@ -124,7 +124,7 @@
             "Cash",
             "Credit Card",
             "wallet Cash"});
-            this.paybx.Location = new System.Drawing.Point(174, 305);
+            this.paybx.Location = new System.Drawing.Point(191, 305);
             this.paybx.Name = "paybx";
             this.paybx.Size = new System.Drawing.Size(179, 38);
             this.paybx.TabIndex = 9;
@@ -147,7 +147,7 @@
             this.payalarm.BackColor = System.Drawing.Color.Transparent;
             this.payalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payalarm.ForeColor = System.Drawing.Color.Red;
-            this.payalarm.Location = new System.Drawing.Point(411, 305);
+            this.payalarm.Location = new System.Drawing.Point(187, 346);
             this.payalarm.Name = "payalarm";
             this.payalarm.Size = new System.Drawing.Size(154, 20);
             this.payalarm.TabIndex = 11;
