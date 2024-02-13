@@ -17,7 +17,10 @@
         <AssociationConnector Association="Reserve_a_Five_a_SideModel.Player_Reservation_FK" ManuallyRouted="false" />
         <AssociationConnector Association="Reserve_a_Five_a_SideModel.Player_Users" ManuallyRouted="false" />
         <AssociationConnector Association="Reserve_a_Five_a_SideModel.Stadium_Reservation_FK" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Team" Width="1.5" PointX="7.5" PointY="6.5" />
+        <AssociationConnector Association="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK" />
+        <AssociationConnector Association="Reserve_a_Five_a_SideModel.MyTeam_Captain_FK" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

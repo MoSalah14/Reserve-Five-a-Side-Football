@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reserve__a_Five_a_Side_Football.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,7 @@ namespace Reserve__a_Five_a_Side_Football
 {
     public partial class AddYourTeam : Form
     {
-        private int count = 1;
-        //private int playerCount = 1;
-        private HashSet<string> playerIDs = new HashSet<string>();
+        Reserve_a_Five_a_SideEntities DB = new Reserve_a_Five_a_SideEntities();
 
         public AddYourTeam()
         {
@@ -28,47 +27,90 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void AddYourTeam_Load(object sender, EventArgs e)
         {
-            UpdateCountLabel();
+            var StadiumName = DB.Legaues.Select(et => et.Legue_Name).ToList();
+            foreach (var item in StadiumName)
+                LeagueNameCmb.Items.Add(item);
+
         }
 
-        private void UpdateCountLabel()
-        {
-            countLabel.Text = $" {count}";
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string playerID = inputTextBox.Text.Trim();
-
-            if (!string.IsNullOrEmpty(playerID))
+            if (ValidateInput()) 
             {
-                if (!playerIDs.Contains(playerID))
-                {
-                    playerIDs.Add(playerID);
-                    MessageBox.Show($"player {count} added successfully!");
-                    count++;
-                    UpdateCountLabel();
-                    //MessageBox.Show($"player {count} added successfully!");
-                    // countLabel.Text = playerIDs.Count.ToString();
-
-                    if (playerIDs.Count == 5)
-                    {
-                        MessageBox.Show("Team added successfully!");
-                        this.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Player ID already exists. Please enter a unique ID.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a player ID.");
+                Team team = new Team();
+                var league_Id = DB.Legaues
+                .Where(r => r.Legue_Name == LeagueNameCmb.SelectedItem.ToString())
+                  .Select(r => r.LegueID).FirstOrDefault();
+                team.TeamName = TeamNametxt.Text;
+                team.CaptainID = int.Parse(CaptinIdtxt.Text);
+                team.NationalID_Player1=NationalIDplayer1txt.Text;
+                team.NationalID_Player2=NationalIDplayer2txt.Text;
+                team.NationalID_Player3 = NationalIDplayer3txt.Text;
+                team.NationalID_Player4 = NationalIDplayer4txt.Text;
+                team.NationalID_Player5 = NationalIDplayer5txt.Text;
+                team.LegueID = league_Id;
+                DB.Teams.Add(team);
+                DB.SaveChanges();
+                MessageBox.Show("DONE");
             }
 
-            
+        }
+        private bool ValidateInput()
+        {
 
+            Team team = new Team();
+            if (string.IsNullOrWhiteSpace(TeamNametxt.Text) ||
+                string.IsNullOrWhiteSpace(CaptinIdtxt.Text) ||
+                string.IsNullOrWhiteSpace(NationalIDplayer1txt.Text) ||
+                string.IsNullOrWhiteSpace(NationalIDplayer2txt.Text) ||
+                string.IsNullOrWhiteSpace(NationalIDplayer3txt.Text) ||
+                string.IsNullOrWhiteSpace(NationalIDplayer4txt.Text)
+
+                )
+            {
+                MessageBox.Show("Please fill in all required fields.");
+                return false;
+            }
+            if (!CheckNationalIDExistence(NationalIDplayer1txt.Text))
+            {
+                MessageBox.Show("National ID for Player 1 is not registered.");
+                button2.Visible = true;
+                return false;
+            }
+            if (!CheckNationalIDExistence(NationalIDplayer2txt.Text))
+            {
+                MessageBox.Show("National ID for Player 2 is not registered.");
+                button2.Visible = true;
+                return false;
+            }
+            if (!CheckNationalIDExistence(NationalIDplayer3txt.Text))
+            {
+                MessageBox.Show("National ID for Player 3 is not registered.");
+                button2.Visible = true;
+                return false;
+            }
+            if (!CheckNationalIDExistence(NationalIDplayer4txt.Text))
+            {
+                MessageBox.Show("National ID for Player 4 is not registered.");
+                button2.Visible = true;
+                return false;
+            }
+            if (!CheckNationalIDExistence(NationalIDplayer5txt.Text))
+            {
+                MessageBox.Show("National ID for Player 5 is not registered.");
+                button2.Visible = true;
+                return false;
+            }
+           
+            return true;
+
+        }
+        private bool CheckNationalIDExistence(string nationalID)
+        {
+            var existingUser = DB.Users.FirstOrDefault(u => u.NationalID == nationalID);
+            return existingUser != null;
         }
     }
 }

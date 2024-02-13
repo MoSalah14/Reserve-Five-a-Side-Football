@@ -24,7 +24,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void getdata()
         {
-            var query = from a in context_stadium.Stadiaum
+            var query = from a in context_stadium.Stadium
                         select a;
             stadiumData.Rows.Clear();
             foreach (var item in query)
@@ -63,7 +63,7 @@ namespace Reserve__a_Five_a_Side_Football
                     Stadium_Image = filePath
 
                 };
-                context_stadium.Stadiaum.Add(std1);
+                context_stadium.Stadium.Add(std1);
                 context_stadium.SaveChanges();
                 getdata();
 
@@ -113,7 +113,7 @@ namespace Reserve__a_Five_a_Side_Football
                 DataGridViewRow row = stadiumData.Rows[selectedrow];
                 string _Name = row.Cells[0].FormattedValue.ToString();
 
-                Stadium std1 = context_stadium.Stadiaum.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
+                Stadium std1 = context_stadium.Stadium.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
 
                 std1.Stad_Name = name.Text;
                 std1.Stad_Status = state.SelectedItem.ToString();
@@ -157,9 +157,9 @@ namespace Reserve__a_Five_a_Side_Football
                     {
                         DataGridViewRow row = stadiumData.Rows[selectedrow];
                         string _Name = row.Cells[0].FormattedValue.ToString();
-                        Stadium std1 = context_stadium.Stadiaum.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
+                        Stadium std1 = context_stadium.Stadium.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
 
-                        context_stadium.Stadiaum.Remove(std1);
+                        context_stadium.Stadium.Remove(std1);
                         context_stadium.SaveChanges();
                         getdata();
 
