@@ -15,29 +15,6 @@ namespace Login_
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            string email = textBox1.Text;
-            string password = textBox2.Text;
-
-            var user = Context.Users.Where(u => u.Email == email && u.Password == password).FirstOrDefault();
-
-            if (user == null)
-            {
-                MessageBox.Show("Invalid email or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                CurrentUserLogin.UserLogginID = user.UserID;
-                MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
-        }
-
-
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             var result = MessageBox.Show("Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -60,5 +37,25 @@ namespace Login_
                 textBox2.PasswordChar = '*';
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string email = textBox1.Text;
+            string password = textBox2.Text;
+
+            var user = Context.Users.Where(u => u.Email == email && u.Password == password).FirstOrDefault();
+
+            if (user == null)
+            {
+                MessageBox.Show("Invalid email or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                CurrentUserLogin.UserLogginID = user.UserID;
+                MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        
     }
 }
