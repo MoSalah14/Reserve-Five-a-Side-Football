@@ -184,6 +184,12 @@
     <Compile Include="TeamInformatin.Designer.cs">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </Compile>
+    <Compile Include="update&amp; delete_Legue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update&amp; delete_Legue.Designer.cs">
+      <DependentUpon>update&amp; delete_Legue.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update&amp; delete_Legue.resx">
+      <DependentUpon>update&amp; delete_Legue.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\DataBase_Project.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
