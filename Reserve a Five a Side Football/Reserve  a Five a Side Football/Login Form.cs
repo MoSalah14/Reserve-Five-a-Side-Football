@@ -1,72 +1,19 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 using System;
+using Reserve__a_Five_a_Side_Football;
+using Reserve__a_Five_a_Side_Football.Database;
 
 namespace Login_
 {
     public partial class Login_Form : Form
     {
+        Reserve_a_Five_a_SideEntities Context;
         public Login_Form()
         {
+            Context = new Reserve_a_Five_a_SideEntities();
             InitializeComponent();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-            string email = textBox1.Text;
-
-            if (!email.Contains('@'))
-            {
-                label3.Visible = true;
-                label3.Text = "Email must contain @";
-            }
-            else
-            {
-                label3.Visible = false;
-            }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            string passwordPattern = "^[A-Za-z\\d@$!%*?&].{7,19}$";
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, passwordPattern))
-            {
-                label4.Visible = true;
-                label4.Text = "Password must contain 8 letters";
-            }
-            else
-            {
-                label4.Visible = false;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            string email = textBox1.Text;
-            string password = textBox2.Text;
-
-
-            // Check if both email and password are not empty
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
-            {
-                MessageBox.Show("Please enter both email and password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;  // Exit the method, as login is not possible with empty fields
-            }
-            if ((label3.Visible || label4.Visible))
-            {
-                MessageBox.Show("Please enter a valid data.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
-
-
-            MessageBox.Show("Login Done Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        }
-
-
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -90,5 +37,25 @@ namespace Login_
                 textBox2.PasswordChar = '*';
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string email = textBox1.Text;
+            string password = textBox2.Text;
+
+            var user = Context.Users.Where(u => u.Email == email && u.Password == password).FirstOrDefault();
+
+            if (user == null)
+            {
+                MessageBox.Show("Invalid email or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                CurrentUserLogin.UserLogginID = user.UserID;
+                MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        
     }
 }

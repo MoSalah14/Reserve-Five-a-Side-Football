@@ -215,10 +215,6 @@
             this.uploadimgbtn.UseVisualStyleBackColor = true;
             this.uploadimgbtn.Click += new System.EventHandler(this.uploadimgbtn_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "UploadImg";
-            // 
             // Add_update_del_Stadium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);

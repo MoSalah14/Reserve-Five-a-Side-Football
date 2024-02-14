@@ -29,7 +29,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public virtual DbSet<Ownar> Ownars { get; set; }
         public virtual DbSet<Player> Players { get; set; }
         public virtual DbSet<Reservation> Reservations { get; set; }
-        public virtual DbSet<Stadium> Stadiaum { get; set; }
+        public virtual DbSet<Stadium> Stadium { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

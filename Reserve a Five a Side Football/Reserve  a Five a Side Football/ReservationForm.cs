@@ -27,6 +27,12 @@ namespace ReservationPage
             payalarm.Visible = false;
             GetContext = new Reserve_a_Five_a_SideEntities();
         }
+        private void ReservationForm_Load(object sender, EventArgs e)
+        {
+            var StadiumName = GetContext.Stadium.Select(et => et.Stad_Name).ToList();
+            foreach (var item in StadiumName)
+                stadbx.Items.Add(item);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             DateTimePicker dateTime = new DateTimePicker();
@@ -62,23 +68,27 @@ namespace ReservationPage
                 datealarm.Visible = false;
                 stadalarm.Visible = false;
                 payalarm.Visible = false;
-                datebx.Text = "";
+                //datebx.Text = "";
                 stadbx.Text = "";
                 paybx.Text = "";
-                timebx.Text = "";
+                timeComboBox.Text = "";
 
                 var stadiumId = GetContext.Reservations
                 .Where(r => r.Stadium.Stad_Name == stadbx.SelectedItem.ToString())
                 .Select(r => r.StadiumID)
                 .FirstOrDefault();
 
+                var x = datebx.Value.Date.ToString();
+
                 Reservation newReservation = new Reservation
                 {
-                    Reservation_Date = DateTime.Parse(datebx.Text),
-                    Reservation_Time = TimeSpan.Parse(timebx.Text),
-                    Payment = paybx.Text,
+                    
+                    Reservation_Date = DateTime.Parse(datebx.Value.Date.ToString()),
+                    Reservation_Time = TimeSpan.Parse(timeComboBox.SelectedItem.ToString()),
+                    Payment = paybx.SelectedItem.ToString(),
                     StadiumID = stadiumId,
                 };
+
 
                 GetContext.Reservations.Add(newReservation);
                 GetContext.SaveChanges();
@@ -97,16 +107,46 @@ namespace ReservationPage
             e.Cancel = (result == DialogResult.No);
         }
 
-        private void ReservationForm_Load(object sender, EventArgs e)
-        {
-            // Get Stadium Names
-            var StadiumName = GetContext.Stadiaum.Select(et => et.Stad_Name).ToList();
-            foreach (var item in StadiumName)
-                stadbx.Items.Add(item);
 
-            timebx.Format = DateTimePickerFormat.Custom;
-            timebx.CustomFormat = "hh:00:00";
-            timebx.ShowUpDown = true;
+        private void PopulateTimeSlots(List<TimeSpan> availableTimeslots)
+        {
+            timeComboBox.Items.Clear();
+
+            // Show Data in Compo Box
+            foreach (var timeSlot in availableTimeslots)
+                timeComboBox.Items.Add(timeSlot.ToString("hh\\:mm"));
         }
+
+
+        private void stadbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (stadbx.SelectedIndex != -1 && datebx.Value != null)
+            {
+                // Get stadium's ID
+                var stadiumId = GetContext.Stadium
+                    .Where(s => s.Stad_Name == stadbx.SelectedItem.ToString())
+                    .Select(s => s.StadiumID)
+                    .FirstOrDefault();
+
+                // Get  Reservations by selected Stadium and date
+                var reservations = GetContext.Reservations
+                    .Where(r => r.StadiumID == stadiumId && r.Reservation_Date == datebx.Value.Date).ToList();
+
+                // Get  reserved timeslots for the selected date
+                var reservedTimeslots = reservations.Select(r => r.Reservation_Time).ToList();
+
+                // Get all available timeslots (24 hours)
+                var allTimeslots = Enumerable.Range(0, 24)
+                    .Select(hour => new TimeSpan(hour, 0, 0)).ToList();
+
+                // Remove reserved timeslots from the list of all timeslots
+                foreach (var reservedTime in reservedTimeslots)
+                    allTimeslots.RemoveAll(time => time == reservedTime);
+                
+                PopulateTimeSlots(allTimeslots);
+            }
+
+        }
+
     }
 }
