@@ -14,6 +14,12 @@ namespace Reserve__a_Five_a_Side_Football.Database
     
     public partial class Legaue
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Legaue()
+        {
+            this.Teams = new HashSet<Team>();
+        }
+    
         public int LegueID { get; set; }
         public string Legue_Name { get; set; }
         public System.DateTime BeginDate { get; set; }
@@ -26,5 +32,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public System.TimeSpan TimePlay { get; set; }
     
         public virtual Stadium Stadium { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Team> Teams { get; set; }
     }
 }

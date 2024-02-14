@@ -59,6 +59,20 @@
           <Property Name="Hourly_Price" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Stadium_Image" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeamName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CaptainID" Type="int" Nullable="false" />
+          <Property Name="NationalID_Player1" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="NationalID_Player2" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="NationalID_Player3" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="NationalID_Player4" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="NationalID_Player5" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="LegueID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="UserID" />
@@ -83,6 +97,34 @@
             </Principal>
             <Dependent Role="Legaue">
               <PropertyRef Name="StadiumID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MyTeam_Captain_FK">
+          <End Role="Player" Type="Self.Player" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Team" Type="Self.Team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="Player_ID" />
+            </Principal>
+            <Dependent Role="Team">
+              <PropertyRef Name="CaptainID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MyTeam_Legue_FK">
+          <End Role="Legaue" Type="Self.Legaue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Team" Type="Self.Team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legaue">
+              <PropertyRef Name="LegueID" />
+            </Principal>
+            <Dependent Role="Team">
+              <PropertyRef Name="LegueID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -160,10 +202,19 @@
           <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stadium" EntityType="Self.Stadium" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="Legue_Stadium" Association="Self.Legue_Stadium">
             <End Role="Stadium" EntitySet="Stadium" />
             <End Role="Legaue" EntitySet="Legaue" />
+          </AssociationSet>
+          <AssociationSet Name="MyTeam_Captain_FK" Association="Self.MyTeam_Captain_FK">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Team" EntitySet="Team" />
+          </AssociationSet>
+          <AssociationSet Name="MyTeam_Legue_FK" Association="Self.MyTeam_Legue_FK">
+            <End Role="Legaue" EntitySet="Legaue" />
+            <End Role="Team" EntitySet="Team" />
           </AssociationSet>
           <AssociationSet Name="Ownar_Reservation_FK" Association="Self.Ownar_Reservation_FK">
             <End Role="Ownar" EntitySet="Ownar" />
@@ -205,6 +256,7 @@
           <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TimePlay" Type="Time" Nullable="false" Precision="7" />
           <NavigationProperty Name="Stadium" Relationship="Self.Legue_Stadium" FromRole="Legaue" ToRole="Stadium" />
+          <NavigationProperty Name="Teams" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK" FromRole="Legaue" ToRole="Team" />
         </EntityType>
         <EntityType Name="Ownar">
           <Key>
@@ -224,6 +276,7 @@
           <Property Name="UserID" Type="Int32" />
           <NavigationProperty Name="Reservations" Relationship="Self.Player_Reservation_FK" FromRole="Player" ToRole="Reservation" />
           <NavigationProperty Name="User" Relationship="Self.Player_Users" FromRole="Player" ToRole="Users" />
+          <NavigationProperty Name="Teams" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Captain_FK" FromRole="Player" ToRole="Team" />
         </EntityType>
         <EntityType Name="Reservation">
           <Key>
@@ -382,8 +435,61 @@
             <End Role="Stadium" EntitySet="Stadia" />
             <End Role="Reservation" EntitySet="Reservations" />
           </AssociationSet>
-        </EntityContainer>
-      </Schema>
+          <EntitySet Name="Teams" EntityType="Reserve_a_Five_a_SideModel.Team" />
+          <AssociationSet Name="MyTeam_Legue_FK" Association="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK">
+            <End Role="Legaue" EntitySet="Legaues" />
+            <End Role="Team" EntitySet="Teams" />
+          </AssociationSet>
+          <AssociationSet Name="MyTeam_Captain_FK" Association="Reserve_a_Five_a_SideModel.MyTeam_Captain_FK">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="Team" EntitySet="Teams" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeamName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CaptainID" Type="Int32" Nullable="false" />
+          <Property Name="NationalID_Player1" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="NationalID_Player2" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="NationalID_Player3" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="NationalID_Player4" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="NationalID_Player5" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="LegueID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Legaue" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK" FromRole="Team" ToRole="Legaue" />
+          <NavigationProperty Name="Player" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Captain_FK" FromRole="Team" ToRole="Player" />
+        </EntityType>
+        <Association Name="MyTeam_Legue_FK">
+          <End Type="Reserve_a_Five_a_SideModel.Legaue" Role="Legaue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Reserve_a_Five_a_SideModel.Team" Role="Team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legaue">
+              <PropertyRef Name="LegueID" />
+            </Principal>
+            <Dependent Role="Team">
+              <PropertyRef Name="LegueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MyTeam_Captain_FK">
+          <End Type="Reserve_a_Five_a_SideModel.Player" Role="Player" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Reserve_a_Five_a_SideModel.Team" Role="Team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="Player_ID" />
+            </Principal>
+            <Dependent Role="Team">
+              <PropertyRef Name="CaptainID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -459,6 +565,21 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
                 <ScalarProperty Name="TypeOFUser" ColumnName="TypeOFUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="Reserve_a_Five_a_SideModel.Team">
+              <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="LegueID" ColumnName="LegueID" />
+                <ScalarProperty Name="NationalID_Player5" ColumnName="NationalID_Player5" />
+                <ScalarProperty Name="NationalID_Player4" ColumnName="NationalID_Player4" />
+                <ScalarProperty Name="NationalID_Player3" ColumnName="NationalID_Player3" />
+                <ScalarProperty Name="NationalID_Player2" ColumnName="NationalID_Player2" />
+                <ScalarProperty Name="NationalID_Player1" ColumnName="NationalID_Player1" />
+                <ScalarProperty Name="CaptainID" ColumnName="CaptainID" />
+                <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
