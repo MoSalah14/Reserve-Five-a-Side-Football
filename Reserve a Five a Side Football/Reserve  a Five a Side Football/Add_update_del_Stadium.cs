@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
@@ -10,16 +11,18 @@ namespace Reserve__a_Five_a_Side_Football
 {
     public partial class Add_update_del_Stadium : Form
     {
-
+        PictureBox pic;
         DataTable data = new DataTable();
         int selectedrow;
         private Reserve_a_Five_a_SideEntities context_stadium;
         string filePath;
+        //byte[] imageData;
         public Add_update_del_Stadium()
         {
             InitializeComponent();
             context_stadium = new Reserve_a_Five_a_SideEntities();
-             filePath = openFileDialog1.FileName;
+             //filePath = openFileDialog1.FileName;
+          
         }
 
         private void getdata()
@@ -44,7 +47,7 @@ namespace Reserve__a_Five_a_Side_Football
             if (name.Text == "" ||
                 price.Text == "" ||
                 state.SelectedIndex == -1 ||
-                area.Text == ""|| filePath=="")
+                area.Text == ""|| openFileDialog1.FileName == "")
             {
 
                 MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -60,10 +63,16 @@ namespace Reserve__a_Five_a_Side_Football
                     Stad_Status = state.SelectedItem.ToString(),
                     Area = area.Text,
                     Hourly_Price = int.Parse(price.Text),
-                    Stadium_Image = filePath
+                   // Stadium_Image = filePath
 
                 };
                 context_stadium.Stadium.Add(std1);
+                context_stadium.SaveChanges();
+
+                string newpath = Environment.CurrentDirectory + "\\ImagesStadium\\" + std1.StadiumID + ".jpg";
+                File.Copy(filePath, newpath);
+
+                std1.Stadium_Image = newpath;
                 context_stadium.SaveChanges();
                 getdata();
 
@@ -73,15 +82,12 @@ namespace Reserve__a_Five_a_Side_Football
                 area.Text = "";
                 filePath = "";
 
-
             }
         }
 
         private void Add_update_del_Stadium_Load(object sender, EventArgs e)
         {
-
             getdata();
-
 
         }
 
@@ -101,7 +107,7 @@ namespace Reserve__a_Five_a_Side_Football
             if (name.Text == "" ||
                 price.Text == "" ||
                 state.SelectedIndex == -1 ||
-                area.Text == "" || filePath == ""
+                area.Text == "" || openFileDialog1.FileName == ""
 )
             {
 
@@ -127,7 +133,7 @@ namespace Reserve__a_Five_a_Side_Football
                 price.Text = "";
                 state.Text = "";
                 area.Text = "";
-                filePath = "";
+                //filePath = "";
             }
 
 
@@ -217,7 +223,8 @@ namespace Reserve__a_Five_a_Side_Football
 
             if (result == DialogResult.OK)
             {
-                 filePath = openFileDialog1.FileName;
+               filePath = openFileDialog1.FileName;
+               //imageData = File.ReadAllBytes(filePath);
             }
            
         }

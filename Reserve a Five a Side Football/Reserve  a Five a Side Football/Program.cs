@@ -26,14 +26,18 @@ namespace Reserve__a_Five_a_Side_Football
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Application.Run(new delReservation());
+            //Application.Run(new delReservation());
             // Application.Run(new Regest());
              //Application.Run(new Add_update_del_Stadium());
-            Application.Run(new Test());
+            Application.Run(new Login_Form());
 
 
 
 
         }
+    }
+
+    internal class StadiumDataInfo : Form
+    {
     }
 }
