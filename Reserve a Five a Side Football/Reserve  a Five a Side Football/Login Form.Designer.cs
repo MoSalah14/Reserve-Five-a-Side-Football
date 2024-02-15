@@ -41,6 +41,8 @@ namespace Login_
             this.textBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +50,7 @@ namespace Login_
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 104);
+            this.label1.Location = new System.Drawing.Point(37, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 38);
             this.label1.TabIndex = 0;
@@ -59,7 +61,7 @@ namespace Login_
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 191);
+            this.label2.Location = new System.Drawing.Point(37, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 38);
             this.label2.TabIndex = 1;
@@ -68,7 +70,7 @@ namespace Login_
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(385, 128);
+            this.label3.Location = new System.Drawing.Point(118, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 23);
             this.label3.TabIndex = 2;
@@ -76,7 +78,7 @@ namespace Login_
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(385, 181);
+            this.label4.Location = new System.Drawing.Point(118, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 23);
             this.label4.TabIndex = 3;
@@ -92,9 +94,9 @@ namespace Login_
             this.button1.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(105, 331);
+            this.button1.Location = new System.Drawing.Point(157, 443);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 45);
+            this.button1.Size = new System.Drawing.Size(397, 45);
             this.button1.TabIndex = 9;
             this.button1.Text = "Login";
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -109,9 +111,9 @@ namespace Login_
             this.Cancel_Btn.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.Cancel_Btn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.Cancel_Btn.ForeColor = System.Drawing.Color.White;
-            this.Cancel_Btn.Location = new System.Drawing.Point(105, 405);
+            this.Cancel_Btn.Location = new System.Drawing.Point(157, 517);
             this.Cancel_Btn.Name = "Cancel_Btn";
-            this.Cancel_Btn.Size = new System.Drawing.Size(262, 45);
+            this.Cancel_Btn.Size = new System.Drawing.Size(397, 45);
             this.Cancel_Btn.TabIndex = 10;
             this.Cancel_Btn.Text = "Cancel";
             // 
@@ -132,7 +134,7 @@ namespace Login_
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(150, 94);
+            this.textBox1.Location = new System.Drawing.Point(179, 124);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '\0';
@@ -159,7 +161,7 @@ namespace Login_
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox2.Location = new System.Drawing.Point(150, 181);
+            this.textBox2.Location = new System.Drawing.Point(179, 211);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
@@ -174,7 +176,7 @@ namespace Login_
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(150, 256);
+            this.checkBox1.Location = new System.Drawing.Point(179, 312);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(148, 27);
             this.checkBox1.TabIndex = 13;
@@ -182,15 +184,27 @@ namespace Login_
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(635, 83);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(755, 648);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 14;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1204, 733);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -203,6 +217,7 @@ namespace Login_
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Login_Form";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,6 @@ namespace Login_
         private Guna.UI2.WinForms.Guna2TextBox textBox1;
         private Guna.UI2.WinForms.Guna2TextBox textBox2;
         private CheckBox checkBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

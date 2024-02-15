@@ -197,6 +197,18 @@
     <Compile Include="TeamInformatin.Designer.cs">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ٍShowTeamsToOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ٍShowTeamsToOwner.Designer.cs">
+      <DependentUpon>ٍShowTeamsToOwner.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ٍShowTeamsToOwner.resx">
+      <DependentUpon>ٍShowTeamsToOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\DataBase_Project.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
