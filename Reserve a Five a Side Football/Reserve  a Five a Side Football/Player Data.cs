@@ -59,4 +59,10 @@ namespace Reserve__a_Five_a_Side_Football
                 MessageBox.Show("No data exists for the entered user ID.");
             }
         }
-    }}
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+}

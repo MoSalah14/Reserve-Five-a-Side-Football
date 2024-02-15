@@ -31,11 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.del_Reservation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reservation_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,41 +58,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.del_Reservation,
-            this.Date,
-            this.Time,
-            this.Paid,
-            this.Reservation_Status});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 85);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(504, 188);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // del_Reservation
-            // 
-            this.del_Reservation.HeaderText = "Name";
-            this.del_Reservation.Name = "del_Reservation";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Time";
-            this.Time.Name = "Time";
-            // 
-            // Paid
-            // 
-            this.Paid.HeaderText = "Paid";
-            this.Paid.Name = "Paid";
-            // 
-            // Reservation_Status
-            // 
-            this.Reservation_Status.HeaderText = "Reservation_Status";
-            this.Reservation_Status.Name = "Reservation_Status";
             // 
             // delReservation
             // 
@@ -107,9 +71,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            //this.Name = "delReservation";
+       
             this.Text = "del_Reservation";
-            this.Load += new System.EventHandler(this.del_Reservation_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,13 +84,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private new System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Paid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Delete_Reservation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn del_Reservation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Reservation_Status;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
