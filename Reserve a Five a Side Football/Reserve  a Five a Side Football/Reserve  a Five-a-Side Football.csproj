@@ -58,6 +58,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -191,6 +192,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reserve_a_Five_a_SideDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StadiumGalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StadiumGalary.Designer.cs">
+      <DependentUpon>StadiumGalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamInformatin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StadiumGalary.resx">
+      <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
