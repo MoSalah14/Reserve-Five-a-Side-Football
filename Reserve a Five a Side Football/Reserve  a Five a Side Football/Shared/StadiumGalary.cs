@@ -3,13 +3,9 @@ using RegertrationPage;
 using ReservationPage;
 using Reserve__a_Five_a_Side_Football.Database;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
@@ -91,7 +87,12 @@ namespace Reserve__a_Five_a_Side_Football
 
                         try
                         {
-                            Bitmap bitmap = new Bitmap(item.Stadium_Image);
+
+                            string currentPath = System.IO.Directory.GetCurrentDirectory();
+
+                           
+
+                            Bitmap bitmap = new Bitmap(currentPath + "\\ImagesStadium\\" + item.Stadium_Image);
                             pictureBox.BackgroundImage = bitmap;
 
                         }
