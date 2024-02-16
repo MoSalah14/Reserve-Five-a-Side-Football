@@ -12,6 +12,8 @@ namespace Reserve__a_Five_a_Side_Football.Database
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class Reserve_a_Five_a_SideEntities : DbContext
     {
@@ -32,5 +34,15 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public virtual DbSet<Stadium> Stadium { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
+    
+        public virtual ObjectResult<GetTeamDetails_Result> GetTeamDetails()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetTeamDetails_Result>("GetTeamDetails");
+        }
+    
+        public virtual ObjectResult<GetTeamsData_Result> GetTeamsData()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetTeamsData_Result>("GetTeamsData");
+        }
     }
 }
