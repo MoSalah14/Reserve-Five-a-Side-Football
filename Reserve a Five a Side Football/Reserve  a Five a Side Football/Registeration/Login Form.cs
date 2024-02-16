@@ -54,9 +54,12 @@ namespace Login_
                 HomeScreen homeScreen = new HomeScreen();
                 CurrentUserLogin.UserLogginID = user.UserID;
                 MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DeleteResrvation deleteResrvation = new DeleteResrvation();
+                deleteResrvation.Show();
             }
+
         }
 
-        
+
     }
 }

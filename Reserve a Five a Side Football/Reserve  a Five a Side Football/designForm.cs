@@ -46,29 +46,24 @@ namespace Reserve__a_Five_a_Side_Football
         ////    tempIndex = index;
         ////    string color = ThemeColor.ColorList[index];
         ////    return ColorTranslator.FromHtml(color);
-        
+
         //}
 
-        //private void ActivateButton(object btnSender)
-        //{
-        //    if (btnSender != null)
-        //    {
-        //        if (currentButton != (Button)btnSender)
-        //        {
-        //            DisableButton();
-        //            Color color = SelectThemeColor();
-        //            currentButton = (Button)btnSender;
-        //            currentButton.BackColor = color;
-        //            currentButton.ForeColor = Color.White;
-        //            currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        //            panelTitleBar.BackColor = color;
-        //            panellogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-        //            ThemeColor.PrimaryColor = color;
-        //            ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-        //           btnCloseChildForm.Visible = true;
-        //        }
-        //    }
-        //}
+        private void ActivateButton(object btnSender)
+        {
+            if (btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    DisableButton();
+                    currentButton = (Button)btnSender;
+                    currentButton.ForeColor = Color.White;
+                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                 
+                    btnCloseChildForm.Visible = true;
+                }
+            }
+        }
 
         private void DisableButton()
         {
@@ -87,7 +82,7 @@ namespace Reserve__a_Five_a_Side_Football
         {
             if (activeForm != null)
                 activeForm.Close();
-           // ActivateButton(btnSender);
+           ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
