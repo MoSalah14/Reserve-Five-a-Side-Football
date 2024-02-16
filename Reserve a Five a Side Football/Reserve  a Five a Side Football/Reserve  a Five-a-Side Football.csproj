@@ -144,17 +144,11 @@
     <Compile Include="Database\User.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
-    <Compile Include="Owner\delLegue.cs">
+    <Compile Include="Player\DeleteResrvation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Owner\delLegue.Designer.cs">
-      <DependentUpon>delLegue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Player\delReservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Player\delReservation.Designer.cs">
-      <DependentUpon>delReservation.cs</DependentUpon>
+    <Compile Include="Player\DeleteResrvation.Designer.cs">
+      <DependentUpon>DeleteResrvation.cs</DependentUpon>
     </Compile>
     <Compile Include="Owner\Player Data.cs">
       <SubType>Form</SubType>
@@ -244,11 +238,8 @@
     <EmbeddedResource Include="Owner\Add_update_del_Stadium.resx">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Owner\delLegue.resx">
-      <DependentUpon>delLegue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Player\delReservation.resx">
-      <DependentUpon>delReservation.cs</DependentUpon>
+    <EmbeddedResource Include="Player\DeleteResrvation.resx">
+      <DependentUpon>DeleteResrvation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner\Player Data.resx">
       <DependentUpon>Player Data.cs</DependentUpon>

@@ -102,7 +102,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new delLegue(), sender);
+            OpenChildForm(new DeleteResrvation(), sender);
         }
 
         private void btn2_Click(object sender, EventArgs e)

@@ -15,11 +15,11 @@ using System.Xml.Linq;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class delLegue : Form
+    public partial class DeleteResrvation : Form
     {
         private readonly Reserve_a_Five_a_SideEntities context1 = new Reserve_a_Five_a_SideEntities();
         Reservation reservation = new Reservation();
-        public delLegue()
+        public DeleteResrvation()
         {
             InitializeComponent();
             show();

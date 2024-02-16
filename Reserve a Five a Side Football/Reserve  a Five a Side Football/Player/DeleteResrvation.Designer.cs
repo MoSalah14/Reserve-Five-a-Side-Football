@@ -1,6 +1,6 @@
 ﻿namespace Reserve__a_Five_a_Side_Football
 {
-    partial class delLegue
+    partial class DeleteResrvation
     {
         /// <summary>
         /// Required designer variable.
