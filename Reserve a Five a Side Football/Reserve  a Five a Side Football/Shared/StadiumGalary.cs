@@ -16,7 +16,7 @@ namespace Reserve__a_Five_a_Side_Football
 {
     public partial class StadiumGalary : Form
     {
-        private Reserve_a_Five_a_SideEntities context=new Reserve_a_Five_a_SideEntities();
+        private Reserve_a_Five_a_SideEntities context = new Reserve_a_Five_a_SideEntities();
 
         PictureBox pictureBox;
         private Label price;
@@ -29,9 +29,9 @@ namespace Reserve__a_Five_a_Side_Football
         public StadiumGalary()
         {
             InitializeComponent();
-        
+
         }
-  
+
         public void GetData()
         {
             try
@@ -42,14 +42,14 @@ namespace Reserve__a_Five_a_Side_Football
                     throw new InvalidOperationException("Database context is not initialized.");
                 }
                 var query = from a in context.Stadium
-                        select a;
+                            select a;
 
-               foreach (var item in query)
+                foreach (var item in query)
                 {
                     if (!string.IsNullOrEmpty(item.Stadium_Image))
                     {
                         price = new Label();
-                        price.Text = (item.Hourly_Price.ToString())+"e.g";
+                        price.Text = (item.Hourly_Price.ToString()) + "e.g";
                         price.BackColor = Color.AliceBlue;
                         price.TextAlign = ContentAlignment.MiddleCenter;
                         price.Font = new Font("", 13);
@@ -57,7 +57,7 @@ namespace Reserve__a_Five_a_Side_Football
 
                         area = new Label();
                         area.Text = item.Area.ToString();
-                        
+
                         area.BackColor = Color.White;
                         area.TextAlign = ContentAlignment.MiddleCenter;
                         area.Font = new Font("Calibri", 12);
@@ -72,9 +72,9 @@ namespace Reserve__a_Five_a_Side_Football
                         button = new Button();
                         button.Width = 50;
                         button.Height = 40;
-                        button.Text = item.Stad_Name+" , " +item.Area;
+                        button.Text = item.Stad_Name + " , " + item.Area;
                         button.BackgroundImageLayout = ImageLayout.Stretch;
-                        button.Click+= new System.EventHandler(this.Button_Clicked);
+                        button.Click += new System.EventHandler(this.Button_Clicked);
                         button.Dock = DockStyle.Bottom;
 
                         //flowLayoutPanel2.Controls.Add(button);
@@ -91,9 +91,9 @@ namespace Reserve__a_Five_a_Side_Football
 
                         try
                         {
-                         Bitmap bitmap=  new Bitmap(item.Stadium_Image);
-                          pictureBox.BackgroundImage = bitmap;
- 
+                            Bitmap bitmap = new Bitmap(item.Stadium_Image);
+                            pictureBox.BackgroundImage = bitmap;
+
                         }
                         catch (Exception ex)
                         {
@@ -106,14 +106,14 @@ namespace Reserve__a_Five_a_Side_Football
                         pictureBox.Controls.Add(button);
 
                         flowLayoutPanel1.Controls.Add(pictureBox);
-                        
+
                         //flowLayoutPanel1.Controls.Add(name);
                         // name.Controls.Add(area);
                         // flowLayoutPanel1.Controls.Add(area);
 
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -132,7 +132,7 @@ namespace Reserve__a_Five_a_Side_Football
         {
             ReservationForm res1 = new ReservationForm();
             res1.ShowDialog();
-            
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

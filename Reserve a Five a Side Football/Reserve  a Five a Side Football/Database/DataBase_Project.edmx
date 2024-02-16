@@ -196,6 +196,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GetTeamDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetTeamsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="Reserve_a_Five_a_SideModelStoreContainer">
           <EntitySet Name="Legaue" EntityType="Self.Legaue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ownar" EntityType="Self.Ownar" Schema="dbo" store:Type="Tables" />
@@ -444,6 +446,8 @@
             <End Role="Player" EntitySet="Players" />
             <End Role="Team" EntitySet="Teams" />
           </AssociationSet>
+          <FunctionImport Name="GetTeamDetails" ReturnType="Collection(Reserve_a_Five_a_SideModel.GetTeamDetails_Result)" />
+          <FunctionImport Name="GetTeamsData" ReturnType="Collection(Reserve_a_Five_a_SideModel.GetTeamsData_Result)" />
           </EntityContainer>
         <EntityType Name="Team">
           <Key>
@@ -489,6 +493,23 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="GetTeamDetails_Result">
+          <Property Type="String" Name="Captain_Name" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Player1_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player2_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player3_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player4_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Legue_Name" Nullable="false" MaxLength="15" />
+        </ComplexType>
+        <ComplexType Name="GetTeamsData_Result">
+          <Property Type="String" Name="Captain_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="TeamName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Player1_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player2_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player3_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player4_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="LeagueName" Nullable="false" MaxLength="15" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -583,6 +604,31 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetTeamDetails" FunctionName="Reserve_a_Five_a_SideModel.Store.GetTeamDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Reserve_a_Five_a_SideModel.GetTeamDetails_Result">
+                <ScalarProperty Name="Captain_Name" ColumnName="Captain_Name" />
+                <ScalarProperty Name="Player1_Name" ColumnName="Player1_Name" />
+                <ScalarProperty Name="Player2_Name" ColumnName="Player2_Name" />
+                <ScalarProperty Name="Player3_Name" ColumnName="Player3_Name" />
+                <ScalarProperty Name="Player4_Name" ColumnName="Player4_Name" />
+                <ScalarProperty Name="Legue_Name" ColumnName="Legue_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTeamsData" FunctionName="Reserve_a_Five_a_SideModel.Store.GetTeamsData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Reserve_a_Five_a_SideModel.GetTeamsData_Result">
+                <ScalarProperty Name="Captain_Name" ColumnName="Captain_Name" />
+                <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+                <ScalarProperty Name="Player1_Name" ColumnName="Player1_Name" />
+                <ScalarProperty Name="Player2_Name" ColumnName="Player2_Name" />
+                <ScalarProperty Name="Player3_Name" ColumnName="Player3_Name" />
+                <ScalarProperty Name="Player4_Name" ColumnName="Player4_Name" />
+                <ScalarProperty Name="LeagueName" ColumnName="LeagueName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

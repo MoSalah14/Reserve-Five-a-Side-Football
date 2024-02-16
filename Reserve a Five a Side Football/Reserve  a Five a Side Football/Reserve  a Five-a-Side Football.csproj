@@ -71,31 +71,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addReservationByOwner.cs">
+    <Compile Include="Owner\addReservationByOwner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addReservationByOwner.Designer.cs">
+    <Compile Include="Owner\addReservationByOwner.Designer.cs">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddYourTeam.cs">
+    <Compile Include="Player\AddYourTeam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddYourTeam.Designer.cs">
+    <Compile Include="Player\AddYourTeam.Designer.cs">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_IncomeingPrice.cs">
+    <Compile Include="Owner\Add_IncomeingPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_IncomeingPrice.Designer.cs">
+    <Compile Include="Owner\Add_IncomeingPrice.Designer.cs">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_update_del_Stadium.cs">
+    <Compile Include="Owner\Add_update_del_Stadium.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_update_del_Stadium.Designer.cs">
+    <Compile Include="Owner\Add_update_del_Stadium.Designer.cs">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrentUserLogin.cs" />
+    <Compile Include="Registeration\CurrentUserLogin.cs" />
     <Compile Include="Database\DataBase_Project.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +110,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBase_Project.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GetTeamDetails_Result.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GetTeamsData_Result.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Legaue.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
@@ -132,28 +138,28 @@
     <Compile Include="Database\User.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
-    <Compile Include="delLegue.cs">
+    <Compile Include="Owner\delLegue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="delLegue.Designer.cs">
+    <Compile Include="Owner\delLegue.Designer.cs">
       <DependentUpon>delLegue.cs</DependentUpon>
     </Compile>
-    <Compile Include="delReservation.cs">
+    <Compile Include="Player\delReservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="delReservation.Designer.cs">
+    <Compile Include="Player\delReservation.Designer.cs">
       <DependentUpon>delReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player Data.cs">
+    <Compile Include="Owner\Player Data.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Player Data.Designer.cs">
+    <Compile Include="Owner\Player Data.Designer.cs">
       <DependentUpon>Player Data.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeScreen.cs">
+    <Compile Include="Shared\HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeScreen.Designer.cs">
+    <Compile Include="Shared\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="League.cs">
@@ -162,29 +168,29 @@
     <Compile Include="League.Designer.cs">
       <DependentUpon>League.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login Form.cs">
+    <Compile Include="Registeration\Login Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login Form.Designer.cs">
+    <Compile Include="Registeration\Login Form.Designer.cs">
       <DependentUpon>Login Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="OwnerAddLeague.cs">
+    <Compile Include="Owner\OwnerAddLeague.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OwnerAddLeague.Designer.cs">
+    <Compile Include="Owner\OwnerAddLeague.Designer.cs">
       <DependentUpon>OwnerAddLeague.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Regest.cs">
+    <Compile Include="Registeration\Regest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Regest.Designer.cs">
+    <Compile Include="Registeration\Regest.Designer.cs">
       <DependentUpon>Regest.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReservationForm.cs">
+    <Compile Include="Player\ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservationForm.Designer.cs">
+    <Compile Include="Player\ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Reserve_a_Five_a_SideDataSet.Designer.cs">
@@ -192,10 +198,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reserve_a_Five_a_SideDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StadiumGalary.cs">
+    <Compile Include="Owner\ShowTeamsToOwner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StadiumGalary.Designer.cs">
+    <Compile Include="Owner\ShowTeamsToOwner.Designer.cs">
+      <DependentUpon>ShowTeamsToOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\StadiumGalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shared\StadiumGalary.Designer.cs">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </Compile>
     <Compile Include="TeamInformatin.cs">
@@ -204,37 +216,43 @@
     <Compile Include="TeamInformatin.Designer.cs">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="addReservationByOwner.resx">
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Owner\addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddYourTeam.resx">
+    <EmbeddedResource Include="Player\AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_IncomeingPrice.resx">
+    <EmbeddedResource Include="Owner\Add_IncomeingPrice.resx">
       <DependentUpon>Add_IncomeingPrice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_update_del_Stadium.resx">
+    <EmbeddedResource Include="Owner\Add_update_del_Stadium.resx">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="delLegue.resx">
+    <EmbeddedResource Include="Owner\delLegue.resx">
       <DependentUpon>delLegue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="delReservation.resx">
+    <EmbeddedResource Include="Player\delReservation.resx">
       <DependentUpon>delReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Player Data.resx">
+    <EmbeddedResource Include="Owner\Player Data.resx">
       <DependentUpon>Player Data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeScreen.resx">
+    <EmbeddedResource Include="Shared\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="League.resx">
       <DependentUpon>League.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login Form.resx">
+    <EmbeddedResource Include="Registeration\Login Form.resx">
       <DependentUpon>Login Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OwnerAddLeague.resx">
+    <EmbeddedResource Include="Owner\OwnerAddLeague.resx">
       <DependentUpon>OwnerAddLeague.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -247,17 +265,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Regest.resx">
+    <EmbeddedResource Include="Registeration\Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReservationForm.resx">
+    <EmbeddedResource Include="Player\ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StadiumGalary.resx">
+    <EmbeddedResource Include="Owner\ShowTeamsToOwner.resx">
+      <DependentUpon>ShowTeamsToOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shared\StadiumGalary.resx">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeamInformatin.resx">
       <DependentUpon>TeamInformatin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\DataBase_Project.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

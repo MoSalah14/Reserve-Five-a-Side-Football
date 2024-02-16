@@ -20,11 +20,7 @@ namespace Reserve__a_Five_a_Side_Football
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void AddYourTeam_Load(object sender, EventArgs e)
         {
             var StadiumName = DB.Legaues.Select(et => et.Legue_Name).ToList();
