@@ -28,8 +28,6 @@ namespace Reserve__a_Five_a_Side_Football
         private void button1_Click(object sender, EventArgs e)
         {
 
-
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)

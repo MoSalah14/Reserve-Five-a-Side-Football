@@ -46,7 +46,7 @@
             this.label1.Location = new System.Drawing.Point(162, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 24);
+            this.label1.Size = new System.Drawing.Size(280, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation For Player";
             // 
@@ -78,42 +78,43 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 181);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1069, 181);
             this.dataGridView1.TabIndex = 3;
             // 
             // payment
             // 
             this.payment.Location = new System.Drawing.Point(22, 314);
             this.payment.Name = "payment";
-            this.payment.Size = new System.Drawing.Size(110, 22);
+            this.payment.Size = new System.Drawing.Size(110, 26);
             this.payment.TabIndex = 5;
             // 
             // date
             // 
             this.date.Location = new System.Drawing.Point(22, 282);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(110, 22);
+            this.date.Size = new System.Drawing.Size(110, 26);
             this.date.TabIndex = 6;
             // 
             // time
             // 
             this.time.Location = new System.Drawing.Point(151, 282);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(123, 22);
+            this.time.Size = new System.Drawing.Size(123, 26);
             this.time.TabIndex = 7;
             // 
             // status
             // 
             this.status.Location = new System.Drawing.Point(151, 314);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(123, 22);
+            this.status.Size = new System.Drawing.Size(123, 26);
             this.status.TabIndex = 8;
             // 
             // delLegue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 362);
+            this.ClientSize = new System.Drawing.Size(1084, 362);
             this.Controls.Add(this.status);
             this.Controls.Add(this.time);
             this.Controls.Add(this.date);

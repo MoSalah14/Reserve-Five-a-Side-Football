@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="designForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designForm.designer.cs">
+      <DependentUpon>designForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner\addReservationByOwner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,10 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="designForm.resx">
+      <DependentUpon>designForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Owner\addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
     </EmbeddedResource>
