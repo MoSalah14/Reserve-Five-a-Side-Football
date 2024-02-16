@@ -21,31 +21,9 @@ namespace Reserve__a_Five_a_Side_Football
         int id;
         private int leagueID;
 
-
-
-
-
         public OwnerAddLeague()
         {
             InitializeComponent();
-
-            //dataGridView1.ClearSelection();
-
-            /*dataGridView1.AutoGenerateColumns = false;
-         
-        */
-
-            // Define DataGridView columns
-            dataGridView1.Columns.Add("LegueID", "Legue ID");
-            dataGridView1.Columns.Add("Legue_Name", "Legue Name");
-            dataGridView1.Columns.Add("BeginDate", "Begin Date");
-            dataGridView1.Columns.Add("EndDate", "End Date");
-            dataGridView1.Columns.Add("StadiumName", "Stadium Name");
-            dataGridView1.Columns.Add("EndReg", "End Registration");
-            dataGridView1.Columns.Add("Reward", "Reward");
-            dataGridView1.Columns.Add("City", "City");
-            dataGridView1.Columns.Add("TimePlay", "Time to Play");
-
 
             var specificColumnsData = DB.Legaues
         .Select(l => new
@@ -59,25 +37,13 @@ namespace Reserve__a_Five_a_Side_Football
             l.Reward,
             l.City,
             l.TimePlay
-        })
-        .ToList();
+        }).ToList();
 
             dataGridView1.DataSource = specificColumnsData;
         }
 
         private void OwnerAddLeague_Load(object sender, EventArgs e)
         {
-
-            // Clear the selection of the DataGridView
-
-
-            // Call the method to populate controls when the form loads
-            //  PopulateControlsFromSelectedRow();
-
-            // TODO: This line of code loads data into the 'reserve_a_Five_a_SideDataSet.Legaue' table. You can move, or remove it, as needed.
-            // this.legaueTableAdapter.Fill(this.reserve_a_Five_a_SideDataSet.Legaue);
-            //Clear();
-            //PopulateDataGridview();
             var StadiumName = DB.Stadium.Select(et => et.Stad_Name).ToList();
             foreach (var item in StadiumName)
                 StadiumNameCmb.Items.Add(item);
@@ -261,28 +227,28 @@ namespace Reserve__a_Five_a_Side_Football
 
 
         private void UpdateLeague(int LeagueID)
+        {
+            if (ValidateInput(leagueID))
             {
-                if (ValidateInput(leagueID))
-                {
-                    var leagueToUpdate = DB.Legaues.SingleOrDefault(x => x.LegueID == LeagueID);
+                var leagueToUpdate = DB.Legaues.SingleOrDefault(x => x.LegueID == LeagueID);
 
-                
-                        // Update league properties
-                        leagueToUpdate.Legue_Name = legaueNametxt.Text;
-                        leagueToUpdate.BeginDate = BeginDate.Value;
-                        leagueToUpdate.EndDate = EndDate.Value;
-                        leagueToUpdate.EndReg = EndRegistration.Value;
-                        leagueToUpdate.StadiumName = StadiumNameCmb.Text;
-                        leagueToUpdate.City = CityCmb.SelectedItem.ToString();
-                        leagueToUpdate.Reward = Rewardtxt.Text;
-                        leagueToUpdate.TimePlay = TimeSpan.Parse(TimePlayDate.Text);
 
-                        DB.SaveChanges();
+                // Update league properties
+                leagueToUpdate.Legue_Name = legaueNametxt.Text;
+                leagueToUpdate.BeginDate = BeginDate.Value;
+                leagueToUpdate.EndDate = EndDate.Value;
+                leagueToUpdate.EndReg = EndRegistration.Value;
+                leagueToUpdate.StadiumName = StadiumNameCmb.Text;
+                leagueToUpdate.City = CityCmb.SelectedItem.ToString();
+                leagueToUpdate.Reward = Rewardtxt.Text;
+                leagueToUpdate.TimePlay = TimeSpan.Parse(TimePlayDate.Text);
 
-                        MessageBox.Show("League updated successfully");
-                        PopulateDataGridview();
-                }
+                DB.SaveChanges();
+
+                MessageBox.Show("League updated successfully");
+                PopulateDataGridview();
             }
+        }
 
 
 

@@ -149,7 +149,8 @@
             // datealarm
             // 
             this.datealarm.AutoSize = true;
-            this.datealarm.BackColor = System.Drawing.Color.Red;
+            this.datealarm.BackColor = System.Drawing.Color.Transparent;
+            this.datealarm.ForeColor = System.Drawing.Color.Red;
             this.datealarm.Location = new System.Drawing.Point(411, 83);
             this.datealarm.Name = "datealarm";
             this.datealarm.Size = new System.Drawing.Size(252, 31);
@@ -159,7 +160,8 @@
             // payalarm
             // 
             this.payalarm.AutoSize = true;
-            this.payalarm.BackColor = System.Drawing.Color.Red;
+            this.payalarm.BackColor = System.Drawing.Color.Transparent;
+            this.payalarm.ForeColor = System.Drawing.Color.Red;
             this.payalarm.Location = new System.Drawing.Point(403, 341);
             this.payalarm.Name = "payalarm";
             this.payalarm.Size = new System.Drawing.Size(250, 31);
@@ -169,7 +171,8 @@
             // stadalarm
             // 
             this.stadalarm.AutoSize = true;
-            this.stadalarm.BackColor = System.Drawing.Color.Red;
+            this.stadalarm.BackColor = System.Drawing.Color.Transparent;
+            this.stadalarm.ForeColor = System.Drawing.Color.Red;
             this.stadalarm.Location = new System.Drawing.Point(411, 146);
             this.stadalarm.Name = "stadalarm";
             this.stadalarm.Size = new System.Drawing.Size(214, 31);
@@ -195,7 +198,8 @@
             // idplayeralarm
             // 
             this.idplayeralarm.AutoSize = true;
-            this.idplayeralarm.BackColor = System.Drawing.Color.Red;
+            this.idplayeralarm.BackColor = System.Drawing.Color.Transparent;
+            this.idplayeralarm.ForeColor = System.Drawing.Color.Red;
             this.idplayeralarm.Location = new System.Drawing.Point(420, 278);
             this.idplayeralarm.Name = "idplayeralarm";
             this.idplayeralarm.Size = new System.Drawing.Size(194, 31);

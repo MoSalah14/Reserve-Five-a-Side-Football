@@ -1,4 +1,5 @@
-﻿using Reserve__a_Five_a_Side_Football.Database;
+﻿using Reserve__a_Five_a_Side_Football;
+using Reserve__a_Five_a_Side_Football.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,9 +30,12 @@ namespace ReservationPage
         }
         private void ReservationForm_Load(object sender, EventArgs e)
         {
-            var StadiumName = GetContext.Stadium.Select(et => et.Stad_Name).ToList();
-            foreach (var item in StadiumName)
-                stadbx.Items.Add(item);
+
+
+            var uniqueAreas = GetContext.Stadium.Select(s => s.Area).Distinct().ToArray();
+
+            // Best Way For Performance ^_^ 
+            CityCompoBox.Items.AddRange(uniqueAreas);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -68,7 +72,6 @@ namespace ReservationPage
                 datealarm.Visible = false;
                 stadalarm.Visible = false;
                 payalarm.Visible = false;
-                //datebx.Text = "";
                 stadbx.Text = "";
                 paybx.Text = "";
                 timeComboBox.Text = "";
@@ -82,7 +85,6 @@ namespace ReservationPage
 
                 Reservation newReservation = new Reservation
                 {
-                    
                     Reservation_Date = DateTime.Parse(datebx.Value.Date.ToString()),
                     Reservation_Time = TimeSpan.Parse(timeComboBox.SelectedItem.ToString()),
                     Payment = paybx.SelectedItem.ToString(),
@@ -111,7 +113,6 @@ namespace ReservationPage
         private void PopulateTimeSlots(List<TimeSpan> availableTimeslots)
         {
             timeComboBox.Items.Clear();
-
             // Show Data in Compo Box
             foreach (var timeSlot in availableTimeslots)
                 timeComboBox.Items.Add(timeSlot.ToString("hh\\:mm"));
@@ -142,11 +143,27 @@ namespace ReservationPage
                 // Remove reserved timeslots from the list of all timeslots
                 foreach (var reservedTime in reservedTimeslots)
                     allTimeslots.RemoveAll(time => time == reservedTime);
-                
+
                 PopulateTimeSlots(allTimeslots);
             }
 
         }
 
+        private void CityCompoBox_SelectedIndexChanged(object sender, EventArgs v)
+        {
+
+            var selectedCity = CityCompoBox.SelectedItem?.ToString();
+            if (selectedCity != null)
+            {
+                var getStadiums = GetContext.Stadium
+                    .Where(s => s.Area == selectedCity && s.Stad_Status == "Active")
+                    .Select(s => s.Stad_Name)
+                    .ToArray();
+
+                // Using To array For Best Performance
+                stadbx.Items.AddRange(getStadiums);
+            }
+
+        }
     }
 }
