@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
 
@@ -69,10 +70,13 @@ namespace Reserve__a_Five_a_Side_Football
                 context_stadium.Stadium.Add(std1);
                 context_stadium.SaveChanges();
 
-                string newpath = Environment.CurrentDirectory + "\\ImagesStadium\\" + std1.StadiumID + ".jpg";
+                
+                string currentPath = System.IO.Directory.GetCurrentDirectory();
+
+                string newpath = currentPath + "\\ImagesStadium\\" + std1.StadiumID + ".jpg";
                 File.Copy(filePath, newpath);
 
-                std1.Stadium_Image = newpath;
+                std1.Stadium_Image = std1.StadiumID + ".jpg";
                 context_stadium.SaveChanges();
                 getdata();
 
@@ -125,6 +129,7 @@ namespace Reserve__a_Five_a_Side_Football
                 std1.Stad_Status = state.SelectedItem.ToString();
                 std1.Area = area.Text;
                 std1.Hourly_Price = int.Parse(price.Text);
+
                 context_stadium.SaveChanges();
 
                 getdata();
