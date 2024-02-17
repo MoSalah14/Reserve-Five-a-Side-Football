@@ -68,5 +68,10 @@ namespace Reserve__a_Five_a_Side_Football
         {
             
         }
+
+        private void RegistBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
