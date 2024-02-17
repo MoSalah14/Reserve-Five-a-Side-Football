@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 584);
+            this.ClientSize = new System.Drawing.Size(1089, 626);
             this.Controls.Add(this.Timelbl);
             this.Controls.Add(this.lblcCity);
             this.Controls.Add(this.paybx);
