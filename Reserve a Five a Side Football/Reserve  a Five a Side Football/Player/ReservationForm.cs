@@ -19,151 +19,163 @@ namespace ReservationPage
 {
     public partial class ReservationForm : Form
     {
-        private Reserve_a_Five_a_SideEntities GetContext;
+        private Reserve_a_Five_a_SideEntities dbContext;
+
         public ReservationForm()
         {
             InitializeComponent();
+            InitializeForm();
+        }
+
+        private void InitializeForm()
+        {
             datealarm.Visible = false;
             stadalarm.Visible = false;
             payalarm.Visible = false;
-            GetContext = new Reserve_a_Five_a_SideEntities();
+            dbContext = new Reserve_a_Five_a_SideEntities();
+            LoadUniqueAreas();
         }
-        private void ReservationForm_Load(object sender, EventArgs e)
+
+        private void LoadUniqueAreas()
         {
-
-
-            var uniqueAreas = GetContext.Stadium.Select(s => s.Area).Distinct().ToArray();
-
-            // Best Way For Performance ^_^ 
+            var uniqueAreas = dbContext.Stadium.Select(s => s.Area).Distinct().ToArray();
             CityCompoBox.Items.AddRange(uniqueAreas);
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DateTimePicker dateTime = new DateTimePicker();
-
-            if (datebx.Value < dateTime.Value ||
-                stadbx.SelectedIndex == -1 ||
-                paybx.SelectedIndex == -1)
-            {
-                if (datebx.Value < dateTime.Value)
-                {
-                    datealarm.Visible = true;
-                    stadalarm.Visible = false;
-                    payalarm.Visible = false;
-                }
-
-                if (stadbx.SelectedIndex == 0)
-                {
-                    datealarm.Visible = false;
-                    stadalarm.Visible = true;
-                    payalarm.Visible = false;
-                }
-                if (paybx.SelectedIndex < 0)
-                {
-                    datealarm.Visible = false;
-                    stadalarm.Visible = false;
-                    payalarm.Visible = true;
-                }
-
-                MessageBox.Show("Invalid Data", "Confirm Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                datealarm.Visible = false;
-                stadalarm.Visible = false;
-                payalarm.Visible = false;
-                stadbx.Text = "";
-                paybx.Text = "";
-                timeComboBox.Text = "";
-
-                var stadiumId = GetContext.Reservations
-                .Where(r => r.Stadium.Stad_Name == stadbx.SelectedItem.ToString())
-                .Select(r => r.StadiumID)
-                .FirstOrDefault();
-
-                var x = datebx.Value.Date.ToString();
-
-                Reservation newReservation = new Reservation
-                {
-                    Reservation_Date = DateTime.Parse(datebx.Value.Date.ToString()),
-                    Reservation_Time = TimeSpan.Parse(timeComboBox.SelectedItem.ToString()),
-                    Payment = paybx.SelectedItem.ToString(),
-                    StadiumID = stadiumId,
-                };
-
-
-                GetContext.Reservations.Add(newReservation);
-                GetContext.SaveChanges();
-
-
-                MessageBox.Show("Success Confirm ", "Confirm Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
         }
 
         private void Reserve_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var result = MessageBox.Show("Are you sure To close  ", "Close Form",
+            var result = MessageBox.Show("Are you sure you want to close?", "Close Form",
                               MessageBoxButtons.YesNo,
                               MessageBoxIcon.Question);
             e.Cancel = (result == DialogResult.No);
         }
 
+        private void CityCompoBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedCity = CityCompoBox.SelectedItem?.ToString();
+            if (selectedCity != null)
+            {
+                var stadiums = dbContext.Stadium
+                    .Where(s => s.Area == selectedCity && s.Stad_Status == "Active")
+                    .Select(s => s.Stad_Name)
+                    .ToArray();
+                stadbx.Items.Clear();
+                stadbx.Items.AddRange(stadiums);
+            }
+        }
+
+        private void stadbx_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (stadbx.SelectedIndex != -1 && datebx.Value != null)
+            {
+                var selectedStadium = stadbx.SelectedItem?.ToString();
+                var selectedDate = datebx.Value.Date;
+
+                var availableTimeslots = GetAvailableTimeslots(selectedStadium, selectedDate);
+                PopulateTimeSlots(availableTimeslots);
+            }
+        }
+
+        private List<TimeSpan> GetAvailableTimeslots(string selectedStadium, DateTime selectedDate)
+        {
+            var stadiumId = dbContext.Stadium
+                .Where(s => s.Stad_Name == selectedStadium)
+                .Select(s => s.StadiumID)
+                .FirstOrDefault();
+
+            var reservedTimeslots = dbContext.Reservations
+                .Where(r => r.StadiumID == stadiumId && r.Reservation_Date == selectedDate.Date)
+                .Select(r => r.Reservation_Time)
+                .ToList();
+
+            var allTimeslots = Enumerable.Range(0, 24)
+                .Select(hour => new TimeSpan(hour, 0, 0))
+                .ToList();
+
+            var availableTimeslots = new List<TimeSpan>();
+            foreach (var timeslot in allTimeslots)
+            {
+                if (!reservedTimeslots.Contains(timeslot))
+                    availableTimeslots.Add(timeslot);
+            }
+            return availableTimeslots;
+        }
 
         private void PopulateTimeSlots(List<TimeSpan> availableTimeslots)
         {
             timeComboBox.Items.Clear();
-            // Show Data in Compo Box
             foreach (var timeSlot in availableTimeslots)
+            {
                 timeComboBox.Items.Add(timeSlot.ToString("hh\\:mm"));
+            }
         }
 
-
-        private void stadbx_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (stadbx.SelectedIndex != -1 && datebx.Value != null)
+            if (!ValidateFormData())
             {
-                // Get stadium's ID
-                var stadiumId = GetContext.Stadium
-                    .Where(s => s.Stad_Name == stadbx.SelectedItem.ToString())
-                    .Select(s => s.StadiumID)
-                    .FirstOrDefault();
-
-                // Get  Reservations by selected Stadium and date
-                var reservations = GetContext.Reservations
-                    .Where(r => r.StadiumID == stadiumId && r.Reservation_Date == datebx.Value.Date).ToList();
-
-                // Get  reserved timeslots for the selected date
-                var reservedTimeslots = reservations.Select(r => r.Reservation_Time).ToList();
-
-                // Get all available timeslots (24 hours)
-                var allTimeslots = Enumerable.Range(0, 24)
-                    .Select(hour => new TimeSpan(hour, 0, 0)).ToList();
-
-                // Remove reserved timeslots from the list of all timeslots
-                foreach (var reservedTime in reservedTimeslots)
-                    allTimeslots.RemoveAll(time => time == reservedTime);
-
-                PopulateTimeSlots(allTimeslots);
+                MessageBox.Show("Invalid Data", "Confirm Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-        }
+            var stadiumName = stadbx.SelectedItem?.ToString();
+            var selectedDate = datebx.Value.Date;
+            var selectedTime = TimeSpan.Parse(timeComboBox.SelectedItem.ToString());
+            var payment = paybx.SelectedItem.ToString();
 
-        private void CityCompoBox_SelectedIndexChanged(object sender, EventArgs v)
-        {
+            var stadiumId = dbContext.Stadium
+                .Where(s => s.Stad_Name == stadiumName)
+                .Select(s => s.StadiumID)
+                .FirstOrDefault();
 
-            var selectedCity = CityCompoBox.SelectedItem?.ToString();
-            if (selectedCity != null)
+            var newReservation = new Reservation
             {
-                var getStadiums = GetContext.Stadium
-                    .Where(s => s.Area == selectedCity && s.Stad_Status == "Active")
-                    .Select(s => s.Stad_Name)
-                    .ToArray();
+                Reservation_Date = selectedDate,
+                Reservation_Time = selectedTime,
+                Payment = payment,
+                Player_ID = 1,  //(CurrentUserLogin.UserLogginID)   Assuming player ID is fixed for now
+                StadiumID = stadiumId,
+            };
 
-                // Using To array For Best Performance
-                stadbx.Items.AddRange(getStadiums);
-            }
+            dbContext.Reservations.Add(newReservation);
+            dbContext.SaveChanges();
 
+            MessageBox.Show("Success Confirm", "Confirm Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ResetForm();
         }
+
+        private bool ValidateFormData()
+        {
+            if (datebx.Value < DateTime.Now || stadbx.SelectedIndex == -1 || paybx.SelectedIndex == -1 || timeComboBox.SelectedIndex == -1)
+            {
+                ShowValidationErrors();
+                return false;
+            }
+            return true;
+        }
+
+        private void ShowValidationErrors()
+        {
+            datealarm.Visible = datebx.Value < DateTime.Now;
+            stadalarm.Visible = stadbx.SelectedIndex == -1;
+            payalarm.Visible = paybx.SelectedIndex == -1;
+            lblcCity.Visible = CityCompoBox.SelectedIndex == -1;
+            Timelbl.Visible = timeComboBox.SelectedIndex == -1;
+        }
+
+        private void ResetForm()
+        {
+            datealarm.Visible = false;
+            stadalarm.Visible = false;
+            payalarm.Visible = false;
+            stadbx.SelectedIndex = -1;
+            paybx.SelectedIndex = -1;
+            timeComboBox.Items.Clear();
+        }
+
+        private void datebx_ValueChanged(object sender, EventArgs e)
+              => timeComboBox.Items.Clear();
+
     }
 }
+
