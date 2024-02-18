@@ -83,11 +83,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(22, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-<<<<<<< Updated upstream:Reserve a Five a Side Football/Reserve  a Five a Side Football/Player/DeleteResrvation.Designer.cs
             this.dataGridView1.Size = new System.Drawing.Size(706, 181);
-=======
+
             this.dataGridView1.Size = new System.Drawing.Size(630, 181);
->>>>>>> Stashed changes:Reserve a Five a Side Football/Reserve  a Five a Side Football/Owner/delLegue.Designer.cs
             this.dataGridView1.TabIndex = 3;
             // 
             // payment
@@ -108,18 +106,15 @@
             // 
             this.time.Location = new System.Drawing.Point(187, 356);
             this.time.Name = "time";
-<<<<<<< Updated upstream:Reserve a Five a Side Football/Reserve  a Five a Side Football/Player/DeleteResrvation.Designer.cs
             this.time.Size = new System.Drawing.Size(123, 22);
-=======
+
             this.time.Size = new System.Drawing.Size(110, 22);
->>>>>>> Stashed changes:Reserve a Five a Side Football/Reserve  a Five a Side Football/Owner/delLegue.Designer.cs
             this.time.TabIndex = 7;
             // 
             // status
             // 
             this.status.Location = new System.Drawing.Point(187, 328);
             this.status.Name = "status";
-<<<<<<< Updated upstream:Reserve a Five a Side Football/Reserve  a Five a Side Football/Player/DeleteResrvation.Designer.cs
             this.status.Size = new System.Drawing.Size(123, 22);
             this.status.TabIndex = 8;
             // 
@@ -128,7 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 362);
-=======
+
             this.status.Size = new System.Drawing.Size(110, 22);
             this.status.TabIndex = 8;
             // 
@@ -177,7 +172,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
->>>>>>> Stashed changes:Reserve a Five a Side Football/Reserve  a Five a Side Football/Owner/delLegue.Designer.cs
             this.Controls.Add(this.status);
             this.Controls.Add(this.time);
             this.Controls.Add(this.date);

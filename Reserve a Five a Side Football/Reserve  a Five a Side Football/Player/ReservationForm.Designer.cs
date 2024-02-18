@@ -111,7 +111,7 @@
             this.datebx.Name = "datebx";
             this.datebx.Size = new System.Drawing.Size(205, 31);
             this.datebx.TabIndex = 6;
-<<<<<<< HEAD
+
             // 
             // paybx
             // 
@@ -124,9 +124,7 @@
             this.paybx.Name = "paybx";
             this.paybx.Size = new System.Drawing.Size(206, 33);
             this.paybx.TabIndex = 9;
-=======
             this.datebx.ValueChanged += new System.EventHandler(this.datebx_ValueChanged);
->>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             // 
             // datealarm
             // 
@@ -271,14 +269,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(890, 437);
-=======
+
             this.ClientSize = new System.Drawing.Size(1089, 626);
             this.Controls.Add(this.Timelbl);
             this.Controls.Add(this.lblcCity);
             this.Controls.Add(this.paybx);
->>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
+
             this.Controls.Add(this.timeComboBox);
             this.Controls.Add(this.stadbx);
             this.Controls.Add(this.Citylbl);
