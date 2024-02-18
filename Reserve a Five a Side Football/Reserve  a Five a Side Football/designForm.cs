@@ -135,7 +135,7 @@ namespace Reserve__a_Five_a_Side_Football
         private void Reset()
         {
             DisableButton();
-            lblTitle.Text = "HOME";
+            lblTitle.Text = "Reserve a Five-a-Side Football";
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             panellogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
@@ -165,6 +165,16 @@ namespace Reserve__a_Five_a_Side_Football
         private void button9_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void designForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

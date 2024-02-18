@@ -63,10 +63,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(329, 372);
+            this.button1.Location = new System.Drawing.Point(278, 385);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 45);
+            this.button1.Size = new System.Drawing.Size(107, 45);
             this.button1.TabIndex = 3;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(470, 72);
+            this.label3.Location = new System.Drawing.Point(501, 72);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 16);
@@ -119,7 +119,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 238);
+            this.label6.Location = new System.Drawing.Point(13, 225);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 16);
@@ -130,7 +130,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(470, 244);
+            this.label7.Location = new System.Drawing.Point(470, 225);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 16);
@@ -139,50 +139,50 @@
             // 
             // CaptinIdtxt
             // 
-            this.CaptinIdtxt.Location = new System.Drawing.Point(645, 66);
+            this.CaptinIdtxt.Location = new System.Drawing.Point(645, 72);
             this.CaptinIdtxt.Name = "CaptinIdtxt";
-            this.CaptinIdtxt.Size = new System.Drawing.Size(264, 22);
+            this.CaptinIdtxt.Size = new System.Drawing.Size(226, 22);
             this.CaptinIdtxt.TabIndex = 11;
             // 
             // TeamNametxt
             // 
-            this.TeamNametxt.Location = new System.Drawing.Point(187, 72);
+            this.TeamNametxt.Location = new System.Drawing.Point(187, 75);
             this.TeamNametxt.Name = "TeamNametxt";
-            this.TeamNametxt.Size = new System.Drawing.Size(245, 22);
+            this.TeamNametxt.Size = new System.Drawing.Size(220, 22);
             this.TeamNametxt.TabIndex = 12;
             // 
             // NationalIDplayer1txt
             // 
             this.NationalIDplayer1txt.Location = new System.Drawing.Point(187, 145);
             this.NationalIDplayer1txt.Name = "NationalIDplayer1txt";
-            this.NationalIDplayer1txt.Size = new System.Drawing.Size(245, 22);
+            this.NationalIDplayer1txt.Size = new System.Drawing.Size(220, 22);
             this.NationalIDplayer1txt.TabIndex = 13;
             // 
             // NationalIDplayer2txt
             // 
             this.NationalIDplayer2txt.Location = new System.Drawing.Point(645, 151);
             this.NationalIDplayer2txt.Name = "NationalIDplayer2txt";
-            this.NationalIDplayer2txt.Size = new System.Drawing.Size(264, 22);
+            this.NationalIDplayer2txt.Size = new System.Drawing.Size(226, 22);
             this.NationalIDplayer2txt.TabIndex = 14;
             // 
             // NationalIDplayer3txt
             // 
-            this.NationalIDplayer3txt.Location = new System.Drawing.Point(187, 238);
+            this.NationalIDplayer3txt.Location = new System.Drawing.Point(187, 219);
             this.NationalIDplayer3txt.Name = "NationalIDplayer3txt";
-            this.NationalIDplayer3txt.Size = new System.Drawing.Size(245, 22);
+            this.NationalIDplayer3txt.Size = new System.Drawing.Size(220, 22);
             this.NationalIDplayer3txt.TabIndex = 15;
             // 
             // NationalIDplayer4txt
             // 
-            this.NationalIDplayer4txt.Location = new System.Drawing.Point(645, 232);
+            this.NationalIDplayer4txt.Location = new System.Drawing.Point(645, 219);
             this.NationalIDplayer4txt.Name = "NationalIDplayer4txt";
-            this.NationalIDplayer4txt.Size = new System.Drawing.Size(264, 22);
+            this.NationalIDplayer4txt.Size = new System.Drawing.Size(226, 22);
             this.NationalIDplayer4txt.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(483, 295);
+            this.label8.Location = new System.Drawing.Point(483, 281);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 32);
@@ -192,15 +192,15 @@
             // LeagueNameCmb
             // 
             this.LeagueNameCmb.FormattingEnabled = true;
-            this.LeagueNameCmb.Location = new System.Drawing.Point(645, 286);
+            this.LeagueNameCmb.Location = new System.Drawing.Point(645, 281);
             this.LeagueNameCmb.Name = "LeagueNameCmb";
-            this.LeagueNameCmb.Size = new System.Drawing.Size(245, 24);
+            this.LeagueNameCmb.Size = new System.Drawing.Size(226, 24);
             this.LeagueNameCmb.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 308);
+            this.label9.Location = new System.Drawing.Point(13, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 16);
             this.label9.TabIndex = 19;
@@ -208,16 +208,16 @@
             // 
             // NationalIDplayer5txt
             // 
-            this.NationalIDplayer5txt.Location = new System.Drawing.Point(187, 305);
+            this.NationalIDplayer5txt.Location = new System.Drawing.Point(187, 283);
             this.NationalIDplayer5txt.Name = "NationalIDplayer5txt";
-            this.NationalIDplayer5txt.Size = new System.Drawing.Size(245, 22);
+            this.NationalIDplayer5txt.Size = new System.Drawing.Size(220, 22);
             this.NationalIDplayer5txt.TabIndex = 20;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(716, 394);
+            this.button2.Location = new System.Drawing.Point(473, 385);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 43);
+            this.button2.Size = new System.Drawing.Size(150, 43);
             this.button2.TabIndex = 21;
             this.button2.Text = "Regiseration Now";
             this.button2.UseVisualStyleBackColor = true;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 587);
+            this.ClientSize = new System.Drawing.Size(944, 481);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NationalIDplayer5txt);
             this.Controls.Add(this.label9);

@@ -54,7 +54,7 @@
             // namelabel
             // 
             this.namelabel.AutoSize = true;
-            this.namelabel.Location = new System.Drawing.Point(12, 33);
+            this.namelabel.Location = new System.Drawing.Point(12, 320);
             this.namelabel.Name = "namelabel";
             this.namelabel.Size = new System.Drawing.Size(68, 25);
             this.namelabel.TabIndex = 0;
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 96);
+            this.label2.Location = new System.Drawing.Point(12, 379);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 25);
             this.label2.TabIndex = 1;
@@ -80,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(299, 96);
+            this.label4.Location = new System.Drawing.Point(12, 477);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 25);
             this.label4.TabIndex = 3;
@@ -89,7 +89,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 33);
+            this.label5.Location = new System.Drawing.Point(12, 427);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 25);
             this.label5.TabIndex = 4;
@@ -97,16 +97,16 @@
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(88, 30);
+            this.name.Location = new System.Drawing.Point(116, 320);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(205, 31);
+            this.name.Size = new System.Drawing.Size(145, 31);
             this.name.TabIndex = 5;
             // 
             // price
             // 
-            this.price.Location = new System.Drawing.Point(88, 96);
+            this.price.Location = new System.Drawing.Point(116, 373);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(205, 31);
+            this.price.Size = new System.Drawing.Size(145, 31);
             this.price.TabIndex = 6;
             // 
             // state
@@ -115,23 +115,23 @@
             this.state.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.state.Location = new System.Drawing.Point(375, 30);
+            this.state.Location = new System.Drawing.Point(116, 427);
             this.state.Name = "state";
-            this.state.Size = new System.Drawing.Size(121, 33);
+            this.state.Size = new System.Drawing.Size(145, 33);
             this.state.TabIndex = 7;
             // 
             // area
             // 
-            this.area.Location = new System.Drawing.Point(375, 93);
+            this.area.Location = new System.Drawing.Point(116, 477);
             this.area.Name = "area";
-            this.area.Size = new System.Drawing.Size(205, 31);
+            this.area.Size = new System.Drawing.Size(145, 31);
             this.area.TabIndex = 8;
             // 
             // addbtn
             // 
-            this.addbtn.Location = new System.Drawing.Point(17, 147);
+            this.addbtn.Location = new System.Drawing.Point(616, 488);
             this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(157, 49);
+            this.addbtn.Size = new System.Drawing.Size(115, 49);
             this.addbtn.TabIndex = 9;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = true;
@@ -145,9 +145,9 @@
             this.Stadstate,
             this.stadarea,
             this.pricehour});
-            this.stadiumData.Location = new System.Drawing.Point(1, 228);
+            this.stadiumData.Location = new System.Drawing.Point(62, 30);
             this.stadiumData.Name = "stadiumData";
-            this.stadiumData.Size = new System.Drawing.Size(756, 388);
+            this.stadiumData.Size = new System.Drawing.Size(627, 241);
             this.stadiumData.TabIndex = 10;
             this.stadiumData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stadiumData_CellClick);
             // 
@@ -177,9 +177,9 @@
             // 
             // deletebtn
             // 
-            this.deletebtn.Location = new System.Drawing.Point(375, 147);
+            this.deletebtn.Location = new System.Drawing.Point(471, 488);
             this.deletebtn.Name = "deletebtn";
-            this.deletebtn.Size = new System.Drawing.Size(157, 49);
+            this.deletebtn.Size = new System.Drawing.Size(116, 49);
             this.deletebtn.TabIndex = 11;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = true;
@@ -187,9 +187,9 @@
             // 
             // updatbtn
             // 
-            this.updatbtn.Location = new System.Drawing.Point(199, 147);
+            this.updatbtn.Location = new System.Drawing.Point(471, 411);
             this.updatbtn.Name = "updatbtn";
-            this.updatbtn.Size = new System.Drawing.Size(157, 49);
+            this.updatbtn.Size = new System.Drawing.Size(116, 49);
             this.updatbtn.TabIndex = 12;
             this.updatbtn.Text = "Update";
             this.updatbtn.UseVisualStyleBackColor = true;
@@ -197,9 +197,9 @@
             // 
             // Clearbtn
             // 
-            this.Clearbtn.Location = new System.Drawing.Point(560, 147);
+            this.Clearbtn.Location = new System.Drawing.Point(616, 411);
             this.Clearbtn.Name = "Clearbtn";
-            this.Clearbtn.Size = new System.Drawing.Size(157, 49);
+            this.Clearbtn.Size = new System.Drawing.Size(115, 49);
             this.Clearbtn.TabIndex = 13;
             this.Clearbtn.Text = "Clear";
             this.Clearbtn.UseVisualStyleBackColor = true;
@@ -207,9 +207,9 @@
             // 
             // uploadimgbtn
             // 
-            this.uploadimgbtn.Location = new System.Drawing.Point(537, 21);
+            this.uploadimgbtn.Location = new System.Drawing.Point(511, 317);
             this.uploadimgbtn.Name = "uploadimgbtn";
-            this.uploadimgbtn.Size = new System.Drawing.Size(180, 49);
+            this.uploadimgbtn.Size = new System.Drawing.Size(159, 31);
             this.uploadimgbtn.TabIndex = 14;
             this.uploadimgbtn.Text = "Choose Image";
             this.uploadimgbtn.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 609);
+            this.ClientSize = new System.Drawing.Size(757, 581);
             this.Controls.Add(this.uploadimgbtn);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.updatbtn);
