@@ -1,4 +1,5 @@
-﻿using RegertrationPage;
+﻿using Login_;
+using RegertrationPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,11 +56,24 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 if (currentButton != (Button)btnSender)
                 {
+<<<<<<< Updated upstream
                     DisableButton();
                     currentButton = (Button)btnSender;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                  
+=======
+                    //            DisableButton();
+                    //            Color color = SelectThemeColor();
+                    //            currentButton = (Button)btnSender;
+                    //            currentButton.BackColor = color;
+                    //            currentButton.ForeColor = Color.White;
+                    //            currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    //            panelTitleBar.BackColor = color;
+                    //            panellogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    //            ThemeColor.PrimaryColor = color;
+                    //            ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+>>>>>>> Stashed changes
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -97,7 +111,11 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn1_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             OpenChildForm(new DeleteResrvation(), sender);
+=======
+            OpenChildForm(new Login_Form(), sender);
+>>>>>>> Stashed changes
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -112,7 +130,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new OwnerAddLeague(), sender);
+            OpenChildForm(new LeagueForm(), sender);
         }
 
         private void btn5_Click(object sender, EventArgs e)
@@ -172,9 +190,15 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
+<<<<<<< Updated upstream
         private void designForm_Load(object sender, EventArgs e)
         {
 
+=======
+        private void button10_Click(object sender, EventArgs e)
+        {
+             OpenChildForm(new TeamInformatin(), sender);
+>>>>>>> Stashed changes
         }
     }
 }
