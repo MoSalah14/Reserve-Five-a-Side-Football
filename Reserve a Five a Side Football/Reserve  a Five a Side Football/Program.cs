@@ -2,6 +2,7 @@
 using RegertrationPage;
 using ReservationPage;
 using Reserve__a_Five_a_Side_Football.Database;
+using Reserve__a_Five_a_Side_Football.Owner;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -26,7 +27,7 @@ namespace Reserve__a_Five_a_Side_Football
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new designForm());
+            Application.Run(new ShowAllRevToOwner());
 
 
 
