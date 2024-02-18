@@ -35,7 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.confbtn = new System.Windows.Forms.Button();
             this.datebx = new System.Windows.Forms.DateTimePicker();
-            this.paybx = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.datealarm = new System.Windows.Forms.Label();
             this.payalarm = new System.Windows.Forms.Label();
@@ -44,6 +43,9 @@
             this.Citylbl = new System.Windows.Forms.Label();
             this.stadbx = new Guna.UI2.WinForms.Guna2ComboBox();
             this.timeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.paybx = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Timelbl = new System.Windows.Forms.Label();
+            this.lblcCity = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -109,6 +111,7 @@
             this.datebx.Name = "datebx";
             this.datebx.Size = new System.Drawing.Size(205, 31);
             this.datebx.TabIndex = 6;
+<<<<<<< HEAD
             // 
             // paybx
             // 
@@ -121,6 +124,9 @@
             this.paybx.Name = "paybx";
             this.paybx.Size = new System.Drawing.Size(206, 33);
             this.paybx.TabIndex = 9;
+=======
+            this.datebx.ValueChanged += new System.EventHandler(this.datebx_ValueChanged);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             // 
             // datealarm
             // 
@@ -197,27 +203,82 @@
             this.stadbx.Name = "stadbx";
             this.stadbx.Size = new System.Drawing.Size(206, 36);
             this.stadbx.TabIndex = 16;
+            this.stadbx.SelectedIndexChanged += new System.EventHandler(this.stadbx_SelectedIndexChanged_1);
             // 
             // timeComboBox
             // 
             this.timeComboBox.BackColor = System.Drawing.Color.Transparent;
             this.timeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.timeComboBox.DropDownHeight = 100;
             this.timeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.timeComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.timeComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.timeComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.timeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.timeComboBox.IntegralHeight = false;
             this.timeComboBox.ItemHeight = 30;
             this.timeComboBox.Location = new System.Drawing.Point(604, 172);
             this.timeComboBox.Name = "timeComboBox";
             this.timeComboBox.Size = new System.Drawing.Size(180, 36);
             this.timeComboBox.TabIndex = 17;
             // 
+            // paybx
+            // 
+            this.paybx.BackColor = System.Drawing.Color.Transparent;
+            this.paybx.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.paybx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.paybx.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.paybx.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.paybx.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.paybx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.paybx.ItemHeight = 30;
+            this.paybx.Items.AddRange(new object[] {
+            "Cash",
+            "Credit Card",
+            "Wallet"});
+            this.paybx.Location = new System.Drawing.Point(191, 402);
+            this.paybx.Name = "paybx";
+            this.paybx.Size = new System.Drawing.Size(140, 36);
+            this.paybx.TabIndex = 18;
+            // 
+            // Timelbl
+            // 
+            this.Timelbl.AutoSize = true;
+            this.Timelbl.BackColor = System.Drawing.Color.Transparent;
+            this.Timelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Timelbl.ForeColor = System.Drawing.Color.Red;
+            this.Timelbl.Location = new System.Drawing.Point(196, 371);
+            this.Timelbl.Name = "Timelbl";
+            this.Timelbl.Size = new System.Drawing.Size(98, 20);
+            this.Timelbl.TabIndex = 20;
+            this.Timelbl.Text = "Select Time";
+            this.Timelbl.Visible = false;
+            // 
+            // lblcCity
+            // 
+            this.lblcCity.AutoSize = true;
+            this.lblcCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblcCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcCity.ForeColor = System.Drawing.Color.Red;
+            this.lblcCity.Location = new System.Drawing.Point(187, 198);
+            this.lblcCity.Name = "lblcCity";
+            this.lblcCity.Size = new System.Drawing.Size(90, 20);
+            this.lblcCity.TabIndex = 19;
+            this.lblcCity.Text = "Select City";
+            this.lblcCity.Visible = false;
+            // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(890, 437);
+=======
+            this.ClientSize = new System.Drawing.Size(1089, 626);
+            this.Controls.Add(this.Timelbl);
+            this.Controls.Add(this.lblcCity);
+            this.Controls.Add(this.paybx);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.Controls.Add(this.timeComboBox);
             this.Controls.Add(this.stadbx);
             this.Controls.Add(this.Citylbl);
@@ -225,7 +286,6 @@
             this.Controls.Add(this.stadalarm);
             this.Controls.Add(this.payalarm);
             this.Controls.Add(this.datealarm);
-            this.Controls.Add(this.paybx);
             this.Controls.Add(this.datebx);
             this.Controls.Add(this.confbtn);
             this.Controls.Add(this.label5);
@@ -238,7 +298,6 @@
             this.Name = "ReservationForm";
             this.Text = "Reserve";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Reserve_FormClosing);
-            this.Load += new System.EventHandler(this.ReservationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +312,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button confbtn;
         private System.Windows.Forms.DateTimePicker datebx;
-        private System.Windows.Forms.ComboBox paybx;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label datealarm;
         private System.Windows.Forms.Label payalarm;
@@ -262,5 +320,8 @@
         private System.Windows.Forms.Label Citylbl;
         private Guna.UI2.WinForms.Guna2ComboBox stadbx;
         private Guna.UI2.WinForms.Guna2ComboBox timeComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox paybx;
+        private System.Windows.Forms.Label Timelbl;
+        private System.Windows.Forms.Label lblcCity;
     }
 }

@@ -71,6 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\GetTeamDetailsForUser_Result.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="designForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,11 +218,11 @@
     <Compile Include="Shared\StadiumGalary.Designer.cs">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeamInformatin.cs">
+    <Compile Include="TeamInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeamInformatin.Designer.cs">
-      <DependentUpon>TeamInformatin.cs</DependentUpon>
+    <Compile Include="TeamInformation.Designer.cs">
+      <DependentUpon>TeamInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
@@ -279,8 +282,8 @@
     <EmbeddedResource Include="Shared\StadiumGalary.resx">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeamInformatin.resx">
-      <DependentUpon>TeamInformatin.cs</DependentUpon>
+    <EmbeddedResource Include="TeamInformation.resx">
+      <DependentUpon>TeamInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>

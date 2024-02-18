@@ -67,12 +67,18 @@
             this.panelmenue.Controls.Add(this.panellogo);
             this.panelmenue.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenue.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.panelmenue.Name = "panelmenue";
 <<<<<<< Updated upstream
             this.panelmenue.Size = new System.Drawing.Size(192, 545);
 =======
             this.panelmenue.Size = new System.Drawing.Size(220, 503);
 >>>>>>> Stashed changes
+=======
+            this.panelmenue.Margin = new System.Windows.Forms.Padding(4);
+            this.panelmenue.Name = "panelmenue";
+            this.panelmenue.Size = new System.Drawing.Size(293, 634);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.panelmenue.TabIndex = 0;
             // 
             // button6
@@ -81,8 +87,13 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button6.Location = new System.Drawing.Point(0, 350);
+=======
+            this.button6.Location = new System.Drawing.Point(0, 428);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(192, 56);
 =======
@@ -101,8 +112,13 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button5.Location = new System.Drawing.Point(0, 296);
+=======
+            this.button5.Location = new System.Drawing.Point(0, 362);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 54);
 =======
@@ -121,8 +137,13 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button4.Location = new System.Drawing.Point(0, 242);
+=======
+            this.button4.Location = new System.Drawing.Point(0, 296);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 54);
 =======
@@ -141,8 +162,13 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button3.Location = new System.Drawing.Point(0, 188);
+=======
+            this.button3.Location = new System.Drawing.Point(0, 230);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 54);
 =======
@@ -161,8 +187,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button2.Location = new System.Drawing.Point(0, 134);
+=======
+            this.button2.Location = new System.Drawing.Point(0, 164);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 54);
 =======
@@ -182,8 +213,13 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button1.Location = new System.Drawing.Point(0, 80);
+=======
+            this.button1.Location = new System.Drawing.Point(0, 98);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 54);
 =======
@@ -202,6 +238,10 @@
             this.panellogo.Controls.Add(this.panel1);
             this.panellogo.ForeColor = System.Drawing.Color.White;
             this.panellogo.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+=======
+            this.panellogo.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.panellogo.Name = "panellogo";
 <<<<<<< Updated upstream
             this.panellogo.Size = new System.Drawing.Size(192, 80);
@@ -212,24 +252,34 @@
             // 
             // panel1
             // 
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(218, 3);
+=======
+            this.panel1.Location = new System.Drawing.Point(291, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 100);
             this.panel1.TabIndex = 1;
             // 
             // panelTitleBar
             // 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.panelTitleBar.BackColor = System.Drawing.Color.Teal;
 =======
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
 >>>>>>> Stashed changes
+=======
+            this.panelTitleBar.BackColor = System.Drawing.Color.Teal;
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.panelTitleBar.Controls.Add(this.button9);
             this.panelTitleBar.Controls.Add(this.button8);
             this.panelTitleBar.Controls.Add(this.button7);
             this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.panelTitleBar.Location = new System.Drawing.Point(192, 0);
             this.panelTitleBar.Name = "panelTitleBar";
@@ -239,6 +289,12 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(787, 56);
 >>>>>>> Stashed changes
+=======
+            this.panelTitleBar.Location = new System.Drawing.Point(293, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(997, 69);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -250,8 +306,13 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button9.Location = new System.Drawing.Point(706, 3);
+=======
+            this.button9.Location = new System.Drawing.Point(897, 0);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(37, 41);
 =======
@@ -272,8 +333,13 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button8.Location = new System.Drawing.Point(738, 3);
+=======
+            this.button8.Location = new System.Drawing.Point(928, 0);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 47);
 =======
@@ -294,8 +360,13 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.button7.Location = new System.Drawing.Point(760, 3);
+=======
+            this.button7.Location = new System.Drawing.Point(957, 0);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(58, 41);
 =======
@@ -315,6 +386,10 @@
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+=======
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.btnCloseChildForm.Name = "btnCloseChildForm";
 <<<<<<< Updated upstream
             this.btnCloseChildForm.Size = new System.Drawing.Size(43, 58);
@@ -352,10 +427,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDesktopPane.ForeColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.panelDesktopPane.Location = new System.Drawing.Point(193, 56);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(804, 489);
+=======
+            this.panelDesktopPane.Location = new System.Drawing.Point(293, 69);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(996, 565);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.panelDesktopPane.TabIndex = 2;
             this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
@@ -363,7 +445,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(997, 545);
+=======
+            this.ClientSize = new System.Drawing.Size(1290, 634);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.Controls.Add(this.panelDesktopPane);
 =======
             this.panelDesktopPane.Location = new System.Drawing.Point(221, 60);
@@ -394,10 +480,14 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelmenue);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.MinimumSize = new System.Drawing.Size(950, 550);
 =======
 >>>>>>> Stashed changes
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> a4cb71189a69bc1aa373c377906f6a3f8ec9541a
             this.Name = "designForm";
             this.Text = "designForm";
             this.Load += new System.EventHandler(this.designForm_Load);

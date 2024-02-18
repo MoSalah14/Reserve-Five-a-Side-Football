@@ -140,7 +140,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new TeamInformatin(), sender);
+            OpenChildForm(new TeamInformation(), sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
