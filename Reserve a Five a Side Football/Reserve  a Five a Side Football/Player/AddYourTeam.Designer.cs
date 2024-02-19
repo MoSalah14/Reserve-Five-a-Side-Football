@@ -89,9 +89,9 @@
             this.label3.Location = new System.Drawing.Point(470, 72);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.Size = new System.Drawing.Size(164, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Captin ID:";
+            this.label3.Text = "NationalID_Captain ID:";
             // 
             // label4
             // 

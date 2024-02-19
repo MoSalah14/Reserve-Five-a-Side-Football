@@ -29,88 +29,117 @@ namespace Reserve__a_Five_a_Side_Football
         private void button1_Click(object sender, EventArgs e)
         {
 
+            /* if (dataGridView1.SelectedRows.Count > 0)
+             {
+                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                 {
+
+                     int reservationId = int.Parse(dataGridView1.Rows[0].Cells["ReservationID"].Value.ToString());
+
+
+                     var q = context1.Reservations.FirstOrDefault(r => r.ReservationID == reservationId);
+
+
+                     context1.Reservations.Remove(q);
+                     context1.SaveChanges();
+                     show();
+
+                 }
+
+             }*/
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)
                 {
+                    int reservationId = Convert.ToInt32(row.Cells["Rev_ID"].Value);
+                    var reservationToDelete = context1.Reservations.FirstOrDefault(r => r.ReservationID == reservationId);
 
-                    int reservationId = int.Parse(dataGridView1.Rows[0].Cells["ReservationID"].Value.ToString());
+                    if (reservationToDelete != null)
+                    {
+
+                         DateTime currentDateTime = DateTime.UtcNow.AddHours(2);
+                       
 
 
-                    var q = context1.Reservations.FirstOrDefault(r => r.ReservationID == reservationId);
+                        DateTime minReservationDateTime = currentDateTime.AddHours(48); 
 
-
-                    context1.Reservations.Remove(q);
-                    context1.SaveChanges();
-                    show();
-
+                        if (reservationToDelete.Reservation_Date >= minReservationDateTime)
+                        {
+                            context1.Reservations.Remove(reservationToDelete);
+                            context1.SaveChanges();
+                            show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Can Not Delete This Rev Must Be More than 48 h");
+                        }
+                    }
                 }
 
+                // إعادة عرض البيانات بعد الحذف
+               // show();
             }
+            else
+            {
+                MessageBox.Show("select any row");
+            }
+
+
+
         }
+        /* private void show()
+         {
+             var y = (from r in context1.Reservations
+                      select new
+                      {
+                          r.ReservationID,
+                          r.Reservation_Date,
+                          r.Reservation_Time,
+                          r.Payment,
+                          r.Reservation_Statues
+                      }).ToList();
+             dataGridView1.DataSource = y;
+         }*/
         private void show()
         {
-            var y = (from r in context1.Reservations
-                     select new
-                     {
-                         r.ReservationID,
-                         r.Reservation_Date,
-                         r.Reservation_Time,
-                         r.Payment,
-                         r.Reservation_Statues
-                     }).ToList();
-            dataGridView1.DataSource = y;
+            dataGridView1.Rows.Clear();
+            int userLoginID = CurrentUserLogin.UserLogginID;
+            
+
+            var reservations = (from r in context1.Reservations
+                                join p in context1.Players on r.Player_ID equals p.Player_ID
+                                join u in context1.Users on p.UserID equals u.UserID
+                                join res in context1.Stadium on r.StadiumID equals res.StadiumID
+                                where u.UserID == 5
+                                select new
+                                {
+
+                                    r.ReservationID,
+                                    res.Stad_Name,
+                                    r.Reservation_Date,
+                                    r.Reservation_Time,
+                                    r.Payment,
+                                    r.Reservation_Statues,
+                                   // PlayerName = p.Name,
+                                   // UserName = u.UserName
+                                }).ToList();
+
+           // dataGridView1.DataSource = reservations;
+           foreach(var reser in reservations ) 
+            {
+                dataGridView1.Rows.Add(reser.ReservationID,reser.Reservation_Date,reser.Reservation_Time,reser.Stad_Name,reser.Payment,reser.Reservation_Statues);
+               
+            }
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteResrvation_Load(object sender, EventArgs e)
         {
 
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                {
-                    int reservationId = int.Parse(row.Cells["ReservationID"].Value.ToString());
-
-                    var reservation = context1.Reservations.FirstOrDefault(r => r.ReservationID == reservationId);
-                    if (reservation != null)
-                    {
-                        DateTime reservationDate;
-                        if (DateTime.TryParse(date.Text, out reservationDate))
-                        {
-                            reservation.Reservation_Date = reservationDate;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid date format");
-                            return;
-                        }
-
-                        DateTime reservationTime;
-                        if (DateTime.TryParse(time.Text, out reservationTime))
-                        {
-                            reservation.Reservation_Time = reservationTime.TimeOfDay;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid time format");
-                            return;
-                        }    
-                            reservation.Payment = payment.Text;
-                            reservation.Reservation_Statues = status.Text;
-                        
-                    }
-                    context1.SaveChanges();
-                    show();
-                    date.Text = "";
-                    time.Text = "";
-                    payment.Text = "";
-                    status.Text = "";
-                }
-            }
         }
     }
-}
-
+        }
+    
 
 
 
