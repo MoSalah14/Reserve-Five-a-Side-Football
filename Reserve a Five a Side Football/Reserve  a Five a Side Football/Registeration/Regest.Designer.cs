@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(363, 22);
+            this.label1.Location = new System.Drawing.Point(353, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 25);
@@ -66,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 173);
+            this.label2.Location = new System.Drawing.Point(15, 150);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 25);
@@ -76,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 101);
+            this.label3.Location = new System.Drawing.Point(15, 75);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 25);
@@ -86,7 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 412);
+            this.label4.Location = new System.Drawing.Point(421, 144);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 25);
@@ -96,7 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 324);
+            this.label5.Location = new System.Drawing.Point(421, 238);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 25);
@@ -106,7 +106,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(62, 241);
+            this.label6.Location = new System.Drawing.Point(15, 238);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 25);
@@ -117,9 +117,9 @@
             // 
             this.Regsterbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regsterbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regsterbtn.Location = new System.Drawing.Point(195, 582);
+            this.Regsterbtn.Location = new System.Drawing.Point(277, 428);
             this.Regsterbtn.Name = "Regsterbtn";
-            this.Regsterbtn.Size = new System.Drawing.Size(479, 48);
+            this.Regsterbtn.Size = new System.Drawing.Size(93, 39);
             this.Regsterbtn.TabIndex = 6;
             this.Regsterbtn.Text = "Register";
             this.Regsterbtn.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             // 
             this.acountalarm.AutoSize = true;
             this.acountalarm.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.acountalarm.Location = new System.Drawing.Point(291, 687);
+            this.acountalarm.Location = new System.Drawing.Point(309, 375);
             this.acountalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.acountalarm.Name = "acountalarm";
             this.acountalarm.Size = new System.Drawing.Size(267, 25);
@@ -139,9 +139,9 @@
             // 
             // Signinbtn
             // 
-            this.Signinbtn.Location = new System.Drawing.Point(346, 731);
+            this.Signinbtn.Location = new System.Drawing.Point(411, 426);
             this.Signinbtn.Name = "Signinbtn";
-            this.Signinbtn.Size = new System.Drawing.Size(189, 39);
+            this.Signinbtn.Size = new System.Drawing.Size(91, 39);
             this.Signinbtn.TabIndex = 8;
             this.Signinbtn.Text = " Sign in";
             this.Signinbtn.UseVisualStyleBackColor = true;
@@ -151,9 +151,9 @@
             // 
             this.Clearbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Clearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clearbtn.Location = new System.Drawing.Point(195, 636);
+            this.Clearbtn.Location = new System.Drawing.Point(550, 424);
             this.Clearbtn.Name = "Clearbtn";
-            this.Clearbtn.Size = new System.Drawing.Size(479, 48);
+            this.Clearbtn.Size = new System.Drawing.Size(78, 39);
             this.Clearbtn.TabIndex = 9;
             this.Clearbtn.Text = "Clear";
             this.Clearbtn.UseVisualStyleBackColor = true;
@@ -161,39 +161,39 @@
             // 
             // Fname
             // 
-            this.Fname.Location = new System.Drawing.Point(181, 95);
+            this.Fname.Location = new System.Drawing.Point(155, 75);
             this.Fname.Name = "Fname";
-            this.Fname.Size = new System.Drawing.Size(160, 31);
+            this.Fname.Size = new System.Drawing.Size(172, 31);
             this.Fname.TabIndex = 10;
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(274, 173);
+            this.email.Location = new System.Drawing.Point(155, 144);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(352, 31);
+            this.email.Size = new System.Drawing.Size(172, 31);
             this.email.TabIndex = 11;
             // 
             // Pass
             // 
-            this.Pass.Location = new System.Drawing.Point(274, 241);
+            this.Pass.Location = new System.Drawing.Point(155, 232);
             this.Pass.Name = "Pass";
             this.Pass.PasswordChar = '•';
-            this.Pass.Size = new System.Drawing.Size(352, 31);
+            this.Pass.Size = new System.Drawing.Size(172, 31);
             this.Pass.TabIndex = 12;
             // 
             // confpass
             // 
-            this.confpass.Location = new System.Drawing.Point(274, 324);
+            this.confpass.Location = new System.Drawing.Point(589, 223);
             this.confpass.Name = "confpass";
             this.confpass.PasswordChar = '•';
-            this.confpass.Size = new System.Drawing.Size(352, 31);
+            this.confpass.Size = new System.Drawing.Size(172, 31);
             this.confpass.TabIndex = 13;
             // 
             // idnum
             // 
-            this.idnum.Location = new System.Drawing.Point(274, 409);
+            this.idnum.Location = new System.Drawing.Point(581, 138);
             this.idnum.Name = "idnum";
-            this.idnum.Size = new System.Drawing.Size(352, 31);
+            this.idnum.Size = new System.Drawing.Size(170, 31);
             this.idnum.TabIndex = 14;
             // 
             // Passalarm
@@ -201,7 +201,7 @@
             this.Passalarm.AutoSize = true;
             this.Passalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Passalarm.ForeColor = System.Drawing.Color.Red;
-            this.Passalarm.Location = new System.Drawing.Point(275, 364);
+            this.Passalarm.Location = new System.Drawing.Point(595, 257);
             this.Passalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Passalarm.Name = "Passalarm";
             this.Passalarm.Size = new System.Drawing.Size(252, 15);
@@ -213,7 +213,7 @@
             this.emailalarm.AutoSize = true;
             this.emailalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailalarm.ForeColor = System.Drawing.Color.Red;
-            this.emailalarm.Location = new System.Drawing.Point(271, 214);
+            this.emailalarm.Location = new System.Drawing.Point(161, 182);
             this.emailalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.emailalarm.Name = "emailalarm";
             this.emailalarm.Size = new System.Drawing.Size(103, 15);
@@ -225,7 +225,7 @@
             this.idalarm.AutoSize = true;
             this.idalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idalarm.ForeColor = System.Drawing.Color.Red;
-            this.idalarm.Location = new System.Drawing.Point(275, 449);
+            this.idalarm.Location = new System.Drawing.Point(613, 182);
             this.idalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.idalarm.Name = "idalarm";
             this.idalarm.Size = new System.Drawing.Size(114, 15);
@@ -237,7 +237,7 @@
             this.namealarm.AutoSize = true;
             this.namealarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namealarm.ForeColor = System.Drawing.Color.Red;
-            this.namealarm.Location = new System.Drawing.Point(271, 132);
+            this.namealarm.Location = new System.Drawing.Point(586, 100);
             this.namealarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.namealarm.Name = "namealarm";
             this.namealarm.Size = new System.Drawing.Size(240, 15);
@@ -250,7 +250,7 @@
             this.showpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showpass.Location = new System.Drawing.Point(665, 247);
+            this.showpass.Location = new System.Drawing.Point(164, 270);
             this.showpass.Name = "showpass";
             this.showpass.Size = new System.Drawing.Size(134, 24);
             this.showpass.TabIndex = 19;
@@ -263,7 +263,7 @@
             this.RegFaildLbl.AutoSize = true;
             this.RegFaildLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegFaildLbl.ForeColor = System.Drawing.Color.Red;
-            this.RegFaildLbl.Location = new System.Drawing.Point(204, 548);
+            this.RegFaildLbl.Location = new System.Drawing.Point(257, 341);
             this.RegFaildLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RegFaildLbl.Name = "RegFaildLbl";
             this.RegFaildLbl.Size = new System.Drawing.Size(382, 18);
@@ -274,7 +274,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(363, 95);
+            this.label7.Location = new System.Drawing.Point(421, 69);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 25);
@@ -283,16 +283,16 @@
             // 
             // Lname
             // 
-            this.Lname.Location = new System.Drawing.Point(487, 92);
+            this.Lname.Location = new System.Drawing.Point(579, 66);
             this.Lname.Name = "Lname";
-            this.Lname.Size = new System.Drawing.Size(160, 31);
+            this.Lname.Size = new System.Drawing.Size(172, 31);
             this.Lname.TabIndex = 22;
             // 
             // Regest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 811);
+            this.ClientSize = new System.Drawing.Size(950, 482);
             this.Controls.Add(this.Lname);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.RegFaildLbl);

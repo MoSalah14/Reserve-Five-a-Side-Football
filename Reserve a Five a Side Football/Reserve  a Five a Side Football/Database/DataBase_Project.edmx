@@ -510,6 +510,14 @@
           <Property Type="String" Name="Player4_Name" Nullable="false" MaxLength="31" />
           <Property Type="String" Name="LeagueName" Nullable="false" MaxLength="15" />
         </ComplexType>
+        <ComplexType Name="GetTeamDetailsForUser_Result">
+          <Property Type="String" Name="Captain_Name" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Player1_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player2_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player3_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player4_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Legue_Name" Nullable="false" MaxLength="15" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

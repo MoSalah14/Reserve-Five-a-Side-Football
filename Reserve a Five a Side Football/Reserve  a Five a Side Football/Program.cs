@@ -2,6 +2,7 @@
 using RegertrationPage;
 using ReservationPage;
 using Reserve__a_Five_a_Side_Football.Database;
+using Reserve__a_Five_a_Side_Football.Owner;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -30,7 +31,7 @@ namespace Reserve__a_Five_a_Side_Football
             // Application.Run(new Regest());
             //Application.Run(new Add_update_del_Stadium());
             //Application.Run(new Login_Form());
-            Application.Run(new  AddYourTeam());
+            Application.Run(new  DeleteResrvation());
             //Application.Run(new AddYourTeam());
             //Application.Run(new StadiumGalary());
 

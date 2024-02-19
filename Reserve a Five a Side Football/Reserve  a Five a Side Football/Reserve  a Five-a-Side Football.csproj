@@ -71,6 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\GetTeamDetailsForUser_Result.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="designForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +85,12 @@
     </Compile>
     <Compile Include="Owner\addReservationByOwner.Designer.cs">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\ShowAllRevToOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner\ShowAllRevToOwner.Designer.cs">
+      <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
     </Compile>
     <Compile Include="Player\AddYourTeam.cs">
       <SubType>Form</SubType>
@@ -100,6 +109,11 @@
     </Compile>
     <Compile Include="Owner\Add_update_del_Stadium.Designer.cs">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Registeration\CurrentUserLogin.cs" />
     <Compile Include="Database\DataBase_Project.Context.cs">
@@ -210,11 +224,11 @@
     <Compile Include="Shared\StadiumGalary.Designer.cs">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeamInformatin.cs">
+    <Compile Include="TeamInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeamInformatin.Designer.cs">
-      <DependentUpon>TeamInformatin.cs</DependentUpon>
+    <Compile Include="TeamInformation.Designer.cs">
+      <DependentUpon>TeamInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
@@ -228,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Owner\addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner\ShowAllRevToOwner.resx">
+      <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player\AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
@@ -259,13 +276,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Registeration\Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,8 +291,8 @@
     <EmbeddedResource Include="Shared\StadiumGalary.resx">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeamInformatin.resx">
-      <DependentUpon>TeamInformatin.cs</DependentUpon>
+    <EmbeddedResource Include="TeamInformation.resx">
+      <DependentUpon>TeamInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
@@ -325,6 +338,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DesignPackge\" />
+    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DataBase_Project.Context.tt">

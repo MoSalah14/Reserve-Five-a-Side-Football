@@ -72,15 +72,15 @@
             // 
             // legaueNametxt
             // 
-            this.legaueNametxt.Location = new System.Drawing.Point(171, 50);
+            this.legaueNametxt.Location = new System.Drawing.Point(199, 288);
             this.legaueNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.legaueNametxt.Name = "legaueNametxt";
-            this.legaueNametxt.Size = new System.Drawing.Size(200, 22);
+            this.legaueNametxt.Size = new System.Drawing.Size(187, 22);
             this.legaueNametxt.TabIndex = 0;
             // 
             // Rewardtxt
             // 
-            this.Rewardtxt.Location = new System.Drawing.Point(171, 432);
+            this.Rewardtxt.Location = new System.Drawing.Point(653, 374);
             this.Rewardtxt.Margin = new System.Windows.Forms.Padding(4);
             this.Rewardtxt.Name = "Rewardtxt";
             this.Rewardtxt.Size = new System.Drawing.Size(200, 22);
@@ -89,7 +89,7 @@
             // LeguaeNamelab
             // 
             this.LeguaeNamelab.AutoSize = true;
-            this.LeguaeNamelab.Location = new System.Drawing.Point(22, 50);
+            this.LeguaeNamelab.Location = new System.Drawing.Point(26, 291);
             this.LeguaeNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LeguaeNamelab.Name = "LeguaeNamelab";
             this.LeguaeNamelab.Size = new System.Drawing.Size(108, 16);
@@ -99,7 +99,7 @@
             // BeginDatelab
             // 
             this.BeginDatelab.AutoSize = true;
-            this.BeginDatelab.Location = new System.Drawing.Point(22, 96);
+            this.BeginDatelab.Location = new System.Drawing.Point(28, 341);
             this.BeginDatelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BeginDatelab.Name = "BeginDatelab";
             this.BeginDatelab.Size = new System.Drawing.Size(92, 16);
@@ -109,7 +109,7 @@
             // EndDatelab
             // 
             this.EndDatelab.AutoSize = true;
-            this.EndDatelab.Location = new System.Drawing.Point(22, 155);
+            this.EndDatelab.Location = new System.Drawing.Point(28, 374);
             this.EndDatelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EndDatelab.Name = "EndDatelab";
             this.EndDatelab.Size = new System.Drawing.Size(75, 16);
@@ -119,7 +119,7 @@
             // EndRegistrationlab
             // 
             this.EndRegistrationlab.AutoSize = true;
-            this.EndRegistrationlab.Location = new System.Drawing.Point(18, 309);
+            this.EndRegistrationlab.Location = new System.Drawing.Point(475, 300);
             this.EndRegistrationlab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EndRegistrationlab.Name = "EndRegistrationlab";
             this.EndRegistrationlab.Size = new System.Drawing.Size(130, 16);
@@ -129,7 +129,7 @@
             // Rewardlab
             // 
             this.Rewardlab.AutoSize = true;
-            this.Rewardlab.Location = new System.Drawing.Point(22, 427);
+            this.Rewardlab.Location = new System.Drawing.Point(513, 380);
             this.Rewardlab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Rewardlab.Name = "Rewardlab";
             this.Rewardlab.Size = new System.Drawing.Size(68, 16);
@@ -139,7 +139,7 @@
             // Citylab
             // 
             this.Citylab.AutoSize = true;
-            this.Citylab.Location = new System.Drawing.Point(22, 373);
+            this.Citylab.Location = new System.Drawing.Point(527, 344);
             this.Citylab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Citylab.Name = "Citylab";
             this.Citylab.Size = new System.Drawing.Size(41, 16);
@@ -149,7 +149,7 @@
             // TimePlaylab
             // 
             this.TimePlaylab.AutoSize = true;
-            this.TimePlaylab.Location = new System.Drawing.Point(22, 491);
+            this.TimePlaylab.Location = new System.Drawing.Point(513, 413);
             this.TimePlaylab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimePlaylab.Name = "TimePlaylab";
             this.TimePlaylab.Size = new System.Drawing.Size(81, 16);
@@ -159,7 +159,7 @@
             // StadiumNamelab
             // 
             this.StadiumNamelab.AutoSize = true;
-            this.StadiumNamelab.Location = new System.Drawing.Point(18, 224);
+            this.StadiumNamelab.Location = new System.Drawing.Point(26, 397);
             this.StadiumNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StadiumNamelab.Name = "StadiumNamelab";
             this.StadiumNamelab.Size = new System.Drawing.Size(112, 32);
@@ -168,30 +168,30 @@
             // 
             // BeginDate
             // 
-            this.BeginDate.Location = new System.Drawing.Point(171, 96);
+            this.BeginDate.Location = new System.Drawing.Point(199, 335);
             this.BeginDate.Name = "BeginDate";
-            this.BeginDate.Size = new System.Drawing.Size(200, 22);
+            this.BeginDate.Size = new System.Drawing.Size(187, 22);
             this.BeginDate.TabIndex = 18;
             // 
             // EndDate
             // 
-            this.EndDate.Location = new System.Drawing.Point(171, 155);
+            this.EndDate.Location = new System.Drawing.Point(199, 369);
             this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(200, 22);
+            this.EndDate.Size = new System.Drawing.Size(187, 22);
             this.EndDate.TabIndex = 19;
             // 
             // EndRegistration
             // 
-            this.EndRegistration.Location = new System.Drawing.Point(171, 309);
+            this.EndRegistration.Location = new System.Drawing.Point(653, 300);
             this.EndRegistration.Name = "EndRegistration";
             this.EndRegistration.Size = new System.Drawing.Size(200, 22);
             this.EndRegistration.TabIndex = 20;
             // 
             // AddNewLegaueBtn
             // 
-            this.AddNewLegaueBtn.Location = new System.Drawing.Point(183, 574);
+            this.AddNewLegaueBtn.Location = new System.Drawing.Point(212, 455);
             this.AddNewLegaueBtn.Name = "AddNewLegaueBtn";
-            this.AddNewLegaueBtn.Size = new System.Drawing.Size(221, 62);
+            this.AddNewLegaueBtn.Size = new System.Drawing.Size(133, 53);
             this.AddNewLegaueBtn.TabIndex = 21;
             this.AddNewLegaueBtn.Text = "AddNewLeague";
             this.AddNewLegaueBtn.UseVisualStyleBackColor = true;
@@ -199,9 +199,9 @@
             // 
             // Deletebtn
             // 
-            this.Deletebtn.Location = new System.Drawing.Point(676, 574);
+            this.Deletebtn.Location = new System.Drawing.Point(579, 454);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(148, 62);
+            this.Deletebtn.Size = new System.Drawing.Size(117, 51);
             this.Deletebtn.TabIndex = 23;
             this.Deletebtn.Text = "Delete";
             this.Deletebtn.UseVisualStyleBackColor = true;
@@ -209,9 +209,9 @@
             // 
             // Updatebtn
             // 
-            this.Updatebtn.Location = new System.Drawing.Point(469, 574);
+            this.Updatebtn.Location = new System.Drawing.Point(396, 455);
             this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(154, 62);
+            this.Updatebtn.Size = new System.Drawing.Size(116, 49);
             this.Updatebtn.TabIndex = 24;
             this.Updatebtn.Text = "Update";
             this.Updatebtn.UseVisualStyleBackColor = true;
@@ -233,9 +233,9 @@
             this.cityDataGridViewTextBoxColumn,
             this.timePlayDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.legaueBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(456, 96);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(945, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(956, 202);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -307,29 +307,29 @@
             // StadiumNameCmb
             // 
             this.StadiumNameCmb.FormattingEnabled = true;
-            this.StadiumNameCmb.Location = new System.Drawing.Point(171, 221);
+            this.StadiumNameCmb.Location = new System.Drawing.Point(199, 405);
             this.StadiumNameCmb.Name = "StadiumNameCmb";
-            this.StadiumNameCmb.Size = new System.Drawing.Size(200, 24);
+            this.StadiumNameCmb.Size = new System.Drawing.Size(187, 24);
             this.StadiumNameCmb.TabIndex = 26;
             // 
             // CityCmb
             // 
             this.CityCmb.FormattingEnabled = true;
-            this.CityCmb.Location = new System.Drawing.Point(171, 365);
+            this.CityCmb.Location = new System.Drawing.Point(652, 341);
             this.CityCmb.Name = "CityCmb";
             this.CityCmb.Size = new System.Drawing.Size(200, 24);
             this.CityCmb.TabIndex = 27;
             // 
             // TimePlayDate
             // 
-            this.TimePlayDate.Location = new System.Drawing.Point(172, 486);
+            this.TimePlayDate.Location = new System.Drawing.Point(653, 413);
             this.TimePlayDate.Name = "TimePlayDate";
             this.TimePlayDate.Size = new System.Drawing.Size(200, 22);
             this.TimePlayDate.TabIndex = 28;
             // 
             // SearchLegaueNametxt
             // 
-            this.SearchLegaueNametxt.Location = new System.Drawing.Point(597, 32);
+            this.SearchLegaueNametxt.Location = new System.Drawing.Point(652, 249);
             this.SearchLegaueNametxt.Name = "SearchLegaueNametxt";
             this.SearchLegaueNametxt.Size = new System.Drawing.Size(201, 22);
             this.SearchLegaueNametxt.TabIndex = 29;
@@ -337,7 +337,7 @@
             // 
             // SearchstadiumNametxt
             // 
-            this.SearchstadiumNametxt.Location = new System.Drawing.Point(1079, 29);
+            this.SearchstadiumNametxt.Location = new System.Drawing.Point(199, 252);
             this.SearchstadiumNametxt.Name = "SearchstadiumNametxt";
             this.SearchstadiumNametxt.Size = new System.Drawing.Size(187, 22);
             this.SearchstadiumNametxt.TabIndex = 30;
@@ -346,7 +346,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 35);
+            this.label1.Location = new System.Drawing.Point(466, 252);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 16);
             this.label1.TabIndex = 31;
@@ -355,7 +355,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(874, 35);
+            this.label2.Location = new System.Drawing.Point(12, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 16);
             this.label2.TabIndex = 32;
@@ -369,7 +369,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1522, 659);
+            this.ClientSize = new System.Drawing.Size(971, 516);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchstadiumNametxt);
