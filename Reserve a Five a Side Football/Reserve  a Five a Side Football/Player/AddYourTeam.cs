@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,8 +40,12 @@ namespace Reserve__a_Five_a_Side_Football
                 var league_Id = DB.Legaues
                 .Where(r => r.Legue_Name == LeagueNameCmb.SelectedItem.ToString())
                   .Select(r => r.LegueID).FirstOrDefault();
+                var playerID = DB.Players
+                .Where(p => p.User.NationalID == CaptinIdtxt.Text)
+                .Select(p => p.Player_ID)
+                .FirstOrDefault();
                 team.TeamName = TeamNametxt.Text;
-                team.CaptainID = int.Parse(CaptinIdtxt.Text);
+                team.CaptainID = playerID;
                 team.NationalID_Player1=NationalIDplayer1txt.Text;
                 team.NationalID_Player2=NationalIDplayer2txt.Text;
                 team.NationalID_Player3 = NationalIDplayer3txt.Text;
@@ -69,6 +74,23 @@ namespace Reserve__a_Five_a_Side_Football
                 MessageBox.Show("Please fill in all required fields.");
                 return false;
             }
+            var nationalIDs = new HashSet<string>
+                             {
+
+                                CaptinIdtxt.Text,
+                                NationalIDplayer1txt.Text,
+                                NationalIDplayer2txt.Text,
+                                NationalIDplayer3txt.Text,
+                                NationalIDplayer4txt.Text,
+                                NationalIDplayer5txt.Text
+                            };
+
+            if (nationalIDs.Count != 6)
+            {
+                MessageBox.Show("National IDs for players must be unique.");
+                return false;
+            }
+
             if (!CheckNationalIDExistence(NationalIDplayer1txt.Text))
             {
                 MessageBox.Show("National ID for Player 1 is not registered.");

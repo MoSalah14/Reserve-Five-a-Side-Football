@@ -28,20 +28,25 @@ namespace Reserve__a_Five_a_Side_Football
             var query = context.Database.SqlQuery<TeamData>("EXEC GetTeamsData").ToList();
 
             foreach (var item in query)
-                guna2DataGridView1.Rows.Add(item.Captain_Name, item.TeamName, item.Player1_Name, item.Player2_Name, item.Player3_Name, item.Player4_Name, item.LeagueName);
+                guna2DataGridView1.Rows.Add(item.Captain_Name, item.TeamName,
+                                            item.Player1_Name, item.Player2_Name,
+                                            item.Player3_Name, item.Player4_Name,
+                                            item.Player5_Name, item.LeagueName);
 
         }
 
         #region         // Class To take Data from Proc To GridView
 
-        private class TeamData
+        public class TeamData
         {
+            public int TeamID { get; set; }
             public string Captain_Name { get; set; }
             public string TeamName { get; set; }
             public string Player1_Name { get; set; }
             public string Player2_Name { get; set; }
             public string Player3_Name { get; set; }
             public string Player4_Name { get; set; }
+            public string Player5_Name { get; set; }
             public string LeagueName { get; set; }
         }
 
@@ -86,7 +91,7 @@ namespace Reserve__a_Five_a_Side_Football
 
                 foreach (var item in TeamValue)
                     guna2DataGridView1.Rows.Add(item.Captain_Name, item.teamName, item.Player1_Name, item.Player2_Name, item.Player3_Name, item.Player4_Name, item.LeagueName.Legue_Name);
-                
+
             }
 
         }

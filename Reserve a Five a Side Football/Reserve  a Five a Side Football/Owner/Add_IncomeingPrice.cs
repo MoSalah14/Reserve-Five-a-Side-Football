@@ -25,10 +25,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void Add_IncomeingPrice_Load(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Maximized;
-
             ToDatePicker.MaxDate = DateTime.Today;
-
         }
 
         // GetStadiumNames
@@ -62,6 +59,8 @@ namespace Reserve__a_Five_a_Side_Football
             }
 
         }
+
+
 
         private void ShowData_btn_Click(object sender, EventArgs e)
         {

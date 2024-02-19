@@ -85,7 +85,7 @@
             // 
             this.FromDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.FromDatePicker.Location = new System.Drawing.Point(248, 59);
-            this.FromDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FromDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.FromDatePicker.MaxDate = new System.DateTime(2024, 2, 8, 0, 0, 0, 0);
             this.FromDatePicker.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.FromDatePicker.Name = "FromDatePicker";
@@ -97,7 +97,7 @@
             // 
             this.ToDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToDatePicker.Location = new System.Drawing.Point(501, 59);
-            this.ToDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ToDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.ToDatePicker.MaxDate = new System.DateTime(2024, 2, 8, 0, 0, 0, 0);
             this.ToDatePicker.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.ToDatePicker.Name = "ToDatePicker";
@@ -109,7 +109,7 @@
             // 
             this.TotalAmountlbl.AutoSize = true;
             this.TotalAmountlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAmountlbl.Location = new System.Drawing.Point(89, 504);
+            this.TotalAmountlbl.Location = new System.Drawing.Point(119, 432);
             this.TotalAmountlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalAmountlbl.Name = "TotalAmountlbl";
             this.TotalAmountlbl.Size = new System.Drawing.Size(204, 36);
@@ -120,22 +120,19 @@
             // 
             this.TotalAmountTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.TotalAmountTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAmountTxtBox.Location = new System.Drawing.Point(602, 504);
-            this.TotalAmountTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TotalAmountTxtBox.Location = new System.Drawing.Point(407, 432);
+            this.TotalAmountTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.TotalAmountTxtBox.Name = "TotalAmountTxtBox";
             this.TotalAmountTxtBox.ReadOnly = true;
-            this.TotalAmountTxtBox.Size = new System.Drawing.Size(239, 32);
+            this.TotalAmountTxtBox.Size = new System.Drawing.Size(213, 32);
             this.TotalAmountTxtBox.TabIndex = 7;
-
-            this.TotalAmountTxtBox.TextChanged += new System.EventHandler(this.TotalAmountTxtBox_TextChanged);
-
             this.TotalAmountTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
+            this.TotalAmountTxtBox.TextChanged += new System.EventHandler(this.TotalAmountTxtBox_TextChanged);
             // 
             // ShowData_btn
             // 
             this.ShowData_btn.Location = new System.Drawing.Point(761, 59);
-            this.ShowData_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowData_btn.Margin = new System.Windows.Forms.Padding(2);
             this.ShowData_btn.Name = "ShowData_btn";
             this.ShowData_btn.Size = new System.Drawing.Size(89, 24);
             this.ShowData_btn.TabIndex = 8;
@@ -171,8 +168,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 99);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 104);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -184,7 +181,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(833, 281);
             this.dataGridView1.TabIndex = 0;
             // 
             // Stadium_Name
@@ -227,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1011, 575);
+            this.ClientSize = new System.Drawing.Size(907, 485);
             this.Controls.Add(this.ShowData_btn);
             this.Controls.Add(this.TotalAmountTxtBox);
             this.Controls.Add(this.TotalAmountlbl);
@@ -237,7 +234,7 @@
             this.Controls.Add(this.Fromlbl);
             this.Controls.Add(this.SelectDatelbl);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Add_IncomeingPrice";
             this.Text = "Add_IncomeingPrice";
             this.Load += new System.EventHandler(this.Add_IncomeingPrice_Load);

@@ -71,11 +71,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\GetTeamDetailsForUser_Result.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="designForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designForm.designer.cs">
+      <DependentUpon>designForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner\addReservationByOwner.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Owner\addReservationByOwner.Designer.cs">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner\ShowAllRevToOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner\ShowAllRevToOwner.Designer.cs">
+      <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
     </Compile>
     <Compile Include="PaymentByWallet.cs">
       <SubType>Form</SubType>
@@ -107,7 +122,6 @@
     <Compile Include="Owner\Add_update_del_Stadium.Designer.cs">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player\ConfirmReservationEventargs.cs" />
     <Compile Include="Registeration\CurrentUserLogin.cs" />
     <Compile Include="Database\DataBase_Project.Context.cs">
       <AutoGen>True</AutoGen>
@@ -151,17 +165,11 @@
     <Compile Include="Database\User.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
-    <Compile Include="Owner\delLegue.cs">
+    <Compile Include="Player\DeleteResrvation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Owner\delLegue.Designer.cs">
-      <DependentUpon>delLegue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Player\delReservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Player\delReservation.Designer.cs">
-      <DependentUpon>delReservation.cs</DependentUpon>
+    <Compile Include="Player\DeleteResrvation.Designer.cs">
+      <DependentUpon>DeleteResrvation.cs</DependentUpon>
     </Compile>
     <Compile Include="Owner\Player Data.cs">
       <SubType>Form</SubType>
@@ -223,11 +231,11 @@
     <Compile Include="Shared\StadiumGalary.Designer.cs">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeamInformatin.cs">
+    <Compile Include="TeamInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeamInformatin.Designer.cs">
-      <DependentUpon>TeamInformatin.cs</DependentUpon>
+    <Compile Include="TeamInformation.Designer.cs">
+      <DependentUpon>TeamInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
@@ -235,14 +243,12 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="designForm.resx">
+      <DependentUpon>designForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Owner\addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PaymentByWallet.resx">
-      <DependentUpon>PaymentByWallet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PaymentWayByCreditCard.resx">
-      <DependentUpon>PaymentWayByCreditCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player\AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
@@ -253,11 +259,8 @@
     <EmbeddedResource Include="Owner\Add_update_del_Stadium.resx">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Owner\delLegue.resx">
-      <DependentUpon>delLegue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Player\delReservation.resx">
-      <DependentUpon>delReservation.cs</DependentUpon>
+    <EmbeddedResource Include="Player\DeleteResrvation.resx">
+      <DependentUpon>DeleteResrvation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner\Player Data.resx">
       <DependentUpon>Player Data.cs</DependentUpon>
@@ -277,13 +280,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Registeration\Regest.resx">
       <DependentUpon>Regest.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,8 +295,8 @@
     <EmbeddedResource Include="Shared\StadiumGalary.resx">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeamInformatin.resx">
-      <DependentUpon>TeamInformatin.cs</DependentUpon>
+    <EmbeddedResource Include="TeamInformation.resx">
+      <DependentUpon>TeamInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
@@ -343,6 +342,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DesignPackge\" />
+    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DataBase_Project.Context.tt">

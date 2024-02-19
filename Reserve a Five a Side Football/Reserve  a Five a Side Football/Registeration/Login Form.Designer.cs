@@ -52,7 +52,7 @@ namespace Login_
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 38);
+            this.label1.Size = new System.Drawing.Size(69, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email";
             // 
@@ -63,7 +63,7 @@ namespace Login_
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(37, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 38);
+            this.label2.Size = new System.Drawing.Size(112, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
@@ -72,7 +72,7 @@ namespace Login_
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(118, 109);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 23);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 2;
             // 
             // label4
@@ -80,7 +80,7 @@ namespace Login_
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(118, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 23);
+            this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 3;
             // 
             // button1
@@ -94,9 +94,9 @@ namespace Login_
             this.button1.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(157, 443);
+            this.button1.Location = new System.Drawing.Point(194, 417);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(397, 45);
+            this.button1.Size = new System.Drawing.Size(216, 45);
             this.button1.TabIndex = 9;
             this.button1.Text = "Login";
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -111,9 +111,9 @@ namespace Login_
             this.Cancel_Btn.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.Cancel_Btn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.Cancel_Btn.ForeColor = System.Drawing.Color.White;
-            this.Cancel_Btn.Location = new System.Drawing.Point(157, 517);
+            this.Cancel_Btn.Location = new System.Drawing.Point(194, 490);
             this.Cancel_Btn.Name = "Cancel_Btn";
-            this.Cancel_Btn.Size = new System.Drawing.Size(397, 45);
+            this.Cancel_Btn.Size = new System.Drawing.Size(216, 45);
             this.Cancel_Btn.TabIndex = 10;
             this.Cancel_Btn.Text = "Cancel";
             // 
@@ -141,7 +141,7 @@ namespace Login_
             this.textBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.textBox1.PlaceholderText = "Enter Email";
             this.textBox1.SelectedText = "";
-            this.textBox1.Size = new System.Drawing.Size(340, 48);
+            this.textBox1.Size = new System.Drawing.Size(324, 48);
             this.textBox1.TabIndex = 11;
             // 
             // textBox2
@@ -168,7 +168,7 @@ namespace Login_
             this.textBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.textBox2.PlaceholderText = "Password";
             this.textBox2.SelectedText = "";
-            this.textBox2.Size = new System.Drawing.Size(340, 48);
+            this.textBox2.Size = new System.Drawing.Size(324, 48);
             this.textBox2.TabIndex = 12;
             // 
             // checkBox1
@@ -176,9 +176,9 @@ namespace Login_
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(179, 312);
+            this.checkBox1.Location = new System.Drawing.Point(179, 295);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(148, 27);
+            this.checkBox1.Size = new System.Drawing.Size(123, 23);
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -189,21 +189,21 @@ namespace Login_
             this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(635, 83);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(509, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(755, 648);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(546, 523);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2PictureBox1.TabIndex = 14;
             this.guna2PictureBox1.TabStop = false;
             // 
             // Login_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1204, 733);
+            this.ClientSize = new System.Drawing.Size(1011, 539);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox2);
