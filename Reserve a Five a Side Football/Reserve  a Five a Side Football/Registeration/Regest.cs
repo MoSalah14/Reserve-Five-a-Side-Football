@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Text.RegularExpressions;
-using System.Data.OleDb;
-using System.Web.UI.WebControls;
-using Login_;
-using Reserve__a_Five_a_Side_Football;
+﻿using Login_;
 using Reserve__a_Five_a_Side_Football.Database;
-using System.Xml.Linq;
+using System;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace RegertrationPage
 {

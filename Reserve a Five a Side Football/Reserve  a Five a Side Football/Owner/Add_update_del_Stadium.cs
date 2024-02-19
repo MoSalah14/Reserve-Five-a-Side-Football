@@ -104,6 +104,7 @@ namespace Reserve__a_Five_a_Side_Football
             area.Text = row.Cells[2].Value.ToString();
             price.Text = row.Cells[3].Value.ToString();
 
+
         }
 
         private void updatbtn_Click(object sender, EventArgs e)
@@ -121,6 +122,7 @@ namespace Reserve__a_Five_a_Side_Football
             else
             {
                 DataGridViewRow row = stadiumData.Rows[selectedrow];
+
                 string _Name = row.Cells[0].FormattedValue.ToString();
 
                 Stadium std1 = context_stadium.Stadium.Select(k => k).Where(k => k.Stad_Name == _Name).FirstOrDefault();
@@ -129,6 +131,7 @@ namespace Reserve__a_Five_a_Side_Football
                 std1.Stad_Status = state.SelectedItem.ToString();
                 std1.Area = area.Text;
                 std1.Hourly_Price = int.Parse(price.Text);
+                
 
                 context_stadium.SaveChanges();
 
@@ -138,14 +141,13 @@ namespace Reserve__a_Five_a_Side_Football
                 price.Text = "";
                 state.Text = "";
                 area.Text = "";
-                //filePath = "";
+                filePath = "";
             }
 
 
         }
         private void deletebtn_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (name.Text == "" ||
@@ -198,11 +200,8 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 MessageBox.Show("Invalid Data");
             }
-            }
+         }
     
-
-
-        
         private void Clearbtn_Click(object sender, EventArgs e)
         {
             name.Text = "";

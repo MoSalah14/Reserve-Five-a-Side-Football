@@ -1,24 +1,19 @@
-﻿using Reserve__a_Five_a_Side_Football.Database;
+﻿using Reserve__a_Five_a_Side_Football;
+using Reserve__a_Five_a_Side_Football.Database;
+using Reserve__a_Five_a_Side_Football.Player;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Configuration;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReservationPage
 {
     public partial class ReservationForm : Form
     {
         private Reserve_a_Five_a_SideEntities GetContext;
+        public event EventHandler<ConfirmReservationEventargs> ConfirmReservation;
+        public int id;
         public ReservationForm()
         {
             InitializeComponent();
@@ -87,14 +82,24 @@ namespace ReservationPage
                     Reservation_Time = TimeSpan.Parse(timeComboBox.SelectedItem.ToString()),
                     Payment = paybx.SelectedItem.ToString(),
                     StadiumID = stadiumId,
+                    Reservation_Statues="Pending"
                 };
 
 
                 GetContext.Reservations.Add(newReservation);
                 GetContext.SaveChanges();
 
+                 id = newReservation.ReservationID;
 
                 MessageBox.Show("Success Confirm ", "Confirm Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              if(newReservation.Payment== "Credit Card")
+                {
+                    PaymentWayByCreditCard paymentWayByCreditCard = new PaymentWayByCreditCard(id);
+                    paymentWayByCreditCard.ShowDialog();
+                }
+
+                PaymentByWallet paymentByWallet = new PaymentByWallet(id);
+                paymentByWallet.ShowDialog();
 
             }
         }
@@ -148,5 +153,10 @@ namespace ReservationPage
 
         }
 
+
+        //protected virtual void  OnConfirmReservation(ConfirmReservationEventargs e)
+        //{
+        //    ConfirmReservation?.Invoke(this, e);
+        //}
     }
 }
