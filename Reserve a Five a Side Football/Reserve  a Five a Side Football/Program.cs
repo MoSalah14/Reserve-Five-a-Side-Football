@@ -31,7 +31,7 @@ namespace Reserve__a_Five_a_Side_Football
             // Application.Run(new Regest());
             //Application.Run(new Add_update_del_Stadium());
             //Application.Run(new Login_Form());
-            Application.Run(new  DeleteResrvation());
+            Application.Run(new AddYourTeam());
             //Application.Run(new AddYourTeam());
             //Application.Run(new StadiumGalary());
 

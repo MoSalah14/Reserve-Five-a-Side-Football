@@ -77,14 +77,12 @@ namespace Reserve__a_Five_a_Side_Football
                     Player5TextBox.Text = GetIDsforTeam.NationalID_Player5;
                 }
                 else
-                {
                     MessageBox.Show("No Teams To Select ");
-                }
+                
             }
             else
-            {
                 MessageBox.Show("Selected row is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
@@ -156,12 +154,12 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
 
-        // Check if the input is exactly 14 characters long and contains only digits
+        // Check if the input  14 characters 
         private bool IsValidNationalID(string nationalID)
              => !string.IsNullOrEmpty(nationalID) && nationalID.Length == 14 && nationalID.All(char.IsDigit);
 
 
-        // Check if the National ID exists in the database
+        // Check National ID exists in database
         private bool NationalIDExists(string nationalID)
              => context.Users.Any(u => u.NationalID == nationalID);
 

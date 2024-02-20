@@ -21,7 +21,7 @@ namespace Reserve__a_Five_a_Side_Football
             InitializeComponent();
         }
 
-        
+
         private void AddYourTeam_Load(object sender, EventArgs e)
         {
             var StadiumName = DB.Legaues.Select(et => et.Legue_Name).ToList();
@@ -30,11 +30,11 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ValidateInput()) 
+            if (ValidateInput())
             {
                 Team team = new Team();
                 var league_Id = DB.Legaues
@@ -46,18 +46,34 @@ namespace Reserve__a_Five_a_Side_Football
                 .FirstOrDefault();
                 team.TeamName = TeamNametxt.Text;
                 team.CaptainID = playerID;
-                team.NationalID_Player1=NationalIDplayer1txt.Text;
-                team.NationalID_Player2=NationalIDplayer2txt.Text;
+                team.NationalID_Player1 = NationalIDplayer1txt.Text;
+                team.NationalID_Player2 = NationalIDplayer2txt.Text;
                 team.NationalID_Player3 = NationalIDplayer3txt.Text;
                 team.NationalID_Player4 = NationalIDplayer4txt.Text;
                 team.NationalID_Player5 = NationalIDplayer5txt.Text;
                 team.LegueID = league_Id;
-                DB.Teams.Add(team);
-                DB.SaveChanges();
-                MessageBox.Show("DONE");
+
+                var leagueMaxSubscribe = DB.Legaues.FirstOrDefault(l => l.LegueID == league_Id);
+                if (leagueMaxSubscribe.NumberOfSubscribersInlegaue.Value <= leagueMaxSubscribe.CurrentSubscriberslegaue)
+                {
+                    MessageBox.Show("Maximum subscriber count reached for this league.");
+                    return;
+                }
+                else
+                {
+                    leagueMaxSubscribe.CurrentSubscriberslegaue++;
+
+                    DB.Teams.Add(team);
+                    DB.SaveChanges();
+                    MessageBox.Show("Done");
+                }
+
             }
 
+
         }
+
+
         private bool ValidateInput()
         {
 
@@ -121,7 +137,7 @@ namespace Reserve__a_Five_a_Side_Football
                 button2.Visible = true;
                 return false;
             }
-           
+
             return true;
 
         }

@@ -19,6 +19,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         {
             this.Reservations = new HashSet<Reservation>();
             this.Teams = new HashSet<Team>();
+            this.ReservationMessages = new HashSet<ReservationMessage>();
         }
     
         public int Player_ID { get; set; }
@@ -30,5 +31,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Team> Teams { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ReservationMessage> ReservationMessages { get; set; }
     }
 }

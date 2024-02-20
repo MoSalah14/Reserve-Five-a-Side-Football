@@ -74,6 +74,12 @@
     <Compile Include="Database\GetTeamDetailsForUser_Result.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\LeagueMessage.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ReservationMessage.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="designForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,10 +182,10 @@
     <Compile Include="Shared\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="League.cs">
+    <Compile Include="Player\League.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="League.Designer.cs">
+    <Compile Include="Player\League.Designer.cs">
       <DependentUpon>League.cs</DependentUpon>
     </Compile>
     <Compile Include="Registeration\Login Form.cs">
@@ -224,10 +230,10 @@
     <Compile Include="Shared\StadiumGalary.Designer.cs">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeamInformation.cs">
+    <Compile Include="Player\TeamInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeamInformation.Designer.cs">
+    <Compile Include="Player\TeamInformation.Designer.cs">
       <DependentUpon>TeamInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Test.cs">
@@ -264,7 +270,7 @@
     <EmbeddedResource Include="Shared\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="League.resx">
+    <EmbeddedResource Include="Player\League.resx">
       <DependentUpon>League.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registeration\Login Form.resx">
@@ -291,7 +297,7 @@
     <EmbeddedResource Include="Shared\StadiumGalary.resx">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeamInformation.resx">
+    <EmbeddedResource Include="Player\TeamInformation.resx">
       <DependentUpon>TeamInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">

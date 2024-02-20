@@ -18,6 +18,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public Legaue()
         {
             this.Teams = new HashSet<Team>();
+            this.LeagueMessages = new HashSet<LeagueMessage>();
         }
     
         public int LegueID { get; set; }
@@ -30,9 +31,13 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public string Reward { get; set; }
         public string City { get; set; }
         public System.TimeSpan TimePlay { get; set; }
+        public Nullable<int> NumberOfSubscribersInlegaue { get; set; }
+        public Nullable<int> CurrentSubscriberslegaue { get; set; }
     
         public virtual Stadium Stadium { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Team> Teams { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LeagueMessage> LeagueMessages { get; set; }
     }
 }

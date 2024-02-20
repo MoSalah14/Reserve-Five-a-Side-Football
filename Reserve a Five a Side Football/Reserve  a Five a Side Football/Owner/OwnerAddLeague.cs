@@ -134,7 +134,11 @@ namespace Reserve__a_Five_a_Side_Football
                 return false;
             }
 
-
+            if (SubNumUpDown.Value <= 3)
+            {
+                MessageBox.Show("Sorry League Must Be 4 Or More");
+                return false;
+            }
 
             return true;
         }
@@ -212,7 +216,7 @@ namespace Reserve__a_Five_a_Side_Football
                 legaue.City = CityCmb.SelectedItem.ToString();
                 legaue.Reward = Rewardtxt.Text;
                 legaue.TimePlay = TimeSpan.Parse(TimePlayDate.Text);
-
+                legaue.NumberOfSubscribersInlegaue = int.Parse(SubNumUpDown.Value.ToString());
 
 
                 DB.Legaues.Add(legaue);

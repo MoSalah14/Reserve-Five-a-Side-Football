@@ -34,6 +34,8 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public virtual DbSet<Stadium> Stadium { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
+        public virtual DbSet<LeagueMessage> LeagueMessages { get; set; }
+        public virtual DbSet<ReservationMessage> ReservationMessages { get; set; }
     
         public virtual ObjectResult<GetTeamDetails_Result> GetTeamDetails()
         {
