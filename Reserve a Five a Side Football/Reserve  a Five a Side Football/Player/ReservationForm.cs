@@ -1,24 +1,19 @@
 ﻿using Reserve__a_Five_a_Side_Football;
 using Reserve__a_Five_a_Side_Football.Database;
+using Reserve__a_Five_a_Side_Football.Player;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Configuration;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReservationPage
 {
     public partial class ReservationForm : Form
     {
+        private Reserve_a_Five_a_SideEntities GetContext;
+        public event EventHandler<ConfirmReservationEventargs> ConfirmReservation;
+        public int id;
         private Reserve_a_Five_a_SideEntities dbContext;
 
         public ReservationForm()
@@ -88,17 +83,31 @@ namespace ReservationPage
                 .Select(r => r.Reservation_Time)
                 .ToList();
 
-            var allTimeslots = Enumerable.Range(0, 24)
-                .Select(hour => new TimeSpan(hour, 0, 0))
-                .ToList();
+                Reservation newReservation = new Reservation
+                {
+                    
+                    Reservation_Date = DateTime.Parse(datebx.Value.Date.ToString()),
+                    Reservation_Time = TimeSpan.Parse(timeComboBox.SelectedItem.ToString()),
+                    Payment = paybx.SelectedItem.ToString(),
+                    StadiumID = stadiumId,
+                };
 
-            var availableTimeslots = new List<TimeSpan>();
-            foreach (var timeslot in allTimeslots)
-            {
-                if (!reservedTimeslots.Contains(timeslot))
-                    availableTimeslots.Add(timeslot);
+
+                GetContext.Reservations.Add(newReservation);
+                GetContext.SaveChanges();
+
+
+                MessageBox.Show("Success Confirm ", "Confirm Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
-            return availableTimeslots;
+        }
+
+        private void Reserve_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure To close  ", "Close Form",
+                              MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Question);
+            e.Cancel = (result == DialogResult.No);
         }
 
         private void PopulateTimeSlots(List<TimeSpan> availableTimeslots)
@@ -172,9 +181,6 @@ namespace ReservationPage
             paybx.SelectedIndex = -1;
             timeComboBox.Items.Clear();
         }
-
-        private void datebx_ValueChanged(object sender, EventArgs e)
-              => timeComboBox.Items.Clear();
 
     }
 }

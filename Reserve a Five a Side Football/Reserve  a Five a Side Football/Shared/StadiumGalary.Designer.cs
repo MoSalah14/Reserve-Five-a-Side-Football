@@ -360,6 +360,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "StadiumGalary";
             this.Text = "StadiumGalary";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StadiumGalary_FormClosing);
             this.Load += new System.EventHandler(this.StadiumGalary_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
