@@ -362,7 +362,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DesignPackge\" />
-    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DataBase_Project.Context.tt">
@@ -375,6 +374,20 @@
       <DependentUpon>DataBase_Project.edmx</DependentUpon>
       <LastGenOutput>DataBase_Project.cs</LastGenOutput>
     </Content>
+    <Content Include="Photos\IMG-20240221-WA0001.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0002.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0003.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0004.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0005.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0006.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0007.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0008.jpg" />
+    <Content Include="Photos\IMG-20240221-WA0009.jpg" />
+    <Content Include="Photos\Joker-Design-3d-Sports-Soccer-football-stadium.512.png" />
+    <Content Include="Photos\undraw_Fans_re_cri3.png" />
+    <Content Include="Photos\undraw_junior_soccer_6sop.png" />
+    <Content Include="Photos\undraw_Sign_up_n6im.png" />
+    <Content Include="Photos\WhatsApp Image 2024-02-21 at 01.38.28_ec6a4b32.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
