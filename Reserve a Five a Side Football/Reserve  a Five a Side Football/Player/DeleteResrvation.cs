@@ -134,10 +134,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
-        private void DeleteResrvation_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 

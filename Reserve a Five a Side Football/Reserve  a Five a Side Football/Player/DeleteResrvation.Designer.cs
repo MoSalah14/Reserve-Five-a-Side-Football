@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.payment = new System.Windows.Forms.TextBox();
-            this.date = new System.Windows.Forms.TextBox();
-            this.time = new System.Windows.Forms.TextBox();
-            this.status = new System.Windows.Forms.TextBox();
             this.Rev_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RevDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RevTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,56 +76,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-
-            this.dataGridView1.Size = new System.Drawing.Size(1069, 181);
-
-
-            this.dataGridView1.Size = new System.Drawing.Size(706, 181);
-
-            this.dataGridView1.Size = new System.Drawing.Size(630, 181);
-
-
+            this.dataGridView1.Size = new System.Drawing.Size(732, 181);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // payment
-            // 
-            this.payment.Location = new System.Drawing.Point(22, 314);
-            this.payment.Name = "payment";
-            this.payment.Size = new System.Drawing.Size(110, 26);
-            this.payment.TabIndex = 5;
-            // 
-            // date
-            // 
-            this.date.Location = new System.Drawing.Point(22, 282);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(110, 26);
-            this.date.TabIndex = 6;
-            // 
-            // time
-            // 
-            this.time.Location = new System.Drawing.Point(151, 282);
-            this.time.Name = "time";
-
-            this.time.Size = new System.Drawing.Size(123, 26);
-
-
-            this.time.Size = new System.Drawing.Size(123, 22);
-
-            this.time.Size = new System.Drawing.Size(110, 22);
-
-            this.time.TabIndex = 7;
-            // 
-            // status
-            // 
-            this.status.Location = new System.Drawing.Point(151, 314);
-            this.status.Name = "status";
-
-            this.status.Size = new System.Drawing.Size(123, 26);
-
-
-            this.status.Size = new System.Drawing.Size(123, 22);
-
-            this.status.TabIndex = 8;
             // 
             // Rev_ID
             // 
@@ -182,65 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(1084, 362);
-
             this.ClientSize = new System.Drawing.Size(747, 362);
-
-            this.status.Size = new System.Drawing.Size(110, 22);
-            this.status.TabIndex = 8;
-            // 
-            // label2
-            // 
-            //this.label2.AutoSize = true;
-            //this.label2.Location = new System.Drawing.Point(19, 276);
-            //this.label2.Name = "label2";
-            //this.label2.Size = new System.Drawing.Size(128, 16);
-            //this.label2.TabIndex = 10;
-            //this.label2.Text = "Reservation Date";
-            // 
-            // label3
-            // 
-            //this.label3.AutoSize = true;
-            //this.label3.Location = new System.Drawing.Point(17, 301);
-            //this.label3.Name = "label3";
-            //this.label3.Size = new System.Drawing.Size(130, 16);
-            //this.label3.TabIndex = 11;
-            //this.label3.Text = "Reservation Time";
-            // 
-            // label4
-            // 
-            //this.label4.AutoSize = true;
-            //this.label4.Location = new System.Drawing.Point(19, 331);
-            //this.label4.Name = "label4";
-            //this.label4.Size = new System.Drawing.Size(67, 16);
-            //this.label4.TabIndex = 12;
-            //this.label4.Text = "Payment";
-            //// 
-            //// label5
-            //// 
-            //this.label5.AutoSize = true;
-            //this.label5.Location = new System.Drawing.Point(19, 362);
-            //this.label5.Name = "label5";
-            //this.label5.Size = new System.Drawing.Size(147, 16);
-            //this.label5.TabIndex = 13;
-            //this.label5.Text = "Reservation Statues";
-            //// 
-            //// delLegue
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 431);
-            //this.Controls.Add(this.label5);
-            //this.Controls.Add(this.label4);
-            //this.Controls.Add(this.label3);
-            //this.Controls.Add(this.label2);
-
-
-            this.Controls.Add(this.status);
-            this.Controls.Add(this.time);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.payment);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -248,7 +138,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteResrvation";
             this.Text = "delLegue";
-            this.Load += new System.EventHandler(this.DeleteResrvation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,10 +149,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox payment;
-        private System.Windows.Forms.TextBox date;
-        private System.Windows.Forms.TextBox time;
-        private System.Windows.Forms.TextBox status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rev_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RevDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn RevTime;

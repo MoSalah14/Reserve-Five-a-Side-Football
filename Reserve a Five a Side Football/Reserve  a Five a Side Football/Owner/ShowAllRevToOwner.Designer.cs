@@ -33,6 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.NationalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StadiumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReservationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReservationTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StadiunComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CityComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.FromDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -43,14 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ShowSelectedbtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.NationalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StadiumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReservationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReservationTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,7 @@
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,7 +118,7 @@
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -133,6 +134,62 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // NationalID
+            // 
+            this.NationalID.HeaderText = "National ID";
+            this.NationalID.MinimumWidth = 6;
+            this.NationalID.Name = "NationalID";
+            this.NationalID.ReadOnly = true;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Full Name";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // City
+            // 
+            this.City.HeaderText = "City";
+            this.City.MinimumWidth = 6;
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
+            // 
+            // StadiumName
+            // 
+            this.StadiumName.HeaderText = "Stadium Name";
+            this.StadiumName.MinimumWidth = 6;
+            this.StadiumName.Name = "StadiumName";
+            this.StadiumName.ReadOnly = true;
+            // 
+            // ReservationDate
+            // 
+            this.ReservationDate.HeaderText = "Reservation Date";
+            this.ReservationDate.MinimumWidth = 6;
+            this.ReservationDate.Name = "ReservationDate";
+            this.ReservationDate.ReadOnly = true;
+            // 
+            // ReservationTime
+            // 
+            this.ReservationTime.HeaderText = "Reservation Time";
+            this.ReservationTime.MinimumWidth = 6;
+            this.ReservationTime.Name = "ReservationTime";
+            this.ReservationTime.ReadOnly = true;
+            // 
+            // Payment
+            // 
+            this.Payment.HeaderText = "Payment";
+            this.Payment.MinimumWidth = 6;
+            this.Payment.Name = "Payment";
+            this.Payment.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
             // StadiunComboBox1
             // 
@@ -269,67 +326,11 @@
             this.panel1.Size = new System.Drawing.Size(1255, 566);
             this.panel1.TabIndex = 11;
             // 
-            // NationalID
-            // 
-            this.NationalID.HeaderText = "National ID";
-            this.NationalID.MinimumWidth = 6;
-            this.NationalID.Name = "NationalID";
-            this.NationalID.ReadOnly = true;
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "Full Name";
-            this.FullName.MinimumWidth = 6;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            // 
-            // City
-            // 
-            this.City.HeaderText = "City";
-            this.City.MinimumWidth = 6;
-            this.City.Name = "City";
-            this.City.ReadOnly = true;
-            // 
-            // StadiumName
-            // 
-            this.StadiumName.HeaderText = "Stadium Name";
-            this.StadiumName.MinimumWidth = 6;
-            this.StadiumName.Name = "StadiumName";
-            this.StadiumName.ReadOnly = true;
-            // 
-            // ReservationDate
-            // 
-            this.ReservationDate.HeaderText = "Reservation Date";
-            this.ReservationDate.MinimumWidth = 6;
-            this.ReservationDate.Name = "ReservationDate";
-            this.ReservationDate.ReadOnly = true;
-            // 
-            // ReservationTime
-            // 
-            this.ReservationTime.HeaderText = "Reservation Time";
-            this.ReservationTime.MinimumWidth = 6;
-            this.ReservationTime.Name = "ReservationTime";
-            this.ReservationTime.ReadOnly = true;
-            // 
-            // Payment
-            // 
-            this.Payment.HeaderText = "Payment";
-            this.Payment.MinimumWidth = 6;
-            this.Payment.Name = "Payment";
-            this.Payment.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
             // ShowAllRevToOwner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1255, 735);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ShowSelectedbtn);
