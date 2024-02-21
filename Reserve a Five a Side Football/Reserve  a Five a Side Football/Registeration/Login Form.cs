@@ -55,6 +55,8 @@ namespace Login_
                 MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 designForm designForm = new designForm();
                 designForm.Show();
+
+                var x = 5;
                 this.Close();
 
             }
