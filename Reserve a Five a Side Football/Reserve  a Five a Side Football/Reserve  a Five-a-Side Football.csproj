@@ -359,7 +359,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DesignPackge\" />
-    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DataBase_Project.Context.tt">
@@ -372,6 +371,16 @@
       <DependentUpon>DataBase_Project.edmx</DependentUpon>
       <LastGenOutput>DataBase_Project.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\message2.jpg" />
+    <None Include="Resources\massage1.jpg" />
+    <None Include="Resources\message.png" />
+    <None Include="Resources\Message-icon.png" />
+    <None Include="Resources\Message-Bubble-icon.png" />
+    <None Include="Resources\text1.png" />
+    <None Include="Resources\text.png" />
+    <None Include="Photos\logout-icon.png" />
+    <None Include="Photos\log out.jpg" />
+    <None Include="Photos\message.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

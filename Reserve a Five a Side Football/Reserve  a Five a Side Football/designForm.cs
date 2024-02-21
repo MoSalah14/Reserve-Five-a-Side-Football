@@ -1,4 +1,7 @@
 ﻿using RegertrationPage;
+using ReservationPage;
+using Reserve__a_Five_a_Side_Football.Database;
+using Reserve__a_Five_a_Side_Football.Owner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Reserve__a_Five_a_Side_Football
 {
@@ -53,12 +57,12 @@ namespace Reserve__a_Five_a_Side_Football
         {
             if (btnSender != null)
             {
-                if (currentButton != (Button)btnSender)
+                if (currentButton != (System.Windows.Forms.Button)btnSender)
                 {
                     DisableButton();
-                    currentButton = (Button)btnSender;
+                    currentButton = (System.Windows.Forms.Button)btnSender;
                     currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    //currentButton.Font = new Font("Microsoft Sans Serif", 12.5F, FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                  
                     btnCloseChildForm.Visible = true;
                 }
@@ -69,9 +73,9 @@ namespace Reserve__a_Five_a_Side_Football
         {
             foreach (Control previousBtn in panelmenue.Controls)
             {
-                if (previousBtn.GetType() == typeof(Button))
+                if (previousBtn.GetType() == typeof(System.Web.UI.WebControls.Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.BackColor = Color.FromArgb(0, 64, 64);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -102,7 +106,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new HomeScreen(), sender);
+            OpenChildForm(new DeleteResrvation(), sender);
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -173,6 +177,11 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Message_Click(object sender, EventArgs e)
         {
 
         }
