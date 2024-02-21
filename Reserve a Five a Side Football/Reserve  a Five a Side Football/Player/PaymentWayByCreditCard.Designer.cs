@@ -35,6 +35,7 @@
             this.name = new Guna.UI2.WinForms.Guna2TextBox();
             this.cvc = new Guna.UI2.WinForms.Guna2TextBox();
             this.confirmbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.Paymentlbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +43,10 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(173, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(231, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(452, 184);
+            this.pictureBox1.Size = new System.Drawing.Size(603, 226);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -65,14 +67,14 @@
             this.cardnum.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.cardnum.ForeColor = System.Drawing.Color.Black;
             this.cardnum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cardnum.Location = new System.Drawing.Point(182, 239);
-            this.cardnum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cardnum.Location = new System.Drawing.Point(243, 294);
+            this.cardnum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cardnum.Name = "cardnum";
             this.cardnum.PasswordChar = '\0';
             this.cardnum.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.cardnum.PlaceholderText = "Card Number";
             this.cardnum.SelectedText = "";
-            this.cardnum.Size = new System.Drawing.Size(409, 48);
+            this.cardnum.Size = new System.Drawing.Size(545, 59);
             this.cardnum.TabIndex = 12;
             // 
             // date
@@ -92,14 +94,14 @@
             this.date.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.date.ForeColor = System.Drawing.Color.Black;
             this.date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.date.Location = new System.Drawing.Point(182, 389);
-            this.date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.date.Location = new System.Drawing.Point(243, 479);
+            this.date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.date.Name = "date";
             this.date.PasswordChar = '\0';
             this.date.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.date.PlaceholderText = "MM/YY";
             this.date.SelectedText = "";
-            this.date.Size = new System.Drawing.Size(192, 48);
+            this.date.Size = new System.Drawing.Size(256, 59);
             this.date.TabIndex = 13;
             // 
             // name
@@ -119,14 +121,14 @@
             this.name.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.name.ForeColor = System.Drawing.Color.Black;
             this.name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.name.Location = new System.Drawing.Point(182, 309);
-            this.name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.name.Location = new System.Drawing.Point(243, 380);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.name.Name = "name";
             this.name.PasswordChar = '\0';
             this.name.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.name.PlaceholderText = "Full Name";
             this.name.SelectedText = "";
-            this.name.Size = new System.Drawing.Size(409, 48);
+            this.name.Size = new System.Drawing.Size(545, 59);
             this.name.TabIndex = 14;
             // 
             // cvc
@@ -146,14 +148,14 @@
             this.cvc.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.cvc.ForeColor = System.Drawing.Color.Black;
             this.cvc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cvc.Location = new System.Drawing.Point(399, 389);
-            this.cvc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cvc.Location = new System.Drawing.Point(532, 479);
+            this.cvc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cvc.Name = "cvc";
             this.cvc.PasswordChar = '\0';
             this.cvc.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.cvc.PlaceholderText = "CVC";
             this.cvc.SelectedText = "";
-            this.cvc.Size = new System.Drawing.Size(192, 48);
+            this.cvc.Size = new System.Drawing.Size(256, 59);
             this.cvc.TabIndex = 15;
             // 
             // confirmbtn
@@ -167,30 +169,43 @@
             this.confirmbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.confirmbtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.confirmbtn.ForeColor = System.Drawing.Color.White;
-            this.confirmbtn.Location = new System.Drawing.Point(182, 459);
+            this.confirmbtn.Location = new System.Drawing.Point(243, 565);
+            this.confirmbtn.Margin = new System.Windows.Forms.Padding(4);
             this.confirmbtn.Name = "confirmbtn";
-            this.confirmbtn.Size = new System.Drawing.Size(409, 61);
+            this.confirmbtn.Size = new System.Drawing.Size(545, 75);
             this.confirmbtn.TabIndex = 16;
             this.confirmbtn.Text = "Confirm";
             this.confirmbtn.Click += new System.EventHandler(this.confirmbtn_Click);
             // 
+            // Paymentlbl
+            // 
+            this.Paymentlbl.AutoSize = true;
+            this.Paymentlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Paymentlbl.Location = new System.Drawing.Point(966, 25);
+            this.Paymentlbl.Name = "Paymentlbl";
+            this.Paymentlbl.Size = new System.Drawing.Size(71, 39);
+            this.Paymentlbl.TabIndex = 17;
+            this.Paymentlbl.Text = "test";
+            // 
             // PaymentWayByCreditCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 548);
+            this.ClientSize = new System.Drawing.Size(1067, 674);
+            this.Controls.Add(this.Paymentlbl);
             this.Controls.Add(this.confirmbtn);
             this.Controls.Add(this.cvc);
             this.Controls.Add(this.name);
             this.Controls.Add(this.date);
             this.Controls.Add(this.cardnum);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PaymentWayByCreditCard";
             this.Text = "PaymentWayByCreditCard";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PaymentWayByCreditCard_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +217,6 @@
         private Guna.UI2.WinForms.Guna2TextBox name;
         private Guna.UI2.WinForms.Guna2TextBox cvc;
         private Guna.UI2.WinForms.Guna2Button confirmbtn;
+        private System.Windows.Forms.Label Paymentlbl;
     }
 }

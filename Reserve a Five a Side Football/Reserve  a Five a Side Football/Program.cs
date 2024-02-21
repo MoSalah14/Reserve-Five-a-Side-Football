@@ -31,10 +31,10 @@ namespace Reserve__a_Five_a_Side_Football
             // Application.Run(new Regest());
             //Application.Run(new Add_update_del_Stadium());
             //Application.Run(new Login_Form());
-            Application.Run(new AddYourTeam());
+            //Application.Run(new AddYourTeam());
             //Application.Run(new AddYourTeam());
             //Application.Run(new StadiumGalary());
-            //Application.Run(new PaymentWayByCreditCard());
+            //Application.Run(new PaymentWayByCreditCard(30));
             Application.Run(new ReservationForm());
             //Application.Run(new StadiumGalary());
 

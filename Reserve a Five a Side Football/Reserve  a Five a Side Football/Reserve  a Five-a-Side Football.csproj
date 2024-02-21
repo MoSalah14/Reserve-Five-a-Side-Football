@@ -98,16 +98,16 @@
     <Compile Include="Owner\ShowAllRevToOwner.Designer.cs">
       <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentByWallet.cs">
+    <Compile Include="Player\PaymentByWallet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentByWallet.Designer.cs">
+    <Compile Include="Player\PaymentByWallet.Designer.cs">
       <DependentUpon>PaymentByWallet.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentWayByCreditCard.cs">
+    <Compile Include="Player\PaymentWayByCreditCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentWayByCreditCard.Designer.cs">
+    <Compile Include="Player\PaymentWayByCreditCard.Designer.cs">
       <DependentUpon>PaymentWayByCreditCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Player\AddYourTeam.cs">
@@ -127,6 +127,11 @@
     </Compile>
     <Compile Include="Owner\Add_update_del_Stadium.Designer.cs">
       <DependentUpon>Add_update_del_Stadium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Registeration\CurrentUserLogin.cs" />
     <Compile Include="Database\DataBase_Project.Context.cs">
@@ -255,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Owner\addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player\PaymentByWallet.resx">
+      <DependentUpon>PaymentByWallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player\PaymentWayByCreditCard.resx">
+      <DependentUpon>PaymentWayByCreditCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player\AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>

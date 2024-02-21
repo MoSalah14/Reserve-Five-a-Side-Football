@@ -1,19 +1,24 @@
 ﻿using Reserve__a_Five_a_Side_Football;
 using Reserve__a_Five_a_Side_Football.Database;
-using Reserve__a_Five_a_Side_Football.Player;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.Configuration;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReservationPage
 {
     public partial class ReservationForm : Form
     {
-        private Reserve_a_Five_a_SideEntities GetContext;
-        public event EventHandler<ConfirmReservationEventargs> ConfirmReservation;
-        public int id;
         private Reserve_a_Five_a_SideEntities dbContext;
 
         public ReservationForm()
@@ -83,31 +88,17 @@ namespace ReservationPage
                 .Select(r => r.Reservation_Time)
                 .ToList();
 
-                Reservation newReservation = new Reservation
-                {
-                    
-                    Reservation_Date = DateTime.Parse(datebx.Value.Date.ToString()),
-                    Reservation_Time = TimeSpan.Parse(timeComboBox.SelectedItem.ToString()),
-                    Payment = paybx.SelectedItem.ToString(),
-                    StadiumID = stadiumId,
-                };
+            var allTimeslots = Enumerable.Range(0, 24)
+                .Select(hour => new TimeSpan(hour, 0, 0))
+                .ToList();
 
-
-                GetContext.Reservations.Add(newReservation);
-                GetContext.SaveChanges();
-
-
-                MessageBox.Show("Success Confirm ", "Confirm Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            var availableTimeslots = new List<TimeSpan>();
+            foreach (var timeslot in allTimeslots)
+            {
+                if (!reservedTimeslots.Contains(timeslot))
+                    availableTimeslots.Add(timeslot);
             }
-        }
-
-        private void Reserve_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var result = MessageBox.Show("Are you sure To close  ", "Close Form",
-                              MessageBoxButtons.YesNo,
-                              MessageBoxIcon.Question);
-            e.Cancel = (result == DialogResult.No);
+            return availableTimeslots;
         }
 
         private void PopulateTimeSlots(List<TimeSpan> availableTimeslots)
@@ -137,6 +128,12 @@ namespace ReservationPage
                 .Select(s => s.StadiumID)
                 .FirstOrDefault();
 
+            decimal? PaymentAmount = dbContext.Stadium
+                .Where(ea => ea.StadiumID == stadiumId)
+                .Select(ea => ea.Hourly_Price).Single();
+
+
+
             var newReservation = new Reservation
             {
                 Reservation_Date = selectedDate,
@@ -145,6 +142,25 @@ namespace ReservationPage
                 Player_ID = 1,  //(CurrentUserLogin.UserLogginID)   Assuming player ID is fixed for now
                 StadiumID = stadiumId,
             };
+
+            if (payment == "Credit Card")
+            {
+                var creditCardPaymentForm = new PaymentWayByCreditCard(PaymentAmount);
+                var result = creditCardPaymentForm.ShowDialog();
+                newReservation.Reservation_Statues = "Confirmed";
+                if (result != DialogResult.OK) return;
+            }
+            else if (payment == "Cash Wallet")
+            {
+                var cashPaymentForm = new PaymentByWallet(PaymentAmount);
+                var result = cashPaymentForm.ShowDialog();
+                newReservation.Reservation_Statues = "Confirmed";
+                if (result != DialogResult.OK) return;
+            }
+            else
+            {
+                newReservation.Reservation_Statues = "Pending";
+            }
 
             dbContext.Reservations.Add(newReservation);
             dbContext.SaveChanges();
@@ -181,6 +197,9 @@ namespace ReservationPage
             paybx.SelectedIndex = -1;
             timeComboBox.Items.Clear();
         }
+
+        private void datebx_ValueChanged(object sender, EventArgs e)
+              => timeComboBox.Items.Clear();
 
     }
 }
