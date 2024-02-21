@@ -31,12 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Rev_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RevDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RevTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StadiumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +41,7 @@
             this.label1.Location = new System.Drawing.Point(202, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 29);
+            this.label1.Size = new System.Drawing.Size(222, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reservation For Player";
             // 
@@ -66,71 +60,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Rev_ID,
-            this.RevDate,
-            this.RevTime,
-            this.StadiumName,
-            this.Payment1,
-            this.Status1});
             this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(1069, 181);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // Rev_ID
-            // 
-            this.Rev_ID.HeaderText = "RevID";
-            this.Rev_ID.MinimumWidth = 6;
-            this.Rev_ID.Name = "Rev_ID";
-            this.Rev_ID.Visible = false;
-            this.Rev_ID.Width = 125;
-            // 
-            // RevDate
-            // 
-            this.RevDate.HeaderText = "RevDate";
-            this.RevDate.MinimumWidth = 6;
-            this.RevDate.Name = "RevDate";
-            this.RevDate.Width = 125;
-            // 
-            // RevTime
-            // 
-            this.RevTime.HeaderText = "RevTime";
-            this.RevTime.MinimumWidth = 6;
-            this.RevTime.Name = "RevTime";
-            this.RevTime.ReadOnly = true;
-            this.RevTime.Width = 125;
-            // 
-            // StadiumName
-            // 
-            this.StadiumName.HeaderText = "Stadium";
-            this.StadiumName.MinimumWidth = 6;
-            this.StadiumName.Name = "StadiumName";
-            this.StadiumName.ReadOnly = true;
-            this.StadiumName.Width = 125;
-            // 
-            // Payment1
-            // 
-            this.Payment1.HeaderText = "Payment";
-            this.Payment1.MinimumWidth = 6;
-            this.Payment1.Name = "Payment1";
-            this.Payment1.ReadOnly = true;
-            this.Payment1.Width = 125;
-            // 
-            // Status1
-            // 
-            this.Status1.HeaderText = "Status";
-            this.Status1.MinimumWidth = 6;
-            this.Status1.Name = "Status1";
-            this.Status1.ReadOnly = true;
-            this.Status1.Width = 125;
             // 
             // DeleteResrvation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 362);
+            this.ClientSize = new System.Drawing.Size(1084, 362);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -138,6 +78,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteResrvation";
             this.Text = "delLegue";
+           // this.Load += new System.EventHandler(this.DeleteResrvation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,11 +90,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rev_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RevDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RevTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StadiumName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Payment1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status1;
     }
 }
