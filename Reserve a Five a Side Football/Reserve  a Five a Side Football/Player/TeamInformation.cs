@@ -27,7 +27,7 @@ namespace Reserve__a_Five_a_Side_Football
         public void GetTeamsForUser()
         {
             var getTeamsForCaptin = context.Teams
-                .Where(e => e.CaptainID == e.Player.Player_ID && e.Player.UserID == 1 /*CurrentUserLogin.UserLogginID*/) // to make it UserID  
+                .Where(e => e.CaptainID == e.Player.Player_ID && e.Player.UserID == 2 /*CurrentUserLogin.UserLogginID*/) // to make it UserID  
                 .Select(e => e.CaptainID).FirstOrDefault();
 
             var query = context.Database.SqlQuery<TeamData>($"Exec Team_DetailsForUser {getTeamsForCaptin}").ToList();

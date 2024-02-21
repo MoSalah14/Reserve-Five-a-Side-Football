@@ -1,4 +1,5 @@
-﻿using Reserve__a_Five_a_Side_Football.Database;
+﻿using RegertrationPage;
+using Reserve__a_Five_a_Side_Football.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,7 +66,8 @@ namespace Reserve__a_Five_a_Side_Football
 
                     DB.Teams.Add(team);
                     DB.SaveChanges();
-                    MessageBox.Show("Done");
+                    MessageBox.Show("Register Completed");
+                    this.Close();
                 }
 
             }
@@ -145,6 +147,12 @@ namespace Reserve__a_Five_a_Side_Football
         {
             var existingUser = DB.Users.FirstOrDefault(u => u.NationalID == nationalID);
             return existingUser != null;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Regest regest = new Regest();
+            regest.ShowDialog();
         }
     }
 }

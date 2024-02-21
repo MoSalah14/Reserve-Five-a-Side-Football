@@ -261,6 +261,9 @@
     <EmbeddedResource Include="Owner\addReservationByOwner.resx">
       <DependentUpon>addReservationByOwner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Owner\ShowAllRevToOwner.resx">
+      <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Player\PaymentByWallet.resx">
       <DependentUpon>PaymentByWallet.cs</DependentUpon>
     </EmbeddedResource>

@@ -92,7 +92,7 @@
             // RegistBtn
             // 
             this.RegistBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistBtn.Location = new System.Drawing.Point(308, 212);
+            this.RegistBtn.Location = new System.Drawing.Point(310, 454);
             this.RegistBtn.Margin = new System.Windows.Forms.Padding(4);
             this.RegistBtn.Name = "RegistBtn";
             this.RegistBtn.Size = new System.Drawing.Size(456, 78);

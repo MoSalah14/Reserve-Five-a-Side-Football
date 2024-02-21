@@ -1,4 +1,7 @@
 ﻿using RegertrationPage;
+using ReservationPage;
+using Reserve__a_Five_a_Side_Football.Database;
+using Reserve__a_Five_a_Side_Football.Owner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,16 +21,19 @@ namespace Reserve__a_Five_a_Side_Football
         private Random random;
         private int tempIndex;
         private Form activeForm;
-   
+        Reserve_a_Five_a_SideEntities context;
+        string GetOwner;
         //Constructor
         public designForm()
         {
             InitializeComponent();
             random = new Random();
-           btnCloseChildForm.Visible = false;
+            btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            context = new Reserve_a_Five_a_SideEntities();
+            GetOwner = GetIDforOwner();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -59,7 +65,7 @@ namespace Reserve__a_Five_a_Side_Football
                     currentButton = (Button)btnSender;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                 
+
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -71,7 +77,7 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.BackColor = Color.FromArgb(0, 64, 64);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -82,7 +88,7 @@ namespace Reserve__a_Five_a_Side_Football
         {
             if (activeForm != null)
                 activeForm.Close();
-           ActivateButton(btnSender);
+            ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -94,36 +100,56 @@ namespace Reserve__a_Five_a_Side_Football
             lblTitle.Text = childForm.Text;
 
         }
+        public string GetIDforOwner()
+        {
+            var CurrentOwner = context.Users
+                .Where(e => e.UserID == CurrentUserLogin.UserLogginID)
+                .Select(e => e.TypeOFUser).FirstOrDefault();
 
+            return CurrentOwner;
+        }
         private void btn1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DeleteResrvation(), sender);
+            if (GetOwner == "Owner")
+                OpenChildForm(new ShowAllRevToOwner(), sender);
+            else
+                OpenChildForm(new ReservationForm(), sender);
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new HomeScreen(), sender);
+            if (GetOwner == "Owner")// Change Button Name
+                OpenChildForm(new OwnerAddLeague(), sender);
+            else
+                OpenChildForm(new LeagueForm(), sender);
         }
+
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Player_Data(), sender);
+            if (GetOwner == "Owner") // Change Button Name
+                OpenChildForm(new addReservationByOwner(), sender);
+            else
+                OpenChildForm(new DeleteResrvation(), sender);
         }
 
-        private void btn4_Click(object sender, EventArgs e)
+
+        private void btn4_Click(object sender, EventArgs e)// Change Button Name
         {
-            OpenChildForm(new OwnerAddLeague(), sender);
+            if (GetOwner == "Owner") // Change Button Name
+                OpenChildForm(new Add_update_del_Stadium(), sender);
+            else
+                OpenChildForm(new TeamInformation(), sender);
         }
 
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Regest(), sender);
-        }
+        private void button6_Click(object sender, EventArgs e)
+           => OpenChildForm(new Player_Data(), sender);
 
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new TeamInformation(), sender);
-        }
+        private void button10_Click_1(object sender, EventArgs e)
+            => OpenChildForm(new ShowTeamsToOwner(), sender);
+
+        private void button11_Click(object sender, EventArgs e)
+             => OpenChildForm(new Add_IncomeingPrice(), sender);
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
@@ -139,7 +165,7 @@ namespace Reserve__a_Five_a_Side_Football
             panelTitleBar.BackColor = Color.Teal;
             panellogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
-           btnCloseChildForm.Visible = false;
+            btnCloseChildForm.Visible = false;
         }
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
@@ -148,11 +174,10 @@ namespace Reserve__a_Five_a_Side_Football
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-       
+
         private void button7_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+            => Application.Exit();
+
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -163,18 +188,15 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
         private void button9_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+            => this.WindowState = FormWindowState.Minimized;
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new TeamInformation(), sender);
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
     }
 }
