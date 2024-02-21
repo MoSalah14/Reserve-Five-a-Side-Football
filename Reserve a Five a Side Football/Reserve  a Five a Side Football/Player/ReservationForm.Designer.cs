@@ -132,8 +132,6 @@
             this.datebx.ValueChanged += new System.EventHandler(this.datebx_ValueChanged);
 
             // 
-            // datealarm
-            // 
             this.datealarm.AutoSize = true;
             this.datealarm.BackColor = System.Drawing.Color.Transparent;
             this.datealarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,8 +274,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-
+<<<<<<< Updated upstream
+=======
 
             this.ClientSize = new System.Drawing.Size(890, 437);
 
