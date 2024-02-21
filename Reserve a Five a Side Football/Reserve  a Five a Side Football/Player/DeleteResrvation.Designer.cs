@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.payment = new System.Windows.Forms.TextBox();
-            this.date = new System.Windows.Forms.TextBox();
-            this.time = new System.Windows.Forms.TextBox();
-            this.status = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,17 +57,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(464, 300);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "update";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -81,43 +66,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(1069, 181);
             this.dataGridView1.TabIndex = 3;
             // 
-            // Rev_ID
-            // 
-            this.payment.Location = new System.Drawing.Point(22, 314);
-            this.payment.Name = "payment";
-            this.payment.Size = new System.Drawing.Size(110, 26);
-            this.payment.TabIndex = 5;
-            // 
-            // stad_name
-            // 
-            this.date.Location = new System.Drawing.Point(22, 282);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(110, 26);
-            this.date.TabIndex = 6;
-            // 
-            // Payment
-            // 
-            this.time.Location = new System.Drawing.Point(151, 282);
-            this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(123, 26);
-            this.time.TabIndex = 7;
-            // 
-            // Status
-            // 
-            this.status.Location = new System.Drawing.Point(151, 314);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(123, 26);
-            this.status.TabIndex = 8;
-            // 
-            // delLegue
+            // DeleteResrvation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 362);
-            this.Controls.Add(this.status);
-            this.Controls.Add(this.time);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.payment);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -137,9 +90,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox payment;
-        private System.Windows.Forms.TextBox date;
-        private System.Windows.Forms.TextBox time;
-        private System.Windows.Forms.TextBox status;
     }
 }
