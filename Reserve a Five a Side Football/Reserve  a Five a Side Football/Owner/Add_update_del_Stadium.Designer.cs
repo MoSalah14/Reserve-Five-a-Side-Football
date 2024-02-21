@@ -56,7 +56,7 @@
             this.namelabel.AutoSize = true;
             this.namelabel.Location = new System.Drawing.Point(12, 320);
             this.namelabel.Name = "namelabel";
-            this.namelabel.Size = new System.Drawing.Size(68, 25);
+            this.namelabel.Size = new System.Drawing.Size(86, 31);
             this.namelabel.TabIndex = 0;
             this.namelabel.Text = "Name";
             // 
@@ -65,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 379);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 25);
+            this.label2.Size = new System.Drawing.Size(76, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Price";
             // 
@@ -74,7 +74,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(571, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 25);
+            this.label3.Size = new System.Drawing.Size(0, 31);
             this.label3.TabIndex = 2;
             // 
             // label4
@@ -82,7 +82,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 477);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 25);
+            this.label4.Size = new System.Drawing.Size(71, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Area";
             // 
@@ -91,7 +91,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 427);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.Size = new System.Drawing.Size(78, 31);
             this.label5.TabIndex = 4;
             this.label5.Text = "State";
             // 
@@ -99,14 +99,14 @@
             // 
             this.name.Location = new System.Drawing.Point(116, 320);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(145, 31);
+            this.name.Size = new System.Drawing.Size(145, 37);
             this.name.TabIndex = 5;
             // 
             // price
             // 
             this.price.Location = new System.Drawing.Point(116, 373);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(145, 31);
+            this.price.Size = new System.Drawing.Size(145, 37);
             this.price.TabIndex = 6;
             // 
             // state
@@ -117,14 +117,14 @@
             "Inactive"});
             this.state.Location = new System.Drawing.Point(116, 427);
             this.state.Name = "state";
-            this.state.Size = new System.Drawing.Size(145, 33);
+            this.state.Size = new System.Drawing.Size(145, 38);
             this.state.TabIndex = 7;
             // 
             // area
             // 
             this.area.Location = new System.Drawing.Point(116, 477);
             this.area.Name = "area";
-            this.area.Size = new System.Drawing.Size(145, 31);
+            this.area.Size = new System.Drawing.Size(145, 37);
             this.area.TabIndex = 8;
             // 
             // addbtn
@@ -147,6 +147,7 @@
             this.pricehour});
             this.stadiumData.Location = new System.Drawing.Point(62, 30);
             this.stadiumData.Name = "stadiumData";
+            this.stadiumData.RowHeadersWidth = 51;
             this.stadiumData.Size = new System.Drawing.Size(627, 241);
             this.stadiumData.TabIndex = 10;
             this.stadiumData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stadiumData_CellClick);
@@ -154,24 +155,28 @@
             // stadname
             // 
             this.stadname.HeaderText = "Stad Name";
+            this.stadname.MinimumWidth = 6;
             this.stadname.Name = "stadname";
             this.stadname.Width = 150;
             // 
             // Stadstate
             // 
             this.Stadstate.HeaderText = "Stad Status";
+            this.Stadstate.MinimumWidth = 6;
             this.Stadstate.Name = "Stadstate";
             this.Stadstate.Width = 150;
             // 
             // stadarea
             // 
             this.stadarea.HeaderText = "Area";
+            this.stadarea.MinimumWidth = 6;
             this.stadarea.Name = "stadarea";
             this.stadarea.Width = 150;
             // 
             // pricehour
             // 
             this.pricehour.HeaderText = "Hourly Price";
+            this.pricehour.MinimumWidth = 6;
             this.pricehour.Name = "pricehour";
             this.pricehour.Width = 150;
             // 
@@ -217,9 +222,9 @@
             // 
             // Add_update_del_Stadium
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 581);
+            this.ClientSize = new System.Drawing.Size(975, 620);
             this.Controls.Add(this.uploadimgbtn);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.updatbtn);

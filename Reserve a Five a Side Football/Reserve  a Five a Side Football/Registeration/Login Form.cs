@@ -46,16 +46,17 @@ namespace Login_
             var user = Context.Users.Where(u => u.Email == email && u.Password == password).FirstOrDefault();
 
             if (user == null)
-            {
                 MessageBox.Show("Invalid email or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
             else
             {
-                HomeScreen homeScreen = new HomeScreen();
+
                 CurrentUserLogin.UserLogginID = user.UserID;
                 MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DeleteResrvation deleteResrvation = new DeleteResrvation();
-                deleteResrvation.Show();
+                designForm designForm = new designForm();
+                designForm.Show();
+                this.Close();
+
             }
 
         }
