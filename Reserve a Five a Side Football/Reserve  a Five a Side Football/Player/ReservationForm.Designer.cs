@@ -112,7 +112,26 @@
             this.datebx.Name = "datebx";
             this.datebx.Size = new System.Drawing.Size(205, 37);
             this.datebx.TabIndex = 6;
+<<<<<<< Updated upstream
             this.datebx.ValueChanged += new System.EventHandler(this.datebx_ValueChanged);
+=======
+
+            // 
+            // paybx
+            // 
+            this.paybx.FormattingEnabled = true;
+            this.paybx.Items.AddRange(new object[] {
+            "Cash",
+            "Credit Card",
+            "wallet Cash"});
+            this.paybx.Location = new System.Drawing.Point(190, 292);
+            this.paybx.Name = "paybx";
+            this.paybx.Size = new System.Drawing.Size(206, 33);
+            this.paybx.TabIndex = 9;
+
+            this.datebx.ValueChanged += new System.EventHandler(this.datebx_ValueChanged);
+
+>>>>>>> Stashed changes
             // 
             // datealarm
             // 
@@ -258,10 +277,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
+=======
+
+            this.ClientSize = new System.Drawing.Size(890, 437);
+
+>>>>>>> Stashed changes
             this.ClientSize = new System.Drawing.Size(1089, 626);
             this.Controls.Add(this.Timelbl);
             this.Controls.Add(this.lblcCity);
             this.Controls.Add(this.paybx);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             this.Controls.Add(this.timeComboBox);
             this.Controls.Add(this.stadbx);
             this.Controls.Add(this.Citylbl);

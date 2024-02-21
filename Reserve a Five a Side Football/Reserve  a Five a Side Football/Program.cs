@@ -27,6 +27,7 @@ namespace Reserve__a_Five_a_Side_Football
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+<<<<<<< Updated upstream
             //Application.Run(new delReservation());
             // Application.Run(new Regest());
             //Application.Run(new Add_update_del_Stadium());
@@ -37,6 +38,15 @@ namespace Reserve__a_Five_a_Side_Football
             //Application.Run(new PaymentWayByCreditCard(30));
             Application.Run(new ReservationForm());
             //Application.Run(new StadiumGalary());
+=======
+
+            //Application.Run(new Player_Data());
+
+            //Application.Run(new TeamInformation());
+
+            
+            Application.Run(new designForm());
+>>>>>>> Stashed changes
 
 
 
