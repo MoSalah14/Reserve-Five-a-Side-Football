@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Get_Player_Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Get_PlayerData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reservationdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LegueName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +47,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(294, 9);
+            this.label1.Location = new System.Drawing.Point(392, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
+            this.label1.Size = new System.Drawing.Size(222, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Get Player Data";
             // 
@@ -58,66 +59,80 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Get_Player_Data,
+            this.Get_PlayerData,
             this.Status,
             this.Reservationdate,
             this.LegueName});
-            this.dataGridView1.Location = new System.Drawing.Point(328, 64);
+            this.dataGridView1.Location = new System.Drawing.Point(437, 79);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(635, 185);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Get_Player_Data
+            // Get_PlayerData
             // 
-            this.Get_Player_Data.HeaderText = "Name";
-            this.Get_Player_Data.Name = "Get_Player_Data";
+            this.Get_PlayerData.HeaderText = "Player Name";
+            this.Get_PlayerData.MinimumWidth = 6;
+            this.Get_PlayerData.Name = "Get_PlayerData";
+            this.Get_PlayerData.Width = 125;
             // 
             // Status
             // 
             this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
+            this.Status.Width = 125;
             // 
             // Reservationdate
             // 
             this.Reservationdate.HeaderText = "Reservationdate";
+            this.Reservationdate.MinimumWidth = 6;
             this.Reservationdate.Name = "Reservationdate";
+            this.Reservationdate.Width = 125;
             // 
             // LegueName
             // 
             this.LegueName.HeaderText = "LegueName";
+            this.LegueName.MinimumWidth = 6;
             this.LegueName.Name = "LegueName";
+            this.LegueName.Width = 125;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 102);
+            this.textBox1.Location = new System.Drawing.Point(163, 126);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
+            this.textBox1.Size = new System.Drawing.Size(197, 22);
             this.textBox1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 102);
+            this.label2.Location = new System.Drawing.Point(16, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.Size = new System.Drawing.Size(91, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Player ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 85);
+            this.label3.Location = new System.Drawing.Point(500, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 4;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(41, 195);
+            this.button1.Location = new System.Drawing.Point(55, 240);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 43);
+            this.button1.Size = new System.Drawing.Size(152, 53);
             this.button1.TabIndex = 5;
             this.button1.Text = "Click";
             this.button1.UseVisualStyleBackColor = false;
@@ -126,9 +141,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Location = new System.Drawing.Point(179, 325);
+            this.button2.Location = new System.Drawing.Point(239, 400);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 48);
+            this.button2.Size = new System.Drawing.Size(180, 59);
             this.button2.TabIndex = 6;
             this.button2.Text = "Click";
             this.button2.UseVisualStyleBackColor = false;
@@ -136,18 +152,19 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Gold;
-            this.button3.Location = new System.Drawing.Point(12, 293);
+            this.button3.Location = new System.Drawing.Point(16, 361);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 46);
+            this.button3.Size = new System.Drawing.Size(168, 57);
             this.button3.TabIndex = 7;
             this.button3.Text = "Click";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // Player_Data
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 428);
+            this.ClientSize = new System.Drawing.Size(1152, 527);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -156,7 +173,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name.Name = "Player_Data";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Player_Data";
             this.Text = "Get_Player_Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -171,13 +189,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private new System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Get_Player_Data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Reservationdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LegueName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Get_PlayerData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reservationdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LegueName;
     }
 }
