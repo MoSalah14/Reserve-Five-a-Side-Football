@@ -362,6 +362,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DesignPackge\" />
+    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DataBase_Project.Context.tt">
