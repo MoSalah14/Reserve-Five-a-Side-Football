@@ -136,7 +136,7 @@ namespace Reserve__a_Five_a_Side_Football
         {
             DisableButton();
             lblTitle.Text = "Reserve a Five-a-Side Football";
-            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelTitleBar.BackColor = Color.Teal;
             panellogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
            btnCloseChildForm.Visible = false;
@@ -167,12 +167,12 @@ namespace Reserve__a_Five_a_Side_Football
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new TeamInformation(), sender);
         }
 
-        private void designForm_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
