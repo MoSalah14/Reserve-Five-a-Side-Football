@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Reserve_a_Five_a_SideModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LeagueMessages">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MessageContent" Type="nvarchar(max)" />
+          <Property Name="leagueID" Type="int" />
+          <Property Name="DeleteTimestamp" Type="datetime" />
+        </EntityType>
         <EntityType Name="Legaue">
           <Key>
             <PropertyRef Name="LegueID" />
@@ -19,6 +28,8 @@
           <Property Name="Reward" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="City" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="TimePlay" Type="time" Precision="7" Nullable="false" />
+          <Property Name="NumberOfSubscribersInlegaue" Type="int" />
+          <Property Name="CurrentSubscriberslegaue" Type="int" />
         </EntityType>
         <EntityType Name="Ownar">
           <Key>
@@ -42,11 +53,20 @@
           <Property Name="ReservationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Reservation_Date" Type="date" />
           <Property Name="Reservation_Time" Type="time" Precision="7" />
-          <Property Name="Payment" Type="nvarchar" MaxLength="20" />
           <Property Name="Reservation_Statues" Type="nvarchar" MaxLength="30" />
           <Property Name="Player_ID" Type="int" />
           <Property Name="OwnarID" Type="int" />
           <Property Name="StadiumID" Type="int" />
+          <Property Name="Payment" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReservationMessages">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerID" Type="int" />
+          <Property Name="MessageContent" Type="nvarchar(max)" />
+          <Property Name="IsRead" Type="bit" />
         </EntityType>
         <EntityType Name="Stadium">
           <Key>
@@ -86,6 +106,30 @@
           <Property Name="AccountStatus" Type="bit" Nullable="false" />
           <Property Name="TypeOFUser" Type="varchar" MaxLength="10" />
         </EntityType>
+        <Association Name="FK_LeagueID">
+          <End Role="Legaue" Type="Self.Legaue" Multiplicity="0..1" />
+          <End Role="LeagueMessages" Type="Self.LeagueMessages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legaue">
+              <PropertyRef Name="LegueID" />
+            </Principal>
+            <Dependent Role="LeagueMessages">
+              <PropertyRef Name="leagueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayerID">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="ReservationMessages" Type="Self.ReservationMessages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="Player_ID" />
+            </Principal>
+            <Dependent Role="ReservationMessages">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Legue_Stadium">
           <End Role="Stadium" Type="Self.Stadium" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -199,13 +243,23 @@
         <Function Name="GetTeamDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="GetTeamsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="Reserve_a_Five_a_SideModelStoreContainer">
+          <EntitySet Name="LeagueMessages" EntityType="Self.LeagueMessages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Legaue" EntityType="Self.Legaue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ownar" EntityType="Self.Ownar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationMessages" EntityType="Self.ReservationMessages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stadium" EntityType="Self.Stadium" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_LeagueID" Association="Self.FK_LeagueID">
+            <End Role="Legaue" EntitySet="Legaue" />
+            <End Role="LeagueMessages" EntitySet="LeagueMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayerID" Association="Self.FK_PlayerID">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="ReservationMessages" EntitySet="ReservationMessages" />
+          </AssociationSet>
           <AssociationSet Name="Legue_Stadium" Association="Self.Legue_Stadium">
             <End Role="Stadium" EntitySet="Stadium" />
             <End Role="Legaue" EntitySet="Legaue" />
@@ -259,6 +313,9 @@
           <Property Name="TimePlay" Type="Time" Nullable="false" Precision="7" />
           <NavigationProperty Name="Stadium" Relationship="Self.Legue_Stadium" FromRole="Legaue" ToRole="Stadium" />
           <NavigationProperty Name="Teams" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK" FromRole="Legaue" ToRole="Team" />
+          <Property Name="NumberOfSubscribersInlegaue" Type="Int32" />
+          <Property Name="CurrentSubscriberslegaue" Type="Int32" />
+          <NavigationProperty Name="LeagueMessages" Relationship="Reserve_a_Five_a_SideModel.FK_LeagueID" FromRole="Legaue" ToRole="LeagueMessage" />
         </EntityType>
         <EntityType Name="Ownar">
           <Key>
@@ -279,6 +336,7 @@
           <NavigationProperty Name="Reservations" Relationship="Self.Player_Reservation_FK" FromRole="Player" ToRole="Reservation" />
           <NavigationProperty Name="User" Relationship="Self.Player_Users" FromRole="Player" ToRole="Users" />
           <NavigationProperty Name="Teams" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Captain_FK" FromRole="Player" ToRole="Team" />
+          <NavigationProperty Name="ReservationMessages" Relationship="Reserve_a_Five_a_SideModel.FK_PlayerID" FromRole="Player" ToRole="ReservationMessage" />
         </EntityType>
         <EntityType Name="Reservation">
           <Key>
@@ -287,7 +345,7 @@
           <Property Name="ReservationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Reservation_Date" Type="DateTime" Precision="0" />
           <Property Name="Reservation_Time" Type="Time" Precision="7" />
-          <Property Name="Payment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Payment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Reservation_Statues" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Player_ID" Type="Int32" />
           <Property Name="OwnarID" Type="Int32" />
@@ -448,6 +506,16 @@
           </AssociationSet>
           <FunctionImport Name="GetTeamDetails" ReturnType="Collection(Reserve_a_Five_a_SideModel.GetTeamDetails_Result)" />
           <FunctionImport Name="GetTeamsData" ReturnType="Collection(Reserve_a_Five_a_SideModel.GetTeamsData_Result)" />
+          <EntitySet Name="LeagueMessages" EntityType="Reserve_a_Five_a_SideModel.LeagueMessage" />
+          <EntitySet Name="ReservationMessages" EntityType="Reserve_a_Five_a_SideModel.ReservationMessage" />
+          <AssociationSet Name="FK_LeagueID" Association="Reserve_a_Five_a_SideModel.FK_LeagueID">
+            <End Role="Legaue" EntitySet="Legaues" />
+            <End Role="LeagueMessage" EntitySet="LeagueMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayerID" Association="Reserve_a_Five_a_SideModel.FK_PlayerID">
+            <End Role="Player" EntitySet="Players" />
+            <End Role="ReservationMessage" EntitySet="ReservationMessages" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Team">
           <Key>
@@ -518,6 +586,50 @@
           <Property Type="String" Name="Player4_Name" Nullable="false" MaxLength="31" />
           <Property Type="String" Name="Legue_Name" Nullable="false" MaxLength="15" />
         </ComplexType>
+        <EntityType Name="LeagueMessage">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MessageContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="leagueID" Type="Int32" />
+          <Property Name="DeleteTimestamp" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Legaue" Relationship="Reserve_a_Five_a_SideModel.FK_LeagueID" FromRole="LeagueMessage" ToRole="Legaue" />
+        </EntityType>
+        <EntityType Name="ReservationMessage">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerID" Type="Int32" />
+          <Property Name="MessageContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsRead" Type="Boolean" />
+          <NavigationProperty Name="Player" Relationship="Reserve_a_Five_a_SideModel.FK_PlayerID" FromRole="ReservationMessage" ToRole="Player" />
+        </EntityType>
+        <Association Name="FK_LeagueID">
+          <End Type="Reserve_a_Five_a_SideModel.Legaue" Role="Legaue" Multiplicity="0..1" />
+          <End Type="Reserve_a_Five_a_SideModel.LeagueMessage" Role="LeagueMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Legaue">
+              <PropertyRef Name="LegueID" />
+            </Principal>
+            <Dependent Role="LeagueMessage">
+              <PropertyRef Name="leagueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayerID">
+          <End Type="Reserve_a_Five_a_SideModel.Player" Role="Player" Multiplicity="0..1" />
+          <End Type="Reserve_a_Five_a_SideModel.ReservationMessage" Role="ReservationMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="Player_ID" />
+            </Principal>
+            <Dependent Role="ReservationMessage">
+              <PropertyRef Name="PlayerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -527,6 +639,8 @@
           <EntitySetMapping Name="Legaues">
             <EntityTypeMapping TypeName="Reserve_a_Five_a_SideModel.Legaue">
               <MappingFragment StoreEntitySet="Legaue">
+                <ScalarProperty Name="CurrentSubscriberslegaue" ColumnName="CurrentSubscriberslegaue" />
+                <ScalarProperty Name="NumberOfSubscribersInlegaue" ColumnName="NumberOfSubscribersInlegaue" />
                 <ScalarProperty Name="LegueID" ColumnName="LegueID" />
                 <ScalarProperty Name="Legue_Name" ColumnName="Legue_Name" />
                 <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
@@ -637,6 +751,26 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="LeagueMessages">
+            <EntityTypeMapping TypeName="Reserve_a_Five_a_SideModel.LeagueMessage">
+              <MappingFragment StoreEntitySet="LeagueMessages">
+                <ScalarProperty Name="DeleteTimestamp" ColumnName="DeleteTimestamp" />
+                <ScalarProperty Name="leagueID" ColumnName="leagueID" />
+                <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationMessages">
+            <EntityTypeMapping TypeName="Reserve_a_Five_a_SideModel.ReservationMessage">
+              <MappingFragment StoreEntitySet="ReservationMessages">
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+                <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

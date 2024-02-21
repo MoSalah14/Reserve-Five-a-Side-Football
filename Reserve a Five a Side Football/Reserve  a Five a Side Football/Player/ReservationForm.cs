@@ -128,6 +128,12 @@ namespace ReservationPage
                 .Select(s => s.StadiumID)
                 .FirstOrDefault();
 
+            decimal? PaymentAmount = dbContext.Stadium
+                .Where(ea => ea.StadiumID == stadiumId)
+                .Select(ea => ea.Hourly_Price).Single();
+
+
+
             var newReservation = new Reservation
             {
                 Reservation_Date = selectedDate,
@@ -136,6 +142,25 @@ namespace ReservationPage
                 Player_ID = 1,  //(CurrentUserLogin.UserLogginID)   Assuming player ID is fixed for now
                 StadiumID = stadiumId,
             };
+
+            if (payment == "Credit Card")
+            {
+                var creditCardPaymentForm = new PaymentWayByCreditCard(PaymentAmount);
+                var result = creditCardPaymentForm.ShowDialog();
+                newReservation.Reservation_Statues = "Confirmed";
+                if (result != DialogResult.OK) return;
+            }
+            else if (payment == "Cash Wallet")
+            {
+                var cashPaymentForm = new PaymentByWallet(PaymentAmount);
+                var result = cashPaymentForm.ShowDialog();
+                newReservation.Reservation_Statues = "Confirmed";
+                if (result != DialogResult.OK) return;
+            }
+            else
+            {
+                newReservation.Reservation_Statues = "Pending";
+            }
 
             dbContext.Reservations.Add(newReservation);
             dbContext.SaveChanges();

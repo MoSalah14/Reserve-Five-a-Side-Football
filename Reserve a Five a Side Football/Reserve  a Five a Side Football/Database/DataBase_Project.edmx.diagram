@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Legaue" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Ownar" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Player" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Reservation" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Reservation" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Stadium" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.User" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <AssociationConnector Association="Reserve_a_Five_a_SideModel.Legue_Stadium" ManuallyRouted="false" />
@@ -20,6 +20,10 @@
         <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.Team" Width="1.5" PointX="7.5" PointY="6.5" />
         <AssociationConnector Association="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK" />
         <AssociationConnector Association="Reserve_a_Five_a_SideModel.MyTeam_Captain_FK" />
+        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.LeagueMessage" Width="1.5" PointX="7.75" PointY="11.375" />
+        <EntityTypeShape EntityType="Reserve_a_Five_a_SideModel.ReservationMessage" Width="1.5" PointX="5.75" PointY="0.5" />
+        <AssociationConnector Association="Reserve_a_Five_a_SideModel.FK_LeagueID" />
+        <AssociationConnector Association="Reserve_a_Five_a_SideModel.FK_PlayerID" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

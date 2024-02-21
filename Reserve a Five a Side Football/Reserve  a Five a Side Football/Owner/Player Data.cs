@@ -34,14 +34,14 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 label3.Visible = true;
                 label3.Text = "ID must contain 14 digits";
-               
+
             }
 
 
             var query = (from r in context.Users
-               
-                        
-                         where r.NationalID ==  userIDStr
+
+
+                         where r.NationalID == userIDStr
                          select new
                          {
                              Name = r.FName + " " + r.LName,

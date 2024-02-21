@@ -37,13 +37,13 @@ namespace Reserve__a_Five_a_Side_Football
             LeagueGridView.DataSource = specificColumnsData;
         }
 
-       
+
 
         private void LeagueGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
             // We Will Handle Open Form To Register His Team
-            
+
         }
 
         private void LeagueForm_Load(object sender, EventArgs e)
@@ -66,12 +66,13 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void LeagueGridView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void RegistBtn_Click(object sender, EventArgs e)
         {
-
+            AddYourTeam add = new AddYourTeam();
+            add.ShowDialog();
         }
     }
 }

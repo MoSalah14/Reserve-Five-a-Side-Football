@@ -179,5 +179,15 @@ namespace Reserve__a_Five_a_Side_Football
             Add_update_del_Stadium newstadium = new Add_update_del_Stadium();
             newstadium.ShowDialog();
         }
+
+        private void StadiumGalary_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            var result = MessageBox.Show("Are you sure To close  ", "Close Form",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+
+            e.Cancel = (result == DialogResult.No);
+        }
     }
 }

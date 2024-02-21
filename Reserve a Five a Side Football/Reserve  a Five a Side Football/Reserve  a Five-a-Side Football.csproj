@@ -74,6 +74,12 @@
     <Compile Include="Database\GetTeamDetailsForUser_Result.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\LeagueMessage.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ReservationMessage.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="designForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,18 @@
     </Compile>
     <Compile Include="Owner\ShowAllRevToOwner.Designer.cs">
       <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player\PaymentByWallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player\PaymentByWallet.Designer.cs">
+      <DependentUpon>PaymentByWallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player\PaymentWayByCreditCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player\PaymentWayByCreditCard.Designer.cs">
+      <DependentUpon>PaymentWayByCreditCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Player\AddYourTeam.cs">
       <SubType>Form</SubType>
@@ -176,10 +194,10 @@
     <Compile Include="Shared\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="League.cs">
+    <Compile Include="Player\League.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="League.Designer.cs">
+    <Compile Include="Player\League.Designer.cs">
       <DependentUpon>League.cs</DependentUpon>
     </Compile>
     <Compile Include="Registeration\Login Form.cs">
@@ -224,10 +242,10 @@
     <Compile Include="Shared\StadiumGalary.Designer.cs">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeamInformation.cs">
+    <Compile Include="Player\TeamInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeamInformation.Designer.cs">
+    <Compile Include="Player\TeamInformation.Designer.cs">
       <DependentUpon>TeamInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Test.cs">
@@ -245,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Owner\ShowAllRevToOwner.resx">
       <DependentUpon>ShowAllRevToOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player\PaymentByWallet.resx">
+      <DependentUpon>PaymentByWallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player\PaymentWayByCreditCard.resx">
+      <DependentUpon>PaymentWayByCreditCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Player\AddYourTeam.resx">
       <DependentUpon>AddYourTeam.cs</DependentUpon>
@@ -264,7 +288,7 @@
     <EmbeddedResource Include="Shared\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="League.resx">
+    <EmbeddedResource Include="Player\League.resx">
       <DependentUpon>League.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registeration\Login Form.resx">
@@ -291,7 +315,7 @@
     <EmbeddedResource Include="Shared\StadiumGalary.resx">
       <DependentUpon>StadiumGalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeamInformation.resx">
+    <EmbeddedResource Include="Player\TeamInformation.resx">
       <DependentUpon>TeamInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
