@@ -35,7 +35,7 @@ namespace Reserve__a_Five_a_Side_Football
             //Application.Run(new AddYourTeam());
             //Application.Run(new StadiumGalary());
             //Application.Run(new PaymentWayByCreditCard(30));
-            Application.Run(new ReservationForm());
+            Application.Run(new ShowAllRevToOwner());
             //Application.Run(new StadiumGalary());
 
 

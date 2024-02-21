@@ -34,7 +34,7 @@ namespace Reserve__a_Five_a_Side_Football
         private bool ValidatePaymentData()
         {
             if (cardnum.TextLength != 16 || name.TextLength < 20
-                || date.TextLength != 5 || cvc.TextLength != 3)
+                || date.TextLength != 5 || cvc.TextLength != 3) // date.TextLength Must Be 1-12/ 30
                 return false;
 
             return true;

@@ -181,9 +181,9 @@
             // 
             this.Paymentlbl.AutoSize = true;
             this.Paymentlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Paymentlbl.Location = new System.Drawing.Point(966, 25);
+            this.Paymentlbl.Location = new System.Drawing.Point(860, 229);
             this.Paymentlbl.Name = "Paymentlbl";
-            this.Paymentlbl.Size = new System.Drawing.Size(71, 39);
+            this.Paymentlbl.Size = new System.Drawing.Size(70, 38);
             this.Paymentlbl.TabIndex = 17;
             this.Paymentlbl.Text = "test";
             // 
@@ -192,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 674);
+            this.ClientSize = new System.Drawing.Size(1150, 674);
             this.Controls.Add(this.Paymentlbl);
             this.Controls.Add(this.confirmbtn);
             this.Controls.Add(this.cvc);
