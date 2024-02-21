@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Get_Player_Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Get_PlayerData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reservationdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LegueName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Get_Player_Data,
+            this.Get_PlayerData,
             this.Status,
             this.Reservationdate,
             this.LegueName});
@@ -67,10 +67,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(476, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Get_Player_Data
+            // Get_PlayerData
             // 
-            this.Get_Player_Data.HeaderText = "Name";
-            this.Get_Player_Data.Name = "Get_Player_Data";
+            this.Get_PlayerData.HeaderText = "Player Name";
+            this.Get_PlayerData.Name = "Get_PlayerData";
             // 
             // Status
             // 
@@ -156,7 +156,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name.Name = "Player_Data";
+            this.Name = "Player_Data";
             this.Text = "Get_Player_Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -171,13 +171,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private new System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Get_Player_Data;
+        private  System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Reservationdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LegueName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Get_PlayerData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reservationdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LegueName;
     }
 }
