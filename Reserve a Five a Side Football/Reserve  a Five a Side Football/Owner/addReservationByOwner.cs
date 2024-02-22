@@ -184,5 +184,9 @@ namespace ReservationPage
         private void datebx_ValueChanged(object sender, EventArgs e)
               => timeComboBox.Items.Clear();
 
+        private void addReservationByOwner_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

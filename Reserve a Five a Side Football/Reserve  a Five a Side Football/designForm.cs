@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Messaging.Design;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,12 +37,6 @@ namespace Reserve__a_Five_a_Side_Football
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             context = new Reserve_a_Five_a_SideEntities();
             GetOwner = GetIDforOwner();
-            if (GetOwner == "Owner")
-            {
-                button6.Visible = true;
-                button10.Visible = true;
-                button11.Visible = true;
-            }
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -204,9 +199,35 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
-        private void designForm_Load(object sender, EventArgs e)
+
+
+
+        private void CountMessageForPlayer()
         {
-            
+            var unreadMessages = context.ReservationMessages
+                .Where(e => e.PlayerID == 1/*CurrentUserLogin.UserLogginID*/ && e.IsRead == false)
+                .Select(e => new { e.MessageContent, e.IsRead })
+                .ToList();
+
+            lblMessage.Text = unreadMessages.Count.ToString();
+
+            guna2DataGridView1.Rows.Clear(); // Clear existing rows before adding new ones
+
+            // Add column to DataGridView
+            guna2DataGridView1.Columns.Clear();
+            guna2DataGridView1.Columns.Add("Message", "Message");
+
+            foreach (var message in unreadMessages)
+            {
+                // Add each message as a new row to the DataGridView
+                guna2DataGridView1.Rows.Add(message.MessageContent);
+            }
+
+            // Auto-size column width to fit content
+            guna2DataGridView1.AutoResizeRows();
         }
+
+
+
     }
 }

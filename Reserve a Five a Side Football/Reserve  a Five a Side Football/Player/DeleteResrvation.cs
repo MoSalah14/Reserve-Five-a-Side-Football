@@ -76,8 +76,6 @@ namespace Reserve__a_Five_a_Side_Football
                     }
                 }
 
-                // إعادة عرض البيانات بعد الحذف
-                // show();
             }
             else
             {
