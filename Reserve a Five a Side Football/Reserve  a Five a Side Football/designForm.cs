@@ -23,6 +23,8 @@ namespace Reserve__a_Five_a_Side_Football
         private Form activeForm;
         Reserve_a_Five_a_SideEntities context;
         string GetOwner;
+
+        
         //Constructor
         public designForm()
         {
@@ -34,6 +36,12 @@ namespace Reserve__a_Five_a_Side_Football
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             context = new Reserve_a_Five_a_SideEntities();
             GetOwner = GetIDforOwner();
+            if (GetOwner == "Owner")
+            {
+                button6.Visible = true;
+                button10.Visible = true;
+                button11.Visible = true;
+            }
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -196,7 +204,9 @@ namespace Reserve__a_Five_a_Side_Football
 
         }
 
-
-
+        private void designForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

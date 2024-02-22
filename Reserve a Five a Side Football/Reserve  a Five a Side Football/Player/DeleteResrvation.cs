@@ -110,7 +110,7 @@ namespace Reserve__a_Five_a_Side_Football
                                 join p in context1.Players on r.Player_ID equals p.Player_ID
                                 join u in context1.Users on p.UserID equals u.UserID
                                 join res in context1.Stadium on r.StadiumID equals res.StadiumID
-                                where u.UserID == 1 // userLoginID
+                                where u.UserID == 2 //userLoginID
                                 select new
                                 {
 
