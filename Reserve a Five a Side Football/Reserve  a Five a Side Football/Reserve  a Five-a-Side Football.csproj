@@ -375,6 +375,7 @@
       <DependentUpon>DataBase_Project.edmx</DependentUpon>
       <LastGenOutput>DataBase_Project.cs</LastGenOutput>
     </Content>
+    <Content Include="Photos\icons8-message-48 %281%29.png" />
     <Content Include="Photos\IMG-20240221-WA0001.jpg" />
     <Content Include="Photos\IMG-20240221-WA0002.jpg" />
     <Content Include="Photos\IMG-20240221-WA0003.jpg" />

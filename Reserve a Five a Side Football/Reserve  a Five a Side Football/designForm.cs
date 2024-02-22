@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Messaging.Design;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace Reserve__a_Five_a_Side_Football
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             context = new Reserve_a_Five_a_SideEntities();
             GetOwner = GetIDforOwner();
+            CountMessageForPlayer();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -198,5 +200,53 @@ namespace Reserve__a_Five_a_Side_Football
 
 
 
+
+        private void CountMessageForPlayer()
+        {
+            var unreadMessages = context.ReservationMessages
+                .Where(e => e.PlayerID == 1/*CurrentUserLogin.UserLogginID*/ && e.IsRead == false)
+                .Select(e => new { e.MessageContent, e.IsRead })
+                .ToList();
+
+            lblMessage.Text = unreadMessages.Count.ToString();
+
+            guna2DataGridView1.Rows.Clear(); // Clear existing rows before adding new ones
+
+            // Add column to DataGridView
+            guna2DataGridView1.Columns.Clear();
+            guna2DataGridView1.Columns.Add("Message", "Message");
+
+            foreach (var message in unreadMessages)
+            {
+                // Add each message as a new row to the DataGridView
+                guna2DataGridView1.Rows.Add(message.MessageContent);
+            }
+
+            // Auto-size column width to fit content
+            guna2DataGridView1.AutoResizeRows();
+        }
+
+        private void pictMessageBox_Click(object sender, EventArgs e)
+                => guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
+
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                var cell = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                    if (cell.Style.Font.Bold)
+                    {
+                        cell.Style.Font = new Font(cell.Style.Font, FontStyle.Regular);
+                        lblMessage.Text = (int.Parse(lblMessage.Text) - 1).ToString();
+                    }
+                    else
+                    {
+                        cell.Style.Font = new Font(cell.Style.Font, FontStyle.Bold);
+                    }
+                
+            }
+        }
     }
 }
