@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 22);
+            this.label1.Location = new System.Drawing.Point(302, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 24);
@@ -48,10 +48,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(440, 287);
+            this.button1.Location = new System.Drawing.Point(345, 300);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(304, 49);
+            this.button1.Size = new System.Drawing.Size(165, 49);
             this.button1.TabIndex = 1;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,17 +60,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1069, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(817, 181);
             this.dataGridView1.TabIndex = 3;
             // 
             // DeleteResrvation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 362);
+            this.ClientSize = new System.Drawing.Size(895, 362);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -78,7 +78,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteResrvation";
             this.Text = "delLegue";
-           // this.Load += new System.EventHandler(this.DeleteResrvation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
