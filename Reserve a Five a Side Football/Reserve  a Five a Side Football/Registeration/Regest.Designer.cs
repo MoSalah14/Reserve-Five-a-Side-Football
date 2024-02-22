@@ -56,7 +56,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(353, 9);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(366, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 25);
@@ -115,20 +116,21 @@
             // 
             // Regsterbtn
             // 
+            this.Regsterbtn.BackColor = System.Drawing.Color.SeaShell;
             this.Regsterbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regsterbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regsterbtn.Location = new System.Drawing.Point(277, 428);
+            this.Regsterbtn.Location = new System.Drawing.Point(278, 424);
             this.Regsterbtn.Name = "Regsterbtn";
             this.Regsterbtn.Size = new System.Drawing.Size(93, 39);
             this.Regsterbtn.TabIndex = 6;
             this.Regsterbtn.Text = "Register";
-            this.Regsterbtn.UseVisualStyleBackColor = true;
+            this.Regsterbtn.UseVisualStyleBackColor = false;
             this.Regsterbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // acountalarm
             // 
             this.acountalarm.AutoSize = true;
-            this.acountalarm.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.acountalarm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.acountalarm.Location = new System.Drawing.Point(309, 375);
             this.acountalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.acountalarm.Name = "acountalarm";
@@ -139,24 +141,26 @@
             // 
             // Signinbtn
             // 
-            this.Signinbtn.Location = new System.Drawing.Point(411, 426);
+            this.Signinbtn.BackColor = System.Drawing.Color.SeaShell;
+            this.Signinbtn.Location = new System.Drawing.Point(411, 422);
             this.Signinbtn.Name = "Signinbtn";
             this.Signinbtn.Size = new System.Drawing.Size(91, 39);
             this.Signinbtn.TabIndex = 8;
             this.Signinbtn.Text = " Sign in";
-            this.Signinbtn.UseVisualStyleBackColor = true;
+            this.Signinbtn.UseVisualStyleBackColor = false;
             this.Signinbtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // Clearbtn
             // 
+            this.Clearbtn.BackColor = System.Drawing.Color.SeaShell;
             this.Clearbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Clearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clearbtn.Location = new System.Drawing.Point(550, 424);
+            this.Clearbtn.Location = new System.Drawing.Point(550, 422);
             this.Clearbtn.Name = "Clearbtn";
             this.Clearbtn.Size = new System.Drawing.Size(78, 39);
             this.Clearbtn.TabIndex = 9;
             this.Clearbtn.Text = "Clear";
-            this.Clearbtn.UseVisualStyleBackColor = true;
+            this.Clearbtn.UseVisualStyleBackColor = false;
             this.Clearbtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // Fname
@@ -183,7 +187,7 @@
             // 
             // confpass
             // 
-            this.confpass.Location = new System.Drawing.Point(589, 223);
+            this.confpass.Location = new System.Drawing.Point(591, 223);
             this.confpass.Name = "confpass";
             this.confpass.PasswordChar = '•';
             this.confpass.Size = new System.Drawing.Size(172, 31);
@@ -191,7 +195,7 @@
             // 
             // idnum
             // 
-            this.idnum.Location = new System.Drawing.Point(581, 138);
+            this.idnum.Location = new System.Drawing.Point(591, 138);
             this.idnum.Name = "idnum";
             this.idnum.Size = new System.Drawing.Size(170, 31);
             this.idnum.TabIndex = 14;
@@ -200,7 +204,7 @@
             // 
             this.Passalarm.AutoSize = true;
             this.Passalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Passalarm.ForeColor = System.Drawing.Color.Red;
+            this.Passalarm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Passalarm.Location = new System.Drawing.Point(595, 257);
             this.Passalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Passalarm.Name = "Passalarm";
@@ -212,7 +216,7 @@
             // 
             this.emailalarm.AutoSize = true;
             this.emailalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailalarm.ForeColor = System.Drawing.Color.Red;
+            this.emailalarm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.emailalarm.Location = new System.Drawing.Point(161, 182);
             this.emailalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.emailalarm.Name = "emailalarm";
@@ -224,8 +228,8 @@
             // 
             this.idalarm.AutoSize = true;
             this.idalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idalarm.ForeColor = System.Drawing.Color.Red;
-            this.idalarm.Location = new System.Drawing.Point(613, 182);
+            this.idalarm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.idalarm.Location = new System.Drawing.Point(595, 182);
             this.idalarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.idalarm.Name = "idalarm";
             this.idalarm.Size = new System.Drawing.Size(114, 15);
@@ -236,7 +240,7 @@
             // 
             this.namealarm.AutoSize = true;
             this.namealarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namealarm.ForeColor = System.Drawing.Color.Red;
+            this.namealarm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.namealarm.Location = new System.Drawing.Point(586, 100);
             this.namealarm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.namealarm.Name = "namealarm";
@@ -262,7 +266,7 @@
             // 
             this.RegFaildLbl.AutoSize = true;
             this.RegFaildLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegFaildLbl.ForeColor = System.Drawing.Color.Red;
+            this.RegFaildLbl.ForeColor = System.Drawing.Color.DimGray;
             this.RegFaildLbl.Location = new System.Drawing.Point(257, 341);
             this.RegFaildLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RegFaildLbl.Name = "RegFaildLbl";
@@ -283,15 +287,16 @@
             // 
             // Lname
             // 
-            this.Lname.Location = new System.Drawing.Point(579, 66);
+            this.Lname.Location = new System.Drawing.Point(591, 63);
             this.Lname.Name = "Lname";
-            this.Lname.Size = new System.Drawing.Size(172, 31);
+            this.Lname.Size = new System.Drawing.Size(170, 31);
             this.Lname.TabIndex = 22;
             // 
             // Regest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 482);
             this.Controls.Add(this.Lname);
             this.Controls.Add(this.label7);
