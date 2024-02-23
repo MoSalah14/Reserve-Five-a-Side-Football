@@ -62,7 +62,7 @@
             this.namelabel.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.namelabel.Location = new System.Drawing.Point(22, 341);
             this.namelabel.Name = "namelabel";
-            this.namelabel.Size = new System.Drawing.Size(77, 30);
+            this.namelabel.Size = new System.Drawing.Size(61, 24);
             this.namelabel.TabIndex = 0;
             this.namelabel.Text = "Name";
             // 
@@ -72,7 +72,7 @@
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.label2.Location = new System.Drawing.Point(676, 342);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 30);
+            this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Price";
             // 
@@ -81,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(571, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 31);
+            this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 2;
             // 
             // label4
@@ -90,7 +90,7 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.label4.Location = new System.Drawing.Point(312, 342);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 30);
+            this.label4.Size = new System.Drawing.Size(53, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Area";
             // 
@@ -100,7 +100,7 @@
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.label5.Location = new System.Drawing.Point(543, 424);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 30);
+            this.label5.Size = new System.Drawing.Size(55, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "State";
             // 
@@ -108,14 +108,14 @@
             // 
             this.name.Location = new System.Drawing.Point(118, 339);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(165, 37);
+            this.name.Size = new System.Drawing.Size(165, 31);
             this.name.TabIndex = 5;
             // 
             // price
             // 
             this.price.Location = new System.Drawing.Point(776, 337);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(162, 37);
+            this.price.Size = new System.Drawing.Size(162, 31);
             this.price.TabIndex = 6;
             // 
             // state
@@ -126,14 +126,14 @@
             "Inactive"});
             this.state.Location = new System.Drawing.Point(641, 421);
             this.state.Name = "state";
-            this.state.Size = new System.Drawing.Size(145, 38);
+            this.state.Size = new System.Drawing.Size(145, 33);
             this.state.TabIndex = 7;
             // 
             // area
             // 
             this.area.Location = new System.Drawing.Point(418, 339);
             this.area.Name = "area";
-            this.area.Size = new System.Drawing.Size(203, 37);
+            this.area.Size = new System.Drawing.Size(203, 31);
             this.area.TabIndex = 8;
             // 
             // addbtn
@@ -164,7 +164,7 @@
             this.stadiumData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkCyan;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -186,7 +186,7 @@
             this.stadiumData.DefaultCellStyle = dataGridViewCellStyle3;
             this.stadiumData.EnableHeadersVisualStyles = false;
             this.stadiumData.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.stadiumData.Location = new System.Drawing.Point(1, 1);
+            this.stadiumData.Location = new System.Drawing.Point(12, 12);
             this.stadiumData.Name = "stadiumData";
             this.stadiumData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -200,7 +200,7 @@
             this.stadiumData.RowHeadersVisible = false;
             this.stadiumData.RowHeadersWidth = 51;
             this.stadiumData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.stadiumData.Size = new System.Drawing.Size(973, 316);
+            this.stadiumData.Size = new System.Drawing.Size(947, 316);
             this.stadiumData.TabIndex = 10;
             this.stadiumData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stadiumData_CellClick);
             // 
@@ -282,13 +282,13 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(156, 428);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 30);
+            this.label1.Size = new System.Drawing.Size(63, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Photo";
             // 
             // Add_update_del_Stadium
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(975, 620);
