@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.legaueNametxt = new System.Windows.Forms.TextBox();
             this.Rewardtxt = new System.Windows.Forms.TextBox();
             this.LeguaeNamelab = new System.Windows.Forms.Label();
@@ -47,6 +47,15 @@
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.legueIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legueNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beginDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stadiumNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timePlayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legaueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reserve_a_Five_a_SideDataSet = new Reserve__a_Five_a_Side_Football.Reserve_a_Five_a_SideDataSet();
             this.StadiumNameCmb = new System.Windows.Forms.ComboBox();
@@ -58,15 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.legaueTableAdapter = new Reserve__a_Five_a_Side_Football.Reserve_a_Five_a_SideDataSetTableAdapters.LegaueTableAdapter();
             this.SubNumUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.legueIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.legueNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beginDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stadiumNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timePlayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.legaueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserve_a_Five_a_SideDataSet)).BeginInit();
@@ -92,7 +93,7 @@
             // LeguaeNamelab
             // 
             this.LeguaeNamelab.AutoSize = true;
-            this.LeguaeNamelab.Location = new System.Drawing.Point(30, 318);
+            this.LeguaeNamelab.Location = new System.Drawing.Point(27, 318);
             this.LeguaeNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LeguaeNamelab.Name = "LeguaeNamelab";
             this.LeguaeNamelab.Size = new System.Drawing.Size(130, 20);
@@ -102,7 +103,7 @@
             // BeginDatelab
             // 
             this.BeginDatelab.AutoSize = true;
-            this.BeginDatelab.Location = new System.Drawing.Point(30, 361);
+            this.BeginDatelab.Location = new System.Drawing.Point(28, 361);
             this.BeginDatelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BeginDatelab.Name = "BeginDatelab";
             this.BeginDatelab.Size = new System.Drawing.Size(115, 20);
@@ -194,9 +195,9 @@
             // 
             this.AddNewLegaueBtn.BackColor = System.Drawing.Color.DarkCyan;
             this.AddNewLegaueBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddNewLegaueBtn.Location = new System.Drawing.Point(199, 503);
+            this.AddNewLegaueBtn.Location = new System.Drawing.Point(544, 503);
             this.AddNewLegaueBtn.Name = "AddNewLegaueBtn";
-            this.AddNewLegaueBtn.Size = new System.Drawing.Size(150, 50);
+            this.AddNewLegaueBtn.Size = new System.Drawing.Size(259, 54);
             this.AddNewLegaueBtn.TabIndex = 21;
             this.AddNewLegaueBtn.Text = "Create League";
             this.AddNewLegaueBtn.UseVisualStyleBackColor = false;
@@ -206,7 +207,7 @@
             // 
             this.Deletebtn.BackColor = System.Drawing.Color.DarkCyan;
             this.Deletebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Deletebtn.Location = new System.Drawing.Point(697, 503);
+            this.Deletebtn.Location = new System.Drawing.Point(911, 312);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(133, 50);
             this.Deletebtn.TabIndex = 23;
@@ -218,9 +219,9 @@
             // 
             this.Updatebtn.BackColor = System.Drawing.Color.DarkCyan;
             this.Updatebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Updatebtn.Location = new System.Drawing.Point(517, 503);
+            this.Updatebtn.Location = new System.Drawing.Point(911, 421);
             this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(123, 50);
+            this.Updatebtn.Size = new System.Drawing.Size(133, 50);
             this.Updatebtn.TabIndex = 24;
             this.Updatebtn.Text = "Update";
             this.Updatebtn.UseVisualStyleBackColor = false;
@@ -235,14 +236,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.legueIDDataGridViewTextBoxColumn,
@@ -260,92 +261,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 202);
+            this.dataGridView1.Size = new System.Drawing.Size(1050, 229);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
-            // 
-            // legaueBindingSource
-            // 
-            this.legaueBindingSource.DataMember = "Legaue";
-            this.legaueBindingSource.DataSource = this.reserve_a_Five_a_SideDataSet;
-            // 
-            // reserve_a_Five_a_SideDataSet
-            // 
-            this.reserve_a_Five_a_SideDataSet.DataSetName = "Reserve_a_Five_a_SideDataSet";
-            this.reserve_a_Five_a_SideDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // StadiumNameCmb
-            // 
-            this.StadiumNameCmb.FormattingEnabled = true;
-            this.StadiumNameCmb.Location = new System.Drawing.Point(199, 442);
-            this.StadiumNameCmb.Name = "StadiumNameCmb";
-            this.StadiumNameCmb.Size = new System.Drawing.Size(187, 28);
-            this.StadiumNameCmb.TabIndex = 26;
-            // 
-            // CityCmb
-            // 
-            this.CityCmb.FormattingEnabled = true;
-            this.CityCmb.Location = new System.Drawing.Point(653, 353);
-            this.CityCmb.Name = "CityCmb";
-            this.CityCmb.Size = new System.Drawing.Size(200, 28);
-            this.CityCmb.TabIndex = 27;
-            // 
-            // TimePlayDate
-            // 
-            this.TimePlayDate.Location = new System.Drawing.Point(653, 445);
-            this.TimePlayDate.Name = "TimePlayDate";
-            this.TimePlayDate.Size = new System.Drawing.Size(200, 26);
-            this.TimePlayDate.TabIndex = 28;
-            // 
-            // SearchLegaueNametxt
-            // 
-            this.SearchLegaueNametxt.Location = new System.Drawing.Point(716, 16);
-            this.SearchLegaueNametxt.Name = "SearchLegaueNametxt";
-            this.SearchLegaueNametxt.Size = new System.Drawing.Size(201, 26);
-            this.SearchLegaueNametxt.TabIndex = 29;
-            this.SearchLegaueNametxt.TextChanged += new System.EventHandler(this.SearchLegaueNametxt_TextChanged);
-            // 
-            // SearchstadiumNametxt
-            // 
-            this.SearchstadiumNametxt.Location = new System.Drawing.Point(220, 19);
-            this.SearchstadiumNametxt.Name = "SearchstadiumNametxt";
-            this.SearchstadiumNametxt.Size = new System.Drawing.Size(187, 26);
-            this.SearchstadiumNametxt.TabIndex = 30;
-            this.SearchstadiumNametxt.TextChanged += new System.EventHandler(this.SearchstadiumNametxt_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(503, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 20);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "SearchByLegaueName:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 20);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "SearchbyStadiumName:";
-            // 
-            // legaueTableAdapter
-            // 
-            this.legaueTableAdapter.ClearBeforeFill = true;
-            // 
-            // SubNumUpDown
-            // 
-            this.SubNumUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.SubNumUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SubNumUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SubNumUpDown.Location = new System.Drawing.Point(910, 383);
-            this.SubNumUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SubNumUpDown.Name = "SubNumUpDown";
-            this.SubNumUpDown.Size = new System.Drawing.Size(87, 48);
-            this.SubNumUpDown.TabIndex = 33;
-            this.SubNumUpDown.UpDownButtonFillColor = System.Drawing.Color.WhiteSmoke;
             // 
             // legueIDDataGridViewTextBoxColumn
             // 
@@ -421,12 +339,106 @@
             this.timePlayDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.timePlayDataGridViewTextBoxColumn.Name = "timePlayDataGridViewTextBoxColumn";
             // 
+            // legaueBindingSource
+            // 
+            this.legaueBindingSource.DataMember = "Legaue";
+            this.legaueBindingSource.DataSource = this.reserve_a_Five_a_SideDataSet;
+            // 
+            // reserve_a_Five_a_SideDataSet
+            // 
+            this.reserve_a_Five_a_SideDataSet.DataSetName = "Reserve_a_Five_a_SideDataSet";
+            this.reserve_a_Five_a_SideDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // StadiumNameCmb
+            // 
+            this.StadiumNameCmb.FormattingEnabled = true;
+            this.StadiumNameCmb.Location = new System.Drawing.Point(199, 442);
+            this.StadiumNameCmb.Name = "StadiumNameCmb";
+            this.StadiumNameCmb.Size = new System.Drawing.Size(187, 28);
+            this.StadiumNameCmb.TabIndex = 26;
+            // 
+            // CityCmb
+            // 
+            this.CityCmb.FormattingEnabled = true;
+            this.CityCmb.Location = new System.Drawing.Point(653, 353);
+            this.CityCmb.Name = "CityCmb";
+            this.CityCmb.Size = new System.Drawing.Size(200, 28);
+            this.CityCmb.TabIndex = 27;
+            // 
+            // TimePlayDate
+            // 
+            this.TimePlayDate.Location = new System.Drawing.Point(653, 445);
+            this.TimePlayDate.Name = "TimePlayDate";
+            this.TimePlayDate.Size = new System.Drawing.Size(200, 26);
+            this.TimePlayDate.TabIndex = 28;
+            // 
+            // SearchLegaueNametxt
+            // 
+            this.SearchLegaueNametxt.Location = new System.Drawing.Point(716, 16);
+            this.SearchLegaueNametxt.Name = "SearchLegaueNametxt";
+            this.SearchLegaueNametxt.Size = new System.Drawing.Size(201, 26);
+            this.SearchLegaueNametxt.TabIndex = 29;
+            this.SearchLegaueNametxt.TextChanged += new System.EventHandler(this.SearchLegaueNametxt_TextChanged);
+            // 
+            // SearchstadiumNametxt
+            // 
+            this.SearchstadiumNametxt.Location = new System.Drawing.Point(235, 19);
+            this.SearchstadiumNametxt.Name = "SearchstadiumNametxt";
+            this.SearchstadiumNametxt.Size = new System.Drawing.Size(187, 26);
+            this.SearchstadiumNametxt.TabIndex = 30;
+            this.SearchstadiumNametxt.TextChanged += new System.EventHandler(this.SearchstadiumNametxt_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(503, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 20);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "SearchByLegaueName:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 20);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "SearchbyStadiumName:";
+            // 
+            // legaueTableAdapter
+            // 
+            this.legaueTableAdapter.ClearBeforeFill = true;
+            // 
+            // SubNumUpDown
+            // 
+            this.SubNumUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.SubNumUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SubNumUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SubNumUpDown.Location = new System.Drawing.Point(199, 503);
+            this.SubNumUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SubNumUpDown.Name = "SubNumUpDown";
+            this.SubNumUpDown.Size = new System.Drawing.Size(187, 35);
+            this.SubNumUpDown.TabIndex = 33;
+            this.SubNumUpDown.UpDownButtonFillColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 509);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 20);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Subscriber Number";
+            // 
             // OwnerAddLeague
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1009, 585);
+            this.ClientSize = new System.Drawing.Size(1074, 612);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.SubNumUpDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -505,5 +517,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rewardDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timePlayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
     }
 }
