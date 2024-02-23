@@ -24,8 +24,6 @@ namespace Reserve__a_Five_a_Side_Football
         private Form activeForm;
         Reserve_a_Five_a_SideEntities context;
         string GetOwner;
-
-        
         //Constructor
         public designForm()
         {
@@ -37,6 +35,13 @@ namespace Reserve__a_Five_a_Side_Football
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             context = new Reserve_a_Five_a_SideEntities();
             GetOwner = GetIDforOwner();
+            CountMessageForPlayer();
+            if (GetOwner == "Owner")
+            {
+                button6.Visible = true;
+                button10.Visible = true;
+                button11.Visible = true;
+            }
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -182,51 +187,74 @@ namespace Reserve__a_Five_a_Side_Football
 
 
 
-
-
-
-
         private void CountMessageForPlayer()
         {
             var unreadMessages = context.ReservationMessages
-                .Where(e => e.PlayerID == 1/*CurrentUserLogin.UserLogginID*/ && e.IsRead == false)
-                .Select(e => new { e.MessageContent, e.IsRead })
-                .ToList();
+                .Where(e => e.PlayerID == 1/*CurrentUserLogin.UserLogginID*/)
+                .Select(e => new { e.MessageID, e.MessageContent, e.IsRead })
+                .OrderByDescending(e => e.MessageID).ToList();
 
             lblMessage.Text = unreadMessages.Count.ToString();
 
-            guna2DataGridView1.Rows.Clear(); // Clear existing rows before adding new ones
+            guna2DataGridView1.Rows.Clear();
 
-            // Add column to DataGridView
-            guna2DataGridView1.Columns.Clear();
-            guna2DataGridView1.Columns.Add("Message", "Message");
-
-            foreach (var message in unreadMessages)
+            // Add column to DataGridView if not already added
+            if (guna2DataGridView1.Columns.Count == 0)
             {
-                // Add each message as a new row to the DataGridView
-                guna2DataGridView1.Rows.Add(message.MessageContent);
+                guna2DataGridView1.Columns.Add("Message", "Message");
             }
 
-            // Auto-size column width to fit content
+            int count = 0;
+            foreach (var message in unreadMessages)
+            {
+                var row = guna2DataGridView1.Rows.Add(message.MessageContent);
+
+                if (message.IsRead == false)
+                {
+                    count++;
+                    // Set the font style to bold for unread messages
+                    guna2DataGridView1.Rows[row].Cells[0].Style.Font = new Font(guna2DataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
+                }
+            }
+
+            lblMessage.Text = count.ToString();
             guna2DataGridView1.AutoResizeRows();
         }
 
+
         private void pictMessageBox_Click(object sender, EventArgs e)
-                => guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
+        {
+            CountMessageForPlayer();
+            guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
+        }
 
 
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                var cell = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-                    if (cell.Style.Font.Bold)
+                // Check if the font style is bold for the specific cell
+                bool isBold = (cell.Style.Font != null && cell.Style.Font.Style.HasFlag(FontStyle.Bold));
+
+                if (isBold)
+                {
+                    cell.Style.Font = new Font(cell.Style.Font, FontStyle.Regular);
+                    lblMessage.Text = (int.Parse(lblMessage.Text) - 1).ToString();
+
+                    // Update the message status to read
+                    var message = context.ReservationMessages
+                        .FirstOrDefault(m => m.PlayerID == 1 /*CurrentUserLogin.UserLogginID*/ && m.MessageContent == cell.Value.ToString());
+
+                    if (message != null)
                     {
-                        cell.Style.Font = new Font(cell.Style.Font, FontStyle.Regular);
-                        lblMessage.Text = (int.Parse(lblMessage.Text) - 1).ToString();
+                        message.IsRead = true;
+                        context.SaveChanges();
                     }
-                    else
-                    {
-                        cell.Style.Font = new Font(cell.Style.Font, FontStyle.Bold);
-                    }
-                
+                }
             }
         }
+
     }
 }

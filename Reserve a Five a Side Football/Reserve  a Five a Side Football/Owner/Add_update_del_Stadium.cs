@@ -73,7 +73,7 @@ namespace Reserve__a_Five_a_Side_Football
                 
                 string currentPath = System.IO.Directory.GetCurrentDirectory();
 
-                string newpath = currentPath + "\\ImagesStadium\\" + std1.StadiumID + ".jpg";
+                string newpath = currentPath + "\\Photos\\" + std1.StadiumID + ".jpg";
                 File.Copy(filePath, newpath);
 
                 std1.Stadium_Image = std1.StadiumID + ".jpg";
