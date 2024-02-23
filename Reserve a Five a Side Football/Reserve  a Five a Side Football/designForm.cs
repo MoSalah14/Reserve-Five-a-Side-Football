@@ -256,5 +256,31 @@ namespace Reserve__a_Five_a_Side_Football
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private int Imagenumber = 1;
+
+        private void LoadNextImage() 
+        {
+            if (Imagenumber == 10) 
+            {
+                Imagenumber = 1;
+            }
+            SlidPic.ImageLocation = String.Format(@"Img_Stadium\{0}.png",Imagenumber);
+            Imagenumber++;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadNextImage();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
