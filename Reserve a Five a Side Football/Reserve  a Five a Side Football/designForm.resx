@@ -121,7 +121,7 @@
   <data name="pictMessageBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAB/VJREFUaEPtmFtQ1HUUx5dd9n6/YTNdXpvppZdq8qWXppkesixDTctKTc0L3pXI
+        DQAACw0B7QfALAAAB/VJREFUaEPtmFtQ1HUUx5dd9n6/YTNdXpvppZdq8qWXppkesixDTctKTc0L3pXI
         RDMBDQJhQZblKiy3ZREW5CJyWS4LrKhlNlM9VWAPmV1ES3o5nd9vf7/dP8S6F9FqxjNzRgdW9nz4fn7n
         919FD+pBPagFqMZGSeLA8GLxwHCaeHDYLRke+Uoy4vtF4hv5Szzq+0vsH/tFfH70SsL5Mbfooj9NNDH2
         rAhAzP71v1eKLu+jkh5vVmKvdyqxbxAS+4cg0TsEksFhkAyNgGQE2+cD8egoiMex/WMgPj8O4gvjkHDB
@@ -160,8 +160,5 @@
   </data>
   <metadata name="Messages.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="guna2DataGridViewStyler1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
 </root>

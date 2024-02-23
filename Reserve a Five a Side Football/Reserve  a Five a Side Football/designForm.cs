@@ -43,19 +43,6 @@ namespace Reserve__a_Five_a_Side_Football
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        //Methods
-        //private Color SelectThemeColor()
-        //{
-        ////    int index = random.Next(ThemeColor.ColorList.Count);
-        ////    while (tempIndex == index)
-        ////    {
-        ////        index = random.Next(ThemeColor.ColorList.Count);
-        ////    }
-        ////    tempIndex = index;
-        ////    string color = ThemeColor.ColorList[index];
-        ////    return ColorTranslator.FromHtml(color);
-
-        //}
 
         private void ActivateButton(object btnSender)
         {
@@ -193,10 +180,7 @@ namespace Reserve__a_Five_a_Side_Football
             => this.WindowState = FormWindowState.Minimized;
 
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
 
 
 
@@ -227,7 +211,10 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
         private void pictMessageBox_Click(object sender, EventArgs e)
-                => guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
+        {
+            CountMessageForPlayer();
+            guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
+        }
 
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -236,16 +223,26 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 var cell = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-                    if (cell.Style.Font.Bold)
+                if (cell.Style != null)
+                {
+                    if (cell.Style.Font == null)
+                        cell.Style.Font = guna2DataGridView1.DefaultCellStyle.Font;
+
+
+
+                    bool isBold = cell.Style.Font.Bold;
+
+                    if (isBold)
                     {
                         cell.Style.Font = new Font(cell.Style.Font, FontStyle.Regular);
                         lblMessage.Text = (int.Parse(lblMessage.Text) - 1).ToString();
+                        var unreadMessages = context.ReservationMessages
+                        .Where(m => m.PlayerID == 1/*CurrentUserLogin.UserLogginID*/ && m.MessageContent == cell.Value.ToString()).FirstOrDefault();
+                        unreadMessages.IsRead = true;
+                        context.SaveChanges();
                     }
-                    else
-                    {
-                        cell.Style.Font = new Font(cell.Style.Font, FontStyle.Bold);
-                    }
-                
+
+                }
             }
         }
     }
