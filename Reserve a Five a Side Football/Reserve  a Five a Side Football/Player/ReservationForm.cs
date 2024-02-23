@@ -162,6 +162,16 @@ namespace ReservationPage
                 newReservation.Reservation_Statues = "Pending";
             }
 
+            ReservationMessage Add_Message = new ReservationMessage
+            {
+                PlayerID = 1,  //CurrentUserLogin.UserLogginID;
+                MessageContent = $"Your Reservation Confirmed in Stadium {stadiumName}" +
+                $" in Date {newReservation.Reservation_Date?.ToString("yyyy-MM-dd")} on {newReservation.Reservation_Time} Clock Don't Late ^_^ ",
+                IsRead = false
+            };
+
+
+            dbContext.ReservationMessages.Add(Add_Message);
             dbContext.Reservations.Add(newReservation);
             dbContext.SaveChanges();
 

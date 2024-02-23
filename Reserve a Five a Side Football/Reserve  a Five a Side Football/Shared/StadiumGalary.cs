@@ -92,7 +92,7 @@ namespace Reserve__a_Five_a_Side_Football
 
                            
 
-                            Bitmap bitmap = new Bitmap(currentPath + "\\ImagesStadium\\" + item.Stadium_Image);
+                            Bitmap bitmap = new Bitmap(currentPath + "\\Photos\\" + item.Stadium_Image);
                             pictureBox.BackgroundImage = bitmap;
 
                         }

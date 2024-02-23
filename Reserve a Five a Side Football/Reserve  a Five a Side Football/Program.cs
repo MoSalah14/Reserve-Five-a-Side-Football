@@ -44,6 +44,7 @@ namespace Reserve__a_Five_a_Side_Football
 
             
             //Application.Run(new designForm());
+            Application.Run(new StadiumGalary());
 
 
 
