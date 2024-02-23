@@ -26,9 +26,15 @@ namespace Reserve__a_Five_a_Side_Football
 
         public void GetTeamsForUser()
         {
+            //var getTeamsForCaptin = context.Teams
+            //   .Where(e => e.CaptainID == e.Player.Player_ID && e.Player.UserID == 2 /*CurrentUserLogin.UserLogginID*/) // to make it UserID  
+            //   .Select(e => e.CaptainID).FirstOrDefault();
+
+            int idloginuser = CurrentUserLogin.UserLogginID;
+
+            
             var getTeamsForCaptin = context.Teams
-                .Where(e => e.CaptainID == e.Player.Player_ID && e.Player.UserID == 2 /*CurrentUserLogin.UserLogginID*/) // to make it UserID  
-                .Select(e => e.CaptainID).FirstOrDefault();
+                .Where(e => e.CaptainID == idloginuser || e.Player.UserID == idloginuser).Select(e => e.CaptainID).FirstOrDefault();
 
             var query = context.Database.SqlQuery<TeamData>($"Exec Team_DetailsForUser {getTeamsForCaptin}").ToList();
 
@@ -40,7 +46,6 @@ namespace Reserve__a_Five_a_Side_Football
                     item.Player3_Name, item.Player4_Name, item.Player5_Name, item.LeagueName);
             }
         }
-
 
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -86,9 +91,15 @@ namespace Reserve__a_Five_a_Side_Football
         }
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            int idloginuser = CurrentUserLogin.UserLogginID;
+
+            var captinid = context.Teams
+                .Where(a => a.CaptainID == idloginuser).Select(a => a.CaptainID).FirstOrDefault();
 
             try
             {
+              if(idloginuser== captinid)
+                { 
                 int teamId = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells["TeamID"].Value);
                 var teamToUpdate = context.Teams.FirstOrDefault(t => t.TeamID == teamId);
 
@@ -144,6 +155,13 @@ namespace Reserve__a_Five_a_Side_Football
                 guna2DataGridView1.Rows.Clear();
                 GetTeamsForUser();
 
+
+                }
+                else
+                {
+                    MessageBox.Show("Cannot to Update", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             catch (Exception ex)
             {
@@ -167,8 +185,18 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in guna2DataGridView1.SelectedRows)
+            int idloginuser = CurrentUserLogin.UserLogginID;
+
+            var captinid = context.Teams
+                .Where(a => a.CaptainID == idloginuser).Select(a => a.CaptainID).FirstOrDefault();
+
+
+            if (idloginuser == captinid)
             {
+
+            
+                foreach (DataGridViewRow row in guna2DataGridView1.SelectedRows)
+               {
                 if (row.Cells["LeagueName"].Value != null)
                 {
                     string displayedLeagueName = row.Cells["LeagueName"].Value.ToString();
@@ -190,7 +218,14 @@ namespace Reserve__a_Five_a_Side_Football
                 }
                 else
                     MessageBox.Show("No Teams To Delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            else
+            {
+                MessageBox.Show("Cannot to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
 
         }
     }

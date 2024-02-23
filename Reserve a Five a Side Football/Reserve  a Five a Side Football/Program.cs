@@ -40,10 +40,10 @@ namespace Reserve__a_Five_a_Side_Football
 
             //Application.Run(new Player_Data());
 
-            //Application.Run(new TeamInformation());
+            Application.Run(new TeamInformation());
 
             
-            Application.Run(new designForm());
+            //Application.Run(new designForm());
 
 
 
