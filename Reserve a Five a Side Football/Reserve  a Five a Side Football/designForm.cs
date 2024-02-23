@@ -24,6 +24,8 @@ namespace Reserve__a_Five_a_Side_Football
         private Form activeForm;
         Reserve_a_Five_a_SideEntities context;
         string GetOwner;
+
+        
         //Constructor
         public designForm()
         {
@@ -35,7 +37,6 @@ namespace Reserve__a_Five_a_Side_Football
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             context = new Reserve_a_Five_a_SideEntities();
             GetOwner = GetIDforOwner();
-            CountMessageForPlayer();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -211,38 +212,20 @@ namespace Reserve__a_Five_a_Side_Football
         }
 
         private void pictMessageBox_Click(object sender, EventArgs e)
-        {
-            CountMessageForPlayer();
-            guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
-        }
-
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                var cell = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-
-                if (cell.Style != null)
-                {
-                    if (cell.Style.Font == null)
-                        cell.Style.Font = guna2DataGridView1.DefaultCellStyle.Font;
+                => guna2DataGridView1.Visible = !guna2DataGridView1.Visible;
 
 
 
-                    bool isBold = cell.Style.Font.Bold;
-
-                    if (isBold)
+                    if (cell.Style.Font.Bold)
                     {
                         cell.Style.Font = new Font(cell.Style.Font, FontStyle.Regular);
                         lblMessage.Text = (int.Parse(lblMessage.Text) - 1).ToString();
-                        var unreadMessages = context.ReservationMessages
-                        .Where(m => m.PlayerID == 1/*CurrentUserLogin.UserLogginID*/ && m.MessageContent == cell.Value.ToString()).FirstOrDefault();
-                        unreadMessages.IsRead = true;
-                        context.SaveChanges();
                     }
-
-                }
+                    else
+                    {
+                        cell.Style.Font = new Font(cell.Style.Font, FontStyle.Bold);
+                    }
+                
             }
         }
     }

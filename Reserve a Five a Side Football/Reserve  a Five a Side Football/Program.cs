@@ -28,7 +28,20 @@ namespace Reserve__a_Five_a_Side_Football
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-           
+            //Application.Run(new delReservation());
+            // Application.Run(new Regest());
+            //Application.Run(new Add_update_del_Stadium());
+            //Application.Run(new Login_Form());
+            //Application.Run(new AddYourTeam());
+            //Application.Run(new AddYourTeam());
+            //Application.Run(new StadiumGalary());
+            //Application.Run(new StadiumGalary());
+
+
+            //Application.Run(new Player_Data());
+
+            //Application.Run(new TeamInformation());
+
             
             Application.Run(new designForm());
 

@@ -31,6 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Rev_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserv_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserv_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stadium_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserv_Statue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +66,48 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(817, 181);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // Rev_ID
+            // 
+            this.Rev_ID.HeaderText = "Rev_ID";
+            this.Rev_ID.Name = "Rev_ID";
+            this.Rev_ID.ReadOnly = true;
+            this.Rev_ID.Visible = false;
+            // 
+            // Reserv_Date
+            // 
+            this.Reserv_Date.HeaderText = "Reservation Date";
+            this.Reserv_Date.Name = "Reserv_Date";
+            this.Reserv_Date.ReadOnly = true;
+            // 
+            // Reserv_Time
+            // 
+            this.Reserv_Time.HeaderText = "Reservation Time";
+            this.Reserv_Time.Name = "Reserv_Time";
+            this.Reserv_Time.ReadOnly = true;
+            // 
+            // Stadium_Name
+            // 
+            this.Stadium_Name.HeaderText = "Stadium Name";
+            this.Stadium_Name.Name = "Stadium_Name";
+            this.Stadium_Name.ReadOnly = true;
+            // 
+            // Payment
+            // 
+            this.Payment.HeaderText = "Payment";
+            this.Payment.Name = "Payment";
+            this.Payment.ReadOnly = true;
+            // 
+            // Reserv_Statue
+            // 
+            this.Reserv_Statue.HeaderText = "Reservation Statue";
+            this.Reserv_Statue.Name = "Reserv_Statue";
+            this.Reserv_Statue.ReadOnly = true;
             // 
             // DeleteResrvation
             // 
@@ -89,5 +132,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rev_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reserv_Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reserv_Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stadium_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reserv_Statue;
     }
 }
