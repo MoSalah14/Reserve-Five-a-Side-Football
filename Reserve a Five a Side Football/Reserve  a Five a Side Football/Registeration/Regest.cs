@@ -30,8 +30,8 @@ namespace RegertrationPage
 
         string passwordpattern = @"^(?:(?=.*[a-z])(?:(?=.*[A-Z])(?=.*[\d\W])|(?=.*\W)(?=.*\d))|(?=.*\W)(?=.*[A-Z])(?=.*\d)).{8,}$";
         string emailpattern = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-        
-       
+
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -47,7 +47,7 @@ namespace RegertrationPage
             }
         }
 
-        
+
 
         private void Regest_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -144,6 +144,10 @@ namespace RegertrationPage
                 idnum.Text = "";
 
                 MessageBox.Show("sucess Data", "Regestration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Login_Form login_ = new Login_Form();
+                login_.ShowDialog();
+                this.Close();
             }
         }
 

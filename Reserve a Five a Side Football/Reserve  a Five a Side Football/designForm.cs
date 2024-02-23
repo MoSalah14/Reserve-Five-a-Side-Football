@@ -41,7 +41,13 @@ namespace Reserve__a_Five_a_Side_Football
                 button6.Visible = true;
                 button10.Visible = true;
                 button11.Visible = true;
+                button1.Text = "All Reservation";
+                button3.Text = "Add League";
+                button4.Text = "Add Reservation";
+                button5.Text = "Stadiums";
+                guna2DataGridView2.Visible = false;
             }
+            addTextLeagueMessageToLabel();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -113,7 +119,7 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (GetOwner == "Owner")// Change Button Name
+            if (GetOwner == "Owner")
                 OpenChildForm(new OwnerAddLeague(), sender);
             else
                 OpenChildForm(new LeagueForm(), sender);
@@ -122,16 +128,17 @@ namespace Reserve__a_Five_a_Side_Football
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (GetOwner == "Owner") // Change Button Name
+            if (GetOwner == "Owner")
                 OpenChildForm(new addReservationByOwner(), sender);
+
             else
                 OpenChildForm(new DeleteResrvation(), sender);
         }
 
 
-        private void btn4_Click(object sender, EventArgs e)// Change Button Name
+        private void btn4_Click(object sender, EventArgs e)
         {
-            if (GetOwner == "Owner") // Change Button Name
+            if (GetOwner == "Owner")
                 OpenChildForm(new Add_update_del_Stadium(), sender);
             else
                 OpenChildForm(new TeamInformation(), sender);
@@ -256,31 +263,17 @@ namespace Reserve__a_Five_a_Side_Football
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void addTextLeagueMessageToLabel()
         {
+            var test = context.LeagueMessages
+                .Where(e => e.DeleteTimestamp > DateTime.Now)
+                .Select(e => e.MessageContent).ToList();
+
+            foreach (var item in test)
+                guna2DataGridView2.Rows.Add(item);
 
         }
 
-        private int Imagenumber = 1;
 
-        private void LoadNextImage() 
-        {
-            if (Imagenumber == 10) 
-            {
-                Imagenumber = 1;
-            }
-            SlidPic.ImageLocation = String.Format(@"Img_Stadium\{0}.png",Imagenumber);
-            Imagenumber++;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            LoadNextImage();
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
