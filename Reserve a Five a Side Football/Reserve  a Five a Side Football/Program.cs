@@ -43,7 +43,7 @@ namespace Reserve__a_Five_a_Side_Football
             //Application.Run(new TeamInformation());
 
             
-            Application.Run(new Regest());
+            Application.Run(new Login_Form());
            // Application.Run(new StadiumGalary());
 
 
