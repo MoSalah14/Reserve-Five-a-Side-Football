@@ -50,7 +50,6 @@ namespace Reserve__a_Five_a_Side_Football
                 button3.Text = "Add League";
                 button4.Text = "Add Reservation";
                 button5.Text = "Stadiums";
-                guna2DataGridView2.Visible = false;
             }
             addTextLeagueMessageToLabel();
             GetTextLeague = label1.Text;
@@ -103,8 +102,8 @@ namespace Reserve__a_Five_a_Side_Football
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            //this.panelDesktopPane.Controls.Add(childForm);
-            //this.panelDesktopPane.Tag = childForm;
+            this.panelDesktopPane.Controls.Add(childForm);
+            this.panelDesktopPane.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             lblTitle.Text = childForm.Text;
