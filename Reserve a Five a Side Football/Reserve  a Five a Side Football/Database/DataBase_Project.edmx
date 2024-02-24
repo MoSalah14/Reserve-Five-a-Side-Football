@@ -29,7 +29,7 @@
           <Property Name="City" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="TimePlay" Type="time" Precision="7" Nullable="false" />
           <Property Name="NumberOfSubscribersInlegaue" Type="int" />
-          <Property Name="CurrentSubscriberslegaue" Type="int" />
+          <Property Name="CurrentSubscriberslegaue" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Ownar">
           <Key>
@@ -53,11 +53,11 @@
           <Property Name="ReservationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Reservation_Date" Type="date" />
           <Property Name="Reservation_Time" Type="time" Precision="7" />
-          <Property Name="Reservation_Statues" Type="nvarchar" MaxLength="30" />
           <Property Name="Player_ID" Type="int" />
           <Property Name="OwnarID" Type="int" />
           <Property Name="StadiumID" Type="int" />
           <Property Name="Payment" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Reservation_Statues" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ReservationMessages">
           <Key>
@@ -242,6 +242,9 @@
         </Association>
         <Function Name="GetTeamDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="GetTeamsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Team_DetailsForUserCaptin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CaptinID" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="Reserve_a_Five_a_SideModelStoreContainer">
           <EntitySet Name="LeagueMessages" EntityType="Self.LeagueMessages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Legaue" EntityType="Self.Legaue" Schema="dbo" store:Type="Tables" />
@@ -314,7 +317,7 @@
           <NavigationProperty Name="Stadium" Relationship="Self.Legue_Stadium" FromRole="Legaue" ToRole="Stadium" />
           <NavigationProperty Name="Teams" Relationship="Reserve_a_Five_a_SideModel.MyTeam_Legue_FK" FromRole="Legaue" ToRole="Team" />
           <Property Name="NumberOfSubscribersInlegaue" Type="Int32" />
-          <Property Name="CurrentSubscriberslegaue" Type="Int32" />
+          <Property Name="CurrentSubscriberslegaue" Type="Int32" Nullable="false" />
           <NavigationProperty Name="LeagueMessages" Relationship="Reserve_a_Five_a_SideModel.FK_LeagueID" FromRole="Legaue" ToRole="LeagueMessage" />
         </EntityType>
         <EntityType Name="Ownar">
@@ -346,7 +349,7 @@
           <Property Name="Reservation_Date" Type="DateTime" Precision="0" />
           <Property Name="Reservation_Time" Type="Time" Precision="7" />
           <Property Name="Payment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Reservation_Statues" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Reservation_Statues" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Player_ID" Type="Int32" />
           <Property Name="OwnarID" Type="Int32" />
           <Property Name="StadiumID" Type="Int32" />
@@ -516,6 +519,9 @@
             <End Role="Player" EntitySet="Players" />
             <End Role="ReservationMessage" EntitySet="ReservationMessages" />
           </AssociationSet>
+          <FunctionImport Name="Team_DetailsForUserCaptin" ReturnType="Collection(Reserve_a_Five_a_SideModel.Team_DetailsForUserCaptin_Result)">
+            <Parameter Name="CaptinID" Mode="In" Type="Int32" />
+          </FunctionImport>
           </EntityContainer>
         <EntityType Name="Team">
           <Key>
@@ -630,6 +636,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="Team_DetailsForUserCaptin_Result">
+          <Property Type="Int32" Name="TeamID" Nullable="false" />
+          <Property Type="String" Name="TeamName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Captain_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player1_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player2_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player3_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player4_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="Player5_Name" Nullable="false" MaxLength="31" />
+          <Property Type="String" Name="LeagueName" Nullable="false" MaxLength="15" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -771,6 +788,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Team_DetailsForUserCaptin" FunctionName="Reserve_a_Five_a_SideModel.Store.Team_DetailsForUserCaptin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Reserve_a_Five_a_SideModel.Team_DetailsForUserCaptin_Result">
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+                <ScalarProperty Name="Captain_Name" ColumnName="Captain_Name" />
+                <ScalarProperty Name="Player1_Name" ColumnName="Player1_Name" />
+                <ScalarProperty Name="Player2_Name" ColumnName="Player2_Name" />
+                <ScalarProperty Name="Player3_Name" ColumnName="Player3_Name" />
+                <ScalarProperty Name="Player4_Name" ColumnName="Player4_Name" />
+                <ScalarProperty Name="Player5_Name" ColumnName="Player5_Name" />
+                <ScalarProperty Name="LeagueName" ColumnName="LeagueName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

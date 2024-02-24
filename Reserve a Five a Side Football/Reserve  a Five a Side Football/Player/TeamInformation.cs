@@ -26,25 +26,41 @@ namespace Reserve__a_Five_a_Side_Football
 
         public void GetTeamsForUser()
         {
-            //var getTeamsForCaptin = context.Teams
-            //   .Where(e => e.CaptainID == e.Player.Player_ID && e.Player.UserID == 2 /*CurrentUserLogin.UserLogginID*/) // to make it UserID  
-            //   .Select(e => e.CaptainID).FirstOrDefault();
-
             int idloginuser = CurrentUserLogin.UserLogginID;
 
-            
-            var getTeamsForCaptin = context.Teams
-                .Where(e => e.CaptainID == idloginuser || e.Player.UserID == idloginuser).Select(e => e.CaptainID).FirstOrDefault();
 
-            var query = context.Database.SqlQuery<TeamData>($"Exec Team_DetailsForUser {getTeamsForCaptin}").ToList();
+            var test1 = context.Teams.Where(e => e.CaptainID == e.Player.Player_ID && e.Player.User.UserID == idloginuser)
+                .Select(e => e.CaptainID).FirstOrDefault();
 
 
-            foreach (var item in query)
+            var playerID = context.Users
+                 .Where(p => p.UserID == idloginuser)
+                 .Select(p => p.NationalID)
+                 .FirstOrDefault();
+
+            if (test1 == idloginuser)
             {
-                guna2DataGridView1.Rows.Add(item.TeamID, item.TeamName, item.Captain_Name,
-                     item.Player1_Name, item.Player2_Name,
-                    item.Player3_Name, item.Player4_Name, item.Player5_Name, item.LeagueName);
+                var query1 = context.Database.SqlQuery<TeamData>($"Exec Team_DetailsForUserCaptin {test1}").ToList();
+                foreach (var item in query1)
+                {
+                    guna2DataGridView1.Rows.Add(item.TeamID, item.TeamName, item.Captain_Name,
+                         item.Player1_Name, item.Player2_Name,
+                         item.Player3_Name, item.Player4_Name, item.Player5_Name, item.LeagueName);
+                }
             }
+            else
+            {
+                var query = context.Database.SqlQuery<TeamData>($"Exec Team_DetailsForUser {playerID}").ToList();
+                foreach (var item in query)
+                {
+                    guna2DataGridView1.Rows.Add(item.TeamID, item.TeamName, item.Captain_Name,
+                         item.Player1_Name, item.Player2_Name,
+                         item.Player3_Name, item.Player4_Name, item.Player5_Name, item.LeagueName);
+                }
+
+            }
+
+
         }
 
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -83,11 +99,11 @@ namespace Reserve__a_Five_a_Side_Football
                 }
                 else
                     MessageBox.Show("No Teams To Select ");
-                
+
             }
             else
                 MessageBox.Show("Selected row is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+
         }
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
@@ -98,62 +114,62 @@ namespace Reserve__a_Five_a_Side_Football
 
             try
             {
-              if(idloginuser== captinid)
-                { 
-                int teamId = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells["TeamID"].Value);
-                var teamToUpdate = context.Teams.FirstOrDefault(t => t.TeamID == teamId);
-
-                // Validate each National ID
-                if (!IsValidNationalID(Player1TextBox.Text) ||
-                    !IsValidNationalID(Player2TextBox.Text) ||
-                    !IsValidNationalID(Player3TextBox.Text) ||
-                    !IsValidNationalID(Player4TextBox.Text) ||
-                    !IsValidNationalID(Player5TextBox.Text))
+                if (idloginuser == captinid)
                 {
-                    MessageBox.Show("Invalid National ID format. Please enter a valid 14-digit National ID for each player.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    int teamId = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells["TeamID"].Value);
+                    var teamToUpdate = context.Teams.FirstOrDefault(t => t.TeamID == teamId);
 
-                // Check if each National ID exists in the database
-                if (!NationalIDExists(Player1TextBox.Text) ||
-                    !NationalIDExists(Player2TextBox.Text) ||
-                    !NationalIDExists(Player3TextBox.Text) ||
-                    !NationalIDExists(Player4TextBox.Text) ||
-                    !NationalIDExists(Player5TextBox.Text))
-                {
-                    MessageBox.Show("One or more National IDs do not exist in the database. Please Enter valid National IDs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                HashSet<string> nationalIDs = new HashSet<string>();
-                nationalIDs.Add(Player1TextBox.Text);
-                nationalIDs.Add(Player2TextBox.Text);
-                nationalIDs.Add(Player3TextBox.Text);
-                nationalIDs.Add(Player4TextBox.Text);
-                nationalIDs.Add(Player5TextBox.Text);
+                    // Validate each National ID
+                    if (!IsValidNationalID(Player1TextBox.Text) ||
+                        !IsValidNationalID(Player2TextBox.Text) ||
+                        !IsValidNationalID(Player3TextBox.Text) ||
+                        !IsValidNationalID(Player4TextBox.Text) ||
+                        !IsValidNationalID(Player5TextBox.Text))
+                    {
+                        MessageBox.Show("Invalid National ID format. Please enter a valid 14-digit National ID for each player.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                if (nationalIDs.Count != 5)
-                {
-                    MessageBox.Show("Duplicate National IDs found. Each player must have a unique National ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    // Check if each National ID exists in the database
+                    if (!NationalIDExists(Player1TextBox.Text) ||
+                        !NationalIDExists(Player2TextBox.Text) ||
+                        !NationalIDExists(Player3TextBox.Text) ||
+                        !NationalIDExists(Player4TextBox.Text) ||
+                        !NationalIDExists(Player5TextBox.Text))
+                    {
+                        MessageBox.Show("One or more National IDs do not exist in the database. Please Enter valid National IDs.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    HashSet<string> nationalIDs = new HashSet<string>();
+                    nationalIDs.Add(Player1TextBox.Text);
+                    nationalIDs.Add(Player2TextBox.Text);
+                    nationalIDs.Add(Player3TextBox.Text);
+                    nationalIDs.Add(Player4TextBox.Text);
+                    nationalIDs.Add(Player5TextBox.Text);
 
-                // Update player IDs in the database
-                teamToUpdate.NationalID_Player1 = Player1TextBox.Text;
-                teamToUpdate.NationalID_Player2 = Player2TextBox.Text;
-                teamToUpdate.NationalID_Player3 = Player3TextBox.Text;
-                teamToUpdate.NationalID_Player4 = Player4TextBox.Text;
-                teamToUpdate.NationalID_Player5 = Player5TextBox.Text;
+                    if (nationalIDs.Count != 5)
+                    {
+                        MessageBox.Show("Duplicate National IDs found. Each player must have a unique National ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                context.SaveChanges();
-                MessageBox.Show("Team updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Player1TextBox.Text = "";
-                Player2TextBox.Text = "";
-                Player3TextBox.Text = "";
-                Player4TextBox.Text = "";
-                Player5TextBox.Text = "";
+                    // Update player IDs in the database
+                    teamToUpdate.NationalID_Player1 = Player1TextBox.Text;
+                    teamToUpdate.NationalID_Player2 = Player2TextBox.Text;
+                    teamToUpdate.NationalID_Player3 = Player3TextBox.Text;
+                    teamToUpdate.NationalID_Player4 = Player4TextBox.Text;
+                    teamToUpdate.NationalID_Player5 = Player5TextBox.Text;
 
-                guna2DataGridView1.Rows.Clear();
-                GetTeamsForUser();
+                    context.SaveChanges();
+                    MessageBox.Show("Team updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Player1TextBox.Text = "";
+                    Player2TextBox.Text = "";
+                    Player3TextBox.Text = "";
+                    Player4TextBox.Text = "";
+                    Player5TextBox.Text = "";
+
+                    guna2DataGridView1.Rows.Clear();
+                    GetTeamsForUser();
 
 
                 }
@@ -194,30 +210,30 @@ namespace Reserve__a_Five_a_Side_Football
             if (idloginuser == captinid)
             {
 
-            
+
                 foreach (DataGridViewRow row in guna2DataGridView1.SelectedRows)
-               {
-                if (row.Cells["LeagueName"].Value != null)
                 {
-                    string displayedLeagueName = row.Cells["LeagueName"].Value.ToString();
-
-                    var league = context.Teams.FirstOrDefault(l => l.Legaue.Legue_Name == displayedLeagueName);
-
-                    if (league != null)
+                    if (row.Cells["LeagueName"].Value != null)
                     {
-                        var hoursDifference = (league.Legaue.BeginDate - DateTime.Now).TotalHours;
-                        if (hoursDifference > 72)
+                        string displayedLeagueName = row.Cells["LeagueName"].Value.ToString();
+
+                        var league = context.Teams.FirstOrDefault(l => l.Legaue.Legue_Name == displayedLeagueName);
+
+                        if (league != null)
                         {
-                            guna2DataGridView1.Rows.Remove(row);
-                            context.Teams.Remove(league);
-                            context.SaveChanges();
+                            var hoursDifference = (league.Legaue.BeginDate - DateTime.Now).TotalHours;
+                            if (hoursDifference > 72)
+                            {
+                                guna2DataGridView1.Rows.Remove(row);
+                                context.Teams.Remove(league);
+                                context.SaveChanges();
+                            }
+                            else
+                                MessageBox.Show("Cannot Delete Team. The league is starting within the next 72 hours.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        else
-                            MessageBox.Show("Cannot Delete Team. The league is starting within the next 72 hours.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                    MessageBox.Show("No Teams To Delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        MessageBox.Show("No Teams To Delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

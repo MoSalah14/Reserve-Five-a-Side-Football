@@ -1,4 +1,5 @@
-﻿using RegertrationPage;
+﻿using Login_;
+using RegertrationPage;
 using ReservationPage;
 using Reserve__a_Five_a_Side_Football.Database;
 using Reserve__a_Five_a_Side_Football.Owner;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Messaging.Design;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,12 +20,15 @@ namespace Reserve__a_Five_a_Side_Football
 {
     public partial class designForm : Form
     {
+
+        private int currentIndex = 0;
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
         Reserve_a_Five_a_SideEntities context;
         string GetOwner;
+        string GetTextLeague;
         //Constructor
         public designForm()
         {
@@ -48,7 +53,11 @@ namespace Reserve__a_Five_a_Side_Football
                 guna2DataGridView2.Visible = false;
             }
             addTextLeagueMessageToLabel();
+            GetTextLeague = label1.Text;
+            timer1.Interval = 350; // Adjust speed here (in milliseconds)
+            timer1.Start();
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -94,8 +103,8 @@ namespace Reserve__a_Five_a_Side_Football
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.panelDesktopPane.Controls.Add(childForm);
-            this.panelDesktopPane.Tag = childForm;
+            //this.panelDesktopPane.Controls.Add(childForm);
+            //this.panelDesktopPane.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             lblTitle.Text = childForm.Text;
@@ -263,20 +272,41 @@ namespace Reserve__a_Five_a_Side_Football
             }
         }
 
+
+
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            CurrentUserLogin.UserLogginID = 0;
+            Login_Form login_Form = new Login_Form();
+            this.Hide();
+            login_Form.ShowDialog();
+            this.Close();
+        }
+
         private void addTextLeagueMessageToLabel()
         {
-            var test = context.LeagueMessages
-                .Where(e => e.DeleteTimestamp > DateTime.Now)
-                .Select(e => e.MessageContent).ToList();
-
-            foreach (var item in test)
-                guna2DataGridView2.Rows.Add(item);
-
+            var latestMessage = context.LeagueMessages
+                        .Where(e => e.DeleteTimestamp > DateTime.Now)
+                        .OrderByDescending(e => e.MessageID)
+                        .Select(e => e.MessageContent)
+                        .FirstOrDefault();
+            label1.Text = latestMessage;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            string fullText = GetTextLeague + GetTextLeague.Substring(0, currentIndex);
 
+            // Update label text with scrolling effect
+            if (currentIndex == GetTextLeague.Length)
+            {
+                // Reset to the beginning if reached the end of the news text
+                currentIndex = 0;
+            }
+            label1.Text = fullText.Substring(currentIndex);
+            currentIndex++;
         }
+
     }
 }
