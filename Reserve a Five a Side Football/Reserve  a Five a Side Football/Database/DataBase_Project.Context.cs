@@ -46,5 +46,14 @@ namespace Reserve__a_Five_a_Side_Football.Database
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetTeamsData_Result>("GetTeamsData");
         }
+    
+        public virtual ObjectResult<Team_DetailsForUserCaptin_Result> Team_DetailsForUserCaptin(Nullable<int> captinID)
+        {
+            var captinIDParameter = captinID.HasValue ?
+                new ObjectParameter("CaptinID", captinID) :
+                new ObjectParameter("CaptinID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Team_DetailsForUserCaptin_Result>("Team_DetailsForUserCaptin", captinIDParameter);
+        }
     }
 }

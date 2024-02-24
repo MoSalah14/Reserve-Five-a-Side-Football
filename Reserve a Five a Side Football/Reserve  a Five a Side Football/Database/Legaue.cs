@@ -32,7 +32,7 @@ namespace Reserve__a_Five_a_Side_Football.Database
         public string City { get; set; }
         public System.TimeSpan TimePlay { get; set; }
         public Nullable<int> NumberOfSubscribersInlegaue { get; set; }
-        public Nullable<int> CurrentSubscriberslegaue { get; set; }
+        public int CurrentSubscriberslegaue { get; set; }
     
         public virtual Stadium Stadium { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

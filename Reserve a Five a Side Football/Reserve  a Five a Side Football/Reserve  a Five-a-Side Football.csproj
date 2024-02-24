@@ -80,6 +80,9 @@
     <Compile Include="Database\ReservationMessage.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\Team_DetailsForUserCaptin_Result.cs">
+      <DependentUpon>DataBase_Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="designForm.cs">
       <SubType>Form</SubType>
     </Compile>
