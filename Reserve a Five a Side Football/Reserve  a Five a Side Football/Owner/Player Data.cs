@@ -37,22 +37,55 @@ namespace Reserve__a_Five_a_Side_Football
 
             }
 
+            //var query = context.Users
+            //.Join(context.Reservations, r => r.UserID, s => s.Player_ID, (r, s) => new { r, s })
+            //.Join(context.Stadium, rs => rs.s.StadiumID, t => t.StadiumID, (rs, t) => new { rs.r, rs.s, t })
+            //.Where(result => result.r.NationalID == userIDStr)
+            //.Select(result => new
+            //{
+            //    Name = result.r.FName + " " + result.r.LName,
+            //    Status = result.r.AccountStatus,
+            //    mail = result.r.Email,
+            //    Reserv_Date = result.s.Reservation_Date,
+            //    stad_name = result.t.Stad_Name
+            //}).FirstOrDefault();
 
-            var query = (from r in context.Users
+
+            //var query = (from r in context.Users
 
 
-                         where r.NationalID == userIDStr
+            //             where r.NationalID == userIDStr
+            //             select new
+            //             {
+            //                 Name = r.FName + " " + r.LName,
+            //                 Status = r.AccountStatus,
+            //                 email=r.Email
+
+            //             }).FirstOrDefault();
+
+
+
+
+            var query = (from r in context.Users /*where(r.NationalID == userIDStr)*/
+                         join s in context.Reservations on r.UserID equals s.Player_ID
+                         join t in context.Stadium on s.StadiumID equals t.StadiumID
+                         where (r.NationalID == userIDStr)
                          select new
                          {
                              Name = r.FName + " " + r.LName,
-                             Status = r.AccountStatus
+                             Status = r.AccountStatus,
+                             mail = r.Email,
+                             Reserv_Date = s.Reservation_Date,
+                             time =s.Reservation_Time,
+                             stadname = t.Stad_Name
+
                          }).FirstOrDefault();
 
             dataGridView1.Rows.Clear();
 
             if (query != null)
             {
-                dataGridView1.Rows.Add(query.Name, query.Status);
+                dataGridView1.Rows.Add(query.Name, query.mail,query.Status,query.Reserv_Date,query.time,query.stadname);
             }
             else
             {
