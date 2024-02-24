@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class ShowTeamsToOwner : Form
+    public partial class ShowTeamsToOwner : BaseForm
     {
         Reserve_a_Five_a_SideEntities context;
         public ShowTeamsToOwner()

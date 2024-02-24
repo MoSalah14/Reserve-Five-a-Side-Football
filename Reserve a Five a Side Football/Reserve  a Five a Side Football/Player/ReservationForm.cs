@@ -17,7 +17,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ReservationPage
 {
-    public partial class ReservationForm : Form
+    public partial class ReservationForm : BaseForm
     {
         private Reserve_a_Five_a_SideEntities dbContext;
 

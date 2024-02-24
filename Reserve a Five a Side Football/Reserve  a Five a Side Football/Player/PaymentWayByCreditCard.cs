@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class PaymentWayByCreditCard : Form
+    public partial class PaymentWayByCreditCard : BaseForm
     {
         private decimal? totalPaymentAmount;
 

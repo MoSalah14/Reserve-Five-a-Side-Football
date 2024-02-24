@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class Add_update_del_Stadium : Form
+    public partial class Add_update_del_Stadium : BaseForm
     {
         PictureBox pic;
         DataTable data = new DataTable();

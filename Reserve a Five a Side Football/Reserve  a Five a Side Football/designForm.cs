@@ -307,16 +307,5 @@ namespace Reserve__a_Five_a_Side_Football
             currentIndex++;
         }
 
-        //private void designForm_Load(object sender, EventArgs e)
-        //{
-        //    // no smaller than design time size
-        //    this.MinimumSize = new System.Drawing.Size(this.Width, this.Height);
-
-        //    // no larger than screen size
-        //    this.MaximumSize = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, (int)System.Windows.SystemParameters.PrimaryScreenHeight);
-
-        //    this.AutoSize = true;
-        //    this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-        //}
     }
 }

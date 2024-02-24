@@ -13,7 +13,7 @@ using static Reserve__a_Five_a_Side_Football.ShowTeamsToOwner;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class TeamInformation : Form
+    public partial class TeamInformation : BaseForm
     {
         Reserve_a_Five_a_SideEntities context;
 

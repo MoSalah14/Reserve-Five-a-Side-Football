@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Login_
 {
-    public partial class Login_Form : Form
+    public partial class Login_Form : BaseForm
     {
         Reserve_a_Five_a_SideEntities Context;
         public Login_Form()

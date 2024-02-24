@@ -13,7 +13,7 @@ using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace Reserve__a_Five_a_Side_Football.Owner
 {
-    public partial class ShowAllRevToOwner : Form
+    public partial class ShowAllRevToOwner : BaseForm
     {
         Reserve_a_Five_a_SideEntities dbContext;
         public ShowAllRevToOwner()

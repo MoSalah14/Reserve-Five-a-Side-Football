@@ -71,6 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database\GetTeamDetailsForUser_Result.cs">
       <DependentUpon>DataBase_Project.tt</DependentUpon>
     </Compile>

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class LeagueForm : Form
+    public partial class LeagueForm : BaseForm
     {
         Reserve_a_Five_a_SideEntities DB = new Reserve_a_Five_a_SideEntities();
         public LeagueForm()

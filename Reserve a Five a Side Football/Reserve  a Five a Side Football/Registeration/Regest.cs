@@ -1,4 +1,5 @@
 ﻿using Login_;
+using Reserve__a_Five_a_Side_Football;
 using Reserve__a_Five_a_Side_Football.Database;
 using System;
 using System.Text.RegularExpressions;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 
 namespace RegertrationPage
 {
-    public partial class Regest : Form
+    public partial class Regest : BaseForm
     {
 
         private Reserve_a_Five_a_SideEntities _a_Five_a_Side;

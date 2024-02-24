@@ -62,9 +62,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(539, 75);
+            this.label2.Location = new System.Drawing.Point(620, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 30);
             this.label2.TabIndex = 1;
@@ -72,9 +74,11 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(518, 165);
+            this.label3.Location = new System.Drawing.Point(599, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 30);
             this.label3.TabIndex = 2;
@@ -82,6 +86,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.label4.Location = new System.Drawing.Point(35, 261);
@@ -92,9 +98,11 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(518, 259);
+            this.label5.Location = new System.Drawing.Point(599, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 30);
             this.label5.TabIndex = 4;
@@ -114,10 +122,12 @@
             // 
             // datebx
             // 
+            this.datebx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.datebx.CustomFormat = "dd-MM-yyyy";
             this.datebx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datebx.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datebx.Location = new System.Drawing.Point(655, 75);
+            this.datebx.Location = new System.Drawing.Point(736, 84);
             this.datebx.Name = "datebx";
             this.datebx.Size = new System.Drawing.Size(149, 30);
             this.datebx.TabIndex = 6;
@@ -125,11 +135,13 @@
             // 
             // datealarm
             // 
+            this.datealarm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.datealarm.AutoSize = true;
             this.datealarm.BackColor = System.Drawing.Color.Transparent;
             this.datealarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datealarm.ForeColor = System.Drawing.Color.DimGray;
-            this.datealarm.Location = new System.Drawing.Point(852, 75);
+            this.datealarm.Location = new System.Drawing.Point(933, 84);
             this.datealarm.Name = "datealarm";
             this.datealarm.Size = new System.Drawing.Size(158, 20);
             this.datealarm.TabIndex = 10;
@@ -137,11 +149,13 @@
             // 
             // payalarm
             // 
+            this.payalarm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.payalarm.AutoSize = true;
             this.payalarm.BackColor = System.Drawing.Color.Transparent;
             this.payalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payalarm.ForeColor = System.Drawing.Color.DimGray;
-            this.payalarm.Location = new System.Drawing.Point(852, 270);
+            this.payalarm.Location = new System.Drawing.Point(933, 279);
             this.payalarm.Name = "payalarm";
             this.payalarm.Size = new System.Drawing.Size(154, 20);
             this.payalarm.TabIndex = 11;
@@ -149,11 +163,13 @@
             // 
             // stadalarm
             // 
+            this.stadalarm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.stadalarm.AutoSize = true;
             this.stadalarm.BackColor = System.Drawing.Color.Transparent;
             this.stadalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stadalarm.ForeColor = System.Drawing.Color.DimGray;
-            this.stadalarm.Location = new System.Drawing.Point(852, 160);
+            this.stadalarm.Location = new System.Drawing.Point(933, 169);
             this.stadalarm.Name = "stadalarm";
             this.stadalarm.Size = new System.Drawing.Size(132, 20);
             this.stadalarm.TabIndex = 12;
@@ -161,6 +177,8 @@
             // 
             // CityCompoBox
             // 
+            this.CityCompoBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.CityCompoBox.BackColor = System.Drawing.Color.Transparent;
             this.CityCompoBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CityCompoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -177,6 +195,8 @@
             // 
             // Citylbl
             // 
+            this.Citylbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Citylbl.AutoSize = true;
             this.Citylbl.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.Citylbl.Location = new System.Drawing.Point(35, 160);
@@ -187,6 +207,8 @@
             // 
             // stadbx
             // 
+            this.stadbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.stadbx.BackColor = System.Drawing.Color.Transparent;
             this.stadbx.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.stadbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -202,7 +224,7 @@
             "3",
             "4",
             "5"});
-            this.stadbx.Location = new System.Drawing.Point(655, 160);
+            this.stadbx.Location = new System.Drawing.Point(736, 169);
             this.stadbx.Name = "stadbx";
             this.stadbx.Size = new System.Drawing.Size(149, 36);
             this.stadbx.TabIndex = 16;
@@ -210,6 +232,8 @@
             // 
             // timeComboBox
             // 
+            this.timeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.timeComboBox.BackColor = System.Drawing.Color.Transparent;
             this.timeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.timeComboBox.DropDownHeight = 100;
@@ -227,6 +251,8 @@
             // 
             // paybx
             // 
+            this.paybx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.paybx.BackColor = System.Drawing.Color.Transparent;
             this.paybx.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.paybx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -243,13 +269,15 @@
             "Cash",
             "Credit Card",
             "Wallet"});
-            this.paybx.Location = new System.Drawing.Point(655, 256);
+            this.paybx.Location = new System.Drawing.Point(736, 265);
             this.paybx.Name = "paybx";
             this.paybx.Size = new System.Drawing.Size(149, 36);
             this.paybx.TabIndex = 18;
             // 
             // Timelbl
             // 
+            this.Timelbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Timelbl.AutoSize = true;
             this.Timelbl.BackColor = System.Drawing.Color.Transparent;
             this.Timelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,6 +291,8 @@
             // 
             // lblcCity
             // 
+            this.lblcCity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblcCity.AutoSize = true;
             this.lblcCity.BackColor = System.Drawing.Color.Transparent;
             this.lblcCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,6 +306,8 @@
             // 
             // NationalTextBox1
             // 
+            this.NationalTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.NationalTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NationalTextBox1.DefaultText = "";
             this.NationalTextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -296,6 +328,8 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
             this.label6.Location = new System.Drawing.Point(22, 75);
@@ -306,6 +340,8 @@
             // 
             // NationalLbl
             // 
+            this.NationalLbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.NationalLbl.AutoSize = true;
             this.NationalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.NationalLbl.ForeColor = System.Drawing.Color.Red;
@@ -319,7 +355,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(1041, 463);
+            this.ClientSize = new System.Drawing.Size(1221, 684);
             this.Controls.Add(this.NationalLbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.NationalTextBox1);

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ReservationPage
 {
-    public partial class addReservationByOwner : Form
+    public partial class addReservationByOwner : BaseForm
     {
         private Reserve_a_Five_a_SideEntities dbContext;
 

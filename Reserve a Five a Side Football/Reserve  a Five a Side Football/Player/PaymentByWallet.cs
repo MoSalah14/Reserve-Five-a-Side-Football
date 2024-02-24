@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class PaymentByWallet : Form
+    public partial class PaymentByWallet : BaseForm
     {
         private Reserve_a_Five_a_SideEntities context;
         private decimal? totalPaymentAmount;

@@ -47,6 +47,15 @@
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.legueIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legueNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beginDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stadiumNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timePlayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legaueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reserve_a_Five_a_SideDataSet = new Reserve__a_Five_a_Side_Football.Reserve_a_Five_a_SideDataSet();
             this.StadiumNameCmb = new System.Windows.Forms.ComboBox();
@@ -59,15 +68,6 @@
             this.legaueTableAdapter = new Reserve__a_Five_a_Side_Football.Reserve_a_Five_a_SideDataSetTableAdapters.LegaueTableAdapter();
             this.SubNumUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.legueIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.legueNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beginDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stadiumNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timePlayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.legaueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reserve_a_Five_a_SideDataSet)).BeginInit();
@@ -268,6 +268,80 @@
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
+            // legueIDDataGridViewTextBoxColumn
+            // 
+            this.legueIDDataGridViewTextBoxColumn.DataPropertyName = "LegueID";
+            this.legueIDDataGridViewTextBoxColumn.FillWeight = 118.7962F;
+            this.legueIDDataGridViewTextBoxColumn.HeaderText = "LegueID";
+            this.legueIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.legueIDDataGridViewTextBoxColumn.Name = "legueIDDataGridViewTextBoxColumn";
+            this.legueIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.legueIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // legueNameDataGridViewTextBoxColumn
+            // 
+            this.legueNameDataGridViewTextBoxColumn.DataPropertyName = "Legue_Name";
+            this.legueNameDataGridViewTextBoxColumn.FillWeight = 112.4939F;
+            this.legueNameDataGridViewTextBoxColumn.HeaderText = "Legue Name";
+            this.legueNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.legueNameDataGridViewTextBoxColumn.Name = "legueNameDataGridViewTextBoxColumn";
+            // 
+            // beginDateDataGridViewTextBoxColumn
+            // 
+            this.beginDateDataGridViewTextBoxColumn.DataPropertyName = "BeginDate";
+            this.beginDateDataGridViewTextBoxColumn.FillWeight = 107.0235F;
+            this.beginDateDataGridViewTextBoxColumn.HeaderText = "Begin Date";
+            this.beginDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.beginDateDataGridViewTextBoxColumn.Name = "beginDateDataGridViewTextBoxColumn";
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.FillWeight = 102.2752F;
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "End Date";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            // 
+            // stadiumNameDataGridViewTextBoxColumn
+            // 
+            this.stadiumNameDataGridViewTextBoxColumn.DataPropertyName = "StadiumName";
+            this.stadiumNameDataGridViewTextBoxColumn.FillWeight = 98.15357F;
+            this.stadiumNameDataGridViewTextBoxColumn.HeaderText = "Stadium";
+            this.stadiumNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stadiumNameDataGridViewTextBoxColumn.Name = "stadiumNameDataGridViewTextBoxColumn";
+            // 
+            // endRegDataGridViewTextBoxColumn
+            // 
+            this.endRegDataGridViewTextBoxColumn.DataPropertyName = "EndReg";
+            this.endRegDataGridViewTextBoxColumn.FillWeight = 94.57603F;
+            this.endRegDataGridViewTextBoxColumn.HeaderText = "Regestir";
+            this.endRegDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endRegDataGridViewTextBoxColumn.Name = "endRegDataGridViewTextBoxColumn";
+            // 
+            // rewardDataGridViewTextBoxColumn
+            // 
+            this.rewardDataGridViewTextBoxColumn.DataPropertyName = "Reward";
+            this.rewardDataGridViewTextBoxColumn.FillWeight = 91.47069F;
+            this.rewardDataGridViewTextBoxColumn.HeaderText = "Reward";
+            this.rewardDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rewardDataGridViewTextBoxColumn.Name = "rewardDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.FillWeight = 88.77526F;
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // timePlayDataGridViewTextBoxColumn
+            // 
+            this.timePlayDataGridViewTextBoxColumn.DataPropertyName = "TimePlay";
+            this.timePlayDataGridViewTextBoxColumn.FillWeight = 86.43561F;
+            this.timePlayDataGridViewTextBoxColumn.HeaderText = "TimePlay";
+            this.timePlayDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timePlayDataGridViewTextBoxColumn.Name = "timePlayDataGridViewTextBoxColumn";
+            // 
             // legaueBindingSource
             // 
             this.legaueBindingSource.DataMember = "Legaue";
@@ -361,86 +435,12 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "Subscriber Number";
             // 
-            // legueIDDataGridViewTextBoxColumn
-            // 
-            this.legueIDDataGridViewTextBoxColumn.DataPropertyName = "LegueID";
-            this.legueIDDataGridViewTextBoxColumn.FillWeight = 118.7962F;
-            this.legueIDDataGridViewTextBoxColumn.HeaderText = "LegueID";
-            this.legueIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.legueIDDataGridViewTextBoxColumn.Name = "legueIDDataGridViewTextBoxColumn";
-            this.legueIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.legueIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // legueNameDataGridViewTextBoxColumn
-            // 
-            this.legueNameDataGridViewTextBoxColumn.DataPropertyName = "Legue_Name";
-            this.legueNameDataGridViewTextBoxColumn.FillWeight = 112.4939F;
-            this.legueNameDataGridViewTextBoxColumn.HeaderText = "Legue Name";
-            this.legueNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.legueNameDataGridViewTextBoxColumn.Name = "legueNameDataGridViewTextBoxColumn";
-            // 
-            // beginDateDataGridViewTextBoxColumn
-            // 
-            this.beginDateDataGridViewTextBoxColumn.DataPropertyName = "BeginDate";
-            this.beginDateDataGridViewTextBoxColumn.FillWeight = 107.0235F;
-            this.beginDateDataGridViewTextBoxColumn.HeaderText = "Begin Date";
-            this.beginDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.beginDateDataGridViewTextBoxColumn.Name = "beginDateDataGridViewTextBoxColumn";
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.FillWeight = 102.2752F;
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "End Date";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            // 
-            // stadiumNameDataGridViewTextBoxColumn
-            // 
-            this.stadiumNameDataGridViewTextBoxColumn.DataPropertyName = "StadiumName";
-            this.stadiumNameDataGridViewTextBoxColumn.FillWeight = 98.15357F;
-            this.stadiumNameDataGridViewTextBoxColumn.HeaderText = "Stadium";
-            this.stadiumNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stadiumNameDataGridViewTextBoxColumn.Name = "stadiumNameDataGridViewTextBoxColumn";
-            // 
-            // endRegDataGridViewTextBoxColumn
-            // 
-            this.endRegDataGridViewTextBoxColumn.DataPropertyName = "EndReg";
-            this.endRegDataGridViewTextBoxColumn.FillWeight = 94.57603F;
-            this.endRegDataGridViewTextBoxColumn.HeaderText = "Regestir";
-            this.endRegDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endRegDataGridViewTextBoxColumn.Name = "endRegDataGridViewTextBoxColumn";
-            // 
-            // rewardDataGridViewTextBoxColumn
-            // 
-            this.rewardDataGridViewTextBoxColumn.DataPropertyName = "Reward";
-            this.rewardDataGridViewTextBoxColumn.FillWeight = 91.47069F;
-            this.rewardDataGridViewTextBoxColumn.HeaderText = "Reward";
-            this.rewardDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rewardDataGridViewTextBoxColumn.Name = "rewardDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn
-            // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.FillWeight = 88.77526F;
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
-            // 
-            // timePlayDataGridViewTextBoxColumn
-            // 
-            this.timePlayDataGridViewTextBoxColumn.DataPropertyName = "TimePlay";
-            this.timePlayDataGridViewTextBoxColumn.FillWeight = 86.43561F;
-            this.timePlayDataGridViewTextBoxColumn.HeaderText = "TimePlay";
-            this.timePlayDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.timePlayDataGridViewTextBoxColumn.Name = "timePlayDataGridViewTextBoxColumn";
-            // 
             // OwnerAddLeague
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1071, 612);
+            this.ClientSize = new System.Drawing.Size(1104, 615);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SubNumUpDown);
             this.Controls.Add(this.label2);
