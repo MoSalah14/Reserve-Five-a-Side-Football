@@ -29,232 +29,298 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TeamNametxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NationalIDplayer1txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NationalIDplayer2txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NationalIDplayer3txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NationalIDplayer4txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NationalIDplayer5txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CaptinIdtxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.LeagueNameCmb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CaptinIdtxt = new System.Windows.Forms.TextBox();
-            this.TeamNametxt = new System.Windows.Forms.TextBox();
-            this.NationalIDplayer1txt = new System.Windows.Forms.TextBox();
-            this.NationalIDplayer2txt = new System.Windows.Forms.TextBox();
-            this.NationalIDplayer3txt = new System.Windows.Forms.TextBox();
-            this.NationalIDplayer4txt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.LeagueNameCmb = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.NationalIDplayer5txt = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(351, 19);
+            this.label1.Location = new System.Drawing.Point(391, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 31);
+            this.label1.Size = new System.Drawing.Size(171, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Your Team";
             // 
+            // TeamNametxt
+            // 
+            this.TeamNametxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TeamNametxt.BorderColor = System.Drawing.Color.Black;
+            this.TeamNametxt.BorderRadius = 15;
+            this.TeamNametxt.BorderThickness = 0;
+            this.TeamNametxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TeamNametxt.DefaultText = "";
+            this.TeamNametxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TeamNametxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TeamNametxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TeamNametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TeamNametxt.FillColor = System.Drawing.SystemColors.Menu;
+            this.TeamNametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TeamNametxt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.TeamNametxt.ForeColor = System.Drawing.Color.Black;
+            this.TeamNametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TeamNametxt.Location = new System.Drawing.Point(70, 72);
+            this.TeamNametxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TeamNametxt.Name = "TeamNametxt";
+            this.TeamNametxt.PasswordChar = '\0';
+            this.TeamNametxt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.TeamNametxt.PlaceholderText = "Team Name";
+            this.TeamNametxt.SelectedText = "";
+            this.TeamNametxt.Size = new System.Drawing.Size(299, 42);
+            this.TeamNametxt.TabIndex = 26;
+            // 
+            // NationalIDplayer1txt
+            // 
+            this.NationalIDplayer1txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NationalIDplayer1txt.BorderColor = System.Drawing.Color.Black;
+            this.NationalIDplayer1txt.BorderRadius = 15;
+            this.NationalIDplayer1txt.BorderThickness = 0;
+            this.NationalIDplayer1txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NationalIDplayer1txt.DefaultText = "";
+            this.NationalIDplayer1txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NationalIDplayer1txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NationalIDplayer1txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer1txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer1txt.FillColor = System.Drawing.SystemColors.Menu;
+            this.NationalIDplayer1txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer1txt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.NationalIDplayer1txt.ForeColor = System.Drawing.Color.Black;
+            this.NationalIDplayer1txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer1txt.Location = new System.Drawing.Point(70, 157);
+            this.NationalIDplayer1txt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NationalIDplayer1txt.Name = "NationalIDplayer1txt";
+            this.NationalIDplayer1txt.PasswordChar = '\0';
+            this.NationalIDplayer1txt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.NationalIDplayer1txt.PlaceholderText = "NationalID Player 1";
+            this.NationalIDplayer1txt.SelectedText = "";
+            this.NationalIDplayer1txt.Size = new System.Drawing.Size(299, 42);
+            this.NationalIDplayer1txt.TabIndex = 27;
+            // 
+            // NationalIDplayer2txt
+            // 
+            this.NationalIDplayer2txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NationalIDplayer2txt.BorderColor = System.Drawing.Color.Black;
+            this.NationalIDplayer2txt.BorderRadius = 15;
+            this.NationalIDplayer2txt.BorderThickness = 0;
+            this.NationalIDplayer2txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NationalIDplayer2txt.DefaultText = "";
+            this.NationalIDplayer2txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NationalIDplayer2txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NationalIDplayer2txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer2txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer2txt.FillColor = System.Drawing.SystemColors.Menu;
+            this.NationalIDplayer2txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer2txt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.NationalIDplayer2txt.ForeColor = System.Drawing.Color.Black;
+            this.NationalIDplayer2txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer2txt.Location = new System.Drawing.Point(619, 157);
+            this.NationalIDplayer2txt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NationalIDplayer2txt.Name = "NationalIDplayer2txt";
+            this.NationalIDplayer2txt.PasswordChar = '\0';
+            this.NationalIDplayer2txt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.NationalIDplayer2txt.PlaceholderText = "NationalID Player 2";
+            this.NationalIDplayer2txt.SelectedText = "";
+            this.NationalIDplayer2txt.Size = new System.Drawing.Size(299, 42);
+            this.NationalIDplayer2txt.TabIndex = 28;
+            // 
+            // NationalIDplayer3txt
+            // 
+            this.NationalIDplayer3txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NationalIDplayer3txt.BorderColor = System.Drawing.Color.Black;
+            this.NationalIDplayer3txt.BorderRadius = 15;
+            this.NationalIDplayer3txt.BorderThickness = 0;
+            this.NationalIDplayer3txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NationalIDplayer3txt.DefaultText = "";
+            this.NationalIDplayer3txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NationalIDplayer3txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NationalIDplayer3txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer3txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer3txt.FillColor = System.Drawing.SystemColors.Menu;
+            this.NationalIDplayer3txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer3txt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.NationalIDplayer3txt.ForeColor = System.Drawing.Color.Black;
+            this.NationalIDplayer3txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer3txt.Location = new System.Drawing.Point(70, 224);
+            this.NationalIDplayer3txt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NationalIDplayer3txt.Name = "NationalIDplayer3txt";
+            this.NationalIDplayer3txt.PasswordChar = '\0';
+            this.NationalIDplayer3txt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.NationalIDplayer3txt.PlaceholderText = "NationalID Player 3";
+            this.NationalIDplayer3txt.SelectedText = "";
+            this.NationalIDplayer3txt.Size = new System.Drawing.Size(299, 42);
+            this.NationalIDplayer3txt.TabIndex = 29;
+            // 
+            // NationalIDplayer4txt
+            // 
+            this.NationalIDplayer4txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NationalIDplayer4txt.BorderColor = System.Drawing.Color.Black;
+            this.NationalIDplayer4txt.BorderRadius = 15;
+            this.NationalIDplayer4txt.BorderThickness = 0;
+            this.NationalIDplayer4txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NationalIDplayer4txt.DefaultText = "";
+            this.NationalIDplayer4txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NationalIDplayer4txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NationalIDplayer4txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer4txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer4txt.FillColor = System.Drawing.SystemColors.Menu;
+            this.NationalIDplayer4txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer4txt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.NationalIDplayer4txt.ForeColor = System.Drawing.Color.Black;
+            this.NationalIDplayer4txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer4txt.Location = new System.Drawing.Point(619, 233);
+            this.NationalIDplayer4txt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NationalIDplayer4txt.Name = "NationalIDplayer4txt";
+            this.NationalIDplayer4txt.PasswordChar = '\0';
+            this.NationalIDplayer4txt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.NationalIDplayer4txt.PlaceholderText = "NationalID Player 4";
+            this.NationalIDplayer4txt.SelectedText = "";
+            this.NationalIDplayer4txt.Size = new System.Drawing.Size(299, 42);
+            this.NationalIDplayer4txt.TabIndex = 30;
+            // 
+            // NationalIDplayer5txt
+            // 
+            this.NationalIDplayer5txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NationalIDplayer5txt.BorderColor = System.Drawing.Color.Black;
+            this.NationalIDplayer5txt.BorderRadius = 15;
+            this.NationalIDplayer5txt.BorderThickness = 0;
+            this.NationalIDplayer5txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NationalIDplayer5txt.DefaultText = "";
+            this.NationalIDplayer5txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NationalIDplayer5txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NationalIDplayer5txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer5txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NationalIDplayer5txt.FillColor = System.Drawing.SystemColors.Menu;
+            this.NationalIDplayer5txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer5txt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.NationalIDplayer5txt.ForeColor = System.Drawing.Color.Black;
+            this.NationalIDplayer5txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NationalIDplayer5txt.Location = new System.Drawing.Point(70, 305);
+            this.NationalIDplayer5txt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NationalIDplayer5txt.Name = "NationalIDplayer5txt";
+            this.NationalIDplayer5txt.PasswordChar = '\0';
+            this.NationalIDplayer5txt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.NationalIDplayer5txt.PlaceholderText = "NationalID Player 5";
+            this.NationalIDplayer5txt.SelectedText = "";
+            this.NationalIDplayer5txt.Size = new System.Drawing.Size(299, 42);
+            this.NationalIDplayer5txt.TabIndex = 31;
+            // 
+            // CaptinIdtxt
+            // 
+            this.CaptinIdtxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CaptinIdtxt.BorderColor = System.Drawing.Color.Black;
+            this.CaptinIdtxt.BorderRadius = 15;
+            this.CaptinIdtxt.BorderThickness = 0;
+            this.CaptinIdtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CaptinIdtxt.DefaultText = "";
+            this.CaptinIdtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.CaptinIdtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.CaptinIdtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.CaptinIdtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.CaptinIdtxt.FillColor = System.Drawing.SystemColors.Menu;
+            this.CaptinIdtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CaptinIdtxt.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.CaptinIdtxt.ForeColor = System.Drawing.Color.Black;
+            this.CaptinIdtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CaptinIdtxt.Location = new System.Drawing.Point(619, 72);
+            this.CaptinIdtxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CaptinIdtxt.Name = "CaptinIdtxt";
+            this.CaptinIdtxt.PasswordChar = '\0';
+            this.CaptinIdtxt.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.CaptinIdtxt.PlaceholderText = "NationalID Captain ID";
+            this.CaptinIdtxt.SelectedText = "";
+            this.CaptinIdtxt.Size = new System.Drawing.Size(299, 42);
+            this.CaptinIdtxt.TabIndex = 32;
+            // 
+            // button2
+            // 
+            this.button2.Animated = true;
+            this.button2.BorderRadius = 20;
+            this.button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button2.FillColor = System.Drawing.Color.DarkCyan;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(619, 400);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(253, 45);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Regiseration Now";
+            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Animated = true;
+            this.button1.BorderRadius = 20;
+            this.button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button1.FillColor = System.Drawing.Color.DarkCyan;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(265, 389);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(142, 400);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 50);
-            this.button1.TabIndex = 3;
+            this.button1.Size = new System.Drawing.Size(251, 45);
+            this.button1.TabIndex = 35;
             this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // LeagueNameCmb
+            // 
+            this.LeagueNameCmb.BackColor = System.Drawing.Color.Transparent;
+            this.LeagueNameCmb.BorderRadius = 15;
+            this.LeagueNameCmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.LeagueNameCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LeagueNameCmb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LeagueNameCmb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LeagueNameCmb.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LeagueNameCmb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.LeagueNameCmb.ItemHeight = 30;
+            this.LeagueNameCmb.Location = new System.Drawing.Point(773, 305);
+            this.LeagueNameCmb.Margin = new System.Windows.Forms.Padding(2);
+            this.LeagueNameCmb.Name = "LeagueNameCmb";
+            this.LeagueNameCmb.Size = new System.Drawing.Size(165, 36);
+            this.LeagueNameCmb.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(43, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Italic);
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(605, 316);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 30);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Team Name:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(527, 74);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "NationalID Captain ID :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 165);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 21);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "NationalID Player 1 :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(540, 151);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 21);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "NationalID Player 2 :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(7, 225);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 21);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "NationalID Player 3 :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic);
-            this.label7.Location = new System.Drawing.Point(540, 225);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 21);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "NationalID Player 4 :";
-            // 
-            // CaptinIdtxt
-            // 
-            this.CaptinIdtxt.Location = new System.Drawing.Point(745, 72);
-            this.CaptinIdtxt.Name = "CaptinIdtxt";
-            this.CaptinIdtxt.Size = new System.Drawing.Size(226, 26);
-            this.CaptinIdtxt.TabIndex = 11;
-            // 
-            // TeamNametxt
-            // 
-            this.TeamNametxt.Location = new System.Drawing.Point(202, 87);
-            this.TeamNametxt.Name = "TeamNametxt";
-            this.TeamNametxt.Size = new System.Drawing.Size(220, 26);
-            this.TeamNametxt.TabIndex = 12;
-            // 
-            // NationalIDplayer1txt
-            // 
-            this.NationalIDplayer1txt.Location = new System.Drawing.Point(202, 160);
-            this.NationalIDplayer1txt.Name = "NationalIDplayer1txt";
-            this.NationalIDplayer1txt.Size = new System.Drawing.Size(220, 26);
-            this.NationalIDplayer1txt.TabIndex = 13;
-            // 
-            // NationalIDplayer2txt
-            // 
-            this.NationalIDplayer2txt.Location = new System.Drawing.Point(745, 151);
-            this.NationalIDplayer2txt.Name = "NationalIDplayer2txt";
-            this.NationalIDplayer2txt.Size = new System.Drawing.Size(226, 26);
-            this.NationalIDplayer2txt.TabIndex = 14;
-            // 
-            // NationalIDplayer3txt
-            // 
-            this.NationalIDplayer3txt.Location = new System.Drawing.Point(202, 222);
-            this.NationalIDplayer3txt.Name = "NationalIDplayer3txt";
-            this.NationalIDplayer3txt.Size = new System.Drawing.Size(220, 26);
-            this.NationalIDplayer3txt.TabIndex = 15;
-            // 
-            // NationalIDplayer4txt
-            // 
-            this.NationalIDplayer4txt.Location = new System.Drawing.Point(745, 222);
-            this.NationalIDplayer4txt.Name = "NationalIDplayer4txt";
-            this.NationalIDplayer4txt.Size = new System.Drawing.Size(226, 26);
-            this.NationalIDplayer4txt.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic);
-            this.label8.Location = new System.Drawing.Point(582, 286);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 42);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "League Name : \r\n\r\n";
-            // 
-            // LeagueNameCmb
-            // 
-            this.LeagueNameCmb.FormattingEnabled = true;
-            this.LeagueNameCmb.Location = new System.Drawing.Point(745, 286);
-            this.LeagueNameCmb.Name = "LeagueNameCmb";
-            this.LeagueNameCmb.Size = new System.Drawing.Size(226, 28);
-            this.LeagueNameCmb.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Italic);
-            this.label9.Location = new System.Drawing.Point(7, 286);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(167, 21);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "NationalID Player 5 :";
-            // 
-            // NationalIDplayer5txt
-            // 
-            this.NationalIDplayer5txt.Location = new System.Drawing.Point(202, 286);
-            this.NationalIDplayer5txt.Name = "NationalIDplayer5txt";
-            this.NationalIDplayer5txt.Size = new System.Drawing.Size(220, 26);
-            this.NationalIDplayer5txt.TabIndex = 20;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(487, 385);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 54);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Regiseration Now";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label2.Size = new System.Drawing.Size(145, 25);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "League Name";
             // 
             // AddYourTeam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1025, 481);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.NationalIDplayer5txt);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.LeagueNameCmb);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.CaptinIdtxt);
+            this.Controls.Add(this.NationalIDplayer5txt);
             this.Controls.Add(this.NationalIDplayer4txt);
             this.Controls.Add(this.NationalIDplayer3txt);
             this.Controls.Add(this.NationalIDplayer2txt);
             this.Controls.Add(this.NationalIDplayer1txt);
             this.Controls.Add(this.TeamNametxt);
-            this.Controls.Add(this.CaptinIdtxt);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -269,23 +335,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2TextBox TeamNametxt;
+        private Guna.UI2.WinForms.Guna2TextBox NationalIDplayer1txt;
+        private Guna.UI2.WinForms.Guna2TextBox NationalIDplayer2txt;
+        private Guna.UI2.WinForms.Guna2TextBox NationalIDplayer3txt;
+        private Guna.UI2.WinForms.Guna2TextBox NationalIDplayer4txt;
+        private Guna.UI2.WinForms.Guna2TextBox NationalIDplayer5txt;
+        private Guna.UI2.WinForms.Guna2TextBox CaptinIdtxt;
+        private Guna.UI2.WinForms.Guna2Button button2;
+        private Guna.UI2.WinForms.Guna2Button button1;
+        private Guna.UI2.WinForms.Guna2ComboBox LeagueNameCmb;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox CaptinIdtxt;
-        private System.Windows.Forms.TextBox TeamNametxt;
-        private System.Windows.Forms.TextBox NationalIDplayer1txt;
-        private System.Windows.Forms.TextBox NationalIDplayer2txt;
-        private System.Windows.Forms.TextBox NationalIDplayer3txt;
-        private System.Windows.Forms.TextBox NationalIDplayer4txt;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox LeagueNameCmb;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox NationalIDplayer5txt;
-        private System.Windows.Forms.Button button2;
     }
 }
