@@ -36,7 +36,9 @@ namespace Reserve__a_Five_a_Side_Football
             l.EndReg,
             l.Reward,
             l.City,
-            l.TimePlay
+            l.TimePlay,
+            l.NumberOfSubscribersInlegaue,
+            l.CurrentSubscriberslegaue
         }).ToList();
 
             dataGridView1.DataSource = specificColumnsData;
@@ -217,11 +219,20 @@ namespace Reserve__a_Five_a_Side_Football
                 legaue.Reward = Rewardtxt.Text;
                 legaue.TimePlay = TimeSpan.Parse(TimePlayDate.Text);
                 legaue.NumberOfSubscribersInlegaue = int.Parse(SubNumUpDown.Value.ToString());
-
+                legaue.CurrentSubscriberslegaue = 0;
 
                 DB.Legaues.Add(legaue);
+                LeagueMessage Add_Message = new LeagueMessage
+                {
+                    leagueID = legaue.LegueID,  //CurrentUserLogin.UserLogginID;
+                    MessageContent = $"In Stadium {legaue.StadiumName} League {legaue.Legue_Name} Start in" +
+                    $" Date {legaue.BeginDate.ToString("yyyy-MM-dd")} and End on {legaue.EndDate.ToString("yyyy-MM-dd")} Final Regestration in {legaue.EndReg.ToString("yyyy-MM-dd")} ",
+                    DeleteTimestamp = legaue.EndReg,
+                };
+                DB.LeagueMessages.Add(Add_Message);
+
                 DB.SaveChanges();
-                MessageBox.Show("DONE");
+                MessageBox.Show("Done");
                 PopulateDataGridview();
             }
 
@@ -258,9 +269,8 @@ namespace Reserve__a_Five_a_Side_Football
 
 
         private void Updatebtn_Click(object sender, EventArgs e)
-        {
-            UpdateLeague(leagueID);
-        }
+             => UpdateLeague(leagueID);
+
 
 
 
@@ -299,6 +309,7 @@ namespace Reserve__a_Five_a_Side_Football
                     CityCmb.SelectedItem = result.City;
                     Rewardtxt.Text = result.Reward;
                     TimePlayDate.Text = result.TimePlay.ToString("hh\\:mm");
+
                 }
             }
         }
@@ -353,9 +364,10 @@ namespace Reserve__a_Five_a_Side_Football
                     l.EndReg,
                     l.Reward,
                     l.City,
-                    l.TimePlay
-                })
-                .ToList();
+                    l.TimePlay,
+                    l.NumberOfSubscribersInlegaue,
+                    l.CurrentSubscriberslegaue
+                }).ToList();
 
             dataGridView1.DataSource = specificColumnsData;
         }

@@ -58,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.legaueTableAdapter = new Reserve__a_Five_a_Side_Football.Reserve_a_Five_a_SideDataSetTableAdapters.LegaueTableAdapter();
             this.SubNumUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.legueIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legueNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beginDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +93,7 @@
             // LeguaeNamelab
             // 
             this.LeguaeNamelab.AutoSize = true;
-            this.LeguaeNamelab.Location = new System.Drawing.Point(30, 318);
+            this.LeguaeNamelab.Location = new System.Drawing.Point(27, 318);
             this.LeguaeNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LeguaeNamelab.Name = "LeguaeNamelab";
             this.LeguaeNamelab.Size = new System.Drawing.Size(130, 20);
@@ -102,7 +103,7 @@
             // BeginDatelab
             // 
             this.BeginDatelab.AutoSize = true;
-            this.BeginDatelab.Location = new System.Drawing.Point(30, 361);
+            this.BeginDatelab.Location = new System.Drawing.Point(28, 361);
             this.BeginDatelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BeginDatelab.Name = "BeginDatelab";
             this.BeginDatelab.Size = new System.Drawing.Size(115, 20);
@@ -194,9 +195,9 @@
             // 
             this.AddNewLegaueBtn.BackColor = System.Drawing.Color.DarkCyan;
             this.AddNewLegaueBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddNewLegaueBtn.Location = new System.Drawing.Point(199, 503);
+            this.AddNewLegaueBtn.Location = new System.Drawing.Point(544, 503);
             this.AddNewLegaueBtn.Name = "AddNewLegaueBtn";
-            this.AddNewLegaueBtn.Size = new System.Drawing.Size(150, 50);
+            this.AddNewLegaueBtn.Size = new System.Drawing.Size(259, 54);
             this.AddNewLegaueBtn.TabIndex = 21;
             this.AddNewLegaueBtn.Text = "Create League";
             this.AddNewLegaueBtn.UseVisualStyleBackColor = false;
@@ -206,7 +207,7 @@
             // 
             this.Deletebtn.BackColor = System.Drawing.Color.DarkCyan;
             this.Deletebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Deletebtn.Location = new System.Drawing.Point(697, 503);
+            this.Deletebtn.Location = new System.Drawing.Point(911, 312);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(133, 50);
             this.Deletebtn.TabIndex = 23;
@@ -218,9 +219,9 @@
             // 
             this.Updatebtn.BackColor = System.Drawing.Color.DarkCyan;
             this.Updatebtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Updatebtn.Location = new System.Drawing.Point(517, 503);
+            this.Updatebtn.Location = new System.Drawing.Point(911, 421);
             this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(123, 50);
+            this.Updatebtn.Size = new System.Drawing.Size(133, 50);
             this.Updatebtn.TabIndex = 24;
             this.Updatebtn.Text = "Update";
             this.Updatebtn.UseVisualStyleBackColor = false;
@@ -235,6 +236,9 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkCyan;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,7 +264,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 202);
+            this.dataGridView1.Size = new System.Drawing.Size(1047, 229);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -307,7 +311,7 @@
             // 
             // SearchstadiumNametxt
             // 
-            this.SearchstadiumNametxt.Location = new System.Drawing.Point(220, 19);
+            this.SearchstadiumNametxt.Location = new System.Drawing.Point(235, 19);
             this.SearchstadiumNametxt.Name = "SearchstadiumNametxt";
             this.SearchstadiumNametxt.Size = new System.Drawing.Size(187, 26);
             this.SearchstadiumNametxt.TabIndex = 30;
@@ -325,7 +329,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 22);
+            this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 20);
             this.label2.TabIndex = 32;
@@ -340,12 +344,22 @@
             this.SubNumUpDown.BackColor = System.Drawing.Color.Transparent;
             this.SubNumUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.SubNumUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SubNumUpDown.Location = new System.Drawing.Point(910, 383);
+            this.SubNumUpDown.Location = new System.Drawing.Point(199, 503);
             this.SubNumUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SubNumUpDown.Name = "SubNumUpDown";
-            this.SubNumUpDown.Size = new System.Drawing.Size(87, 48);
+            this.SubNumUpDown.Size = new System.Drawing.Size(187, 35);
             this.SubNumUpDown.TabIndex = 33;
             this.SubNumUpDown.UpDownButtonFillColor = System.Drawing.Color.WhiteSmoke;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 509);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 20);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Subscriber Number";
             // 
             // legueIDDataGridViewTextBoxColumn
             // 
@@ -426,7 +440,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1009, 585);
+            this.ClientSize = new System.Drawing.Size(1071, 612);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.SubNumUpDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -496,6 +511,7 @@
         private System.Windows.Forms.BindingSource legaueBindingSource;
         private Reserve_a_Five_a_SideDataSetTableAdapters.LegaueTableAdapter legaueTableAdapter;
         private Guna.UI2.WinForms.Guna2NumericUpDown SubNumUpDown;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn legueIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn legueNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn beginDateDataGridViewTextBoxColumn;

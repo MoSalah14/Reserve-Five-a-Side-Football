@@ -118,6 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AAAASUVORK5CYII=
+</value>
+  </data>
   <data name="pictMessageBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -159,6 +197,9 @@
 </value>
   </data>
   <metadata name="Messages.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Attention.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

@@ -375,6 +375,7 @@
       <DependentUpon>DataBase_Project.edmx</DependentUpon>
       <LastGenOutput>DataBase_Project.cs</LastGenOutput>
     </Content>
+    <None Include="Photos\Apps-Sms-icon.png" />
     <Content Include="Photos\icons8-message-48 %281%29.png" />
     <Content Include="Photos\IMG-20240221-WA0001.jpg" />
     <Content Include="Photos\IMG-20240221-WA0002.jpg" />
@@ -386,10 +387,14 @@
     <Content Include="Photos\IMG-20240221-WA0008.jpg" />
     <Content Include="Photos\IMG-20240221-WA0009.jpg" />
     <Content Include="Photos\Joker-Design-3d-Sports-Soccer-football-stadium.512.png" />
+    <None Include="Photos\Stad2.jpg" />
+    <None Include="Photos\Stadium1.jpg" />
+    <None Include="Photos\Stad3.png" />
     <Content Include="Photos\undraw_Fans_re_cri3.png" />
     <Content Include="Photos\undraw_junior_soccer_6sop.png" />
     <Content Include="Photos\undraw_Sign_up_n6im.png" />
     <Content Include="Photos\WhatsApp Image 2024-02-21 at 01.38.28_ec6a4b32.jpg" />
+    <None Include="Resources\logout-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
