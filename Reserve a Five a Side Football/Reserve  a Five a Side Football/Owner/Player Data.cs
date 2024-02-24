@@ -37,19 +37,6 @@ namespace Reserve__a_Five_a_Side_Football
 
             }
 
-            //var query = context.Users
-            //.Join(context.Reservations, r => r.UserID, s => s.Player_ID, (r, s) => new { r, s })
-            //.Join(context.Stadium, rs => rs.s.StadiumID, t => t.StadiumID, (rs, t) => new { rs.r, rs.s, t })
-            //.Where(result => result.r.NationalID == userIDStr)
-            //.Select(result => new
-            //{
-            //    Name = result.r.FName + " " + result.r.LName,
-            //    Status = result.r.AccountStatus,
-            //    mail = result.r.Email,
-            //    Reserv_Date = result.s.Reservation_Date,
-            //    stad_name = result.t.Stad_Name
-            //}).FirstOrDefault();
-
 
             //var query = (from r in context.Users
 
