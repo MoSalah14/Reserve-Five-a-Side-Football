@@ -24,7 +24,8 @@ namespace Reserve__a_Five_a_Side_Football
         public OwnerAddLeague()
         {
             InitializeComponent();
-
+            this.MinimumSize = new Size(1400, 800); // Adjust1374, 812 the size according to your requirements
+            this.MaximumSize = new Size(1700, 900); // Adjust1374, 812 the size according to your requirements
             var specificColumnsData = DB.Legaues
         .Select(l => new
         {

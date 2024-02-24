@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class designForm : Form
+    public partial class designForm : BaseForm
     {
 
         private int currentIndex = 0;
@@ -33,6 +33,8 @@ namespace Reserve__a_Five_a_Side_Football
         public designForm()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(1400, 800); // Adjust1374, 812 the size according to your requirements
+            this.MaximumSize = new Size(1700, 900); // Adjust1374, 812 the size according to your requirements
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;

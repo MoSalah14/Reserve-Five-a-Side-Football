@@ -2,6 +2,7 @@
 using Reserve__a_Five_a_Side_Football.Database;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,6 +16,8 @@ namespace ReservationPage
         {
             InitializeComponent();
             InitializeForm();
+            this.MinimumSize = new Size(1400, 800); // Adjust1374, 812 the size according to your requirements
+            this.MaximumSize = new Size(1700, 900); // Adjust1374, 812 the size according to your requirements
         }
 
         private void InitializeForm()

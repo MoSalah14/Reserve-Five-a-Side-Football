@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -22,8 +23,9 @@ namespace Reserve__a_Five_a_Side_Football
         {
             InitializeComponent();
             context_stadium = new Reserve_a_Five_a_SideEntities();
-             //filePath = openFileDialog1.FileName;
-          
+            //filePath = openFileDialog1.FileName;
+            this.MinimumSize = new Size(1400, 800); // Adjust1374, 812 the size according to your requirements
+            this.MaximumSize = new Size(1700, 900); // Adjust1374, 812 the size according to your requirements
         }
 
         private void getdata()
