@@ -68,8 +68,11 @@ namespace Reserve__a_Five_a_Side_Football
                 label1.Text = "Please Enter National ID";
                 return;
             }
+            int getCaptinid = context.Players
+                .Where(c => c.User.NationalID == guna2TextBox1.Text)
+                .Select(ec=>ec.Player_ID).FirstOrDefault();
 
-            if (!int.TryParse(ValueTxtBox, out int convertedValue) /*|| ValueTxtBox.Length != 14*/ || !context.Teams.Any(team => team.CaptainID == convertedValue))
+            if (!context.Teams.Any(team => team.CaptainID == getCaptinid))
             {
                 label1.Visible = true;
                 label1.Text = "Invalid Data Please Enter a Correct National ID.";
@@ -79,7 +82,7 @@ namespace Reserve__a_Five_a_Side_Football
                 label1.Text = "";
                 //var TeamValue = context.Teams
                 var TeamValue = from team in context.Teams
-                                .Where(es => es.CaptainID.ToString() == ValueTxtBox)
+                                .Where(es => es.CaptainID == getCaptinid)
                                 select new
                                 {
                                     Captain_Name = context.Users.FirstOrDefault(u => u.UserID == team.CaptainID).FName + " " + context.Users.FirstOrDefault(u => u.UserID == team.CaptainID).LName,
