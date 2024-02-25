@@ -50,9 +50,8 @@ namespace Reserve__a_Five_a_Side_Football
             if (name.Text == "" ||
                 price.Text == "" ||
                 state.SelectedIndex == -1 ||
-                area.Text == ""|| openFileDialog1.FileName == "")
+                area.Text == "")
             {
-
                 MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -66,19 +65,10 @@ namespace Reserve__a_Five_a_Side_Football
                     Stad_Status = state.SelectedItem.ToString(),
                     Area = area.Text,
                     Hourly_Price = int.Parse(price.Text),
-                   // Stadium_Image = filePath
+                    // Stadium_Image = filePath
 
                 };
                 context_stadium.Stadium.Add(std1);
-                context_stadium.SaveChanges();
-
-                
-                string currentPath = System.IO.Directory.GetCurrentDirectory();
-
-                string newpath = currentPath + "\\Photos\\" + std1.StadiumID + ".jpg";
-                File.Copy(filePath, newpath);
-
-                std1.Stadium_Image = std1.StadiumID + ".jpg";
                 context_stadium.SaveChanges();
                 getdata();
 
@@ -114,8 +104,7 @@ namespace Reserve__a_Five_a_Side_Football
             if (name.Text == "" ||
                 price.Text == "" ||
                 state.SelectedIndex == -1 ||
-                area.Text == "" || openFileDialog1.FileName == ""
-)
+                area.Text == "")
             {
 
                 MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -133,7 +122,7 @@ namespace Reserve__a_Five_a_Side_Football
                 std1.Stad_Status = state.SelectedItem.ToString();
                 std1.Area = area.Text;
                 std1.Hourly_Price = int.Parse(price.Text);
-                
+
 
                 context_stadium.SaveChanges();
 
@@ -155,7 +144,7 @@ namespace Reserve__a_Five_a_Side_Football
                 if (name.Text == "" ||
                    price.Text == "" ||
                    state.SelectedIndex == -1 ||
-                   area.Text == "" || openFileDialog1.FileName == "")
+                   area.Text == "")
                 {
 
                     MessageBox.Show("Invalid Data", "Failed to Add", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -182,7 +171,7 @@ namespace Reserve__a_Five_a_Side_Football
                         price.Text = "";
                         state.Text = "";
                         area.Text = "";
-                        openFileDialog1.FileName = "";
+
 
                     }
                     else
@@ -191,7 +180,6 @@ namespace Reserve__a_Five_a_Side_Football
                         price.Text = "";
                         state.Text = "";
                         area.Text = "";
-                        openFileDialog1.FileName = "";
 
                     }
 
@@ -202,15 +190,14 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 MessageBox.Show("Invalid Data");
             }
-         }
-    
+        }
+
         private void Clearbtn_Click(object sender, EventArgs e)
         {
             name.Text = "";
             price.Text = "";
             state.Text = "";
             area.Text = "";
-            openFileDialog1.FileName = "";
         }
 
         private void Add_update_del_Stadium_FormClosing(object sender, FormClosingEventArgs e)
@@ -222,17 +209,6 @@ namespace Reserve__a_Five_a_Side_Football
             e.Cancel = (result == DialogResult.No);
         }
 
-        private void uploadimgbtn_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif|All files|*.*";
-            var result=openFileDialog1.ShowDialog();
 
-            if (result == DialogResult.OK)
-            {
-               filePath = openFileDialog1.FileName;
-               //imageData = File.ReadAllBytes(filePath);
-            }
-           
-        }
     }
 }

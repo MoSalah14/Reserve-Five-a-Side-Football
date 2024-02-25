@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Kick_icon-icons.com_62265 %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="C1.Win.4.8, Version=4.8.20233.631, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
     <Reference Include="C1.Win.C1Command.4.8, Version=4.8.20233.631, Culture=neutral, PublicKeyToken=e808566f358766d8" />
@@ -382,6 +385,8 @@
       <LastGenOutput>DataBase_Project.cs</LastGenOutput>
     </Content>
     <None Include="Photos\Apps-Sms-icon.png" />
+    <Content Include="Kick_icon-icons.com_62265 %281%29.ico" />
+    <Content Include="Kick_icon-icons.com_62265.ico" />
     <Content Include="Photos\icons8-message-48 %281%29.png" />
     <Content Include="Photos\IMG-20240221-WA0001.jpg" />
     <Content Include="Photos\IMG-20240221-WA0002.jpg" />

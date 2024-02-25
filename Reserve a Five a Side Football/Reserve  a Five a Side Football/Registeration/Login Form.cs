@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace Login_
 {
-    public partial class Login_Form : BaseForm
+    public partial class Login_Form : Form
     {
         Reserve_a_Five_a_SideEntities Context;
         public Login_Form()

@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Configuration;
@@ -43,23 +45,25 @@ namespace Reserve__a_Five_a_Side_Football
         }).ToList();
 
             dataGridView1.DataSource = specificColumnsData;
+            LoadUniqueAreas();
         }
 
         private void OwnerAddLeague_Load(object sender, EventArgs e)
         {
-            var StadiumName = DB.Stadium.Select(et => et.Stad_Name).ToList();
-            foreach (var item in StadiumName)
-                StadiumNameCmb.Items.Add(item);
+            //var StadiumName = DB.Stadium.Select(et => et.Stad_Name).ToList();
+            //foreach (var item in StadiumName)
+            //    StadiumNameCmb.Items.Add(item);
 
-            var City = DB.Stadium.Select(et => et.Area).ToList();
-            foreach (var item in City)
-                CityCmb.Items.Add(item);
 
             TimePlayDate.Format = DateTimePickerFormat.Custom;
             TimePlayDate.CustomFormat = "hh:00:00";
             TimePlayDate.ShowUpDown = true;
         }
-
+        private void LoadUniqueAreas()
+        {
+            var uniqueAreas = DB.Stadium.Select(s => s.Area).Distinct().ToArray();
+            CityCmb.Items.AddRange(uniqueAreas);
+        }
 
 
         private bool CheckForConflicts(DateTime BeginDate, DateTime EndDate, string selectedStadium, string selectedCity)
@@ -371,6 +375,20 @@ namespace Reserve__a_Five_a_Side_Football
                 }).ToList();
 
             dataGridView1.DataSource = specificColumnsData;
+        }
+
+        private void CityCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedCity = CityCmb.SelectedItem?.ToString();
+            if (selectedCity != null)
+            {
+                var stadiums = DB.Stadium
+                    .Where(s => s.Area == selectedCity && s.Stad_Status == "Active")
+                    .Select(s => s.Stad_Name)
+                    .ToArray();
+                StadiumNameCmb.Items.Clear();
+                StadiumNameCmb.Items.AddRange(stadiums);
+            }
         }
     }
 }

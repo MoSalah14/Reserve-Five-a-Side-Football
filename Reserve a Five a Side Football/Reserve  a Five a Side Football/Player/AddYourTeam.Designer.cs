@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddYourTeam));
             this.label1 = new System.Windows.Forms.Label();
             this.TeamNametxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.NationalIDplayer1txt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -326,6 +327,7 @@
             this.Controls.Add(this.TeamNametxt);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddYourTeam";
             this.Text = "AddYourTeam";

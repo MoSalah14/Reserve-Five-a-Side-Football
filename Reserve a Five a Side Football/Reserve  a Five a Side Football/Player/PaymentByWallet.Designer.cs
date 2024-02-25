@@ -44,7 +44,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(91, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(413, 226);
             this.pictureBox1.TabIndex = 1;
@@ -62,7 +62,7 @@
             this.confirmbtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.confirmbtn.ForeColor = System.Drawing.Color.White;
             this.confirmbtn.Location = new System.Drawing.Point(405, 546);
-            this.confirmbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmbtn.Margin = new System.Windows.Forms.Padding(4);
             this.confirmbtn.Name = "confirmbtn";
             this.confirmbtn.Size = new System.Drawing.Size(275, 75);
             this.confirmbtn.TabIndex = 19;
@@ -128,7 +128,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(543, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(413, 226);
             this.pictureBox2.TabIndex = 20;
@@ -156,7 +156,8 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.phonenum);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PaymentByWallet";
             this.Text = "PaymentByWallet";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

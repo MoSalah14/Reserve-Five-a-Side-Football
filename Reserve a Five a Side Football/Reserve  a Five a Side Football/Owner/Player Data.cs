@@ -38,23 +38,7 @@ namespace Reserve__a_Five_a_Side_Football
 
             }
 
-
-            //var query = (from r in context.Users
-
-
-            //             where r.NationalID == userIDStr
-            //             select new
-            //             {
-            //                 Name = r.FName + " " + r.LName,
-            //                 Status = r.AccountStatus,
-            //                 email=r.Email
-
-            //             }).FirstOrDefault();
-
-
-
-
-            var query = (from r in context.Users /*where(r.NationalID == userIDStr)*/
+            var query = (from r in context.Users
                          join s in context.Reservations on r.UserID equals s.Player_ID
                          join t in context.Stadium on s.StadiumID equals t.StadiumID
                          where (r.NationalID == userIDStr)
@@ -72,18 +56,12 @@ namespace Reserve__a_Five_a_Side_Football
             dataGridView1.Rows.Clear();
 
             if (query != null)
-            {
                 dataGridView1.Rows.Add(query.Name, query.mail,query.Status,query.Reserv_Date,query.time,query.stadname);
-            }
+            
             else
-            {
                 MessageBox.Show("No data exists for the entered user ID.");
-            }
+            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

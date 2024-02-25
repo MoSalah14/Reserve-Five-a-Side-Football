@@ -223,7 +223,7 @@ namespace Login_
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1058, 600);
+            this.ClientSize = new System.Drawing.Size(1071, 596);
             this.Controls.Add(this.RegesterNow);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.checkBox1);
@@ -236,6 +236,7 @@ namespace Login_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login_Form";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

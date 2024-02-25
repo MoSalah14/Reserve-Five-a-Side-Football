@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_update_del_Stadium));
             this.namelabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,9 +52,6 @@
             this.deletebtn = new System.Windows.Forms.Button();
             this.updatbtn = new System.Windows.Forms.Button();
             this.Clearbtn = new System.Windows.Forms.Button();
-            this.uploadimgbtn = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.stadiumData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -275,35 +273,12 @@
             this.Clearbtn.UseVisualStyleBackColor = false;
             this.Clearbtn.Click += new System.EventHandler(this.Clearbtn_Click);
             // 
-            // uploadimgbtn
-            // 
-            this.uploadimgbtn.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.uploadimgbtn.Location = new System.Drawing.Point(118, 609);
-            this.uploadimgbtn.Name = "uploadimgbtn";
-            this.uploadimgbtn.Size = new System.Drawing.Size(203, 42);
-            this.uploadimgbtn.TabIndex = 14;
-            this.uploadimgbtn.Text = "Choose Image";
-            this.uploadimgbtn.UseVisualStyleBackColor = false;
-            this.uploadimgbtn.Click += new System.EventHandler(this.uploadimgbtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 616);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 30);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Photo";
-            // 
             // Add_update_del_Stadium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1382, 753);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.uploadimgbtn);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.updatbtn);
             this.Controls.Add(this.deletebtn);
@@ -319,6 +294,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.namelabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Add_update_del_Stadium";
             this.Text = "Add_update_del_Stadium";
@@ -350,9 +326,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stadstate;
         private System.Windows.Forms.DataGridViewTextBoxColumn stadarea;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricehour;
-        private System.Windows.Forms.Button uploadimgbtn;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
     }
 }

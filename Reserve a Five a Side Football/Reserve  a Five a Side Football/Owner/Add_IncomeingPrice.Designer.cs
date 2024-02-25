@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_IncomeingPrice));
             this.SelectDatelbl = new System.Windows.Forms.Label();
             this.Fromlbl = new System.Windows.Forms.Label();
             this.Tolbl = new System.Windows.Forms.Label();
@@ -327,6 +328,7 @@
             this.Controls.Add(this.Fromlbl);
             this.Controls.Add(this.SelectDatelbl);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Add_IncomeingPrice";
             this.Text = "Add_IncomeingPrice";

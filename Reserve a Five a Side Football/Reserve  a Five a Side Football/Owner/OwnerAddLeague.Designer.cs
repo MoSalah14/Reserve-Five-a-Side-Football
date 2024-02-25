@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OwnerAddLeague));
             this.legaueNametxt = new System.Windows.Forms.TextBox();
             this.Rewardtxt = new System.Windows.Forms.TextBox();
             this.LeguaeNamelab = new System.Windows.Forms.Label();
@@ -412,6 +413,7 @@
             this.CityCmb.Name = "CityCmb";
             this.CityCmb.Size = new System.Drawing.Size(358, 28);
             this.CityCmb.TabIndex = 27;
+            this.CityCmb.SelectedIndexChanged += new System.EventHandler(this.CityCmb_SelectedIndexChanged);
             // 
             // TimePlayDate
             // 
@@ -514,6 +516,7 @@
             this.Controls.Add(this.Rewardtxt);
             this.Controls.Add(this.legaueNametxt);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OwnerAddLeague";
             this.Text = "OwnerAddLeague";

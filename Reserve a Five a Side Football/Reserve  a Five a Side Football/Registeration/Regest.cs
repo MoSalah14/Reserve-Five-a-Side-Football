@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace RegertrationPage
 {
-    public partial class Regest : BaseForm
+    public partial class Regest : Form
     {
 
         private Reserve_a_Five_a_SideEntities _a_Five_a_Side;

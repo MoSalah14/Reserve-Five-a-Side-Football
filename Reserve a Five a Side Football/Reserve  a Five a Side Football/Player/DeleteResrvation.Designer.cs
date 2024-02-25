@@ -33,21 +33,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteResrvation));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Rev_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reserv_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reserv_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stadium_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reserv_Statue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RevID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReservationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReservationTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StadiumName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReservasionStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rev_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserv_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserv_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stadium_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reserv_Statue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +140,48 @@
             this.dataGridView1.Size = new System.Drawing.Size(1377, 400);
             this.dataGridView1.TabIndex = 3;
             // 
+            // RevID
+            // 
+            this.RevID.HeaderText = "Rev iD";
+            this.RevID.MinimumWidth = 6;
+            this.RevID.Name = "RevID";
+            this.RevID.Visible = false;
+            // 
+            // ReservationDate
+            // 
+            this.ReservationDate.HeaderText = " Date";
+            this.ReservationDate.MinimumWidth = 6;
+            this.ReservationDate.Name = "ReservationDate";
+            this.ReservationDate.ReadOnly = true;
+            // 
+            // ReservationTime
+            // 
+            this.ReservationTime.HeaderText = " Time";
+            this.ReservationTime.MinimumWidth = 6;
+            this.ReservationTime.Name = "ReservationTime";
+            this.ReservationTime.ReadOnly = true;
+            // 
+            // StadiumName
+            // 
+            this.StadiumName.HeaderText = "Stadium Name";
+            this.StadiumName.MinimumWidth = 6;
+            this.StadiumName.Name = "StadiumName";
+            this.StadiumName.ReadOnly = true;
+            // 
+            // Payment1
+            // 
+            this.Payment1.HeaderText = "Payment";
+            this.Payment1.MinimumWidth = 6;
+            this.Payment1.Name = "Payment1";
+            this.Payment1.ReadOnly = true;
+            // 
+            // ReservasionStatus
+            // 
+            this.ReservasionStatus.HeaderText = " Status";
+            this.ReservasionStatus.MinimumWidth = 6;
+            this.ReservasionStatus.Name = "ReservasionStatus";
+            this.ReservasionStatus.ReadOnly = true;
+            // 
             // Rev_ID
             // 
             this.Rev_ID.HeaderText = "Rev_ID";
@@ -188,48 +231,6 @@
             this.Reserv_Statue.ReadOnly = true;
             this.Reserv_Statue.Width = 125;
             // 
-            // RevID
-            // 
-            this.RevID.HeaderText = "Rev iD";
-            this.RevID.MinimumWidth = 6;
-            this.RevID.Name = "RevID";
-            this.RevID.Visible = false;
-            // 
-            // ReservationDate
-            // 
-            this.ReservationDate.HeaderText = " Date";
-            this.ReservationDate.MinimumWidth = 6;
-            this.ReservationDate.Name = "ReservationDate";
-            this.ReservationDate.ReadOnly = true;
-            // 
-            // ReservationTime
-            // 
-            this.ReservationTime.HeaderText = " Time";
-            this.ReservationTime.MinimumWidth = 6;
-            this.ReservationTime.Name = "ReservationTime";
-            this.ReservationTime.ReadOnly = true;
-            // 
-            // StadiumName
-            // 
-            this.StadiumName.HeaderText = "Stadium Name";
-            this.StadiumName.MinimumWidth = 6;
-            this.StadiumName.Name = "StadiumName";
-            this.StadiumName.ReadOnly = true;
-            // 
-            // Payment1
-            // 
-            this.Payment1.HeaderText = "Payment";
-            this.Payment1.MinimumWidth = 6;
-            this.Payment1.Name = "Payment1";
-            this.Payment1.ReadOnly = true;
-            // 
-            // ReservasionStatus
-            // 
-            this.ReservasionStatus.HeaderText = " Status";
-            this.ReservasionStatus.MinimumWidth = 6;
-            this.ReservasionStatus.Name = "ReservasionStatus";
-            this.ReservasionStatus.ReadOnly = true;
-            // 
             // DeleteResrvation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -240,6 +241,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteResrvation";
             this.Text = "delLegue";

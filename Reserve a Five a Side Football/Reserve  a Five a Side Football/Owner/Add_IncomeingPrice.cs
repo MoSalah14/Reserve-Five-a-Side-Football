@@ -38,7 +38,7 @@ namespace Reserve__a_Five_a_Side_Football
             var fromDate = FromDatePicker.Value;
             var toDate = dateTimePicker1.Value;
             var selectedCity = CityComboBox1.SelectedItem;
-            var selectedStadium = guna2ComboBox1.SelectedItem.ToString();
+            var selectedStadium = guna2ComboBox1.SelectedItem;
 
             var query = from s in Context.Stadium
                         join r in Context.Reservations on s.StadiumID equals r.StadiumID

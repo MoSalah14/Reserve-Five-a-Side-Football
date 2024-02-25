@@ -528,6 +528,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelmenue);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "designForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
