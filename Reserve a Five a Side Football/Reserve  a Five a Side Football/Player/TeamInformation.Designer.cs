@@ -43,18 +43,13 @@
             this.Player4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Player5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LeagueName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Player1TextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Player5TextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Player4TextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Player2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Player3TextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPlayer1 = new System.Windows.Forms.Label();
-            this.lblPlayer2 = new System.Windows.Forms.Label();
-            this.lblPlayer3 = new System.Windows.Forms.Label();
-            this.lblPlayer4 = new System.Windows.Forms.Label();
-            this.lblPlayer5 = new System.Windows.Forms.Label();
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.Player1TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Player3TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Player5TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Player2TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Player4TextBox = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(394, 9);
+            this.label1.Location = new System.Drawing.Point(639, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 41);
@@ -71,8 +66,16 @@
             // 
             // guna2DataGridView1
             // 
+            this.guna2DataGridView1.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
@@ -99,25 +102,26 @@
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(55, 69);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(1, 69);
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1019, 192);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1381, 262);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -205,211 +209,198 @@
             this.LeagueName.Name = "LeagueName";
             this.LeagueName.ReadOnly = true;
             // 
-            // Player1TextBox
-            // 
-            this.Player1TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Player1TextBox.DefaultText = "";
-            this.Player1TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Player1TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Player1TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player1TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player1TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player1TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Player1TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player1TextBox.Location = new System.Drawing.Point(257, 278);
-            this.Player1TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Player1TextBox.Name = "Player1TextBox";
-            this.Player1TextBox.PasswordChar = '\0';
-            this.Player1TextBox.PlaceholderText = "";
-            this.Player1TextBox.SelectedText = "";
-            this.Player1TextBox.Size = new System.Drawing.Size(185, 30);
-            this.Player1TextBox.TabIndex = 2;
-            // 
-            // Player5TextBox
-            // 
-            this.Player5TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Player5TextBox.DefaultText = "";
-            this.Player5TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Player5TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Player5TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player5TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player5TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player5TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Player5TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player5TextBox.Location = new System.Drawing.Point(257, 537);
-            this.Player5TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Player5TextBox.Name = "Player5TextBox";
-            this.Player5TextBox.PasswordChar = '\0';
-            this.Player5TextBox.PlaceholderText = "";
-            this.Player5TextBox.SelectedText = "";
-            this.Player5TextBox.Size = new System.Drawing.Size(185, 30);
-            this.Player5TextBox.TabIndex = 3;
-            // 
-            // Player4TextBox
-            // 
-            this.Player4TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Player4TextBox.DefaultText = "";
-            this.Player4TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Player4TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Player4TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player4TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player4TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player4TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Player4TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player4TextBox.Location = new System.Drawing.Point(257, 473);
-            this.Player4TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Player4TextBox.Name = "Player4TextBox";
-            this.Player4TextBox.PasswordChar = '\0';
-            this.Player4TextBox.PlaceholderText = "";
-            this.Player4TextBox.SelectedText = "";
-            this.Player4TextBox.Size = new System.Drawing.Size(185, 30);
-            this.Player4TextBox.TabIndex = 4;
-            // 
-            // Player2TextBox
-            // 
-            this.Player2TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Player2TextBox.DefaultText = "";
-            this.Player2TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Player2TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Player2TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player2TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player2TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player2TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Player2TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player2TextBox.Location = new System.Drawing.Point(257, 347);
-            this.Player2TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Player2TextBox.Name = "Player2TextBox";
-            this.Player2TextBox.PasswordChar = '\0';
-            this.Player2TextBox.PlaceholderText = "";
-            this.Player2TextBox.SelectedText = "";
-            this.Player2TextBox.Size = new System.Drawing.Size(185, 30);
-            this.Player2TextBox.TabIndex = 5;
-            // 
-            // Player3TextBox
-            // 
-            this.Player3TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Player3TextBox.DefaultText = "";
-            this.Player3TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Player3TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Player3TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player3TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Player3TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player3TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Player3TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Player3TextBox.Location = new System.Drawing.Point(257, 412);
-            this.Player3TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Player3TextBox.Name = "Player3TextBox";
-            this.Player3TextBox.PasswordChar = '\0';
-            this.Player3TextBox.PlaceholderText = "";
-            this.Player3TextBox.SelectedText = "";
-            this.Player3TextBox.Size = new System.Drawing.Size(185, 30);
-            this.Player3TextBox.TabIndex = 6;
-            // 
-            // lblPlayer1
-            // 
-            this.lblPlayer1.AutoSize = true;
-            this.lblPlayer1.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer1.Location = new System.Drawing.Point(103, 278);
-            this.lblPlayer1.Name = "lblPlayer1";
-            this.lblPlayer1.Size = new System.Drawing.Size(89, 25);
-            this.lblPlayer1.TabIndex = 8;
-            this.lblPlayer1.Text = "Player 1";
-            // 
-            // lblPlayer2
-            // 
-            this.lblPlayer2.AutoSize = true;
-            this.lblPlayer2.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Italic);
-            this.lblPlayer2.Location = new System.Drawing.Point(103, 347);
-            this.lblPlayer2.Name = "lblPlayer2";
-            this.lblPlayer2.Size = new System.Drawing.Size(89, 25);
-            this.lblPlayer2.TabIndex = 9;
-            this.lblPlayer2.Text = "Player 2";
-            // 
-            // lblPlayer3
-            // 
-            this.lblPlayer3.AutoSize = true;
-            this.lblPlayer3.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Italic);
-            this.lblPlayer3.Location = new System.Drawing.Point(103, 412);
-            this.lblPlayer3.Name = "lblPlayer3";
-            this.lblPlayer3.Size = new System.Drawing.Size(89, 25);
-            this.lblPlayer3.TabIndex = 10;
-            this.lblPlayer3.Text = "Player 3";
-            // 
-            // lblPlayer4
-            // 
-            this.lblPlayer4.AutoSize = true;
-            this.lblPlayer4.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Italic);
-            this.lblPlayer4.Location = new System.Drawing.Point(103, 478);
-            this.lblPlayer4.Name = "lblPlayer4";
-            this.lblPlayer4.Size = new System.Drawing.Size(89, 25);
-            this.lblPlayer4.TabIndex = 11;
-            this.lblPlayer4.Text = "Player 4";
-            // 
-            // lblPlayer5
-            // 
-            this.lblPlayer5.AutoSize = true;
-            this.lblPlayer5.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Italic);
-            this.lblPlayer5.Location = new System.Drawing.Point(103, 539);
-            this.lblPlayer5.Name = "lblPlayer5";
-            this.lblPlayer5.Size = new System.Drawing.Size(89, 25);
-            this.lblPlayer5.TabIndex = 12;
-            this.lblPlayer5.Text = "Player 5";
-            // 
             // DeleteBtn
             // 
+            this.DeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DeleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DeleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DeleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DeleteBtn.FillColor = System.Drawing.Color.DarkCyan;
-            this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(912, 364);
+            this.DeleteBtn.Location = new System.Drawing.Point(806, 597);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(180, 46);
+            this.DeleteBtn.Size = new System.Drawing.Size(325, 46);
             this.DeleteBtn.TabIndex = 14;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // UpdateBtn
             // 
+            this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.UpdateBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.UpdateBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.UpdateBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.UpdateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.UpdateBtn.FillColor = System.Drawing.Color.DarkCyan;
-            this.UpdateBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UpdateBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(912, 465);
+            this.UpdateBtn.Location = new System.Drawing.Point(161, 597);
             this.UpdateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(180, 46);
+            this.UpdateBtn.Size = new System.Drawing.Size(321, 46);
             this.UpdateBtn.TabIndex = 15;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
+            // 
+            // Player1TextBox
+            // 
+            this.Player1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Player1TextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Player1TextBox.BorderColor = System.Drawing.Color.Black;
+            this.Player1TextBox.BorderRadius = 15;
+            this.Player1TextBox.BorderThickness = 0;
+            this.Player1TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Player1TextBox.DefaultText = "";
+            this.Player1TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Player1TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Player1TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player1TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player1TextBox.FillColor = System.Drawing.SystemColors.Menu;
+            this.Player1TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player1TextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.Player1TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Player1TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player1TextBox.Location = new System.Drawing.Point(101, 392);
+            this.Player1TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Player1TextBox.Name = "Player1TextBox";
+            this.Player1TextBox.PasswordChar = '\0';
+            this.Player1TextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Player1TextBox.PlaceholderText = "Player 1";
+            this.Player1TextBox.SelectedText = "";
+            this.Player1TextBox.Size = new System.Drawing.Size(418, 59);
+            this.Player1TextBox.TabIndex = 26;
+            // 
+            // Player3TextBox
+            // 
+            this.Player3TextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Player3TextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Player3TextBox.BorderColor = System.Drawing.Color.Black;
+            this.Player3TextBox.BorderRadius = 15;
+            this.Player3TextBox.BorderThickness = 0;
+            this.Player3TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Player3TextBox.DefaultText = "";
+            this.Player3TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Player3TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Player3TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player3TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player3TextBox.FillColor = System.Drawing.SystemColors.Menu;
+            this.Player3TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player3TextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.Player3TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Player3TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player3TextBox.Location = new System.Drawing.Point(573, 392);
+            this.Player3TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Player3TextBox.Name = "Player3TextBox";
+            this.Player3TextBox.PasswordChar = '\0';
+            this.Player3TextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Player3TextBox.PlaceholderText = "Player 3";
+            this.Player3TextBox.SelectedText = "";
+            this.Player3TextBox.Size = new System.Drawing.Size(402, 59);
+            this.Player3TextBox.TabIndex = 27;
+            // 
+            // Player5TextBox
+            // 
+            this.Player5TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Player5TextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Player5TextBox.BorderColor = System.Drawing.Color.Black;
+            this.Player5TextBox.BorderRadius = 15;
+            this.Player5TextBox.BorderThickness = 0;
+            this.Player5TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Player5TextBox.DefaultText = "";
+            this.Player5TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Player5TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Player5TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player5TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player5TextBox.FillColor = System.Drawing.SystemColors.Menu;
+            this.Player5TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player5TextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.Player5TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Player5TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player5TextBox.Location = new System.Drawing.Point(898, 444);
+            this.Player5TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Player5TextBox.Name = "Player5TextBox";
+            this.Player5TextBox.PasswordChar = '\0';
+            this.Player5TextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Player5TextBox.PlaceholderText = "Player 5";
+            this.Player5TextBox.SelectedText = "";
+            this.Player5TextBox.Size = new System.Drawing.Size(392, 57);
+            this.Player5TextBox.TabIndex = 28;
+            // 
+            // Player2TextBox
+            // 
+            this.Player2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Player2TextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Player2TextBox.BorderColor = System.Drawing.Color.Black;
+            this.Player2TextBox.BorderRadius = 15;
+            this.Player2TextBox.BorderThickness = 0;
+            this.Player2TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Player2TextBox.DefaultText = "";
+            this.Player2TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Player2TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Player2TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player2TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player2TextBox.FillColor = System.Drawing.SystemColors.Menu;
+            this.Player2TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player2TextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.Player2TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Player2TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player2TextBox.Location = new System.Drawing.Point(101, 507);
+            this.Player2TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Player2TextBox.Name = "Player2TextBox";
+            this.Player2TextBox.PasswordChar = '\0';
+            this.Player2TextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Player2TextBox.PlaceholderText = "Player 2";
+            this.Player2TextBox.SelectedText = "";
+            this.Player2TextBox.Size = new System.Drawing.Size(418, 56);
+            this.Player2TextBox.TabIndex = 29;
+            // 
+            // Player4TextBox
+            // 
+            this.Player4TextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Player4TextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Player4TextBox.BorderColor = System.Drawing.Color.Black;
+            this.Player4TextBox.BorderRadius = 15;
+            this.Player4TextBox.BorderThickness = 0;
+            this.Player4TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Player4TextBox.DefaultText = "";
+            this.Player4TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Player4TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Player4TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player4TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Player4TextBox.FillColor = System.Drawing.SystemColors.Menu;
+            this.Player4TextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player4TextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
+            this.Player4TextBox.ForeColor = System.Drawing.Color.Black;
+            this.Player4TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Player4TextBox.Location = new System.Drawing.Point(573, 507);
+            this.Player4TextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Player4TextBox.Name = "Player4TextBox";
+            this.Player4TextBox.PasswordChar = '\0';
+            this.Player4TextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Player4TextBox.PlaceholderText = "Player 4";
+            this.Player4TextBox.SelectedText = "";
+            this.Player4TextBox.Size = new System.Drawing.Size(402, 56);
+            this.Player4TextBox.TabIndex = 30;
             // 
             // TeamInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1130, 606);
+            this.ClientSize = new System.Drawing.Size(1382, 753);
+            this.Controls.Add(this.Player4TextBox);
+            this.Controls.Add(this.Player2TextBox);
+            this.Controls.Add(this.Player5TextBox);
+            this.Controls.Add(this.Player3TextBox);
+            this.Controls.Add(this.Player1TextBox);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.DeleteBtn);
-            this.Controls.Add(this.lblPlayer5);
-            this.Controls.Add(this.lblPlayer4);
-            this.Controls.Add(this.lblPlayer3);
-            this.Controls.Add(this.lblPlayer2);
-            this.Controls.Add(this.lblPlayer1);
-            this.Controls.Add(this.Player3TextBox);
-            this.Controls.Add(this.Player2TextBox);
-            this.Controls.Add(this.Player4TextBox);
-            this.Controls.Add(this.Player5TextBox);
-            this.Controls.Add(this.Player1TextBox);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TeamInformation";
             this.Text = "TeamInformatin";
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -422,16 +413,6 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Guna.UI2.WinForms.Guna2TextBox Player1TextBox;
-        private Guna.UI2.WinForms.Guna2TextBox Player5TextBox;
-        private Guna.UI2.WinForms.Guna2TextBox Player4TextBox;
-        private Guna.UI2.WinForms.Guna2TextBox Player2TextBox;
-        private Guna.UI2.WinForms.Guna2TextBox Player3TextBox;
-        private System.Windows.Forms.Label lblPlayer1;
-        private System.Windows.Forms.Label lblPlayer2;
-        private System.Windows.Forms.Label lblPlayer3;
-        private System.Windows.Forms.Label lblPlayer4;
-        private System.Windows.Forms.Label lblPlayer5;
         private Guna.UI2.WinForms.Guna2Button DeleteBtn;
         private Guna.UI2.WinForms.Guna2Button UpdateBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TeamID;
@@ -443,5 +424,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Player4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Player5;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeagueName;
+        private Guna.UI2.WinForms.Guna2TextBox Player1TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox Player3TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox Player5TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox Player2TextBox;
+        private Guna.UI2.WinForms.Guna2TextBox Player4TextBox;
     }
 }

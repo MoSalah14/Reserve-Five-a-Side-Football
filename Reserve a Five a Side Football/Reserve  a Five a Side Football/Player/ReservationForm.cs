@@ -134,15 +134,17 @@ namespace ReservationPage
                 .Where(ea => ea.StadiumID == stadiumId)
                 .Select(ea => ea.Hourly_Price).Single();
 
-
+            var GetPlayerID = dbContext.Players
+                .Where(es => es.UserID == CurrentUserLogin.UserLogginID)
+                .Select(es => es.Player_ID).FirstOrDefault();
 
             var newReservation = new Reservation
             {
                 Reservation_Date = selectedDate,
                 Reservation_Time = selectedTime,
+                Player_ID = GetPlayerID,
                 Payment = payment,
-                Player_ID = 1,  //(CurrentUserLogin.UserLogginID)   Assuming player ID is fixed for now
-                StadiumID = stadiumId,
+                StadiumID = stadiumId
             };
 
             if (payment == "Credit Card")
@@ -166,7 +168,7 @@ namespace ReservationPage
 
             ReservationMessage Add_Message = new ReservationMessage
             {
-                PlayerID = 1,  //CurrentUserLogin.UserLogginID;
+                PlayerID = GetPlayerID,
                 MessageContent = $"Your Reservation Confirmed in Stadium {stadiumName}" +
                 $" in Date {newReservation.Reservation_Date?.ToString("yyyy-MM-dd")} on {newReservation.Reservation_Time} Clock Don't Late ^_^ ",
                 IsRead = false
@@ -213,7 +215,7 @@ namespace ReservationPage
         private void datebx_ValueChanged(object sender, EventArgs e)
               => timeComboBox.Items.Clear();
 
-        
+
     }
 }
 

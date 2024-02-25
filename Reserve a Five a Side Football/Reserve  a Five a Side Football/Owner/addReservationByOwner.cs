@@ -2,6 +2,7 @@
 using Reserve__a_Five_a_Side_Football.Database;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -143,12 +144,26 @@ namespace ReservationPage
                 Reservation_Time = selectedTime,
                 Payment = payment,
                 Player_ID = player.Player_ID,
-                OwnarID = 1, /*CurrentUserLogin.UserLogginID*/
+                OwnarID = CurrentUserLogin.UserLogginID,
                 StadiumID = stadiumId,
+                Reservation_Statues = "Confirmed"
             };
-
-            dbContext.Reservations.Add(newReservation);
-            dbContext.SaveChanges();
+            try
+            {
+                dbContext.Reservations.Add(newReservation);
+                dbContext.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                foreach (var validationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Console.WriteLine($"Property: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
+                    }
+                }
+            }
+            
 
             MessageBox.Show("Success Confirm", "Confirm Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetForm();

@@ -29,8 +29,6 @@ namespace Reserve__a_Five_a_Side_Football
         public void GetTeamsForUser()
         {
             int idloginuser = CurrentUserLogin.UserLogginID;
-
-
             var test1 = context.Teams.Where(e => e.CaptainID == e.Player.Player_ID && e.Player.User.UserID == idloginuser)
                 .Select(e => e.CaptainID).FirstOrDefault();
 
@@ -239,10 +237,8 @@ namespace Reserve__a_Five_a_Side_Football
                 }
             }
             else
-            {
                 MessageBox.Show("Cannot to Delete", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            
 
 
         }

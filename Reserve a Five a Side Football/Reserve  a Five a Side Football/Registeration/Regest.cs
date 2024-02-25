@@ -2,6 +2,7 @@
 using Reserve__a_Five_a_Side_Football;
 using Reserve__a_Five_a_Side_Football.Database;
 using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -61,6 +62,14 @@ namespace RegertrationPage
 
         private void Regsterbtn_Click(object sender, EventArgs e)
         {
+            var emailOrNationalIdExists = _a_Five_a_Side.Users.Any(u => u.Email == email.Text || u.NationalID == idnum.Text);
+
+            if (emailOrNationalIdExists)
+            {
+                MessageBox.Show("Email or National Already Exists", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
 
             if (Fname.Text == "" ||
                 Lname.Text == "" ||
@@ -131,7 +140,8 @@ namespace RegertrationPage
                 _a_Five_a_Side.Users.Add(newUser);
                 _a_Five_a_Side.SaveChanges();
 
-
+                var AddTest = _a_Five_a_Side.Users.Select(s => s.UserID).OrderByDescending(s => s).FirstOrDefault();
+                CurrentUserLogin.UserLogginID = AddTest;
 
                 namealarm.Visible = false;
                 emailalarm.Visible = false;
@@ -145,11 +155,23 @@ namespace RegertrationPage
                 idnum.Text = "";
 
                 MessageBox.Show("sucess Data", "Regestration Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddUserToPlayerTable();
                 this.Hide();
                 Login_Form login_ = new Login_Form();
                 login_.ShowDialog();
                 this.Close();
             }
+        }
+
+        public void AddUserToPlayerTable()
+        {
+            Player player = new Player
+            {
+                RegistrationDate = DateTime.Now.Date,
+                UserID = CurrentUserLogin.UserLogginID
+            };
+            _a_Five_a_Side.Players.Add(player);
+            _a_Five_a_Side.SaveChanges();
         }
 
         private void Signinbtn_Click(object sender, EventArgs e)

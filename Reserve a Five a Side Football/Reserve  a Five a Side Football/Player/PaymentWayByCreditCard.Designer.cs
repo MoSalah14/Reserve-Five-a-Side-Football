@@ -43,8 +43,8 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(223, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(603, 226);
             this.pictureBox1.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.cardnum.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.cardnum.ForeColor = System.Drawing.Color.Black;
             this.cardnum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cardnum.Location = new System.Drawing.Point(243, 342);
+            this.cardnum.Location = new System.Drawing.Point(131, 329);
             this.cardnum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cardnum.Name = "cardnum";
             this.cardnum.PasswordChar = '\0';
@@ -94,7 +94,7 @@
             this.date.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.date.ForeColor = System.Drawing.Color.Black;
             this.date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.date.Location = new System.Drawing.Point(243, 479);
+            this.date.Location = new System.Drawing.Point(131, 466);
             this.date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.date.Name = "date";
             this.date.PasswordChar = '\0';
@@ -121,7 +121,7 @@
             this.name.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.name.ForeColor = System.Drawing.Color.Black;
             this.name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.name.Location = new System.Drawing.Point(243, 417);
+            this.name.Location = new System.Drawing.Point(131, 404);
             this.name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.name.Name = "name";
             this.name.PasswordChar = '\0';
@@ -148,7 +148,7 @@
             this.cvc.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Italic);
             this.cvc.ForeColor = System.Drawing.Color.Black;
             this.cvc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cvc.Location = new System.Drawing.Point(532, 479);
+            this.cvc.Location = new System.Drawing.Point(420, 466);
             this.cvc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cvc.Name = "cvc";
             this.cvc.PasswordChar = '\0';
@@ -169,8 +169,8 @@
             this.confirmbtn.FillColor = System.Drawing.Color.RoyalBlue;
             this.confirmbtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.confirmbtn.ForeColor = System.Drawing.Color.White;
-            this.confirmbtn.Location = new System.Drawing.Point(384, 567);
-            this.confirmbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmbtn.Location = new System.Drawing.Point(272, 554);
+            this.confirmbtn.Margin = new System.Windows.Forms.Padding(4);
             this.confirmbtn.Name = "confirmbtn";
             this.confirmbtn.Size = new System.Drawing.Size(271, 75);
             this.confirmbtn.TabIndex = 16;
@@ -183,7 +183,7 @@
             this.Paymentlbl.BackColor = System.Drawing.Color.Transparent;
             this.Paymentlbl.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Paymentlbl.ForeColor = System.Drawing.Color.Black;
-            this.Paymentlbl.Location = new System.Drawing.Point(469, 280);
+            this.Paymentlbl.Location = new System.Drawing.Point(357, 267);
             this.Paymentlbl.Name = "Paymentlbl";
             this.Paymentlbl.Size = new System.Drawing.Size(72, 41);
             this.Paymentlbl.TabIndex = 17;
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1149, 674);
+            this.ClientSize = new System.Drawing.Size(872, 647);
             this.Controls.Add(this.Paymentlbl);
             this.Controls.Add(this.confirmbtn);
             this.Controls.Add(this.cvc);
@@ -202,7 +202,7 @@
             this.Controls.Add(this.date);
             this.Controls.Add(this.cardnum);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PaymentWayByCreditCard";
             this.Text = "PaymentWayByCreditCard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

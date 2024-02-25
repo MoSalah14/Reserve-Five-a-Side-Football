@@ -35,47 +35,47 @@ namespace Reserve__a_Five_a_Side_Football
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (ValidateInput())
-            {
-                Team team = new Team();
-                var league_Id = DB.Legaues
-                .Where(r => r.Legue_Name == LeagueNameCmb.SelectedItem.ToString())
-                  .Select(r => r.LegueID).FirstOrDefault();
-                var playerID = DB.Players
-                .Where(p => p.User.NationalID == CaptinIdtxt.Text)
-                .Select(p => p.Player_ID)
-                .FirstOrDefault();
-                team.TeamName = TeamNametxt.Text;
-                team.CaptainID = playerID;
-                team.NationalID_Player1 = NationalIDplayer1txt.Text;
-                team.NationalID_Player2 = NationalIDplayer2txt.Text;
-                team.NationalID_Player3 = NationalIDplayer3txt.Text;
-                team.NationalID_Player4 = NationalIDplayer4txt.Text;
-                team.NationalID_Player5 = NationalIDplayer5txt.Text;
-                team.LegueID = league_Id;
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (ValidateInput())
+        //    {
+        //        Team team = new Team();
+        //        var league_Id = DB.Legaues
+        //        .Where(r => r.Legue_Name == LeagueNameCmb.SelectedItem.ToString())
+        //          .Select(r => r.LegueID).FirstOrDefault();
+        //        var playerID = DB.Players
+        //        .Where(p => p.User.NationalID == CaptinIdtxt.Text)
+        //        .Select(p => p.Player_ID)
+        //        .FirstOrDefault();
+        //        team.TeamName = TeamNametxt.Text;
+        //        team.CaptainID = playerID;
+        //        team.NationalID_Player1 = NationalIDplayer1txt.Text;
+        //        team.NationalID_Player2 = NationalIDplayer2txt.Text;
+        //        team.NationalID_Player3 = NationalIDplayer3txt.Text;
+        //        team.NationalID_Player4 = NationalIDplayer4txt.Text;
+        //        team.NationalID_Player5 = NationalIDplayer5txt.Text;
+        //        team.LegueID = league_Id;
 
-                var leagueMaxSubscribe = DB.Legaues.FirstOrDefault(l => l.LegueID == league_Id);
-                if (leagueMaxSubscribe.NumberOfSubscribersInlegaue.Value <= leagueMaxSubscribe.CurrentSubscriberslegaue)
-                {
-                    MessageBox.Show("Maximum subscriber count reached for this league.");
-                    return;
-                }
-                else
-                {
-                    leagueMaxSubscribe.CurrentSubscriberslegaue++;
+        //        var leagueMaxSubscribe = DB.Legaues.FirstOrDefault(l => l.LegueID == league_Id);
+        //        if (leagueMaxSubscribe.NumberOfSubscribersInlegaue.Value <= leagueMaxSubscribe.CurrentSubscriberslegaue)
+        //        {
+        //            MessageBox.Show("Maximum subscriber count reached for this league.");
+        //            return;
+        //        }
+        //        else
+        //        {
+        //            leagueMaxSubscribe.CurrentSubscriberslegaue++;
 
-                    DB.Teams.Add(team);
-                    DB.SaveChanges();
-                    MessageBox.Show("Register Completed");
-                    this.Close();
-                }
+        //            DB.Teams.Add(team);
+        //            DB.SaveChanges();
+        //            MessageBox.Show("Register Completed");
+        //            this.Close();
+        //        }
 
-            }
+        //    }
 
 
-        }
+        //}
 
 
         private bool ValidateInput()
@@ -151,7 +151,53 @@ namespace Reserve__a_Five_a_Side_Football
             return existingUser != null;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    Regest regest = new Regest();
+        //    regest.ShowDialog();
+        //}
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (ValidateInput())
+            {
+                Team team = new Team();
+                var league_Id = DB.Legaues
+                .Where(r => r.Legue_Name == LeagueNameCmb.SelectedItem.ToString())
+                  .Select(r => r.LegueID).FirstOrDefault();
+                var playerID = DB.Players
+                .Where(p => p.User.NationalID == CaptinIdtxt.Text)
+                .Select(p => p.Player_ID)
+                .FirstOrDefault();
+                team.TeamName = TeamNametxt.Text;
+                team.CaptainID = playerID;
+                team.NationalID_Player1 = NationalIDplayer1txt.Text;
+                team.NationalID_Player2 = NationalIDplayer2txt.Text;
+                team.NationalID_Player3 = NationalIDplayer3txt.Text;
+                team.NationalID_Player4 = NationalIDplayer4txt.Text;
+                team.NationalID_Player5 = NationalIDplayer5txt.Text;
+                team.LegueID = league_Id;
+
+                var leagueMaxSubscribe = DB.Legaues.FirstOrDefault(l => l.LegueID == league_Id);
+                if (leagueMaxSubscribe.NumberOfSubscribersInlegaue.Value <= leagueMaxSubscribe.CurrentSubscriberslegaue)
+                {
+                    MessageBox.Show("Maximum subscriber count reached for this league.");
+                    return;
+                }
+                else
+                {
+                    leagueMaxSubscribe.CurrentSubscriberslegaue++;
+
+                    DB.Teams.Add(team);
+                    DB.SaveChanges();
+                    MessageBox.Show("Register Completed");
+                    this.Close();
+                }
+
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             Regest regest = new Regest();
             regest.ShowDialog();

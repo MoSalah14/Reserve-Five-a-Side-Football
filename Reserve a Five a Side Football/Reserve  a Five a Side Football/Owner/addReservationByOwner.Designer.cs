@@ -65,10 +65,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(620, 84);
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(779, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 30);
+            this.label2.Size = new System.Drawing.Size(77, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Date";
             // 
@@ -77,10 +77,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(599, 174);
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Italic);
+            this.label3.Location = new System.Drawing.Point(758, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 30);
+            this.label3.Size = new System.Drawing.Size(126, 34);
             this.label3.TabIndex = 2;
             this.label3.Text = "Stadium";
             // 
@@ -89,10 +89,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Italic);
             this.label4.Location = new System.Drawing.Point(35, 261);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 30);
+            this.label4.Size = new System.Drawing.Size(84, 34);
             this.label4.TabIndex = 3;
             this.label4.Text = "Time";
             // 
@@ -101,10 +101,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(599, 268);
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(743, 263);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 30);
+            this.label5.Size = new System.Drawing.Size(137, 34);
             this.label5.TabIndex = 4;
             this.label5.Text = "Pay Way";
             // 
@@ -112,9 +112,10 @@
             // 
             this.confbtn.AutoSize = true;
             this.confbtn.BackColor = System.Drawing.Color.DarkCyan;
-            this.confbtn.Location = new System.Drawing.Point(412, 364);
+            this.confbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.confbtn.Location = new System.Drawing.Point(504, 407);
             this.confbtn.Name = "confbtn";
-            this.confbtn.Size = new System.Drawing.Size(193, 56);
+            this.confbtn.Size = new System.Drawing.Size(330, 114);
             this.confbtn.TabIndex = 5;
             this.confbtn.Text = "Confirm";
             this.confbtn.UseVisualStyleBackColor = false;
@@ -127,9 +128,9 @@
             this.datebx.CustomFormat = "dd-MM-yyyy";
             this.datebx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datebx.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datebx.Location = new System.Drawing.Point(736, 84);
+            this.datebx.Location = new System.Drawing.Point(895, 80);
             this.datebx.Name = "datebx";
-            this.datebx.Size = new System.Drawing.Size(149, 30);
+            this.datebx.Size = new System.Drawing.Size(257, 30);
             this.datebx.TabIndex = 6;
             this.datebx.ValueChanged += new System.EventHandler(this.datebx_ValueChanged);
             // 
@@ -141,7 +142,7 @@
             this.datealarm.BackColor = System.Drawing.Color.Transparent;
             this.datealarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datealarm.ForeColor = System.Drawing.Color.DimGray;
-            this.datealarm.Location = new System.Drawing.Point(933, 84);
+            this.datealarm.Location = new System.Drawing.Point(891, 113);
             this.datealarm.Name = "datealarm";
             this.datealarm.Size = new System.Drawing.Size(158, 20);
             this.datealarm.TabIndex = 10;
@@ -155,7 +156,7 @@
             this.payalarm.BackColor = System.Drawing.Color.Transparent;
             this.payalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payalarm.ForeColor = System.Drawing.Color.DimGray;
-            this.payalarm.Location = new System.Drawing.Point(933, 279);
+            this.payalarm.Location = new System.Drawing.Point(895, 312);
             this.payalarm.Name = "payalarm";
             this.payalarm.Size = new System.Drawing.Size(154, 20);
             this.payalarm.TabIndex = 11;
@@ -169,7 +170,7 @@
             this.stadalarm.BackColor = System.Drawing.Color.Transparent;
             this.stadalarm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stadalarm.ForeColor = System.Drawing.Color.DimGray;
-            this.stadalarm.Location = new System.Drawing.Point(933, 169);
+            this.stadalarm.Location = new System.Drawing.Point(891, 199);
             this.stadalarm.Name = "stadalarm";
             this.stadalarm.Size = new System.Drawing.Size(132, 20);
             this.stadalarm.TabIndex = 12;
@@ -187,9 +188,9 @@
             this.CityCompoBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CityCompoBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CityCompoBox.ItemHeight = 30;
-            this.CityCompoBox.Location = new System.Drawing.Point(178, 160);
+            this.CityCompoBox.Location = new System.Drawing.Point(200, 160);
             this.CityCompoBox.Name = "CityCompoBox";
-            this.CityCompoBox.Size = new System.Drawing.Size(171, 36);
+            this.CityCompoBox.Size = new System.Drawing.Size(274, 36);
             this.CityCompoBox.TabIndex = 14;
             this.CityCompoBox.SelectedIndexChanged += new System.EventHandler(this.CityCompoBox_SelectedIndexChanged);
             // 
@@ -198,10 +199,10 @@
             this.Citylbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Citylbl.AutoSize = true;
-            this.Citylbl.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
+            this.Citylbl.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Italic);
             this.Citylbl.Location = new System.Drawing.Point(35, 160);
             this.Citylbl.Name = "Citylbl";
-            this.Citylbl.Size = new System.Drawing.Size(59, 30);
+            this.Citylbl.Size = new System.Drawing.Size(69, 34);
             this.Citylbl.TabIndex = 15;
             this.Citylbl.Text = "City";
             // 
@@ -224,9 +225,9 @@
             "3",
             "4",
             "5"});
-            this.stadbx.Location = new System.Drawing.Point(736, 169);
+            this.stadbx.Location = new System.Drawing.Point(895, 160);
             this.stadbx.Name = "stadbx";
-            this.stadbx.Size = new System.Drawing.Size(149, 36);
+            this.stadbx.Size = new System.Drawing.Size(257, 36);
             this.stadbx.TabIndex = 16;
             this.stadbx.SelectedIndexChanged += new System.EventHandler(this.stadbx_SelectedIndexChanged_1);
             // 
@@ -244,9 +245,9 @@
             this.timeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.timeComboBox.IntegralHeight = false;
             this.timeComboBox.ItemHeight = 30;
-            this.timeComboBox.Location = new System.Drawing.Point(178, 261);
+            this.timeComboBox.Location = new System.Drawing.Point(200, 261);
             this.timeComboBox.Name = "timeComboBox";
-            this.timeComboBox.Size = new System.Drawing.Size(171, 36);
+            this.timeComboBox.Size = new System.Drawing.Size(274, 36);
             this.timeComboBox.TabIndex = 17;
             // 
             // paybx
@@ -269,9 +270,9 @@
             "Cash",
             "Credit Card",
             "Wallet"});
-            this.paybx.Location = new System.Drawing.Point(736, 265);
+            this.paybx.Location = new System.Drawing.Point(895, 261);
             this.paybx.Name = "paybx";
-            this.paybx.Size = new System.Drawing.Size(149, 36);
+            this.paybx.Size = new System.Drawing.Size(257, 36);
             this.paybx.TabIndex = 18;
             // 
             // Timelbl
@@ -282,7 +283,7 @@
             this.Timelbl.BackColor = System.Drawing.Color.Transparent;
             this.Timelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timelbl.ForeColor = System.Drawing.Color.DimGray;
-            this.Timelbl.Location = new System.Drawing.Point(372, 270);
+            this.Timelbl.Location = new System.Drawing.Point(204, 312);
             this.Timelbl.Name = "Timelbl";
             this.Timelbl.Size = new System.Drawing.Size(98, 20);
             this.Timelbl.TabIndex = 20;
@@ -297,7 +298,7 @@
             this.lblcCity.BackColor = System.Drawing.Color.Transparent;
             this.lblcCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcCity.ForeColor = System.Drawing.Color.DimGray;
-            this.lblcCity.Location = new System.Drawing.Point(372, 169);
+            this.lblcCity.Location = new System.Drawing.Point(204, 196);
             this.lblcCity.Name = "lblcCity";
             this.lblcCity.Size = new System.Drawing.Size(90, 20);
             this.lblcCity.TabIndex = 19;
@@ -317,13 +318,13 @@
             this.NationalTextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.NationalTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NationalTextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.NationalTextBox1.Location = new System.Drawing.Point(178, 70);
+            this.NationalTextBox1.Location = new System.Drawing.Point(200, 74);
             this.NationalTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NationalTextBox1.Name = "NationalTextBox1";
             this.NationalTextBox1.PasswordChar = '\0';
             this.NationalTextBox1.PlaceholderText = "Enter National ID";
             this.NationalTextBox1.SelectedText = "";
-            this.NationalTextBox1.Size = new System.Drawing.Size(171, 36);
+            this.NationalTextBox1.Size = new System.Drawing.Size(274, 36);
             this.NationalTextBox1.TabIndex = 21;
             // 
             // label6
@@ -331,10 +332,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(22, 75);
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Italic);
+            this.label6.Location = new System.Drawing.Point(12, 76);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 30);
+            this.label6.Size = new System.Drawing.Size(179, 34);
             this.label6.TabIndex = 22;
             this.label6.Text = "National ID";
             // 
@@ -355,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(1221, 684);
+            this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.NationalLbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.NationalTextBox1);

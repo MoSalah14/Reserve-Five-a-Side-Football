@@ -5,6 +5,7 @@ using Reserve__a_Five_a_Side_Football;
 using Reserve__a_Five_a_Side_Football.Database;
 using RegertrationPage;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Login_
 {
@@ -52,7 +53,8 @@ namespace Login_
                 CurrentUserLogin.UserLogginID = user.UserID;
                 MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 designForm designForm = new designForm();
-                designForm.Show();
+                this.Hide();
+                designForm.ShowDialog();
                 this.Close();
 
             }

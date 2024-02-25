@@ -82,7 +82,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Tolbl.AutoSize = true;
             this.Tolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.Tolbl.Location = new System.Drawing.Point(611, 47);
+            this.Tolbl.Location = new System.Drawing.Point(861, 49);
             this.Tolbl.Name = "Tolbl";
             this.Tolbl.Size = new System.Drawing.Size(30, 20);
             this.Tolbl.TabIndex = 3;
@@ -107,7 +107,7 @@
             this.TotalAmountlbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.TotalAmountlbl.AutoSize = true;
             this.TotalAmountlbl.Font = new System.Drawing.Font("Modern No. 20", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAmountlbl.Location = new System.Drawing.Point(123, 606);
+            this.TotalAmountlbl.Location = new System.Drawing.Point(123, 637);
             this.TotalAmountlbl.Name = "TotalAmountlbl";
             this.TotalAmountlbl.Size = new System.Drawing.Size(214, 34);
             this.TotalAmountlbl.TabIndex = 6;
@@ -119,7 +119,7 @@
             this.TotalAmountTxtBox.BackColor = System.Drawing.Color.White;
             this.TotalAmountTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalAmountTxtBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.TotalAmountTxtBox.Location = new System.Drawing.Point(413, 603);
+            this.TotalAmountTxtBox.Location = new System.Drawing.Point(413, 634);
             this.TotalAmountTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TotalAmountTxtBox.Name = "TotalAmountTxtBox";
             this.TotalAmountTxtBox.ReadOnly = true;
@@ -133,10 +133,10 @@
             this.ShowData_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ShowData_btn.BackColor = System.Drawing.Color.DarkCyan;
             this.ShowData_btn.ForeColor = System.Drawing.Color.White;
-            this.ShowData_btn.Location = new System.Drawing.Point(1093, 76);
+            this.ShowData_btn.Location = new System.Drawing.Point(1121, 80);
             this.ShowData_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ShowData_btn.Name = "ShowData_btn";
-            this.ShowData_btn.Size = new System.Drawing.Size(119, 50);
+            this.ShowData_btn.Size = new System.Drawing.Size(129, 50);
             this.ShowData_btn.TabIndex = 8;
             this.ShowData_btn.Text = "Show Details";
             this.ShowData_btn.UseVisualStyleBackColor = false;
@@ -227,7 +227,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(1168, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(1332, 412);
             this.dataGridView1.TabIndex = 0;
             // 
             // CityComboBox1
@@ -246,7 +246,7 @@
             this.CityComboBox1.Location = new System.Drawing.Point(171, 94);
             this.CityComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CityComboBox1.Name = "CityComboBox1";
-            this.CityComboBox1.Size = new System.Drawing.Size(260, 36);
+            this.CityComboBox1.Size = new System.Drawing.Size(309, 36);
             this.CityComboBox1.TabIndex = 10;
             this.CityComboBox1.SelectedIndexChanged += new System.EventHandler(this.CityComboBox1_SelectedIndexChanged);
             // 
@@ -263,7 +263,7 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(693, 94);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(990, 94);
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(260, 36);
@@ -287,7 +287,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectStadiumlbl.AutoSize = true;
             this.SelectStadiumlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectStadiumlbl.Location = new System.Drawing.Point(533, 101);
+            this.SelectStadiumlbl.Location = new System.Drawing.Point(830, 101);
             this.SelectStadiumlbl.Name = "SelectStadiumlbl";
             this.SelectStadiumlbl.Size = new System.Drawing.Size(136, 20);
             this.SelectStadiumlbl.TabIndex = 13;
@@ -299,7 +299,7 @@
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(688, 47);
+            this.dateTimePicker1.Location = new System.Drawing.Point(938, 49);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
@@ -313,7 +313,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1267, 663);
+            this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.SelectStadiumlbl);
             this.Controls.Add(this.SelectCitylbl);

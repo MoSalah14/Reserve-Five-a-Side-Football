@@ -88,7 +88,7 @@
             this.panelmenue.Location = new System.Drawing.Point(0, 0);
             this.panelmenue.Margin = new System.Windows.Forms.Padding(4);
             this.panelmenue.Name = "panelmenue";
-            this.panelmenue.Size = new System.Drawing.Size(256, 753);
+            this.panelmenue.Size = new System.Drawing.Size(223, 753);
             this.panelmenue.TabIndex = 0;
             // 
             // button12
@@ -115,7 +115,7 @@
             this.button11.ForeColor = System.Drawing.Color.Ivory;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(4, 534);
+            this.button11.Location = new System.Drawing.Point(-13, 534);
             this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(252, 65);
@@ -134,7 +134,7 @@
             this.button10.ForeColor = System.Drawing.Color.Ivory;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 462);
+            this.button10.Location = new System.Drawing.Point(-17, 462);
             this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(252, 65);
@@ -153,7 +153,7 @@
             this.button6.ForeColor = System.Drawing.Color.Ivory;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 388);
+            this.button6.Location = new System.Drawing.Point(-17, 388);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(252, 65);
@@ -172,7 +172,7 @@
             this.button5.ForeColor = System.Drawing.Color.Ivory;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(4, 324);
+            this.button5.Location = new System.Drawing.Point(-13, 324);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(252, 65);
@@ -190,7 +190,7 @@
             this.button4.ForeColor = System.Drawing.Color.Ivory;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(4, 251);
+            this.button4.Location = new System.Drawing.Point(-13, 251);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(252, 65);
@@ -207,7 +207,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Ivory;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(4, 178);
+            this.button3.Location = new System.Drawing.Point(-13, 178);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(252, 65);
@@ -222,7 +222,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Yellow;
-            this.button2.Location = new System.Drawing.Point(0, 324);
+            this.button2.Location = new System.Drawing.Point(-17, 324);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 65);
@@ -239,7 +239,7 @@
             this.button1.ForeColor = System.Drawing.Color.Ivory;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 106);
+            this.button1.Location = new System.Drawing.Point(-17, 106);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 65);
@@ -259,7 +259,7 @@
             this.panellogo.Location = new System.Drawing.Point(0, 0);
             this.panellogo.Margin = new System.Windows.Forms.Padding(4);
             this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(256, 98);
+            this.panellogo.Size = new System.Drawing.Size(223, 98);
             this.panellogo.TabIndex = 0;
             // 
             // panel1
@@ -283,10 +283,10 @@
             this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelTitleBar.Location = new System.Drawing.Point(256, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(222, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1157, 71);
+            this.panelTitleBar.Size = new System.Drawing.Size(1191, 71);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -324,7 +324,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(996, 7);
+            this.button9.Location = new System.Drawing.Point(1030, 7);
             this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(67, 58);
@@ -341,7 +341,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(1097, 4);
+            this.button7.Location = new System.Drawing.Point(1131, 4);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(56, 63);
@@ -358,7 +358,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(1057, 7);
+            this.button8.Location = new System.Drawing.Point(1091, 7);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(47, 54);
@@ -388,7 +388,7 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(390, 18);
+            this.lblTitle.Location = new System.Drawing.Point(407, 18);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(347, 29);
@@ -426,7 +426,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(256, 70);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(222, 70);
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -483,7 +483,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1149, 635);
+            this.pictureBox2.Size = new System.Drawing.Size(1191, 656);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -497,10 +497,10 @@
             this.panelDesktopPane.BackColor = System.Drawing.Color.White;
             this.panelDesktopPane.Controls.Add(this.pictureBox2);
             this.panelDesktopPane.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelDesktopPane.Location = new System.Drawing.Point(264, 118);
+            this.panelDesktopPane.Location = new System.Drawing.Point(222, 118);
             this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(4);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1149, 635);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1191, 656);
             this.panelDesktopPane.TabIndex = 2;
             // 
             // label1
@@ -529,7 +529,6 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelmenue);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(0, 0);
             this.Name = "designForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "designForm";

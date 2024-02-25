@@ -53,7 +53,7 @@ namespace Reserve__a_Five_a_Side_Football
             {
                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)
                 {
-                    int reservationId = Convert.ToInt32(row.Cells["Rev_ID"].Value);
+                    int reservationId = Convert.ToInt32(row.Cells["RevID"].Value);
                     var reservationToDelete = context1.Reservations.FirstOrDefault(r => r.ReservationID == reservationId);
 
                     if (reservationToDelete != null)
@@ -87,19 +87,7 @@ namespace Reserve__a_Five_a_Side_Football
 
 
         }
-        /* private void show()
-         {
-             var y = (from r in context1.Reservations
-                      select new
-                      {
-                          r.ReservationID,
-                          r.Reservation_Date,
-                          r.Reservation_Time,
-                          r.Payment,
-                          r.Reservation_Statues
-                      }).ToList();
-             dataGridView1.DataSource = y;
-         }*/
+
         private void show()
         {
             dataGridView1.Rows.Clear();
@@ -110,7 +98,7 @@ namespace Reserve__a_Five_a_Side_Football
                                 join p in context1.Players on r.Player_ID equals p.Player_ID
                                 join u in context1.Users on p.UserID equals u.UserID
                                 join res in context1.Stadium on r.StadiumID equals res.StadiumID
-                                where u.UserID == 2 //userLoginID
+                                where u.UserID == userLoginID
                                 select new
                                 {
 
@@ -120,21 +108,17 @@ namespace Reserve__a_Five_a_Side_Football
                                     r.Reservation_Time,
                                     r.Payment,
                                     r.Reservation_Statues,
-                                    // PlayerName = p.Name,
-                                    // UserName = u.UserName
                                 }).ToList();
 
 
             //dataGridView1.DataSource = reservations;
             foreach (var reser in reservations)
-            {
                 dataGridView1.Rows.Add(reser.ReservationID, reser.Reservation_Date.Value.Date.ToString("yyyy-MM-dd"), reser.Reservation_Time, reser.Stad_Name, reser.Payment, reser.Reservation_Statues);
 
-            }
 
         }
 
-        
+
     }
 }
 

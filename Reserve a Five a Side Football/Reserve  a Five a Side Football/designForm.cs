@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace Reserve__a_Five_a_Side_Football
 {
-    public partial class designForm : BaseForm
+    public partial class designForm : Form
     {
 
         private int currentIndex = 0;
@@ -29,6 +29,7 @@ namespace Reserve__a_Five_a_Side_Football
         Reserve_a_Five_a_SideEntities context;
         string GetOwner;
         string GetTextLeague;
+        string GetTextIfNull;
         //Constructor
         public designForm()
         {
@@ -53,10 +54,21 @@ namespace Reserve__a_Five_a_Side_Football
                 button4.Text = "Add Reservation";
                 button5.Text = "Stadiums";
             }
-            addTextLeagueMessageToLabel();
-            GetTextLeague = label1.Text;
-            timer1.Interval = 350; // Adjust speed here (in milliseconds)
-            timer1.Start();
+            GetTextIfNull =  addTextLeagueMessageToLabel();
+            if (string.IsNullOrEmpty(GetTextIfNull))
+            {
+                GetTextIfNull = "Currently, there are no leagues available for registration. Please stay tuned for updates on upcoming leagues. Thank you for your patience and continued support.";
+                label1.Text = GetTextIfNull;
+                timer1.Interval = 350; // Adjust speed here (in milliseconds)
+                timer1.Start();
+            }
+            else
+            {
+                GetTextLeague = label1.Text;
+                timer1.Interval = 350; // Adjust speed here (in milliseconds)
+                timer1.Start();
+            }
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -207,7 +219,7 @@ namespace Reserve__a_Five_a_Side_Football
         private void CountMessageForPlayer()
         {
             var unreadMessages = context.ReservationMessages
-                .Where(e => e.PlayerID == 1/*CurrentUserLogin.UserLogginID*/)
+                .Where(e => e.PlayerID == CurrentUserLogin.UserLogginID)
                 .Select(e => new { e.MessageID, e.MessageContent, e.IsRead })
                 .OrderByDescending(e => e.MessageID).ToList();
 
@@ -262,7 +274,7 @@ namespace Reserve__a_Five_a_Side_Football
 
                     // Update the message status to read
                     var message = context.ReservationMessages
-                        .FirstOrDefault(m => m.PlayerID == 1 /*CurrentUserLogin.UserLogginID*/ && m.MessageContent == cell.Value.ToString());
+                        .FirstOrDefault(m => m.PlayerID == CurrentUserLogin.UserLogginID && m.MessageContent == cell.Value.ToString());
 
                     if (message != null)
                     {
@@ -275,7 +287,7 @@ namespace Reserve__a_Five_a_Side_Football
 
 
 
-
+        // Log Out
         private void button12_Click(object sender, EventArgs e)
         {
             CurrentUserLogin.UserLogginID = 0;
@@ -285,7 +297,7 @@ namespace Reserve__a_Five_a_Side_Football
             this.Close();
         }
 
-        private void addTextLeagueMessageToLabel()
+        private string addTextLeagueMessageToLabel()
         {
             var latestMessage = context.LeagueMessages
                         .Where(e => e.DeleteTimestamp > DateTime.Now)
@@ -293,20 +305,38 @@ namespace Reserve__a_Five_a_Side_Football
                         .Select(e => e.MessageContent)
                         .FirstOrDefault();
             label1.Text = latestMessage;
+            return latestMessage;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string fullText = GetTextLeague + GetTextLeague.Substring(0, currentIndex);
+
+            if (GetTextIfNull == "Currently, there are no leagues available for registration. Please stay tuned for updates on upcoming leagues. Thank you for your patience and continued support.")
+            {
+                
+            string fullText = GetTextIfNull + GetTextIfNull.Substring(0, currentIndex);
 
             // Update label text with scrolling effect
-            if (currentIndex == GetTextLeague.Length)
-            {
-                // Reset to the beginning if reached the end of the news text
+            if (currentIndex == GetTextIfNull.Length)
+            {// Reset to the beginning if reached the end of the news text
                 currentIndex = 0;
             }
             label1.Text = fullText.Substring(currentIndex);
             currentIndex++;
+            }
+            else
+            {
+                string fullText = GetTextLeague + GetTextLeague.Substring(0, currentIndex);
+
+                // Update label text with scrolling effect
+                if (currentIndex == GetTextLeague.Length)
+                {
+                    // Reset to the beginning if reached the end of the news text
+                    currentIndex = 0;
+                }
+                label1.Text = fullText.Substring(currentIndex);
+                currentIndex++;
+            }
         }
 
     }
